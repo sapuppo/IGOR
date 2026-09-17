@@ -1,0 +1,21 @@
+name: V09 Data Vision Smoke
+on:
+  push:
+    branches: [chatgpt-v09-data-bridge-20260917]
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test official Binance Data Vision archives
+        shell: bash
+        run: |
+          set -x
+          mkdir -p smoke
+          curl -fLsS 'https://data.binance.vision/data/futures/um/monthly/klines/BTCUSDT/4h/BTCUSDT-4h-2026-02.zip' -o smoke/k.zip
+          unzip -l smoke/k.zip | head
+          curl -fLsS 'https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/1h/BTCUSDT-1h-2026-02.zip' -o smoke/m.zip
+          unzip -l smoke/m.zip | head
+          curl -fLsS 'https://data.binance.vision/data/futures/um/monthly/fundingRate/BTCUSDT/BTCUSDT-fundingRate-2026-02.zip' -o smoke/f.zip || true
+          ls -lh smoke
