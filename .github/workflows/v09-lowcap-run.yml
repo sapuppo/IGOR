@@ -1,0 +1,24 @@
+name: V09 Lowcap 101-300
+on:
+  push:
+    branches: [chatgpt-v09-data-bridge-20260917]
+  workflow_dispatch:
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore frozen V09 bundle
+        run: base64 -d v09_bridge/v09_bundle.tar.gz.b64 | tar -xzf -
+      - name: Run ranks 101-300 across six frozen windows
+        run: python3 v09_bridge/run_lowcap.py | tee v09_lowcap.log
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v09-lowcap-101-300
+          path: |
+            v09_out/
+            v09_lowcap.log
+          retention-days: 1
