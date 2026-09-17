@@ -1,0 +1,23 @@
+name: V09 Data Only 101-300
+on:
+  push:
+    branches: [chatgpt-v09-data-bridge-20260917]
+  workflow_dispatch:
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect Binance historical data for PIT ranks 101-300
+        run: python3 v09_bridge/collect_lowcap_data.py 2>&1 | tee v09_data_only.log
+      - name: Upload market data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v09-market-data-101-300
+          path: |
+            v09_market_data/
+            v09_data_only.log
+          retention-days: 1
+          if-no-files-found: warn
