@@ -17,8 +17,10 @@ ranked={str(x.get("symbol","")).upper():{"rank":int(x["cmcRank"]),"name":x.get("
 ex=get("https://fapi.binance.com","/fapi/v1/exchangeInfo",{})
 symbols={}
 for s in ex["symbols"]:
-    if s.get("contractType")=="PERPETUAL" and s.get("quoteAsset")=="USDT" and s.get("status")=="TRADING":
+    if s.get("contractType")=="PERPETUAL" and s.get("quoteAsset")=="USDT":
         symbols[s["symbol"]]=s
+print("DEBUG ranked",len(ranked),"sample",list(ranked.items())[:10])
+print("DEBUG futures_usdt_perp",len(symbols),"sample",list(symbols)[:10])
 
 def klines(sym,limit=80):
     return get("https://fapi.binance.com","/fapi/v1/klines",{"symbol":sym,"interval":"4h","limit":limit})
