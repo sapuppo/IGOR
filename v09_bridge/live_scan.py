@@ -9,8 +9,8 @@ def get(base,path,params):
     with urllib.request.urlopen(req,timeout=30) as r: return json.loads(r.read())
 
 today=datetime.datetime.now(datetime.timezone.utc).date().isoformat()
-cmc=get("https://api.coinmarketcap.com","/data-api/v3/cryptocurrency/listings/historical",
-        {"date":today,"start":1,"limit":300,"convert":"USD"})
+cmc=get("https://pro-api.coinmarketcap.com","/public-api/v1/cryptocurrency/listings/latest",
+        {"start":1,"limit":300,"convert":"USD"})
 rows=cmc["data"]
 ranked={str(x.get("symbol","")).upper():{"rank":int(x["cmcRank"]),"name":x.get("name","")} for x in rows if 101<=int(x.get("cmcRank",0))<=300}
 
