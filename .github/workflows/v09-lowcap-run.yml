@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Restore frozen V09 bundle
-        run: base64 -d v09_bridge/v09_bundle.tar.gz.b64 | tar -xzf -
+        run: |
+          cat v09_bridge/bundle.part00 v09_bridge/bundle.part01 v09_bridge/bundle.part02 v09_bridge/bundle.part03 > /tmp/v09_bundle.b64
+          base64 -d /tmp/v09_bundle.b64 | tar -xzf -
       - name: Run ranks 101-300 across six frozen windows
         run: python3 v09_bridge/run_lowcap.py | tee v09_lowcap.log
       - name: Upload result
