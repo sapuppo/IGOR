@@ -14,7 +14,7 @@ nowms=int(now.timestamp()*1000)
 cmc_date=(now.date()-datetime.timedelta(days=1)).isoformat()
 cmc=get("https://api.coinmarketcap.com","/data-api/v3/cryptocurrency/listings/historical",
         {"date":cmc_date,"start":1,"limit":300,"convert":"USD"})
-rows=cmc.get("data") or []
+rows=cmc.get("data") or []\nPath("v09_live").mkdir(exist_ok=True)\nPath("v09_live/cmc_rank101_300.json").write_text(json.dumps([x for x in rows if 101<=int(x.get("cmcRank",0))<=300],indent=2),encoding="utf-8")
 ranked={str(x.get("symbol","")).upper():{"rank":int(x["cmcRank"]),"name":x.get("name",""),
         "mcap":float(((x.get("quotes") or [{}])[0]).get("marketCap") or 0)}
         for x in rows if 101<=int(x.get("cmcRank",0))<=300}
