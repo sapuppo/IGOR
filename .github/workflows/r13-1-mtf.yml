@@ -30,20 +30,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
 
-      - name: Download validated R13.1 dataset
-        uses: actions/download-artifact@v4
-        with:
-          name: r13-1-binance-spot-mtf-dataset
-          path: dataset_artifact
-          github-token: \${{ secrets.GITHUB_TOKEN }}
-          run-id: 35751357225
-
-      - name: Extract validated dataset
+      - name: Rebuild validated R13.1 dataset in-job
         run: |
-          ls -lah dataset_artifact
-          tar -xzf dataset_artifact/V10_R13_1_BINANCE_SPOT_MTF_DATASET.tar.gz
-          test -f V10_R13_1_BINANCE_SPOT_MTF_DATASET/manifest.json
-          du -sh V10_R13_1_BINANCE_SPOT_MTF_DATASET
+          git fetch origin tmp-r13-1-dataset-20260922
+          git show origin/tmp-r13-1-dataset-20260922:r13_1_dataset/build_mtf_dataset.py > build_mtf_dataset.py
+          python build_mtf_dataset.py
 
       - name: Syntax check
         run: python -m py_compile r13_1_mtf/run_r13_1_mtf.py
@@ -51,7 +42,7 @@ jobs:
       - name: Run R13.1 MTF integral walk-forward
         working-directory: r13_1_mtf
         env:
-          R13_DATA_ROOT: ../V10_R13_1_BINANCE_SPOT_MTF_DATASET
+          R13_DATA_ROOT: ../r13_1_dataset
         run: set -o pipefail; python run_r13_1_mtf.py | tee r13_1_console.log
 
       - name: Bundle results
