@@ -1,0 +1,77 @@
+name: R13.1 MTF Engine
+on:
+  push:
+    branches:
+      - tmp-r13-1-mtf-20260922
+    paths:
+      - "r13_1_mtf/**"
+      - ".github/workflows/r13-1-mtf.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r13-1-mtf-20260922
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
+
+      - name: Download validated R13.1 dataset
+        uses: actions/download-artifact@v4
+        with:
+          name: r13-1-binance-spot-mtf-dataset
+          path: dataset_artifact
+          github-token: \${{ secrets.GITHUB_TOKEN }}
+          run-id: 35751357225
+
+      - name: Extract validated dataset
+        run: |
+          ls -lah dataset_artifact
+          tar -xzf dataset_artifact/V10_R13_1_BINANCE_SPOT_MTF_DATASET.tar.gz
+          test -f V10_R13_1_BINANCE_SPOT_MTF_DATASET/manifest.json
+          du -sh V10_R13_1_BINANCE_SPOT_MTF_DATASET
+
+      - name: Syntax check
+        run: python -m py_compile r13_1_mtf/run_r13_1_mtf.py
+
+      - name: Run R13.1 MTF integral walk-forward
+        working-directory: r13_1_mtf
+        env:
+          R13_DATA_ROOT: ../V10_R13_1_BINANCE_SPOT_MTF_DATASET
+        run: set -o pipefail; python run_r13_1_mtf.py | tee r13_1_console.log
+
+      - name: Bundle results
+        if: always()
+        run: |
+          mkdir -p r13_1_output
+          cp r13_1_mtf/r13_1_console.log r13_1_output/ || true
+          cp r13_1_mtf/r13_1_result.json r13_1_output/ || true
+          cp r13_1_mtf/r13_1_report.md r13_1_output/ || true
+          cp r13_1_mtf/r13_1_folds.csv r13_1_output/ || true
+          cp r13_1_mtf/r13_1_trades.csv r13_1_output/ || true
+          cp r13_1_mtf/r13_1_trades_stress.csv r13_1_output/ || true
+          cp r13_1_mtf/r13_1_predictions.parquet r13_1_output/ || true
+          cp r13_1_mtf/r13_1_equity_curve.parquet r13_1_output/ || true
+          cp r13_1_mtf/r13_1_equity_curve_stress.parquet r13_1_output/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r13-1-mtf-integral-results
+          path: r13_1_output/
+          compression-level: 6
+          if-no-files-found: warn
