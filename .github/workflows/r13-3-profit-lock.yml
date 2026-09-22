@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow
+          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
 
       - name: Download validated MTF dataset artifact
         run: |
