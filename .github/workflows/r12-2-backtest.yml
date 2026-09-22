@@ -1,0 +1,45 @@
+name: R12.2 Integral Backtest
+on:
+  push:
+    branches:
+      - tmp-r12-2-backtest-20260922
+    paths:
+      - "r12_2_code/**"
+      - "r12_2_data/**"
+      - ".github/workflows/r12-2-backtest.yml"
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r12-2-backtest-20260922
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install "numpy<3" "pandas<3" "scikit-learn<2" requests
+      - name: Run frozen R12.2
+        working-directory: r12_2_code
+        run: python run_ci.py | tee r12_2_console.log
+      - name: Bundle results
+        if: always()
+        run: |
+          mkdir -p r12_2_output
+          cp r12_2_code/r12_2_console.log r12_2_output/ || true
+          cp r12_2_code/r12_2_result.json r12_2_output/ || true
+          cp r12_2_code/r12_2_report.md r12_2_output/ || true
+          cp r12_2_code/r12_2_folds.csv r12_2_output/ || true
+          cp r12_2_code/r12_2_selected_predictions.csv r12_2_output/ || true
+          cp r12_2_code/r12_2_*_signals.csv r12_2_output/ || true
+          cp r12_2_code/r12_2_*_trades.csv r12_2_output/ || true
+          cp r12_2_code/r12_2_*_trades_2x_slippage.csv r12_2_output/ || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r12-2-integral-backtest
+          path: r12_2_output/
+          if-no-files-found: warn
