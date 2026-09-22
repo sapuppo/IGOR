@@ -1,0 +1,42 @@
+name: R13.1 Rebuild MTF Dataset
+on:
+  push:
+    branches:
+      - tmp-r13-1-dataset-20260922
+    paths:
+      - "r13_1_dataset/**"
+      - ".github/workflows/r13-1-dataset.yml"
+  workflow_dispatch:
+
+jobs:
+  dataset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r13-1-dataset-20260922
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: python -m pip install --upgrade pip && pip install "numpy<3" "pandas<3" pyarrow requests
+      - name: Build dataset
+        working-directory: r13_1_dataset
+        run: set -o pipefail; python build_mtf_dataset.py | tee dataset_console.log
+      - name: Bundle audit files
+        if: always()
+        run: |
+          mkdir -p dataset_output
+          cp r13_1_dataset/dataset_console.log dataset_output/ || true
+          cp r13_1_dataset/r13_1_dataset/manifest.json dataset_output/ || true
+          cp r13_1_dataset/r13_1_dataset/coverage.csv dataset_output/ || true
+          cp r13_1_dataset/r13_1_dataset/inventory.csv dataset_output/ || true
+          cp r13_1_dataset/V10_R13_1_BINANCE_SPOT_MTF_DATASET.tar.gz dataset_output/ || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r13-1-binance-spot-mtf-dataset
+          path: dataset_output/
+          compression-level: 0
+          if-no-files-found: error
