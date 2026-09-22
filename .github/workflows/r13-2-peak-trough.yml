@@ -1,0 +1,71 @@
+name: R13.2 Peak Trough Engine
+on:
+  push:
+    branches:
+      - tmp-r13-2-peak-trough-20260922
+    paths:
+      - "r13_2_peak_trough/**"
+      - ".github/workflows/r13-2-peak-trough.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r13-2-peak-trough-20260922
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
+
+      - name: Rebuild validated MTF dataset
+        run: |
+          git fetch origin tmp-r13-1-dataset-20260922
+          git show origin/tmp-r13-1-dataset-20260922:r13_1_dataset/build_mtf_dataset.py > build_mtf_dataset.py
+          python build_mtf_dataset.py
+
+      - name: Syntax check
+        run: |
+          python -m py_compile r13_1_mtf/run_r13_1_mtf.py
+          python -m py_compile r13_2_peak_trough/run_r13_2_peak_trough.py
+
+      - name: Run R13.2 integral walk-forward
+        working-directory: r13_2_peak_trough
+        env:
+          R13_DATA_ROOT: ../r13_1_dataset
+        run: set -o pipefail; python run_r13_2_peak_trough.py | tee r13_2_console.log
+
+      - name: Bundle results
+        if: always()
+        run: |
+          mkdir -p r13_2_output
+          cp r13_2_peak_trough/r13_2_console.log r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_result.json r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_report.md r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_folds.csv r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_trades.csv r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_trades_stress.csv r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_predictions.parquet r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_equity_curve.parquet r13_2_output/ || true
+          cp r13_2_peak_trough/r13_2_equity_curve_stress.parquet r13_2_output/ || true
+          cp r13_2_peak_trough/run_r13_2_peak_trough.py r13_2_output/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r13-2-peak-trough-results
+          path: r13_2_output/
+          compression-level: 6
+          if-no-files-found: warn
