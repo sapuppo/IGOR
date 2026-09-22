@@ -1,0 +1,80 @@
+name: R13.4 Relative Risk
+on:
+  push:
+    branches:
+      - tmp-r13-4-relative-risk-20260922
+    paths:
+      - "r13_4_relative_risk/**"
+      - ".github/workflows/r13-4-relative-risk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r13-4-relative-risk-20260922
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
+
+      - name: Download validated MTF dataset
+        run: |
+          mkdir -p dataset_artifact
+          gh run download 35751357225 -n r13-1-binance-spot-mtf-dataset -D dataset_artifact
+          tar -xzf dataset_artifact/V10_R13_1_BINANCE_SPOT_MTF_DATASET.tar.gz
+          mv V10_R13_1_BINANCE_SPOT_MTF_DATASET r13_1_dataset
+          test -f r13_1_dataset/15m/BTCUSDT.parquet
+
+      - name: Download frozen R13.2 predictions
+        run: |
+          mkdir -p frozen_r13_2
+          gh run download 35759548380 -n r13-2-peak-trough-results -D frozen_r13_2
+          test -f frozen_r13_2/r13_2_predictions.parquet
+          test -f frozen_r13_2/r13_2_folds.csv
+
+      - name: Syntax check
+        run: python -m py_compile r13_4_relative_risk/run_r13_4_relative_risk.py
+
+      - name: Run R13.4
+        working-directory: r13_4_relative_risk
+        env:
+          R13_DATA_ROOT: ../r13_1_dataset
+          R13_FROZEN_RESULTS: ../frozen_r13_2
+        run: set -o pipefail; python run_r13_4_relative_risk.py | tee r13_4_console.log
+
+      - name: Bundle results
+        if: always()
+        run: |
+          mkdir -p r13_4_output
+          cp r13_4_relative_risk/r13_4_console.log r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_result.json r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_report.md r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_folds.csv r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_trades.csv r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_trades_stress.csv r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_equity_curve.parquet r13_4_output/ || true
+          cp r13_4_relative_risk/r13_4_equity_curve_stress.parquet r13_4_output/ || true
+          cp r13_4_relative_risk/run_r13_4_relative_risk.py r13_4_output/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r13-4-relative-risk-results
+          path: r13_4_output/
+          compression-level: 6
+          if-no-files-found: warn
