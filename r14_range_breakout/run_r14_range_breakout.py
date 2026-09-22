@@ -148,7 +148,7 @@ def simulate(feat, one_way_cost):
     syms=sorted(feat)
     start=max(x.index.min() for x in feat.values()); end=min(END_EXCLUSIVE,max(x.index.max() for x in feat.values())+pd.Timedelta(minutes=15))
     timeline=pd.date_range(max(start,START),end-pd.Timedelta(minutes=15),freq='15min',tz='UTC')
-    realized=INITIAL_EQUITY; positions={}; cooldown={}; pending={}; trades=[]; curve=[]; peak=INITIAL_EQUITY; last={}
+    realized=INITIAL_EQUITY; positions={}; cooldown={}; pending={}; pending_entries=[]; trades=[]; curve=[]; peak=INITIAL_EQUITY; last={}
 
     def equity(prices):
         u=0.0
@@ -180,6 +180,19 @@ def simulate(feat, one_way_cost):
                 eq=max(equity(opens),1.0); notional=min(eq*TARGET_SLOT,eq)
                 side=1 if reverse=='LONG' else -1; cost=notional*one_way_cost; realized-=cost
                 positions[s]={'side':side,'entry':opens[s],'time':t,'notional':notional,'entry_cost':cost,'mode':'TREND','best':opens[s],'stop':opens[s]*(1-CATASTROPHIC_STOP if side>0 else 1+CATASTROPHIC_STOP)}
+        # Execute entries signaled by the PREVIOUS completed 15m bar at this bar's open.
+        if pending_entries:
+            queued=sorted(pending_entries, reverse=True)
+            pending_entries=[]
+            used=set()
+            for score,s,side,mode in queued:
+                if len(positions)>=MAX_POSITIONS or s in used or s in positions or s not in opens:
+                    continue
+                if cooldown.get(s,pd.Timestamp.min.tz_localize('UTC'))>t:
+                    continue
+                eq=max(equity(opens),1.0); notional=min(eq*TARGET_SLOT,eq); cost=notional*one_way_cost; realized-=cost
+                positions[s]={'side':side,'entry':opens[s],'time':t,'notional':notional,'entry_cost':cost,'mode':mode,'best':opens[s],'stop':opens[s]*(1-CATASTROPHIC_STOP if side>0 else 1+CATASTROPHIC_STOP)}
+                used.add(s)
         # Manage existing positions using current completed-bar signal, action executes next open.
         for s,p in list(positions.items()):
             if s not in rows: continue
@@ -215,8 +228,9 @@ def simulate(feat, one_way_cost):
                     trail=p['best']*(1+TREND_TRAIL_ATR*max(float(r.atr_pct),0.001))
                     if closes[s]>trail or sg['trend_exit_short'] or sg['breakout_up']:
                         pending[s]={'reason':'TREND_LOST','reverse':'LONG' if sg['breakout_up'] else None}
-        # Flat candidates, choose best opportunities only.
+        # Flat candidates from THIS completed bar are queued for the NEXT 15m open.
         slots=MAX_POSITIONS-len(positions)
+        pending_entries=[]
         if slots>0:
             candidates=[]
             for s,r in rows.items():
@@ -226,13 +240,7 @@ def simulate(feat, one_way_cost):
                 if sg['range_short']: candidates.append((sg['score_short'],s,-1,'RANGE'))
                 if sg['breakout_up']: candidates.append((sg['score_long'],s,1,'TREND'))
                 if sg['breakout_down']: candidates.append((sg['score_short'],s,-1,'TREND'))
-            candidates=sorted(candidates,reverse=True)
-            used=set()
-            for score,s,side,mode in candidates:
-                if slots<=0 or s in used or s not in opens: continue
-                eq=max(equity(opens),1.0); notional=min(eq*TARGET_SLOT,eq); cost=notional*one_way_cost; realized-=cost
-                positions[s]={'side':side,'entry':opens[s],'time':t,'notional':notional,'entry_cost':cost,'mode':mode,'best':opens[s],'stop':opens[s]*(1-CATASTROPHIC_STOP if side>0 else 1+CATASTROPHIC_STOP)}
-                used.add(s); slots-=1
+            pending_entries=sorted(candidates,reverse=True)[:slots]
         eq=equity(closes); peak=max(peak,eq); dd=1-eq/peak if peak>0 else 1
         curve.append({'time':t,'equity':eq,'drawdown':dd,'open_positions':len(positions)})
         if eq<=0: break
@@ -265,7 +273,7 @@ def main():
     feat={s:build_symbol(d15[s],d1[s]) for s in dev}
     td,cd,normal=simulate(feat,ONE_WAY_COST)
     std,scd,stress=simulate(feat,STRESS_ONE_WAY_COST)
-    result={'version':VERSION,'period':[str(START),str(END_EXCLUSIVE)],'symbols':dev,'symbol_count':len(dev),'skipped':skipped,'architecture':{'scan_every':'15m','holding_minimum':None,'holding_target':None,'states':['RANGE_LONG','RANGE_SHORT','TREND_LONG','TREND_SHORT','FLAT'],'range_window_bars_15m':32,'max_positions':MAX_POSITIONS,'cost_one_way':ONE_WAY_COST,'stress_one_way':STRESS_ONE_WAY_COST},'normal':normal,'stress':stress,'monthly':monthly_folds(td),'outer_holdout_opened':False,'outer_holdout':base.OUTER_HOLDOUT,'note':'R14 is a deterministic causal baseline. All regime/support/resistance inputs use completed bars; rolling range levels are shifted so the current bar cannot define its own boundaries. Actions triggered by completed-bar signals execute at the next 15m open, except the fixed catastrophic intrabar cap.'}
+    result={'version':VERSION,'period':[str(START),str(END_EXCLUSIVE)],'symbols':dev,'symbol_count':len(dev),'skipped':skipped,'architecture':{'scan_every':'15m','holding_minimum':None,'holding_target':None,'states':['RANGE_LONG','RANGE_SHORT','TREND_LONG','TREND_SHORT','FLAT'],'range_window_bars_15m':32,'max_positions':MAX_POSITIONS,'cost_one_way':ONE_WAY_COST,'stress_one_way':STRESS_ONE_WAY_COST},'normal':normal,'stress':stress,'monthly':monthly_folds(td),'outer_holdout_opened':False,'outer_holdout':base.OUTER_HOLDOUT,'note':'R14 is a deterministic causal baseline. All regime/support/resistance inputs use completed bars; rolling range levels are shifted so the current bar cannot define its own boundaries. Both entries and normal exits triggered by a completed 15m bar execute only at the next 15m open. Only a pre-existing fixed catastrophic stop may execute intrabar.'}
     Path('r14_result.json').write_text(json.dumps(result,indent=2,default=str))
     Path('r14_report.md').write_text('# V10 R14 Range/Breakout Engine\n\n```json\n'+json.dumps(result,indent=2,default=str)+'\n```\n')
     td.to_csv('r14_trades.csv',index=False); std.to_csv('r14_trades_stress.csv',index=False)
