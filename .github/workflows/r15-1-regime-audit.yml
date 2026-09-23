@@ -1,0 +1,22 @@
+name: R15.1 Regime Data Audit
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r15-market-regime-lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Run R15.1 audit
+        run: python r15_regime_lab/run_r15_1_data_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r15-1-regime-audit
+          path: r15_regime_lab/output/
+          retention-days: 30
