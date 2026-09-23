@@ -1,0 +1,74 @@
+{
+  "version": "R15.6",
+  "status": "success",
+  "run_id": 35884646939,
+  "artifact": {
+    "id": 10761404394,
+    "name": "r15-6-event-intelligence",
+    "size_in_bytes": 83795265
+  },
+  "raw_candles": 3591796,
+  "all_events": 101497,
+  "train_events": 73766,
+  "calib_events": 9463,
+  "test_events": 9605,
+  "outer_holdout_events": 8648,
+  "cooldown_hours": 8,
+  "feature_pool_before_prune": 318,
+  "features_after_train_only_prune": 286,
+  "event_context_features": 13,
+  "event_outcome_test": {
+    "accuracy": 0.41957313899010934,
+    "balanced_accuracy": 0.336011290075962,
+    "macro_f1": 0.30114707841312904,
+    "weighted_f1": 0.37461610420460173,
+    "logloss": 1.0350059355166819,
+    "best_iteration": 33
+  },
+  "followthrough_selection_test": {
+    "threshold_from_calib": 0.45,
+    "selected_events": 485,
+    "coverage": 0.05049453409682457,
+    "followthrough_rate_selected": 0.4536082474226804,
+    "followthrough_rate_all": 0.3980218636127017,
+    "lift": 1.139656609075293,
+    "positive_signed_return_rate": 0.5195876288659794,
+    "mean_signed_ret_atr": 0.36967326973747344,
+    "median_signed_ret_atr": 0.32476338744163513,
+    "median_favorable_atr": 2.4900646209716797,
+    "median_adverse_atr": 1.9763168096542358
+  },
+  "clean_edge_model": {
+    "test_roc_auc": 0.5389352412614741,
+    "test_pr_auc": 0.2161741092451681,
+    "baseline_clean_edge_rate": 0.1937532535137949,
+    "top_decile_clean_edge_rate": 0.2372528616024974,
+    "top_decile_lift": 1.224510336212782,
+    "top_decile_mean_signed_ret_atr": 0.1770111038112135
+  },
+  "top_features": [
+    "btc_4h_adx14",
+    "btc_4h_ret4",
+    "btc_15m_atr_pct",
+    "btc_15m_adx14",
+    "4h_compression60",
+    "btc_15m_ret4",
+    "btc_15m_eff20",
+    "15m_compression60",
+    "1d_compression60",
+    "1d_ta_close_location",
+    "1d_ta_tr_median_ratio20",
+    "1d_ret1",
+    "1h_compression60",
+    "1d_break_up_atr",
+    "1d_volume_z40"
+  ],
+  "outer_holdout_opened": false,
+  "interpretation": [
+    "Event sampling reduced 3.59M candle decisions to 101,497 non-overlapping causal events.",
+    "High-confidence followthrough selection improved event followthrough rate by ~14% relative lift on 2026Q2.",
+    "Selected events had positive mean and median signed 8h ATR return, but only ~52% positive signed-return rate.",
+    "Strict clean-edge prediction improved over R15.5 but remains weak and is not sufficient alone for live trading.",
+    "Next step is an event-driven economic backtest on TEST only with fees/slippage/position overlap, keeping outer holdout sealed."
+  ]
+}
