@@ -113,9 +113,9 @@ def stats(g):
       "ever_positive_rate":float(g.ever_positive.mean()),
       "hit_0_5_before_exit_rate":float(g.hit_0_5_atr_before_exit.mean()),
       "hit_1_0_before_exit_rate":float(g.hit_1_0_atr_before_exit.mean()),
-      "target_rate":float(g.exit_reason.eq("TARGET").mean()),
-      "stop_rate":float(g.exit_reason.str.startswith("STOP").mean()),
-      "time_rate":float(g.exit_reason.eq("TIME").mean()),
+      "target_rate":float(g["exit_reason"].eq("TARGET").mean()) if "exit_reason" in g.columns else np.nan,
+      "stop_rate":float(g["exit_reason"].str.startswith("STOP").mean()) if "exit_reason" in g.columns else np.nan,
+      "time_rate":float(g["exit_reason"].eq("TIME").mean()) if "exit_reason" in g.columns else np.nan,
     })
 
 def audit_file(fn):
