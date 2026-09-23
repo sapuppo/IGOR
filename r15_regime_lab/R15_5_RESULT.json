@@ -1,0 +1,66 @@
+{
+  "version": "R15.5",
+  "status": "success",
+  "run_id": 35878308367,
+  "artifact": {
+    "id": 10759008484,
+    "name": "r15-5-hierarchical-intelligence",
+    "size_in_bytes": 1383701
+  },
+  "data": {
+    "train_rows_sampled": 1735383,
+    "calib_rows": 336960,
+    "test_rows": 340621,
+    "features": 90
+  },
+  "hierarchy_test": {
+    "accuracy": 0.2478913513846768,
+    "balanced_accuracy": 0.219891940518556,
+    "macro_f1": 0.17269947960139995,
+    "weighted_f1": 0.20218563005429907
+  },
+  "flat_r15_4": {
+    "accuracy": 0.3037276034067189,
+    "balanced_accuracy": 0.2092232831255561,
+    "macro_f1": 0.16025691172594042
+  },
+  "heads_test": {
+    "predictable": {
+      "roc_auc": 0.5774919420893604,
+      "balanced_accuracy": 0.5251584766389189
+    },
+    "range_vs_expansion": {
+      "roc_auc": 0.801927266683232,
+      "balanced_accuracy": 0.5377940624437478
+    },
+    "directional_vs_chop": {
+      "roc_auc": 0.5842174499238482,
+      "balanced_accuracy": 0.5177905863522085
+    },
+    "up_vs_down": {
+      "roc_auc": 0.63630138665526,
+      "balanced_accuracy": 0.5963988928822397
+    },
+    "breakout_vs_trend": {
+      "roc_auc": 0.5976444884299374,
+      "balanced_accuracy": 0.5586748662905591
+    },
+    "up_edge": {
+      "roc_auc": 0.5291737196671794,
+      "balanced_accuracy": 0.524957004359059
+    },
+    "down_edge": {
+      "roc_auc": 0.5223222032282312,
+      "balanced_accuracy": 0.5002271787152972
+    }
+  },
+  "interpretation": [
+    "Hierarchy improved balanced accuracy and macro F1 slightly versus R15.4, but reduced raw accuracy.",
+    "Range-vs-expansion contains strong ranking signal but is severely class-imbalanced under the current candle-level label definition.",
+    "Up-vs-down is the clearest directional out-of-sample signal and deserves event-based follow-up.",
+    "MFE/MAE edge heads are too weak for trading decisions in current form.",
+    "Next iteration should redesign labels around independent market events/transitions rather than label every 15m candle."
+  ],
+  "outer_holdout_opened": false,
+  "outer_holdout_start": "2026-07-01T00:00:00Z"
+}
