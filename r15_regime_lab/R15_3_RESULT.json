@@ -1,0 +1,37 @@
+{
+  "stage": "R15.3",
+  "status": "success",
+  "run_id": 35875987226,
+  "source_run_id": 35829207633,
+  "artifact": {
+    "id": 10757556611,
+    "name": "r15-3-processed-market-structure",
+    "size_in_bytes": 832260661,
+    "files": 44
+  },
+  "symbols": 39,
+  "rows_15m_decisions": 3591796,
+  "feature_columns_median": 90,
+  "median_feature_coverage": 1,
+  "outer_holdout_start": "2026-07-01T00:00:00Z",
+  "outer_holdout_rows": 306470,
+  "state_totals": {
+    "BREAKOUT": 194270,
+    "EXHAUSTION": 185606,
+    "RANGE_DERIORATING": 389163,
+    "RANGE_STABLE": 798740,
+    "TREND": 450739,
+    "UNCERTAIN": 1573278
+  },
+  "target_totals_dev_only": {
+    "BREAKOUT_DOWN": 516272,
+    "BREAKOUT_UP": 510347,
+    "EXPANSION_CHOP": 355726,
+    "RANGE_HOLD": 100466,
+    "TREND_DOWN": 476607,
+    "TREND_UP": 431956,
+    "UNCERTAIN": 893952
+  },
+  "leakage_policy": "Higher-timeframe features become available only at candle close and are merged backward; future-derived labels are blank for outer holdout.",
+  "asset_fold_policy": "crc32(symbol)%5"
+}
