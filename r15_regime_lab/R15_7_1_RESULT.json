@@ -1,0 +1,106 @@
+{
+  "version": "R15.7.1",
+  "status": "success",
+  "run_id": 35900412276,
+  "artifact": {
+    "id": 10769390124,
+    "name": "r15-7-1-economic-failure-audit",
+    "size_in_bytes": 472789
+  },
+  "main_scenario": {
+    "trades": 471,
+    "win_rate": 0.28874734607218683,
+    "avg_net_pct": -0.0029150753534848833,
+    "profit_factor": 0.5649379797942105,
+    "median_mfe_atr": 1.2366378283464645,
+    "median_mae_atr": 1.3615889809582664,
+    "avg_giveback_atr": 1.720822977798246,
+    "ever_positive_rate": 0.6963906581740976,
+    "hit_0_5_before_exit_rate": 0.6985138004246284,
+    "hit_1_0_before_exit_rate": 0.5201698513800425,
+    "stop_rate": 0.6772823779193206
+  },
+  "losers": {
+    "n": 335,
+    "ever_positive_before_exit_rate": 0.573134328358209,
+    "hit_0_5_atr_before_exit_rate": 0.5940298507462687,
+    "hit_1_0_atr_before_exit_rate": 0.34626865671641793,
+    "median_mfe_atr": 0.6582585564183178,
+    "median_mae_atr": 1.4833191852183527,
+    "median_giveback_atr": 1.848129398908598
+  },
+  "stops": {
+    "n": 319,
+    "stop_after_never_positive": 143,
+    "stop_after_positive": 176,
+    "stop_after_0_5ATR_favorable": 183,
+    "stop_after_1ATR_favorable": 100,
+    "ever_positive_rate": 0.5517241379310345,
+    "hit_0_5_before_stop_rate": 0.5736677115987461,
+    "hit_1_0_before_stop_rate": 0.31347962382445144,
+    "median_mfe_before_stop_atr": 0.5901957884014752,
+    "median_bars_held": 6
+  },
+  "directions": {
+    "short": {
+      "trades": 319,
+      "avg_net_pct": -0.0024474938012717623,
+      "profit_factor": 0.5800952900733235,
+      "win_rate": 0.3072100313479624
+    },
+    "long": {
+      "trades": 152,
+      "avg_net_pct": -0.003896381374247946,
+      "profit_factor": 0.5432007595824752,
+      "win_rate": 0.25
+    }
+  },
+  "event_type_observations": {
+    "TREND_ONSET": {
+      "trades": 37,
+      "avg_net_pct": 0.0006028762408985651,
+      "profit_factor": 1.1096556849925792
+    },
+    "DONCHIAN_DOWN": {
+      "trades": 23,
+      "avg_net_pct": -0.0010446414702423542,
+      "profit_factor": 0.779642800041652
+    },
+    "RANGE_DETERIORATION": {
+      "trades": 61,
+      "avg_net_pct": -0.0020982749564850195,
+      "profit_factor": 0.6187777277579167
+    },
+    "BOS_DOWN": {
+      "trades": 195,
+      "avg_net_pct": -0.0029887236404057354,
+      "profit_factor": 0.5129495588908546
+    },
+    "BOS_UP": {
+      "trades": 114,
+      "avg_net_pct": -0.004078349342120547,
+      "profit_factor": 0.533270545456562
+    },
+    "EXHAUSTION_ONSET": {
+      "trades": 18,
+      "avg_net_pct": -0.004809735205002061,
+      "profit_factor": 0.3805790607503492
+    },
+    "DONCHIAN_UP": {
+      "trades": 10,
+      "avg_net_pct": -0.007377644435969219,
+      "profit_factor": 0.06950369335560096
+    }
+  },
+  "confidence_net_spearman": -0.03488059334667092,
+  "interpretation": [
+    "Primary failure is not simply absence of favorable movement: ~70% of trades move at least +0.5 ATR before exit, yet the portfolio loses.",
+    "More than half of stopped trades were positive at some point, and 57.4% of stops had reached +0.5 ATR before stopping.",
+    "31.3% of stopped trades had reached +1.0 ATR before eventually stopping.",
+    "Current p_follow confidence is not an economic score; Spearman correlation with realized net PnL is approximately zero/slightly negative.",
+    "Long trades underperform shorts, but both are negative.",
+    "TREND_ONSET appears positive descriptively on TEST, but this cannot be promoted to a trading rule without new validation because TEST has already been inspected.",
+    "Next design should learn economic entry/management targets on TRAIN/CALIB: early favorable excursion, reversal risk, giveback risk, dynamic protect-profit/breakeven logic, and trade rejection based on economic expectancy."
+  ],
+  "outer_holdout_opened": false
+}
