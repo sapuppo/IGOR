@@ -1,0 +1,82 @@
+{
+  "version": "R15.7",
+  "status": "success",
+  "run_id": 35891545456,
+  "artifact": {
+    "id": 10764892823,
+    "name": "r15-7-event-economic-backtest",
+    "size_in_bytes": 788632
+  },
+  "test_period": "2026-04-01..2026-06-30",
+  "capital": 10000,
+  "max_positions": 10,
+  "slot_fraction": 0.1,
+  "entry": "next 15m open after event signal",
+  "cost_base_one_way": 0.0016,
+  "cost_stress_one_way": 0.0021,
+  "calibration": {
+    "period": "2026Q1",
+    "stop_atr": 1.25,
+    "target_atr": 3.5,
+    "max_bars": 32,
+    "trades": 508,
+    "win_rate": 0.35236220472440943,
+    "avg_net_pct": -0.00005317045800115944,
+    "profit_factor": 0.9919797699957835
+  },
+  "scenarios": {
+    "ai_directional_base": {
+      "trades": 471,
+      "win_rate": 0.28874734607218683,
+      "avg_net_pct": -0.0029150753534849046,
+      "profit_factor": 0.5649379797942097,
+      "ending_capital": 8706.869015819746,
+      "portfolio_return": -0.1293130984180254,
+      "max_dd": 0.13389261713087552
+    },
+    "ai_directional_stress": {
+      "trades": 471,
+      "win_rate": 0.2823779193205945,
+      "avg_net_pct": -0.003915075353484904,
+      "profit_factor": 0.4720658126936054,
+      "ending_capital": 8306.160861470997,
+      "portfolio_return": -0.1693839138529003,
+      "max_dd": 0.1725137362985607
+    },
+    "all_events_control": {
+      "trades": 6686,
+      "win_rate": 0.27355668561172597,
+      "avg_net_pct": -0.00341614222743116,
+      "profit_factor": 0.5358631772674122,
+      "ending_capital": 1002.5951228340541,
+      "portfolio_return": -0.8997404877165947,
+      "max_dd": 0.8998491983597781
+    },
+    "ai_long_only_spot": {
+      "trades": 153,
+      "win_rate": 0.24836601307189543,
+      "avg_net_pct": -0.0039448864264478595,
+      "profit_factor": 0.538500059867529,
+      "ending_capital": 9407.37788997256,
+      "portfolio_return": -0.05926221100274398,
+      "max_dd": 0.07280614421499865
+    },
+    "ai_long_only_spot_stress": {
+      "trades": 153,
+      "win_rate": 0.24183006535947713,
+      "avg_net_pct": -0.004944886426447859,
+      "profit_factor": 0.46848624639602976,
+      "ending_capital": 9264.576854861085,
+      "portfolio_return": -0.07354231451389148,
+      "max_dd": 0.0809649745973352
+    }
+  },
+  "outer_holdout_opened": false,
+  "interpretation": [
+    "The AI filter drastically reduces exposure and loss versus trading all events, but does not produce positive net expectancy.",
+    "The best Q1 calibration exit rule was itself slightly negative (PF 0.992), warning that the economic edge was not established before TEST.",
+    "Q2 deterioration is substantial: selected directional PF 0.565 and -12.93% portfolio return.",
+    "Long-only Spot variant loses less (-5.93%) but remains negative.",
+    "Do not open the outer holdout yet. Next work should diagnose event types, direction asymmetry, confidence calibration, and entry timing before another strategy test."
+  ]
+}
