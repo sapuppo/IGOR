@@ -38,3 +38,4 @@ jobs:
           path: r15_regime_lab/model_r15_8/
           retention-days: 30
           compression-level: 6
+# rerun after conditional mask fix
