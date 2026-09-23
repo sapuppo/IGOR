@@ -127,7 +127,7 @@ def trade_set(events,params,cost,filter_ai=True,long_only=False):
     if filter_ai:d=d[d.p_follow>=FOLLOW_THRESHOLD]
     if long_only:d=d[d.event_direction>0]
     rows=[]
-    for ev in d.itertuples(index=False):
+    for _,ev in d.iterrows():
         r=one_trade(ev,st,tp,h,cost)
         if r is not None:rows.append(r)
     return pd.DataFrame(rows)
