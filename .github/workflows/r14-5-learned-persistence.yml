@@ -1,0 +1,83 @@
+name: R14.5 Learned Persistence
+on:
+  push:
+    branches:
+      - tmp-r14-range-breakout-20260922
+    paths:
+      - "r14_range_breakout/run_r14_5_learned_persistence.py"
+      - ".github/workflows/r14-5-learned-persistence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-r14-range-breakout-20260922
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy<3" "pandas<3" "scikit-learn<2" pyarrow requests
+
+      - name: Download validated MTF dataset
+        run: |
+          mkdir -p dataset_artifact
+          gh run download 35751357225 -n r13-1-binance-spot-mtf-dataset -D dataset_artifact
+          tar -xzf dataset_artifact/V10_R13_1_BINANCE_SPOT_MTF_DATASET.tar.gz
+          mv V10_R13_1_BINANCE_SPOT_MTF_DATASET r13_1_dataset
+          test -f r13_1_dataset/15m/BTCUSDT.parquet
+
+      - name: Download R14.3 control trades
+        run: |
+          mkdir -p control_r14_3
+          gh run download 35799214720 -n r14-3-range-quality-results -D control_r14_3
+          test -f control_r14_3/r14_trades.csv
+
+      - name: Syntax check
+        run: python -m py_compile r14_range_breakout/run_r14_5_learned_persistence.py
+
+      - name: Run R14.5
+        working-directory: r14_range_breakout
+        env:
+          R14_DATA_ROOT: ../r13_1_dataset
+          R14_CONTROL_RESULTS: ../control_r14_3
+        run: set -o pipefail; python run_r14_5_learned_persistence.py | tee r14_5_console.log
+
+      - name: Bundle results
+        if: always()
+        run: |
+          mkdir -p r14_5_output
+          cp r14_range_breakout/r14_5_console.log r14_5_output/ || true
+          cp r14_range_breakout/r14_5_result.json r14_5_output/ || true
+          cp r14_range_breakout/r14_5_report.md r14_5_output/ || true
+          cp r14_range_breakout/r14_5_trades.csv r14_5_output/ || true
+          cp r14_range_breakout/r14_5_trades_stress.csv r14_5_output/ || true
+          cp r14_range_breakout/r14_5_control_trades.csv r14_5_output/ || true
+          cp r14_range_breakout/r14_5_control_trades_stress.csv r14_5_output/ || true
+          cp r14_range_breakout/r14_5_meta_labels.parquet r14_5_output/ || true
+          cp r14_range_breakout/r14_5_candidates.parquet r14_5_output/ || true
+          cp r14_range_breakout/r14_5_gate_diagnostics.csv r14_5_output/ || true
+          cp r14_range_breakout/r14_5_equity.parquet r14_5_output/ || true
+          cp r14_range_breakout/r14_5_equity_stress.parquet r14_5_output/ || true
+          cp r14_range_breakout/run_r14_5_learned_persistence.py r14_5_output/ || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r14-5-learned-persistence-results
+          path: r14_5_output/
+          compression-level: 6
+          if-no-files-found: warn
