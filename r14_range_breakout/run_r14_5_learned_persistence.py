@@ -10,7 +10,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from r13_1_mtf import run_r13_1_mtf as base
 
-VERSION = 'V10-R14.5-LEARNED-RANGE-PERSISTENCE'
+VERSION = 'V10-R14.5.1-LEARNED-PERSISTENCE-CALIBRATION-VETO'
 DATA_ROOT = Path(os.environ.get('R14_DATA_ROOT', '../r13_1_dataset'))
 CONTROL_ROOT = Path(os.environ.get('R14_CONTROL_RESULTS', '../control_r14_3'))
 START = pd.Timestamp('2024-01-01T00:00:00Z')
@@ -373,14 +373,16 @@ def build_walkforward_gate(labels, candidates):
             if n<max(15,int(0.15*len(cal))): continue
             rets=cal.loc[mask,'net_return'].to_numpy(dtype=float)
             pf=pf_from_returns(rets); mean=float(np.mean(rets)); precision=float(cal.loc[mask,'success'].mean())
-            # Reward positive expectancy but discourage tiny calibration samples.
+            # Calibration veto: never enable the next month from a losing calibration slice.
+            if pf < 1.10 or mean <= 0.0:
+                continue
             objective=mean*math.sqrt(n)
             cand={'threshold':thr,'keep_target':keep,'cal_n':n,'cal_pf':pf,'cal_mean':mean,
                   'cal_precision':precision,'objective':objective}
             if best is None or cand['objective']>best['objective']:
                 best=cand
         if best is None:
-            diagnostics.append({'month':test_m,'status':'NO_THRESHOLD','train':len(tr),'cal':len(cal),'candidates':len(te)})
+            diagnostics.append({'month':test_m,'status':'NO_EDGE','train':len(tr),'cal':len(cal),'candidates':len(te)})
             continue
         test_scores=model.predict_proba(te[META_FEATURES])[:,1]
         mask=test_scores>=best['threshold']
@@ -561,7 +563,7 @@ def main():
         'normal':normal,'stress':stress,'matched_control_normal':control_normal,'matched_control_stress':control_stress,
         'gate_diagnostics':diag.to_dict(orient='records'),
         'outer_holdout_opened':False,'outer_holdout':base.OUTER_HOLDOUT,
-        'note':'R14.5 learns whether a raw R14.3 range entry is likely to survive using only earlier executed R14.3 outcomes. Each OOS month is scored by a classifier trained on months before the immediately previous calibration month. The keep threshold is selected only on that prior calibration month. Range targets, trend conversion, invalidation logic and no-minimum-holding behavior remain unchanged.'
+        'note':'R14.5.1 adds a strict calibration veto to R14.5: the following OOS month is enabled only when the immediately previous calibration slice has positive mean net return and PF >= 1.10. The classifier remains trained only on earlier months. All R14.3 trade-management logic stays unchanged.'
     }
     Path('r14_5_result.json').write_text(json.dumps(result,indent=2,default=str))
     Path('r14_5_report.md').write_text('# V10 R14.5 Learned Range Persistence\n\n```json\n'+json.dumps(result,indent=2,default=str)+'\n```\n')
