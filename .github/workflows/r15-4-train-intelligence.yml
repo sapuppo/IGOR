@@ -1,0 +1,36 @@
+name: R15.4 Train Regime Intelligence
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r15-4-train-intelligence.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r15-market-regime-lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy pyarrow scikit-learn lightgbm
+      - name: Download R15.3 processed dataset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35875987226 --repo sapuppo/IGOR -n r15-3-processed-market-structure -D r15_regime_lab/processed
+      - name: Train R15.4 intelligence model
+        run: python r15_regime_lab/run_r15_4_train_intelligence.py
+      - name: Print R15.4 summary
+        run: cat r15_regime_lab/model_r15_4/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r15-4-regime-intelligence
+          path: r15_regime_lab/model_r15_4/
+          retention-days: 30
+          compression-level: 6
