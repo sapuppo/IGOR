@@ -1,0 +1,40 @@
+name: R15.7 Event Economic Backtest
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r15-7-event-backtest.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r15-market-regime-lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy pyarrow lightgbm
+      - name: Download R15.6 event intelligence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35884646939 --repo sapuppo/IGOR -n r15-6-event-intelligence -D r15_regime_lab/model_r15_6
+      - name: Download R15.2 raw candles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Run R15.7 economic backtest
+        run: python r15_regime_lab/run_r15_7_event_backtest.py
+      - name: Print summary
+        run: cat r15_regime_lab/backtest_r15_7/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r15-7-event-economic-backtest
+          path: r15_regime_lab/backtest_r15_7/
+          retention-days: 30
+          compression-level: 6
