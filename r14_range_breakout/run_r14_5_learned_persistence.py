@@ -228,8 +228,8 @@ def signals(r):
         efficiency_quality=max(0.0,1-r.eff16/RANGE_EFF_MAX)
         slope_quality=max(0.0,1-abs(r.range_mid_slope)/MAX_RANGE_SLOPE)
         quality=touch_quality*oscillation_quality*containment_quality*efficiency_quality*slope_quality
-        out['score_long']=quality*max(0,0.5-r.range_pos)*r.range_width*max(long_rr,0)*p_long
-        out['score_short']=quality*max(0,r.range_pos-0.5)*r.range_width*max(short_rr,0)*p_short
+        out['score_long']=quality*max(0,0.5-r.range_pos)*r.range_width*max(long_rr,0)
+        out['score_short']=quality*max(0,r.range_pos-0.5)*r.range_width*max(short_rr,0)
 
     bu=(r.close>r.range_hi+BREAKOUT_ATR*r.atr and r.vol_z>=BREAKOUT_VOL_Z and r.ret4>0 and r.ema20_1h>=r.ema50_1h)
     bd=(r.close<r.range_lo-BREAKOUT_ATR*r.atr and r.vol_z>=BREAKOUT_VOL_Z and r.ret4<0 and r.ema20_1h<=r.ema50_1h)
