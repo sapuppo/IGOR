@@ -1,0 +1,68 @@
+{
+  "version": "R15.4",
+  "status": "success",
+  "run_id": 35877143697,
+  "artifact": {
+    "id": 10759061711,
+    "name": "r15-4-regime-intelligence",
+    "size_in_bytes": 1641934
+  },
+  "model": "LightGBM multiclass + 3 ATR-normalized regression heads",
+  "features": 90,
+  "train_rows_sampled": 1735383,
+  "calib_rows": 336960,
+  "test_rows": 340621,
+  "best_iteration_classifier": 60,
+  "test": {
+    "accuracy": 0.3037276034067189,
+    "balanced_accuracy": 0.2092232831255561,
+    "macro_f1": 0.16025691172594042,
+    "weighted_f1": 0.22252318177523112,
+    "logloss": 1.7436127705404199,
+    "confidence_threshold_from_calib": 0.32500000000000007,
+    "selective_coverage": 0.28761291875721107,
+    "selective_accuracy": 0.3616932232282299,
+    "selective_macro_f1": 0.19696472641219215,
+    "n_selective": 97967
+  },
+  "regression_test": {
+    "y_ret_8h_atr": {
+      "mae": 2.972355817124973,
+      "rmse": 4.107199134137166,
+      "corr": -0.010016951557453807,
+      "best_iteration": 60
+    },
+    "y_mfe_8h_atr": {
+      "mae": 2.110524026093147,
+      "rmse": 3.3105782897242757,
+      "corr": 0.08673523286995746,
+      "best_iteration": 16
+    },
+    "y_mae_8h_atr": {
+      "mae": 1.9627705771291981,
+      "rmse": 2.8772985996624265,
+      "corr": 0.10500177976066355,
+      "best_iteration": 88
+    }
+  },
+  "top_features": [
+    "15m_break_up_atr",
+    "15m_break_dn_atr",
+    "btc_4h_adx14",
+    "15m_dist_high20_atr",
+    "15m_dist_low20_atr",
+    "btc_4h_ret4",
+    "btc_15m_atr_pct",
+    "15m_range_width_atr",
+    "15m_range_pos",
+    "btc_15m_adx14",
+    "15m_compression60",
+    "1h_compression60",
+    "4h_volume_z40",
+    "4h_compression60",
+    "1d_compression60"
+  ],
+  "outer_holdout_opened": false,
+  "outer_holdout_start": "2026-07-01T00:00:00Z",
+  "conclusion": "First predictive baseline learned some class structure but is not strong enough for trading; regression heads show very weak out-of-sample directional signal and require redesign."
+}
