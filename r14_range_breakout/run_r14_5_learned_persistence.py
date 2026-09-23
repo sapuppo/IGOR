@@ -250,6 +250,7 @@ META_FEATURES = [
     'ret12h_against','reward_risk','persistence_manual'
 ]
 
+
 def meta_vector(r, side):
     if side > 0:
         stop=max(float(r.range_lo-RANGE_STOP_ATR*r.atr), float(r.close*(1-RANGE_STOP_MAX_LOSS)))
@@ -260,7 +261,7 @@ def meta_vector(r, side):
         rr=(r.close-r.range_lo)/max(stop-r.close,1e-12)
         rsi_ext=(r.rsi-50.0)/20.0
     lo=max(float(r.touch_lo),0.0); hi=max(float(r.touch_hi),0.0)
-    vals={
+    return {
         'range_width':float(r.range_width),
         'eff16':float(r.eff16),
         'touch_balance':float(min(lo,hi)/max(lo,hi,1.0)),
@@ -286,24 +287,29 @@ def meta_vector(r, side):
         'reward_risk':float(rr),
         'persistence_manual':float(persistence_score(r,side)),
     }
-    return vals
+
 
 def _month(ts):
-    return pd.Timestamp(ts).tz_convert('UTC').to_period('M').strftime('%Y-%m')
+    t=pd.Timestamp(ts)
+    if t.tzinfo is None: t=t.tz_localize('UTC')
+    else: t=t.tz_convert('UTC')
+    return t.strftime('%Y-%m')
+
 
 def collect_raw_candidates(feat):
     rows=[]
-    for s,d in feat.items():
+    for symbol,d in feat.items():
         q=d[(d.index>=START)&(d.index<END_EXCLUSIVE)]
         for t,r in q.iterrows():
             sg=signals(r)
             if sg['range_long']:
-                z=meta_vector(r,1); z.update({'time':t,'symbol':s,'side':1,'month':_month(t)})
+                z=meta_vector(r,1); z.update({'time':t,'symbol':symbol,'side':1,'month':_month(t)})
                 rows.append(z)
             if sg['range_short']:
-                z=meta_vector(r,-1); z.update({'time':t,'symbol':s,'side':-1,'month':_month(t)})
+                z=meta_vector(r,-1); z.update({'time':t,'symbol':symbol,'side':-1,'month':_month(t)})
                 rows.append(z)
     return pd.DataFrame(rows)
+
 
 def build_meta_labels(control, feat):
     rows=[]
@@ -327,45 +333,47 @@ def build_meta_labels(control, feat):
         rows.append(z)
     return pd.DataFrame(rows)
 
+
 def gate_model():
     return HistGradientBoostingClassifier(
         learning_rate=0.045,max_iter=160,max_leaf_nodes=15,min_samples_leaf=24,
         l2_regularization=6.0,random_state=1405
     )
 
+
 def pf_from_returns(x):
     x=np.asarray(x,dtype=float)
     w=x[x>0].sum(); l=-x[x<0].sum()
     return float(w/l) if l>0 else (math.inf if w>0 else 0.0)
 
+
 def build_walkforward_gate(labels, candidates):
     allowed=set(); diagnostics=[]
     months=sorted(set(labels.month)&set(candidates.month))
     for i in range(7,len(months)):
-        test_m=months[i]; cal_m=months[i-1]
-        train_months=months[:i-1]
+        test_m=months[i]; cal_m=months[i-1]; train_months=months[:i-1]
         tr=labels[labels.month.isin(train_months)].copy()
         cal=labels[labels.month==cal_m].copy()
         te=candidates[candidates.month==test_m].copy()
         if len(tr)<450 or len(cal)<25 or te.empty or tr.success.nunique()<2 or cal.success.nunique()<2:
             diagnostics.append({'month':test_m,'status':'SKIP','train':len(tr),'cal':len(cal),'candidates':len(te)})
             continue
-        m=gate_model()
+        model=gate_model()
         y=tr.success.to_numpy(dtype=int)
         n1=max(int((y==1).sum()),1); n0=max(int((y==0).sum()),1)
         sw=np.where(y==1,0.5/n1,0.5/n0)*len(y)
-        m.fit(tr[META_FEATURES],y,sample_weight=sw)
-        cps=m.predict_proba(cal[META_FEATURES])[:,1]
+        model.fit(tr[META_FEATURES],y,sample_weight=sw)
+        cal_scores=model.predict_proba(cal[META_FEATURES])[:,1]
         best=None
-        for keep in (0.25,0.35,0.45,0.55,0.65):
-            thr=float(np.quantile(cps,1.0-keep))
-            mask=cps>=thr
+        # Selectivity is calibrated only on the immediately preceding month.
+        for keep in (0.25,0.35,0.45,0.55,0.65,0.75):
+            thr=float(np.quantile(cal_scores,1.0-keep))
+            mask=cal_scores>=thr
             n=int(mask.sum())
-            if n<max(15,int(0.15*len(cal))): 
-                continue
+            if n<max(15,int(0.15*len(cal))): continue
             rets=cal.loc[mask,'net_return'].to_numpy(dtype=float)
-            pf=pf_from_returns(rets); mean=float(np.mean(rets))
-            precision=float(cal.loc[mask,'success'].mean())
+            pf=pf_from_returns(rets); mean=float(np.mean(rets)); precision=float(cal.loc[mask,'success'].mean())
+            # Reward positive expectancy but discourage tiny calibration samples.
             objective=mean*math.sqrt(n)
             cand={'threshold':thr,'keep_target':keep,'cal_n':n,'cal_pf':pf,'cal_mean':mean,
                   'cal_precision':precision,'objective':objective}
@@ -374,8 +382,8 @@ def build_walkforward_gate(labels, candidates):
         if best is None:
             diagnostics.append({'month':test_m,'status':'NO_THRESHOLD','train':len(tr),'cal':len(cal),'candidates':len(te)})
             continue
-        scores=m.predict_proba(te[META_FEATURES])[:,1]
-        mask=scores>=best['threshold']
+        test_scores=model.predict_proba(te[META_FEATURES])[:,1]
+        mask=test_scores>=best['threshold']
         for row in te.loc[mask,['time','symbol','side']].itertuples(index=False):
             allowed.add((pd.Timestamp(row.time).value,row.symbol,int(row.side)))
         diagnostics.append({
@@ -383,6 +391,7 @@ def build_walkforward_gate(labels, candidates):
             'allowed':int(mask.sum()),'allowed_share':float(mask.mean()),**best
         })
     return allowed,pd.DataFrame(diagnostics)
+
 
 def simulate(feat, one_way_cost, allowed_keys=None, eval_start=START):
     syms=sorted(feat)
@@ -526,21 +535,18 @@ def main():
     feat={s:build_symbol(d15[s],d1[s]) for s in dev}
 
     cp=CONTROL_ROOT/'r14_trades.csv'
-    if not cp.exists():
-        raise FileNotFoundError(cp)
+    if not cp.exists(): raise FileNotFoundError(cp)
     control=pd.read_csv(cp)
     labels=build_meta_labels(control,feat)
     candidates=collect_raw_candidates(feat)
-    labels=labels.dropna(subset=META_FEATURES+['success','net_return'])
-    candidates=candidates.dropna(subset=META_FEATURES)
-    print('META',len(labels),'RAW_CANDIDATES',len(candidates),flush=True)
+    print('META_LABELS',len(labels),'RAW_CANDIDATES',len(candidates),flush=True)
+    if labels.empty or candidates.empty: raise RuntimeError('Empty labels/candidates')
 
     allowed,diag=build_walkforward_gate(labels,candidates)
     valid_diag=diag[diag.status=='OOS'] if not diag.empty else pd.DataFrame()
-    if valid_diag.empty:
-        raise RuntimeError('No valid walk-forward gate months')
-    eval_start=pd.Timestamp(valid_diag.month.iloc[0]+'-01',tz='UTC')
-    print('EVAL_START',eval_start,'ALLOWED',len(allowed),flush=True)
+    if valid_diag.empty: raise RuntimeError('No valid walk-forward gate months')
+    eval_start=pd.Timestamp(str(valid_diag.month.iloc[0])+'-01',tz='UTC')
+    print('EVAL_START',eval_start,'ALLOWED_KEYS',len(allowed),flush=True)
 
     td,cd,normal=simulate(feat,ONE_WAY_COST,allowed_keys=allowed,eval_start=eval_start)
     std,scd,stress=simulate(feat,STRESS_ONE_WAY_COST,allowed_keys=allowed,eval_start=eval_start)
@@ -548,33 +554,24 @@ def main():
     cstd,cscd,control_stress=simulate(feat,STRESS_ONE_WAY_COST,allowed_keys=None,eval_start=eval_start)
 
     result={
-        'version':VERSION,
-        'period':[str(START),str(END_EXCLUSIVE)],
-        'evaluation_start':str(eval_start),
+        'version':VERSION,'period':[str(START),str(END_EXCLUSIVE)],'evaluation_start':str(eval_start),
         'symbols':dev,'symbol_count':len(dev),'skipped':skipped,
         'meta_labels':int(len(labels)),'raw_candidates':int(len(candidates)),
         'gate_months':int((diag.status=='OOS').sum()),'allowed_keys':int(len(allowed)),
-        'normal':normal,'stress':stress,
-        'matched_control_normal':control_normal,'matched_control_stress':control_stress,
+        'normal':normal,'stress':stress,'matched_control_normal':control_normal,'matched_control_stress':control_stress,
         'gate_diagnostics':diag.to_dict(orient='records'),
         'outer_holdout_opened':False,'outer_holdout':base.OUTER_HOLDOUT,
-        'note':'R14.5 learns whether a raw R14.3 range entry is likely to survive using only earlier R14.3 outcomes. Each OOS month is scored by a classifier trained on months before the immediately previous calibration month. The keep threshold is chosen only on that prior calibration month. Range targets, trend conversion, invalidation logic and no-minimum-holding behavior remain unchanged.'
+        'note':'R14.5 learns whether a raw R14.3 range entry is likely to survive using only earlier executed R14.3 outcomes. Each OOS month is scored by a classifier trained on months before the immediately previous calibration month. The keep threshold is selected only on that prior calibration month. Range targets, trend conversion, invalidation logic and no-minimum-holding behavior remain unchanged.'
     }
-
     Path('r14_5_result.json').write_text(json.dumps(result,indent=2,default=str))
     Path('r14_5_report.md').write_text('# V10 R14.5 Learned Range Persistence\n\n```json\n'+json.dumps(result,indent=2,default=str)+'\n```\n')
-    td.to_csv('r14_5_trades.csv',index=False)
-    std.to_csv('r14_5_trades_stress.csv',index=False)
-    ctd.to_csv('r14_5_control_trades.csv',index=False)
-    cstd.to_csv('r14_5_control_trades_stress.csv',index=False)
+    td.to_csv('r14_5_trades.csv',index=False); std.to_csv('r14_5_trades_stress.csv',index=False)
+    ctd.to_csv('r14_5_control_trades.csv',index=False); cstd.to_csv('r14_5_control_trades_stress.csv',index=False)
     labels.to_parquet('r14_5_meta_labels.parquet',index=False,compression='zstd')
     candidates.to_parquet('r14_5_candidates.parquet',index=False,compression='zstd')
     diag.to_csv('r14_5_gate_diagnostics.csv',index=False)
     cd.to_parquet('r14_5_equity.parquet',index=False,compression='zstd')
     scd.to_parquet('r14_5_equity_stress.parquet',index=False,compression='zstd')
-    print('===R14_5_RESULT_JSON===')
-    print(json.dumps(result,separators=(',',':'),default=str))
-    print('===END_R14_5_RESULT_JSON===')
+    print('===R14_5_RESULT_JSON==='); print(json.dumps(result,separators=(',',':'),default=str)); print('===END_R14_5_RESULT_JSON===')
 
-if __name__=='__main__':
-    main()
+if __name__=='__main__': main()
