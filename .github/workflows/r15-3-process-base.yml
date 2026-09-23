@@ -1,0 +1,36 @@
+name: R15.3 Process Market Structure Base
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r15-3-process-base.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r15-market-regime-lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy pyarrow
+      - name: Download R15.2 candle base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Process causal multi-timeframe dataset
+        run: python r15_regime_lab/run_r15_3_process_base.py
+      - name: Print summary
+        run: cat r15_regime_lab/processed/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r15-3-processed-market-structure
+          path: r15_regime_lab/processed/
+          retention-days: 30
+          compression-level: 6
