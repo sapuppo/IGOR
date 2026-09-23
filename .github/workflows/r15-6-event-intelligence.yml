@@ -1,0 +1,40 @@
+name: R15.6 Event Intelligence
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r15-6-event-intelligence.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r15-market-regime-lab
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy pyarrow scikit-learn lightgbm
+      - name: Download R15.3 processed base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35875987226 --repo sapuppo/IGOR -n r15-3-processed-market-structure -D r15_regime_lab/processed
+      - name: Download R15.5.1 technical expansion
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35879912760 --repo sapuppo/IGOR -n r15-5-1-technical-expansion -D r15_regime_lab/technical_expansion
+      - name: Train R15.6 event intelligence
+        run: python r15_regime_lab/run_r15_6_event_intelligence.py
+      - name: Print R15.6 summary
+        run: cat r15_regime_lab/model_r15_6/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r15-6-event-intelligence
+          path: r15_regime_lab/model_r15_6/
+          retention-days: 30
+          compression-level: 6
