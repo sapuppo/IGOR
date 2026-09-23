@@ -79,10 +79,10 @@ def raw(sym):
     return RAW_CACHE[sym]
 
 def one_trade(ev,stop_atr,target_atr,max_bars,cost):
-    x=raw(ev.symbol)
+    x=raw(ev["symbol"])
     # Event candle closes at available_time. Next candle opens at same timestamp.
-    pos=np.searchsorted(x.open_time.to_numpy(),int(ev.available_time))
-    if pos>=len(x) or int(x.open_time.iloc[pos])!=int(ev.available_time):
+    pos=np.searchsorted(x.open_time.to_numpy(),int(ev["available_time"]))
+    if pos>=len(x) or int(x.open_time.iloc[pos])!=int(ev["available_time"]):
         return None
     event_pos=pos-1
     if event_pos<0:return None
@@ -91,7 +91,7 @@ def one_trade(ev,stop_atr,target_atr,max_bars,cost):
     if not np.isfinite(atr_pct) or atr_pct<=0:return None
     atr=event_close*atr_pct
     entry=float(x.open.iloc[pos])
-    direction=int(ev.event_direction)
+    direction=int(ev["event_direction"])
     if direction not in (-1,1):return None
     stop=entry-direction*stop_atr*atr
     target=entry+direction*target_atr*atr
@@ -112,13 +112,13 @@ def one_trade(ev,stop_atr,target_atr,max_bars,cost):
     gross=direction*(exit_px-entry)/entry
     net=gross-2*cost
     return {
-      "symbol":ev.symbol,"event_type":ev.event_type,"direction":direction,
-      "signal_time":int(ev.available_time-BAR_MS),"entry_time":int(x.open_time.iloc[pos]),
+      "symbol":ev["symbol"],"event_type":ev["event_type"],"direction":direction,
+      "signal_time":int(ev["available_time"]-BAR_MS),"entry_time":int(x.open_time.iloc[pos]),
       "exit_time":int(x.open_time.iloc[exit_i])+BAR_MS,
       "entry":entry,"exit":exit_px,"atr_abs":atr,
       "stop_atr":stop_atr,"target_atr":target_atr,"max_bars":max_bars,
       "gross_pct":gross,"cost_pct":2*cost,"net_pct":net,"exit_reason":reason,
-      "p_follow":float(ev.p_follow),"p_failure":float(ev.p_failure),"p_mixed":float(ev.p_mixed)
+      "p_follow":float(ev["p_follow"]),"p_failure":float(ev["p_failure"]),"p_mixed":float(ev["p_mixed"])
     }
 
 def trade_set(events,params,cost,filter_ai=True,long_only=False):
