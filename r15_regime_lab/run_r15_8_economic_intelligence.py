@@ -174,7 +174,7 @@ HEADS={
 
 def mask_for(d,head):
     tgt=HEADS[head]["target"]
-    m=d[tgt].notna().to_numpy()
+    m=d[tgt].notna().to_numpy().copy()
     cond=HEADS[head]["conditional"]
     if cond:m &= d[cond].eq(1).to_numpy()
     return m
