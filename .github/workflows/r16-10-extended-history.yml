@@ -1,0 +1,43 @@
+name: R16.10 Extended History Validation
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-10-extended-history.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Collect official Binance 2021-2023 1h and 4h
+        run: python r16_edge_lab/run_r16_10_collect_pre2024.py --workers 10
+      - name: Download existing 2024-present artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Run frozen extended validation
+        run: python r16_edge_lab/run_r16_10_extended_validation.py
+      - name: Print result
+        run: cat r16_edge_lab/r16_10_extended_validation/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-10-extended-history-results
+          path: r16_edge_lab/r16_10_extended_validation/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-10-pre2024-history
+          path: r16_edge_lab/pre2024_history/
+          retention-days: 90
+          compression-level: 6
