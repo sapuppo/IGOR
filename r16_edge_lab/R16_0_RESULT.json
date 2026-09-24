@@ -1,0 +1,51 @@
+{
+  "version": "R16.0",
+  "status": "success",
+  "run_id": 35946558360,
+  "artifact": {
+    "id": 10787367119,
+    "name": "r16-0-simple-edge-map",
+    "size_in_bytes": 2191709
+  },
+  "conclusion": "R15 reset validated: one simple family shows positive net edge; no ML used.",
+  "passed_strict_gate": [],
+  "best_candidate": {
+    "strategy": "TB4H55",
+    "definition": "4h Donchian 55 breakout + EMA50/EMA200 trend filter + ADX>=25; stop 2.5 ATR; target 5 ATR; max hold 30 bars",
+    "trades": 1760,
+    "gross_avg_pct": 0.006977158221323206,
+    "gross_pf": 1.1839751784906432,
+    "base_avg_net_pct": 0.003777158221323206,
+    "base_pf": 1.0950830934048725,
+    "stress_avg_net_pct": 0.0027771582213232055,
+    "stress_pf": 1.0689256357828307,
+    "positive_quarter_rate": 0.7,
+    "median_quarter_avg": 0.0032540353894392063,
+    "bootstrap_prob_mean_positive": 0.9241666666666667,
+    "max_positive_pnl_symbol_share": 0.10926069418962002,
+    "long": {
+      "trades": 779,
+      "avg_net_pct": 0.007631,
+      "pf": 1.190192
+    },
+    "short": {
+      "trades": 981,
+      "avg_net_pct": 0.000717,
+      "pf": 1.018188
+    },
+    "weak_periods": [
+      "2024Q2",
+      "2025Q1",
+      "2025Q2"
+    ],
+    "strongest_observed_issue": "regime dependence; 2025Q1 average net trade approximately -2.007%"
+  },
+  "interpretation": [
+    "R15 was solving classification before proving a tradable edge.",
+    "Lower-frequency 4h trend breakout is the first family in this project to remain positive after both base and stress costs.",
+    "The edge is diversified across symbols but not stable enough yet to pass the strict bootstrap gate.",
+    "Longs carry most of the edge; shorts add little.",
+    "Next step is robustness, not ML: parameter neighborhood, BTC regime, market breadth, block bootstrap, and portfolio-level overlap."
+  ],
+  "outer_holdout_opened": false
+}
