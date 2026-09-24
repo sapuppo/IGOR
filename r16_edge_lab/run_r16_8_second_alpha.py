@@ -54,7 +54,7 @@ def add_indicators(x):
     x["ret3"]=c.pct_change(3)
     x["ret6"]=c.pct_change(6)
     x["ret24"]=c.pct_change(24)
-    x["ret72"]=c.pct_change(72)
+    x["ret42"]=c.pct_change(42)\n    x["ret72"]=c.pct_change(72)
     x["volz48"]=(v-v.rolling(48,min_periods=36).mean())/v.rolling(48,min_periods=36).std().replace(0,np.nan)
     x["body_pos"]=(c-l)/(h-l).replace(0,np.nan)
     for n in [24,48,72]:
@@ -84,7 +84,7 @@ for sym,z in F4.items():
 breadth4=pd.concat(parts,axis=1).mean(axis=1,skipna=True)
 btc4=F4["BTCUSDT"].set_index("open_time")
 ctx4=pd.DataFrame({"breadth":breadth4})
-ctx4["btc_strict"]=((btc4.close>btc4.ema200)&(btc4.ema50>btc4.ema200)&(btc4.ret24>0)).reindex(ctx4.index).fillna(False)
+ctx4["btc_strict"]=((btc4.close>btc4.ema200)&(btc4.ema50>btc4.ema200)&(btc4.ret42>0)).reindex(ctx4.index).fillna(False)
 
 def simulate_long(z,signal,stop_atr,target_atr,hold,cost,sym):
     rows=[];last_exit=-1
