@@ -34,3 +34,5 @@ jobs:
           name: r16-22-regime-adaptive
           path: r16_edge_lab/r16_22_regime_adaptive/
           retention-days: 90
+
+# dispatch-trigger: 2026-09-24
