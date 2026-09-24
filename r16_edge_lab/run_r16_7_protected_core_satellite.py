@@ -111,7 +111,8 @@ def sleeve_portfolio(d,sat_risk,sat_max,start=None,end=DEV_END):
     if start is not None:x=x[x.entry_time>=start]
     if end is not None:x=x[x.entry_time<end]
     if x.empty:return {"end":START_CAP,"return":0.,"max_dd":0.,"core_acc":0,"sat_acc":0,"rejected":0}
-    x["tier_priority"]=x.tier.map({"CORE":0,"STANDARD":1,"EXPANSION":2}).fillna(9)\n    x=x.sort_values(["entry_time","tier_priority","symbol"]).reset_index(drop=True)
+    x["tier_priority"]=x.tier.map({"CORE":0,"STANDARD":1,"EXPANSION":2}).fillna(9)
+    x=x.sort_values(["entry_time","tier_priority","symbol"]).reset_index(drop=True)
     eq=START_CAP;curve=[eq];uid=0
     core_heap=[];sat_heap=[];core_syms=set();sat_syms=set();core_acc=sat_acc=rej=0
     def settle(heap,syms,until):
