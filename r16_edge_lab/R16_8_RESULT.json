@@ -1,0 +1,35 @@
+{
+  "version": "R16.8",
+  "status": "success",
+  "run_id": 35959317270,
+  "project_target_monthly_return": 0.2,
+  "candidate_count": 16,
+  "economic_pass_count": 0,
+  "complement_pass_count": 0,
+  "selected": null,
+  "best_candidate": {
+    "name": "FLUSH_R7_V20",
+    "family": "FLUSH_REVERSAL",
+    "trades": 372,
+    "base_avg": 0.011010342449759541,
+    "base_pf": 1.4518476728322292,
+    "base_win_rate": 0.47043010752688175,
+    "base_positive_quarter_rate": 0.7,
+    "base_all_years_positive": false,
+    "base_weekly_prob_positive": 0.7658333333333334,
+    "base_active_month_rate": 0.7333333333333333,
+    "base_positive_month_rate": 0.5,
+    "base_weekly_corr_core": 0.11379404419700201,
+    "stress_avg": 0.010010342449759542,
+    "stress_pf": 1.4020710900098483,
+    "stress_all_years_positive": false,
+    "stress_weekly_prob_positive": 0.745
+  },
+  "interpretation": [
+    "No second-alpha candidate is robust enough to combine with CORE yet.",
+    "The flush-reversal family is the strongest lead because it is profitable per trade and weakly correlated with CORE, but consistency is insufficient.",
+    "Short-horizon 1h momentum breakouts are clearly negative after costs and should be discarded.",
+    "The 20% monthly objective remains a project target; current evidence does not support claiming it is achievable with the tested engines."
+  ],
+  "july_august_used": false
+}
