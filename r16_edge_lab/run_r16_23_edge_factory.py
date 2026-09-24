@@ -33,7 +33,20 @@ def met(x):
  "monthly_mean":float(mr.mean()),"monthly_median":float(mr.median()),"positive_month_rate":float((mr>0).mean()),
  "m10":int((mr>=.10).sum()),"m20":int((mr>=.20).sum()),"best":float(mr.max()),"worst":float(mr.min()),
  "positive_quarter_rate":float((qr>0).mean()),"positive_year_rate":float((yr>0).mean()),"yearly":{str(int(k)):float(v) for k,v in yr.items()}}
-B=load("selected_base.csv");S=load("selected_stress.csv")
+try:
+ B=load("selected_base.csv");S=load("selected_stress.csv")
+except FileNotFoundError:
+ # R16.19B had no strict standalone pass, so it intentionally wrote no selected streams.
+ # Rebuild the highest-ranked frozen candidate from its momentum_map using the original
+ # R16.19B implementation; this changes no signal parameter and avoids cherry-picking here.
+ mp=pd.read_csv(find("momentum_map.csv"))
+ best=mp.iloc[0]
+ import importlib.util
+ src=Path("r16_edge_lab/run_r16_19b_cross_momentum.py")
+ spec=importlib.util.spec_from_file_location("r1619b",src); mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+ B=mod.run(int(best.lb),int(best.hold),int(best.k),str(best.regime),float(best.minmom),mod.BASE)
+ S=mod.run(int(best.lb),int(best.hold),int(best.k),str(best.regime),float(best.minmom),mod.STRESS)
+ print("Rebuilt frozen R16.19B candidate:",best["name"],flush=True)
 rows=[];cache={}
 for scale in [.10,.15,.20,.25,.30,.40,.50]:
  for cap in [.03,.05,.075,.10]:
