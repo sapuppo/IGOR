@@ -197,7 +197,7 @@ def main():
     R.to_csv(out/'portfolio_frontier.csv',index=False)
     robust=R[R.robust]
     selected=robust.iloc[0].to_dict() if len(robust) else R.iloc[0].to_dict()
-    b=simulate(CB,RB,float(selected.core_risk),float(selected.rev_risk),int(selected.rev_max))
+    b=simulate(CB,RB,float(selected['core_risk']),float(selected['rev_risk']),int(selected['rev_max']))
     s=simulate(CS,RS,float(selected.core_risk),float(selected.rev_risk),int(selected.rev_max))
     months=pd.period_range('2021-01','2026-06',freq='M').astype(str)
     pd.DataFrame({'month':months,'base_return':b['monthly_returns'],'stress_return':s['monthly_returns']}).to_csv(out/'selected_monthly_returns.csv',index=False)
