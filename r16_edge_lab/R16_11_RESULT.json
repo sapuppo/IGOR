@@ -1,0 +1,43 @@
+{
+  "version": "R16.11",
+  "status": "success",
+  "run_id": 35961453884,
+  "artifact": {
+    "id": 10792910291,
+    "name": "r16-11-bear-short-map",
+    "digest": "sha256:6fa9079528ddde45fc49642ac45411e5e028244b24db18d3b17805a97f79c129"
+  },
+  "period": "2021-01-01..2026-06-30",
+  "variants": 108,
+  "strict_pass_count": 0,
+  "selected": null,
+  "best_observed": {
+    "name": "D40_A20_B35_SOFT_S2.0_T4.0_H30",
+    "trades": 2233,
+    "base_avg": -0.0015852671067273076,
+    "base_pf": 0.9596540688329291,
+    "base_weekly_prob_positive": 0.393,
+    "base_portfolio_return": 0.21001655502103622,
+    "base_portfolio_dd": 0.0964255587111057,
+    "stress_avg": -0.0033351999325222027,
+    "stress_pf": 0.917193366518597,
+    "stress_weekly_prob_positive": 0.279,
+    "stress_portfolio_return": 0.12504093536870098,
+    "stress_portfolio_dd": 0.10566335137839333,
+    "yearly_trade_return_sums": {
+      "2021": -7.930169690290632,
+      "2022": 2.2711294448907267,
+      "2023": 1.4458868277579284,
+      "2024": 0.972803247335106,
+      "2025": -2.9815743203661267,
+      "2026": 2.6820230413509187
+    }
+  },
+  "interpretation": [
+    "The direct downside-breakout mirror of the LONG CORE is not a robust short alpha family.",
+    "The family is strongly positive in 2022 but loses heavily in 2021 and 2025, indicating frequent whipsaw/reversal after downside breakouts.",
+    "Funding and stressed costs make the aggregate economics worse, but the base-cost result is already below PF 1, so costs are not the root cause.",
+    "Do not tune this family further by merely changing Donchian/ADX/breadth thresholds.",
+    "The next short family should target bear-market rally failure / continuation after retracement rather than raw downside breakout."
+  ]
+}
