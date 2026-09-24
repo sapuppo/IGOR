@@ -1,0 +1,26 @@
+{
+  "version": "R16.13",
+  "status": "success",
+  "run_id": 35962884222,
+  "artifact": {
+    "id": 10792848161,
+    "name": "r16-13-failed-recovery-regime",
+    "digest": "sha256:1ec451eb54902618d9c0fc9057c302fa1e5a70ce2ac8ffb205fea9086a6cb1e5"
+  },
+  "strict_pass_count": 0,
+  "raw_failed_recovery": {
+    "trades": 159,
+    "pf": 1.241414627873998,
+    "stress_pf": 1.182999366454518,
+    "weekly_bootstrap": 0.8184
+  },
+  "best_regime_gate": {
+    "name": "G4_R0_B45_SN_C5",
+    "trades": 32,
+    "pf": 1.479406809646332,
+    "stress_pf": 1.4140452232637173,
+    "weekly_bootstrap": 0.8124
+  },
+  "conclusion": "Regime gating improves per-trade PF only by collapsing sample size; FAILED_RECOVERY is not promoted.",
+  "next_step": "Move to independent 1h extreme-reversion pair engine."
+}
