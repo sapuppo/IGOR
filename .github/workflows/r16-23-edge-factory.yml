@@ -36,3 +36,5 @@ jobs:
 # trigger 2026-09-24T12:00-03
 
 # retrigger after frozen-candidate fallback fix 2026-09-24
+
+# retrigger import-safe fix
