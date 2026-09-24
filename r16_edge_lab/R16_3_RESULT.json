@@ -1,0 +1,72 @@
+{
+  "version": "R16.3",
+  "status": "success",
+  "run_id": 35957266409,
+  "artifact": {
+    "id": 10790444389,
+    "name": "r16-3-meta-filter",
+    "size_in_bytes": 200079
+  },
+  "baseline": "D55_A30_LONG_BREADTH + S2_T6_H30",
+  "rows": {
+    "TRAIN": 419,
+    "CALIB": 17,
+    "TEST": 43
+  },
+  "model_diagnostics": {
+    "calib": {
+      "classifier_roc_auc": 0.65,
+      "classifier_pr_auc": 0.45977591036414567,
+      "reg_spearman": -0.002450980392156863
+    },
+    "test": {
+      "classifier_roc_auc": 0.3911111111111111,
+      "classifier_pr_auc": 0.38220468946023645,
+      "reg_spearman": 0.04469948655995167
+    }
+  },
+  "calib_baseline": {
+    "trades": 17,
+    "avg": 0.0030415894543035886,
+    "pf": 1.1046287116725362,
+    "win_rate": 0.29411764705882354
+  },
+  "filter_active": false,
+  "test": {
+    "baseline_trade_metrics": {
+      "trades": 43,
+      "avg": 0.009229440515754339,
+      "pf": 1.3129711576573293,
+      "win_rate": 0.4186046511627907
+    },
+    "baseline_portfolio": {
+      "end": 10058.468043190149,
+      "return": 0.005846804319014964,
+      "max_dd": 0.018096354137694504,
+      "accepted": 25,
+      "rejected": 18
+    },
+    "stress_trade_metrics": {
+      "trades": 43,
+      "avg": 0.00822944051575434,
+      "pf": 1.2736657023057727,
+      "win_rate": 0.4186046511627907
+    },
+    "stress_portfolio": {
+      "end": 10042.118098583269,
+      "return": 0.004211809858326809,
+      "max_dd": 0.018781471210924106,
+      "accepted": 25,
+      "rejected": 18
+    }
+  },
+  "interpretation": [
+    "The meta-model does not add reliable out-of-sample economic information.",
+    "CALIB selected 100% coverage, meaning the best calibrated action was to keep every baseline trade.",
+    "TEST classifier ROC AUC fell below random and regressor rank correlation with returns was near zero.",
+    "R16.3 is rejected as an active trading layer. The deterministic R16.2 baseline remains the champion.",
+    "Next step should focus on deterministic robustness / walk-forward / transaction-model validation rather than more ML.",
+    "Outer holdout remains sealed."
+  ],
+  "outer_holdout_opened": false
+}
