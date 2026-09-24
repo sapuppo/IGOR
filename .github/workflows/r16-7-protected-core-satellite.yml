@@ -1,0 +1,35 @@
+name: R16.7 Protected Core Satellite
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-7-protected-core-satellite.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  protected:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Download R15.2 raw candles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Run R16.7 protected core satellite
+        run: python r16_edge_lab/run_r16_7_protected_core_satellite.py
+      - name: Print summary
+        run: cat r16_edge_lab/r16_7_protected_core_satellite/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-7-protected-core-satellite
+          path: r16_edge_lab/r16_7_protected_core_satellite/
+          retention-days: 30
