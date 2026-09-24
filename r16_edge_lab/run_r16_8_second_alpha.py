@@ -135,8 +135,8 @@ def family_trades(spec,cost):
         elif fam=="PULLBACK_CONT":
             adx=spec["adx"]
             # strong trend, prior 24h positive, price pulls to EMA20 then reclaims previous high
-            sig=(z.ema20>z.ema100)&(z.ret24>=spec["mom24"])&(z.adx>=adx)&
-                (z.low<=z.ema20*(1+spec["touch"]))&(c>z.ema20)&(c>z.high.shift(1))
+            sig=((z.ema20>z.ema100)&(z.ret24>=spec["mom24"])&(z.adx>=adx)&
+                 (z.low<=z.ema20*(1+spec["touch"]))&(c>z.ema20)&(c>z.high.shift(1)))
         elif fam=="FLUSH_REVERSAL":
             sig=(z.ret6<=spec["ret6"])&(z.volz48>=spec["volz"])&(z.rsi14<=spec["rsi"])&(z.body_pos>=spec["body"])
         else:
