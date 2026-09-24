@@ -1,0 +1,34 @@
+name: R16.24.2 Portfolio Integration
+"on":
+  push: {branches: [master], paths: [".github/workflows/r16-24-2-portfolio.yml"]}
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: mkdir -p r16_edge_lab/r16_242_inputs/{r241,core,rev1h,rev15m,pre2024,pre2024_15m,post}
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 36046951668 --repo sapuppo/IGOR -n r16-24-1-risk-normalized -D r16_edge_lab/r16_242_inputs/r241
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-extended-history-results -D r16_edge_lab/r16_241_inputs/core
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963085634 --repo sapuppo/IGOR -n r16-14-extreme-reversion -D r16_edge_lab/r16_241_inputs/rev1h
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-intraday-reversion -D r16_edge_lab/r16_241_inputs/rev15m
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-pre2024-history -D r16_edge_lab/r16_241_inputs/pre2024
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-pre2024-15m -D r16_edge_lab/r16_241_inputs/pre2024_15m
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r16_edge_lab/r16_241_inputs/post
+      - run: python r16_edge_lab/run_r16_24_2_portfolio.py
+      - run: cat r16_edge_lab/r16_24_2_portfolio/summary.json
+      - uses: actions/upload-artifact@v4
+        with: {name: r16-24-2-portfolio, path: r16_edge_lab/r16_24_2_portfolio/, retention-days: 90}
