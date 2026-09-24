@@ -1,0 +1,45 @@
+{
+  "version": "R16.7",
+  "status": "success",
+  "run_id": 35958735362,
+  "artifact": {
+    "id": 10791741640,
+    "name": "r16-7-protected-core-satellite",
+    "size_in_bytes": 1594
+  },
+  "core_baseline": {
+    "base_return": 0.18406028580423528,
+    "base_dd": 0.041493554406167865,
+    "stress_return": 0.16896220050837263,
+    "stress_dd": 0.04256965531746537,
+    "core_accepted": 251
+  },
+  "selected_satellite": {
+    "risk_per_trade": 0.0005,
+    "max_positions": 1,
+    "base_return": 0.18875631348082167,
+    "base_dd": 0.046567905705642065,
+    "stress_return": 0.1725153778424664,
+    "stress_dd": 0.04776640071530602,
+    "core_accepted": 251,
+    "satellite_accepted": 79
+  },
+  "aggressive_satellite_reference": {
+    "risk_per_trade": 0.001,
+    "max_positions": 1,
+    "base_return": 0.1934131772330976,
+    "base_dd": 0.05161804086630695,
+    "stress_return": 0.17602242617678066,
+    "stress_dd": 0.05306048219961912
+  },
+  "consumed_diagnostics": {
+    "july_return": -0.0016397243983706788,
+    "august_return": 0.0249791875909553
+  },
+  "interpretation": [
+    "True CORE protection was enforced at signal generation and portfolio allocation.",
+    "A small satellite adds modest return without materially damaging drawdown.",
+    "The gain from relaxing the same breakout family is marginal, so further large return expansion should come from a genuinely independent alpha family rather than increasingly weaker versions of the same signal.",
+    "July and August remain consumed diagnostics and were not used for selection."
+  ]
+}
