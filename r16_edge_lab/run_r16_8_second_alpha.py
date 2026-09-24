@@ -54,7 +54,8 @@ def add_indicators(x):
     x["ret3"]=c.pct_change(3)
     x["ret6"]=c.pct_change(6)
     x["ret24"]=c.pct_change(24)
-    x["ret42"]=c.pct_change(42)\n    x["ret72"]=c.pct_change(72)
+    x["ret42"]=c.pct_change(42)
+    x["ret72"]=c.pct_change(72)
     x["volz48"]=(v-v.rolling(48,min_periods=36).mean())/v.rolling(48,min_periods=36).std().replace(0,np.nan)
     x["body_pos"]=(c-l)/(h-l).replace(0,np.nan)
     for n in [24,48,72]:
