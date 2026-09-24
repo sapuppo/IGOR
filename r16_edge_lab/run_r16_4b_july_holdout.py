@@ -130,7 +130,7 @@ def pf(a):
     return float(gp/gl) if gl>0 else None
 
 def portfolio(t):
-    if t.empty:return {"start":START_CAP,"end":START_CAP,"return":0.0,"max_dd":0.0,"accepted":0,"rejected":0}
+    if t.empty:return {"start":START_CAP,"end":START_CAP,"return":0.0,"max_dd":0.0,"accepted":0,"rejected":0},pd.DataFrame()
     t=t.sort_values(["entry_time","symbol"]).reset_index(drop=True)
     eq=START_CAP;heap=[];active=set();curve=[eq];uid=0;accepted=[];rejected=0
     def settle(until):
