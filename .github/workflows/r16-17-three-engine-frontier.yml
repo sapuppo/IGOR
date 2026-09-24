@@ -1,0 +1,43 @@
+name: R16.17 Three Engine Frontier
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-17-three-engine-frontier.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  frontier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Download CORE trades
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-extended-history-results -D r16_edge_lab/r16_17_inputs/core
+      - name: Download 1h reversion trades
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35963085634 --repo sapuppo/IGOR -n r16-14-extreme-reversion -D r16_edge_lab/r16_17_inputs/rev1h
+      - name: Download 15m reversion trades
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35963816098 --repo sapuppo/IGOR -n r16-16-intraday-15m -D r16_edge_lab/r16_17_inputs/rev15m
+      - name: Run R16.17
+        run: python r16_edge_lab/run_r16_17_three_engine_frontier.py
+      - name: Print summary
+        run: cat r16_edge_lab/r16_17_three_engine_frontier/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-17-three-engine-frontier
+          path: r16_edge_lab/r16_17_three_engine_frontier/
+          retention-days: 90
