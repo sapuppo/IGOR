@@ -1,0 +1,38 @@
+{
+  "version": "R16.17",
+  "status": "success",
+  "run_id": 35964280215,
+  "artifact": {
+    "id": 10793701518,
+    "name": "r16-17-three-engine-frontier"
+  },
+  "selected": {
+    "core_risk": 0.0075,
+    "rev1h_risk": 0.01,
+    "rev15m_risk": 0.015,
+    "rev15m_max": 5,
+    "global_gross_cap": 1
+  },
+  "base": {
+    "end": 124342.78692147008,
+    "return": 11.434278692147007,
+    "dd": 0.24541402174474447,
+    "monthly_mean": 0.04205582497608354,
+    "monthly_median": 0.020472641106297818,
+    "positive_month_rate": 0.6363636363636364,
+    "months_ge_20": 5,
+    "best_month": 0.2960454606383005,
+    "worst_month": -0.0927098101160253
+  },
+  "stress": {
+    "end": 101365.82973120212,
+    "return": 9.13658297312021,
+    "dd": 0.25394408760841036,
+    "monthly_mean": 0.03876311408885054,
+    "monthly_median": 0.01684902720563243,
+    "positive_month_rate": 0.6363636363636364,
+    "months_ge_20": 4,
+    "best_month": 0.28483863470575477,
+    "worst_month": -0.0945650669969332
+  }
+}
