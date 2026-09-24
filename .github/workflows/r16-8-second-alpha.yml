@@ -33,3 +33,4 @@ jobs:
           name: r16-8-second-alpha
           path: r16_edge_lab/r16_8_second_alpha/
           retention-days: 30
+# rerun after syntax fix
