@@ -1,0 +1,36 @@
+name: R16.22 Regime Adaptive Portfolio
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-22-regime-adaptive.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  adaptive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - run: mkdir -p r16_edge_lab/r16_22_inputs/core r16_edge_lab/r16_22_inputs/rev1h r16_edge_lab/r16_22_inputs/rev15m
+      - run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-extended-history-results -D r16_edge_lab/r16_22_inputs/core
+        env: { GH_TOKEN: ${{ github.token }} }
+      - run: gh run download 35963085634 --repo sapuppo/IGOR -n r16-14-extreme-reversion -D r16_edge_lab/r16_22_inputs/rev1h
+        env: { GH_TOKEN: ${{ github.token }} }
+      - run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-intraday-reversion -D r16_edge_lab/r16_22_inputs/rev15m
+        env: { GH_TOKEN: ${{ github.token }} }
+      - run: python r16_edge_lab/run_r16_22_regime_adaptive.py
+      - run: cat r16_edge_lab/r16_22_regime_adaptive/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-22-regime-adaptive
+          path: r16_edge_lab/r16_22_regime_adaptive/
+          retention-days: 90
