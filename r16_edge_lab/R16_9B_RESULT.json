@@ -1,0 +1,41 @@
+{
+  "version": "R16.9B",
+  "status": "success",
+  "run_id": 35960197245,
+  "artifact": {
+    "id": 10791619481,
+    "name": "r16-9b-flush-cluster-control",
+    "digest": "sha256:d9a7a07cbf301e194359ec10d794061225df337dc524e39d9f756697e79c76c3"
+  },
+  "fixed_flush": "D9_R60",
+  "cluster_candidates": 27,
+  "strict_pass_count": 0,
+  "best_candidate": {
+    "name": "H6_N3_SEVERITY",
+    "trades": 75,
+    "base_avg": 0.021026065781016116,
+    "base_pf": 1.8482318939863267,
+    "base_win_rate": 0.5066666666666667,
+    "base_positive_quarter_rate": 0.8888888888888888,
+    "base_all_years_positive": true,
+    "base_weekly_prob_positive": 0.9733333333333334,
+    "base_positive_month_rate": 0.6111111111111112,
+    "stress_avg": 0.02002606578101612,
+    "stress_pf": 1.7921250875042325,
+    "stress_weekly_prob_positive": 0.966,
+    "max_positive_symbol_share": 0.15026478291022605
+  },
+  "near_pass_candidate": {
+    "name": "H1_N3_SEVERITY",
+    "trades": 91,
+    "base_avg": 0.01797605802186917,
+    "base_pf": 1.7223380060036029,
+    "base_all_years_positive": true,
+    "base_positive_quarter_rate": 0.8888888888888888,
+    "base_weekly_prob_positive": 0.9586666666666667,
+    "stress_pf": 1.668863756305819,
+    "stress_weekly_prob_positive": 0.9526666666666667
+  },
+  "reason_not_promoted": "Predeclared minimum sample was 100 trades; best cluster-controlled candidates had fewer than 100. Threshold was not relaxed post hoc.",
+  "next_step": "Extend historical sample before changing any rule."
+}
