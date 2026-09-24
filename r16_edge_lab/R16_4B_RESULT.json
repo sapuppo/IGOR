@@ -1,0 +1,47 @@
+{
+  "version": "R16.4B",
+  "status": "success",
+  "run_id": 35957832465,
+  "artifact": {
+    "id": 10791725205,
+    "name": "r16-4b-july-holdout",
+    "size_in_bytes": 791
+  },
+  "test_type": "one-shot July 2026 calendar holdout",
+  "period": "2026-07-01..2026-07-31 UTC",
+  "frozen_strategy": "D55_A30_LONG_BREADTH + S2_T6_H30",
+  "portfolio": {
+    "risk_per_trade": 0.0025,
+    "max_positions": 5,
+    "notional_cap": 0.25
+  },
+  "base": {
+    "signals": 0,
+    "start": 10000,
+    "end": 10000,
+    "return": 0,
+    "max_dd": 0,
+    "accepted": 0,
+    "rejected": 0
+  },
+  "stress": {
+    "signals": 0,
+    "start": 10000,
+    "end": 10000,
+    "return": 0,
+    "max_dd": 0,
+    "accepted": 0,
+    "rejected": 0
+  },
+  "interpretation": [
+    "No July trade passed the fully frozen breakout + ADX + BTC-up + breadth gate.",
+    "The strategy correctly remained flat rather than forcing exposure in an unfavorable regime.",
+    "This is economically neutral for July but highlights that the strategy can have inactive months.",
+    "August 2026 subsequently produced +2.75% base return under the same frozen rules."
+  ],
+  "holdout_status": {
+    "july_consumed": true,
+    "august_consumed": true,
+    "september_consumed": false
+  }
+}
