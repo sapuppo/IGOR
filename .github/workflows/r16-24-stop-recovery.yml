@@ -1,0 +1,47 @@
+name: R16.24 Stop Recovery Map
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-24-stop-recovery.yml"]
+  workflow_dispatch: {}
+permissions:
+  actions: read
+  contents: read
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - run: mkdir -p r16_edge_lab/r16_24_inputs/{core,rev1h,rev15m,pre2024,pre2024_15m,post}
+      - name: Frozen CORE trades
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-extended-history-results -D r16_edge_lab/r16_24_inputs/core
+      - name: Frozen REV1H trades
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963085634 --repo sapuppo/IGOR -n r16-14-extreme-reversion -D r16_edge_lab/r16_24_inputs/rev1h
+      - name: Frozen REV15M trades
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-intraday-reversion -D r16_edge_lab/r16_24_inputs/rev15m
+      - name: 2021-2023 1h/4h history
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-pre2024-history -D r16_edge_lab/r16_24_inputs/pre2024
+      - name: 2021-2023 15m history
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-pre2024-15m -D r16_edge_lab/r16_24_inputs/pre2024_15m
+      - name: 2024-present history
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r16_edge_lab/r16_24_inputs/post
+      - run: python r16_edge_lab/run_r16_24_stop_recovery.py
+      - run: cat r16_edge_lab/r16_24_stop_recovery/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-24-stop-recovery
+          path: r16_edge_lab/r16_24_stop_recovery/
+          retention-days: 90
