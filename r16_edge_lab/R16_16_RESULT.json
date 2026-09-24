@@ -1,0 +1,18 @@
+{
+  "version": "R16.16",
+  "status": "success",
+  "run_id": 35963816098,
+  "selected_long": {
+    "name": "LONG_L16_M8_V20_B60_G1_C3",
+    "trades": 512,
+    "avg": 0.01550505866867534,
+    "pf": 1.7381386525085702,
+    "stress_pf": 1.6738656446065008,
+    "weekly_bootstrap": 1,
+    "stress_bootstrap": 1,
+    "portfolio_return": 0.34387512806181597,
+    "portfolio_dd": 0.062020466483198144
+  },
+  "selected_short": null,
+  "strict_pass_count": 9
+}
