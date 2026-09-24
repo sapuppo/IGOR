@@ -1,0 +1,54 @@
+{
+  "version": "R16.12",
+  "status": "success",
+  "run_id": 35962105962,
+  "artifact": {
+    "id": 10792457406,
+    "name": "r16-12-bear-rally-fade",
+    "digest": "sha256:03d3e069b2249a54420f711a422969a355a65fe7f9d87966ae89e4d3c985bd39"
+  },
+  "period": "2021-01-01..2026-06-30",
+  "variants": 160,
+  "strict_pass_count": 0,
+  "rally_fade_best": {
+    "name": "RF_L12_R4_EMA50_A24_B35_SOFT_S1.5_T3.0_H24",
+    "trades": 647,
+    "base_avg": -0.0009606977265484599,
+    "base_pf": 0.9680537629886682,
+    "base_weekly_prob_positive": 0.4235,
+    "stress_avg": -0.0026147935534418148,
+    "stress_pf": 0.9155262759443892,
+    "year_2022": -1.796806089054861,
+    "portfolio_return": 0.007810712853760338,
+    "portfolio_dd": 0.15250679016607682
+  },
+  "failed_recovery_best": {
+    "name": "FR_D40_A24_B45_STRICT_S2.0_T4.0_H30",
+    "trades": 159,
+    "base_avg": 0.0083086216603438,
+    "base_pf": 1.241414627873998,
+    "base_win_rate": 0.44654088050314467,
+    "base_weekly_prob_positive": 0.818,
+    "stress_avg": 0.006463338641475873,
+    "stress_pf": 1.182999366454518,
+    "stress_weekly_prob_positive": 0.7555,
+    "positive_active_quarter_rate": 0.6363636363636364,
+    "yearly_trade_return_sums": {
+      "2021": 0.2414558517017273,
+      "2022": 0.1449566967212366,
+      "2023": -0.1375407192346657,
+      "2024": -1.0869036107484555,
+      "2025": 1.6812286397687988,
+      "2026": 0.4778739857860227
+    },
+    "portfolio_return": 0.04870081798082526,
+    "portfolio_dd": 0.05244919444623575
+  },
+  "interpretation": [
+    "RALLY_FADE is structurally weak and should be discarded.",
+    "FAILED_RECOVERY is the only promising short family, with positive aggregate expectancy and PF above 1, but it is not robust enough.",
+    "FAILED_RECOVERY performs positively in 2021, 2022, 2025 and 2026 but loses in 2023 and especially 2024.",
+    "Bootstrap confidence is too low for deployment.",
+    "The next short research step should focus on regime-specific gating of FAILED_RECOVERY rather than further tuning raw rally-fade geometry."
+  ]
+}
