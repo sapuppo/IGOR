@@ -104,24 +104,26 @@ def met(x):
             'best_month':float(mr.max()),'worst_month':float(mr.min()),'max_dd':float(-dd.min()),'total_return':float(eq[-1]-1),
             'yearly':{str(int(k)):float(v) for k,v in yr.items()}}
 
-rows=[];cache={}
-for lb in [24,72,168]:
- for hold in [12,24,48]:
-  for k in [1,3,5]:
-   for reg in ['ALL','BTC_BULL','BREADTH_BULL']:
-    for mm in [0.,.02]:
-     name=f'MOM_L{lb}_H{hold}_K{k}_{reg}_M{int(mm*100)}'
-     b=run(lb,hold,k,reg,mm,BASE);s=run(lb,hold,k,reg,mm,STRESS);mb=met(b);ms=met(s)
-     passed=bool(mb.get('periods',0)>=100 and mb.get('pf',0)>=1.10 and ms.get('pf',0)>=1.05 and mb.get('bootstrap',0)>=.95 and
-                 mb.get('positive_year_rate',0)>=.80 and mb.get('positive_quarter_rate',0)>=.65 and ms.get('total_return',0)>0 and ms.get('max_dd',1)<=.35)
-     rows.append({'name':name,'lb':lb,'hold':hold,'k':k,'regime':reg,'minmom':mm,
-                  **{f'base_{a}':v for a,v in mb.items()},**{f'stress_{a}':v for a,v in ms.items()},'passes_gate':passed})
-     cache[name]=(b,s)
-R=pd.DataFrame(rows);R['score']=R.passes_gate.astype(int)*1000+R.base_bootstrap.fillna(0)*100+R.stress_pf.fillna(0)*10+R.base_positive_year_rate.fillna(0)
-R=R.sort_values(['passes_gate','score','stress_monthly_mean'],ascending=[False,False,False]);R.to_csv(OUT/'momentum_map.csv',index=False)
-p=R[R.passes_gate];sel=p.iloc[0].to_dict() if len(p) else None
-if sel:
-    b,s=cache[sel['name']];b.to_csv(OUT/'selected_base.csv',index=False);s.to_csv(OUT/'selected_stress.csv',index=False)
-summary={'version':'R16.19B','period':'2021-01-01..2026-06-30','variants':int(len(R)),'strict_pass_count':int(R.passes_gate.sum()),'selected':sel,'top10':R.head(10).to_dict('records'),
-         'notes':['No leverage.','No overlapping vintages.','Next-open causal execution.','September 2026 untouched.']}
-(OUT/'summary.json').write_text(json.dumps(summary,indent=2,default=float),encoding='utf-8');print(json.dumps(summary,indent=2,default=float),flush=True)
+if __name__ == '__main__':
+    rows=[];cache={}
+    for lb in [24,72,168]:
+     for hold in [12,24,48]:
+      for k in [1,3,5]:
+       for reg in ['ALL','BTC_BULL','BREADTH_BULL']:
+        for mm in [0.,.02]:
+         name=f'MOM_L{lb}_H{hold}_K{k}_{reg}_M{int(mm*100)}'
+         b=run(lb,hold,k,reg,mm,BASE);s=run(lb,hold,k,reg,mm,STRESS);mb=met(b);ms=met(s)
+         passed=bool(mb.get('periods',0)>=100 and mb.get('pf',0)>=1.10 and ms.get('pf',0)>=1.05 and mb.get('bootstrap',0)>=.95 and
+                     mb.get('positive_year_rate',0)>=.80 and mb.get('positive_quarter_rate',0)>=.65 and ms.get('total_return',0)>0 and ms.get('max_dd',1)<=.35)
+         rows.append({'name':name,'lb':lb,'hold':hold,'k':k,'regime':reg,'minmom':mm,
+                      **{f'base_{a}':v for a,v in mb.items()},**{f'stress_{a}':v for a,v in ms.items()},'passes_gate':passed})
+         cache[name]=(b,s)
+    R=pd.DataFrame(rows);R['score']=R.passes_gate.astype(int)*1000+R.base_bootstrap.fillna(0)*100+R.stress_pf.fillna(0)*10+R.base_positive_year_rate.fillna(0)
+    R=R.sort_values(['passes_gate','score','stress_monthly_mean'],ascending=[False,False,False]);R.to_csv(OUT/'momentum_map.csv',index=False)
+    p=R[R.passes_gate];sel=p.iloc[0].to_dict() if len(p) else None
+    if sel:
+        b,s=cache[sel['name']];b.to_csv(OUT/'selected_base.csv',index=False);s.to_csv(OUT/'selected_stress.csv',index=False)
+    summary={'version':'R16.19B','period':'2021-01-01..2026-06-30','variants':int(len(R)),'strict_pass_count':int(R.passes_gate.sum()),'selected':sel,'top10':R.head(10).to_dict('records'),
+             'notes':['No leverage.','No overlapping vintages.','Next-open causal execution.','September 2026 untouched.']}
+    (OUT/'summary.json').write_text(json.dumps(summary,indent=2,default=float),encoding='utf-8');print(json.dumps(summary,indent=2,default=float),flush=True)
+    
