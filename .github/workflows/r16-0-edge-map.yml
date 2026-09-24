@@ -1,0 +1,36 @@
+name: R16.0 Simple Edge Map
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-0-edge-map.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  edge-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy pyarrow
+      - name: Download R15.2 raw candles
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Run R16.0 simple edge map
+        run: python r16_edge_lab/run_r16_0_edge_map.py
+      - name: Print summary
+        run: cat r16_edge_lab/r16_0_edge_map/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-0-simple-edge-map
+          path: r16_edge_lab/r16_0_edge_map/
+          retention-days: 30
+          compression-level: 6
