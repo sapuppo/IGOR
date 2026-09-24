@@ -16,7 +16,7 @@ Frozen R16.2 champion:
 - 25% notional cap
 
 Calendar test:
-- fresh start 2026-08-01 00:00 UTC
+- fresh start 2026-07-01 00:00 UTC
 - no carry-in positions
 - only signals inside July
 - any position still open at month end is liquidated at final July 4h close
@@ -30,7 +30,7 @@ import numpy as np
 import pandas as pd
 
 ROOT=Path("r15_regime_lab/history/4h")
-OUT=Path("r16_edge_lab/r16_4a_july_holdout")
+OUT=Path("r16_edge_lab/r16_4b_july_holdout")
 OUT.mkdir(parents=True,exist_ok=True)
 
 START=int(pd.Timestamp("2026-07-01T00:00:00Z").timestamp()*1000)
