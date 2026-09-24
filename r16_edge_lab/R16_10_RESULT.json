@@ -1,0 +1,95 @@
+{
+  "version": "R16.10",
+  "status": "success",
+  "run_id": 35960805987,
+  "period": "2021-01-01..2026-06-30",
+  "artifacts": {
+    "results": {
+      "id": 10792510909,
+      "name": "r16-10-extended-history-results",
+      "digest": "sha256:5d8c2c8566dabf0f7a5bdd365b00e6a2cdcd1ff824299d4ae03b30e9375791bc"
+    },
+    "pre2024_history": {
+      "id": 10792187432,
+      "name": "r16-10-pre2024-history",
+      "digest": "sha256:141344a4f3410468c1376730a89f94dff75ab4e48fb2512404336a0caf9f1bda"
+    }
+  },
+  "core": {
+    "trades": 1002,
+    "base_avg": 0.016417817376164778,
+    "base_pf": 1.4119144039374838,
+    "base_weekly_bootstrap": 0.9976666666666667,
+    "base_positive_quarter_rate": 0.6818181818181818,
+    "all_years_positive": false,
+    "yearly_trade_return_sums": {
+      "2021": 6.1798437239706105,
+      "2022": -1.6398699823671996,
+      "2023": 2.783659666487275,
+      "2024": 7.519048625770823,
+      "2025": 1.1593980141550024,
+      "2026": 0.44857296290059756
+    },
+    "portfolio": {
+      "start": 10000,
+      "end": 14269.746288696917,
+      "return": 0.4269746288696916,
+      "max_dd": 0.050048293873025784
+    }
+  },
+  "h6": {
+    "rule": "D9_R60 + 6h cluster + max3 + severity ranking",
+    "trades": 187,
+    "base_avg": 0.00905055339558858,
+    "base_pf": 1.2982862716330368,
+    "base_weekly_bootstrap": 0.912,
+    "base_positive_quarter_rate": 0.6842105263157895,
+    "all_years_positive": false,
+    "weekly_corr_core": 0.39939838645365655,
+    "stress_avg": 0.008050553395588578,
+    "stress_pf": 1.2606429060518285,
+    "stress_weekly_bootstrap": 0.8813333333333333,
+    "yearly_trade_return_sums": {
+      "2021": 0.022874641206667046,
+      "2022": -0.17377791728589675,
+      "2023": 0.26651170788395273,
+      "2024": 0.7676511863477623,
+      "2025": 0.4245425271231955,
+      "2026": 0.38465133969938337
+    },
+    "passes_frozen_gate": false
+  },
+  "h1": {
+    "rule": "D9_R60 + 1h cluster + max3 + severity ranking",
+    "trades": 221,
+    "base_avg": 0.0067410699499615735,
+    "base_pf": 1.2145709270251386,
+    "base_weekly_bootstrap": 0.859,
+    "base_positive_quarter_rate": 0.631578947368421,
+    "all_years_positive": false,
+    "weekly_corr_core": 0.44203103674876293,
+    "stress_pf": 1.1796103707785484,
+    "passes_frozen_gate": false
+  },
+  "fixed_portfolio_scenario": {
+    "flush_risk_per_trade": 0.001,
+    "max_flush_positions": 2,
+    "core_plus_h6": {
+      "end": 14418.479409786532,
+      "return": 0.4418479409786533,
+      "max_dd": 0.05276510941419643
+    },
+    "core_plus_h1": {
+      "end": 14402.267374364215,
+      "return": 0.4402267374364215,
+      "max_dd": 0.05276510941419699
+    }
+  },
+  "interpretation": [
+    "The promising 2024-2026 FLUSH cluster behavior is regime-dependent and does not fully generalize to 2021-2023.",
+    "H6 remains positive in aggregate with PF above 1.25 but fails frozen robustness due 2022 losses, quarter consistency and stress bootstrap below threshold.",
+    "H1 is weaker and should be discarded.",
+    "The frozen CORE itself is profitable in aggregate but also has a negative 2022 trade-return sum, so it is not regime-invariant.",
+    "A next engine should explicitly address bear/downtrend regimes rather than further tuning long-only signals."
+  ]
+}
