@@ -1,0 +1,92 @@
+{
+  "version": "R15.8",
+  "status": "success",
+  "run_id": 35901558865,
+  "artifact": {
+    "id": 10769418207,
+    "name": "r15-8-economic-trade-intelligence",
+    "size_in_bytes": 100574958
+  },
+  "data": {
+    "features": 299,
+    "train_events": 73766,
+    "calib_events": 9463,
+    "test_events": 9605
+  },
+  "heads_test": {
+    "hit05": {
+      "roc_auc": 0.5075015472562776,
+      "pr_auc": 0.6492854231243848,
+      "positive_rate": 0.6434148880791255
+    },
+    "hit10": {
+      "roc_auc": 0.5055659159872378,
+      "pr_auc": 0.49128930667057674,
+      "positive_rate": 0.4888079125455492
+    },
+    "hit15": {
+      "roc_auc": 0.507294926994471,
+      "pr_auc": 0.39137834689468454,
+      "positive_rate": 0.39021343050494534
+    },
+    "giveback05": {
+      "roc_auc": 0.5047642871954003,
+      "pr_auc": 0.5456606213347407,
+      "positive_rate": 0.5402912621359224
+    },
+    "extend10": {
+      "roc_auc": 0.5210234529316256,
+      "pr_auc": 0.5450316691529974,
+      "positive_rate": 0.5267305644302449
+    }
+  },
+  "policy_calibration": {
+    "period": "2026Q1",
+    "entry_threshold": 0.5,
+    "giveback_threshold": 0.5,
+    "extend_threshold": 0.45,
+    "protect_atr": 0.25,
+    "partial_at_1": 0,
+    "runner_target_atr": 2.5,
+    "runner_stop_atr": 0.5,
+    "trades": 2383,
+    "win_rate": 0.2698279479647503,
+    "avg_net_pct": -0.0019428576547538083,
+    "profit_factor": 0.5305605443726613
+  },
+  "test": {
+    "base": {
+      "trades": 2182,
+      "win_rate": 0.2552703941338222,
+      "avg_net_pct": -0.0021117302338843906,
+      "profit_factor": 0.4653050658165858,
+      "ending_capital": 6299.640256885261,
+      "portfolio_return": -0.37003597431147395,
+      "max_dd": 0.3713576583767021
+    },
+    "stress": {
+      "trades": 2182,
+      "win_rate": 0.20348304307974335,
+      "avg_net_pct": -0.0031117302338843898,
+      "profit_factor": 0.34106433272881254,
+      "ending_capital": 5063.8793646908,
+      "portfolio_return": -0.49361206353092,
+      "max_dd": 0.49426642273136334
+    }
+  },
+  "comparison_r15_7": {
+    "base_return": -0.1293130984180254,
+    "base_pf": 0.5649379797942097,
+    "long_only_return": -0.05926221100274398
+  },
+  "interpretation": [
+    "Event-time features do not materially predict short-horizon path ordering (+0.5/+1/+1.5 ATR before -1 ATR); AUC is ~0.50.",
+    "Giveback and extension heads are also weak; extend10 is the strongest but still only AUC ~0.521.",
+    "The CALIB-selected stateful policy is already negative (PF ~0.531), so there is no defensible economic edge to carry into TEST.",
+    "R15.8 performs worse economically than R15.7 and should not replace it.",
+    "The next architecture should not predict intratrade trajectory solely from event-entry features. It should update decisions after observing post-entry evidence (online state model / sequential policy).",
+    "Outer holdout remains sealed."
+  ],
+  "outer_holdout_opened": false,
+  "outer_holdout_start": "2026-07-01T00:00:00Z"
+}
