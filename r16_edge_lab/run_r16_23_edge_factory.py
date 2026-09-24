@@ -25,6 +25,8 @@ def boot(x,n=4000):
  rng=np.random.default_rng(SEED);v=np.array([rng.choice(w,len(w),replace=True).mean() for _ in range(n)])
  return float((v>0).mean())
 def met(x):
+ if x.empty or "scaled" not in x.columns:
+  return {"periods":0,"pf":0.0,"bootstrap":0.0,"return":0.0,"dd":0.0,"monthly_mean":0.0,"monthly_median":0.0,"positive_month_rate":0.0,"m10":0,"m20":0,"best":0.0,"worst":0.0,"positive_quarter_rate":0.0,"positive_year_rate":0.0,"yearly":{}}
  r=x.scaled.to_numpy(float);dt=pd.to_datetime(x.entry_time,unit="ms",utc=True);z=x.copy()
  z["y"]=dt.dt.year;z["q"]=dt.dt.to_period("Q").astype(str);z["m"]=dt.dt.to_period("M").astype(str)
  yr=z.groupby("y").scaled.apply(lambda s:(1+s).prod()-1);qr=z.groupby("q").scaled.apply(lambda s:(1+s).prod()-1);mr=z.groupby("m").scaled.apply(lambda s:(1+s).prod()-1)
@@ -44,8 +46,10 @@ except FileNotFoundError:
  import importlib.util
  src=Path("r16_edge_lab/run_r16_19b_cross_momentum.py")
  spec=importlib.util.spec_from_file_location("r1619b",src); mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
- B=mod.run(int(best.lb),int(best.hold),int(best.k),str(best.regime),float(best.minmom),mod.BASE)
- S=mod.run(int(best.lb),int(best.hold),int(best.k),str(best.regime),float(best.minmom),mod.STRESS)
+ B=mod.run(int(best["lb"]),int(best["hold"]),int(best["k"]),str(best["regime"]),float(best["minmom"]),mod.BASE)
+ S=mod.run(int(best["lb"]),int(best["hold"]),int(best["k"]),str(best["regime"]),float(best["minmom"]),mod.STRESS)
+ if B.empty or S.empty:
+  raise RuntimeError(f"Frozen candidate produced no trades: base={len(B)} stress={len(S)}. Historical source data required for reconstruction is missing from checkout.")
  print("Rebuilt frozen R16.19B candidate:",best["name"],flush=True)
 rows=[];cache={}
 for scale in [.10,.15,.20,.25,.30,.40,.50]:
