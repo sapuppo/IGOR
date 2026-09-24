@@ -1,0 +1,36 @@
+{
+  "version": "R16.18",
+  "status": "success",
+  "run_id": 35964599153,
+  "artifact": {
+    "id": 10794055057,
+    "name": "r16-18-leverage-frontier"
+  },
+  "selected": {
+    "gross_cap": 1.5,
+    "risk_mult": 3
+  },
+  "base": {
+    "end": 1010542.5972136923,
+    "return": 100.05425972136922,
+    "dd": 0.43132611885640804,
+    "monthly_mean": 0.08742149853354733,
+    "monthly_median": 0.035484994021034943,
+    "positive_month_rate": 0.5909090909090909,
+    "months_ge_20": 14,
+    "best_month": 0.6830025691436228,
+    "worst_month": -0.21627074774107227
+  },
+  "stress": {
+    "end": 560977.7015518312,
+    "return": 55.09777015518312,
+    "dd": 0.4517762706131464,
+    "monthly_mean": 0.07722634145700899,
+    "monthly_median": 0.030178674143809897,
+    "positive_month_rate": 0.5757575757575758,
+    "months_ge_20": 14,
+    "best_month": 0.6412695158834907,
+    "worst_month": -0.22396113266976897
+  },
+  "target_reached_in_acceptable_grid": false
+}
