@@ -1,0 +1,60 @@
+{
+  "version": "R16.5",
+  "status": "success",
+  "run_id": 35958177632,
+  "purpose": "Recover trading opportunity by relaxing regime gates while keeping D55 and S2/T6/H30 frozen",
+  "diagnostics": {
+    "july_d55_trend_candidates": 31,
+    "july_adx_ge30": 10,
+    "july_btc_up": 11,
+    "july_breadth_ge55": 1,
+    "july_all_frozen": 0
+  },
+  "selected": {
+    "variant": "A25_B45_STRICT",
+    "adx": 25,
+    "breadth": 0.45,
+    "btc_mode": "STRICT",
+    "base_trades": 494,
+    "base_avg": 0.014851880261403242,
+    "base_pf": 1.418494368268752,
+    "base_win_rate": 0.402834008097166,
+    "base_positive_quarter_rate": 0.7,
+    "base_all_years_positive": true,
+    "base_weekly_prob_positive": 0.9808333333333333,
+    "base_active_month_rate": 0.7666666666666667,
+    "base_median_trades_active_month": 13,
+    "stress_avg": 0.013851880261403243,
+    "stress_pf": 1.3838538559435953,
+    "stress_weekly_prob_positive": 0.9741666666666666,
+    "july_signals": 2,
+    "august_signals": 40
+  },
+  "higher_activity_passers": [
+    {
+      "variant": "A20_B45_STRICT",
+      "base_trades": 641,
+      "base_pf": 1.3745172979554672,
+      "stress_pf": 1.3397736104226383,
+      "median_trades_active_month": 19,
+      "july_signals": 4,
+      "august_signals": 40
+    },
+    {
+      "variant": "A20_B45_SOFT",
+      "base_trades": 679,
+      "base_pf": 1.3343451811003237,
+      "stress_pf": 1.300299393158807,
+      "median_trades_active_month": 23,
+      "july_signals": 5,
+      "august_signals": 41
+    }
+  ],
+  "interpretation": [
+    "The main July bottleneck was breadth >=55%, compounded by ADX>=30 and strict BTC confirmation.",
+    "Breadth 45% with ADX 25 and strict BTC preserves strong historical robustness while increasing opportunity.",
+    "Lowering ADX to 20 increases trade frequency further but sacrifices some PF.",
+    "Relaxing the BTC gate to SOFT increases frequency modestly while reducing PF further.",
+    "July/August are consumed diagnostics and cannot be used as fresh validation after rule changes."
+  ]
+}
