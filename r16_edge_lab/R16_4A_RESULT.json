@@ -1,0 +1,46 @@
+{
+  "version": "R16.4A",
+  "status": "success",
+  "run_id": 35957571004,
+  "artifact": {
+    "id": 10790997250,
+    "name": "r16-4a-august-holdout",
+    "size_in_bytes": 8606
+  },
+  "test_type": "one-shot August 2026 calendar holdout",
+  "period": "2026-08-01..2026-08-31 UTC",
+  "frozen_strategy": "D55_A30_LONG_BREADTH + S2_T6_H30",
+  "portfolio": {
+    "risk_per_trade": 0.0025,
+    "max_positions": 5,
+    "notional_cap": 0.25
+  },
+  "base": {
+    "signals": 62,
+    "accepted": 23,
+    "rejected": 39,
+    "win_rate": 0.3548387096774194,
+    "avg_net_pct": 0.002718845199979533,
+    "profit_factor": 1.0739286761544375,
+    "start": 10000,
+    "end": 10274.88752976381,
+    "return": 0.02748875297638098,
+    "max_dd": 0.029341516281820468
+  },
+  "stress": {
+    "win_rate": 0.3548387096774194,
+    "avg_net_pct": 0.0017188451999795322,
+    "profit_factor": 1.0459317048377217,
+    "start": 10000,
+    "end": 10262.466140470515,
+    "return": 0.02624661404705142,
+    "max_dd": 0.029870759097392008
+  },
+  "notes": [
+    "Fresh-start August test; no July carry-in positions.",
+    "Only August signals used.",
+    "Open positions were forcibly liquidated at the final August 4h close.",
+    "No September candle was used.",
+    "August 2026 is now consumed as a tuning holdout; July and September remain unconsumed."
+  ]
+}
