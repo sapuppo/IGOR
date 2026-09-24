@@ -1,0 +1,43 @@
+name: R16.16 15m Intraday Alpha Map
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-16-intraday-15m.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  intraday:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Collect pre-2024 15m history
+        run: python r16_edge_lab/run_r16_16_collect_pre2024_15m.py
+      - name: Download 2024-present history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - name: Run R16.16
+        run: python r16_edge_lab/run_r16_16_intraday_15m.py
+      - name: Print summary
+        run: cat r16_edge_lab/r16_16_intraday_15m/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-16-intraday-15m
+          path: r16_edge_lab/r16_16_intraday_15m/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-16-pre2024-15m
+          path: r16_edge_lab/pre2024_15m/
+          retention-days: 90
+          compression-level: 6
