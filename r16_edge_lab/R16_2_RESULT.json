@@ -1,0 +1,58 @@
+{
+  "version": "R16.2",
+  "status": "success",
+  "run_id": 35956587053,
+  "artifact": {
+    "id": 10790274140,
+    "name": "r16-2-economic-geometry",
+    "size_in_bytes": 11491
+  },
+  "signal_frozen": "D55_A30_LONG_BREADTH",
+  "geometry_plateau": {
+    "variants": 27,
+    "base_positive_fraction": 1,
+    "stress_positive_fraction": 1,
+    "base_pf_gt_1_fraction": 1,
+    "strict_geometry_pass_count": 8,
+    "median_base_avg": 0.01299693798910583,
+    "median_base_pf": 1.3386200234514716,
+    "median_stress_avg": 0.01199693798910583,
+    "median_weekly_block_prob": 0.9613333333333334
+  },
+  "selected_geometry": {
+    "stop_atr": 2,
+    "target_atr": 6,
+    "max_hold_4h_bars": 30,
+    "trades": 479,
+    "base_avg": 0.018127614963313436,
+    "base_pf": 1.5191193192002317,
+    "stress_avg": 0.017127614963313435,
+    "stress_pf": 1.482402368074351,
+    "positive_quarter_rate": 0.7,
+    "all_years_positive": true,
+    "weekly_block_prob_positive": 0.9926666666666667,
+    "max_positive_symbol_share": 0.10832096451707723
+  },
+  "selected_conservative_portfolio": {
+    "risk_per_trade": 0.0025,
+    "max_positions": 5,
+    "notional_cap": 0.25,
+    "base_start": 10000,
+    "base_end": 12378.441605756414,
+    "base_return": 0.2378441605756414,
+    "base_max_dd": 0.049268257879854116,
+    "base_accepted": 280,
+    "base_rejected": 199,
+    "stress_end": 12197.565447545894,
+    "stress_return": 0.2197565447545895,
+    "stress_max_dd": 0.05230197539425652
+  },
+  "interpretation": [
+    "All 27 nearby economic geometries remain positive after both base and stress costs, confirming a broad economic plateau.",
+    "Eight geometries pass the strict robustness gate.",
+    "S2.0_T6.0_H30 is selected for the next stage because it combines high block-bootstrap confidence, strong PF, yearly consistency and diversified symbol contribution.",
+    "A conservative 0.25% equity risk per trade with max 5 simultaneous positions materially compresses drawdown while retaining positive portfolio growth.",
+    "Next stage should be R16.3 meta-filter: ML may only decide skip/size on top of this frozen deterministic baseline and must beat it out-of-sample."
+  ],
+  "outer_holdout_opened": false
+}
