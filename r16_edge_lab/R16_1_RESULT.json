@@ -1,0 +1,71 @@
+{
+  "version": "R16.1",
+  "status": "success",
+  "run_id": 35947455343,
+  "artifact": {
+    "id": 10787574787,
+    "name": "r16-1-trend-breakout-robustness",
+    "size_in_bytes": 22368
+  },
+  "variants": 45,
+  "strict_passed": [
+    "D55_A30_LONG_BREADTH"
+  ],
+  "best": {
+    "variant": "D55_A30_LONG_BREADTH",
+    "donchian": 55,
+    "adx": 30,
+    "mode": "LONG_BREADTH",
+    "trades": 484,
+    "gross_avg": 0.018276010728482898,
+    "base_avg": 0.015076010728482896,
+    "base_pf": 1.3889608607648805,
+    "stress_avg": 0.014076010728482897,
+    "stress_pf": 1.3581368813503898,
+    "positive_quarter_rate": 0.7,
+    "all_years_positive": true,
+    "weekly_block_prob_positive": 0.98,
+    "portfolio_return": 0.839685609496845,
+    "portfolio_max_dd": 0.14480230711400843,
+    "portfolio_end": 18396.85609496845,
+    "portfolio_accepted": 392,
+    "max_positive_symbol_share": 0.14670812685169957
+  },
+  "plateau": {
+    "LONG_BREADTH": {
+      "variants": 9,
+      "stress_positive_fraction": 1,
+      "base_pf_gt_1_fraction": 1,
+      "median_base_avg": 0.011092170944163914,
+      "median_stress_avg": 0.010092170944163913,
+      "median_positive_quarter_rate": 0.6,
+      "gate_pass_count": 1
+    },
+    "LONG_ONLY": {
+      "variants": 9,
+      "stress_positive_fraction": 1,
+      "base_pf_gt_1_fraction": 1,
+      "median_base_avg": 0.008273197380999625,
+      "median_stress_avg": 0.007273197380999622,
+      "median_positive_quarter_rate": 0.7,
+      "gate_pass_count": 0
+    },
+    "BOTH_NONE": {
+      "variants": 9,
+      "stress_positive_fraction": 1,
+      "base_pf_gt_1_fraction": 1,
+      "median_base_avg": 0.0037488398240188023,
+      "median_stress_avg": 0.0027488398240188014,
+      "median_positive_quarter_rate": 0.7,
+      "gate_pass_count": 0
+    }
+  },
+  "interpretation": [
+    "The 4h trend-breakout edge is a parameter plateau, not a single lucky point.",
+    "Long-only variants are consistently stronger than mixed long/short.",
+    "BTC+breadth market regime gating materially improves the edge.",
+    "D55 A30 LONG_BREADTH is the only variant that passed every strict gate.",
+    "Outer holdout remains sealed; next step is R16.2 economic geometry around the robust long+breadth plateau."
+  ],
+  "outer_holdout_opened": false
+}
