@@ -1,0 +1,39 @@
+name: R16.21 Top100 Frozen Reversion
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/r16-21-top100-reversion.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  top100:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - name: Collect top100 2024-Jun2026 15m
+        run: python r16_edge_lab/run_r16_21_collect_top100.py
+      - name: Validate frozen REV15M
+        run: python r16_edge_lab/run_r16_21_top100_validation.py
+      - name: Print summary
+        run: cat r16_edge_lab/r16_21_top100_validation/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-21-top100-validation
+          path: r16_edge_lab/r16_21_top100_validation/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-21-top100-history
+          path: r16_edge_lab/r16_21_top100_history/
+          retention-days: 90
+          compression-level: 6
