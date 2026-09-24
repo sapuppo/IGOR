@@ -1,0 +1,30 @@
+{
+  "version": "R16.9",
+  "status": "success",
+  "run_id": 35960041644,
+  "artifact": {
+    "id": 10791483114,
+    "name": "r16-9-flush-intelligence",
+    "digest": "sha256:04eddb877eecf7c7107cc6cfd70731283acbc5ffd22f8d39303ffdd6d8a42df0"
+  },
+  "candidate_count": 72,
+  "strict_pass_count": 0,
+  "best_rule": {
+    "name": "BTCANY_COINANY_BN_D9_R60",
+    "trades": 221,
+    "base_avg": 0.01948821900030788,
+    "base_pf": 1.7344483325956468,
+    "base_win_rate": 0.5339366515837104,
+    "base_positive_quarter_rate": 0.7777777777777778,
+    "base_all_years_positive": true,
+    "base_weekly_prob_positive": 0.7986666666666666,
+    "stress_avg": 0.018488219000307886,
+    "stress_pf": 1.6847345747445834,
+    "stress_weekly_prob_positive": 0.7853333333333333
+  },
+  "interpretation": [
+    "Deep flush >=9% in 6h materially improves per-trade economics.",
+    "The candidate still fails strict robustness due insufficient weekly bootstrap confidence.",
+    "Failure appears related to temporal clustering of simultaneous altcoin panic events."
+  ]
+}
