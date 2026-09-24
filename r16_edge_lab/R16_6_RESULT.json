@@ -1,0 +1,58 @@
+{
+  "version": "R16.6",
+  "status": "success",
+  "run_id": 35958431235,
+  "artifact": {
+    "id": 10791048615,
+    "name": "r16-6-multi-tier",
+    "size_in_bytes": 273636
+  },
+  "core": {
+    "trades": 479,
+    "avg": 0.018127614963313436,
+    "pf": 1.5191193192002317,
+    "active_month_rate": 0.7333333333333333,
+    "median_trades_active_month": 14.5,
+    "portfolio_return": 0.1735255595958447,
+    "max_dd": 0.04636543206515087,
+    "stress_return": 0.15715892635072715,
+    "stress_dd": 0.04922772904529593
+  },
+  "standard": {
+    "trades": 621,
+    "avg": 0.012782726477016816,
+    "pf": 1.370387130205989,
+    "active_month_rate": 0.7666666666666667,
+    "median_trades_active_month": 20,
+    "portfolio_return": 0.08939166320367775,
+    "max_dd": 0.0566410187269647,
+    "stress_return": 0.07340140664232853,
+    "stress_dd": 0.05987041095615586
+  },
+  "multi": {
+    "trades": 774,
+    "avg": 0.011477969801020881,
+    "pf": 1.3312225916447806,
+    "positive_quarter_rate": 0.8,
+    "all_years_positive": true,
+    "active_month_rate": 0.7666666666666667,
+    "median_trades_active_month": 25,
+    "tier_counts": {
+      "CORE": 366,
+      "STANDARD": 165,
+      "EXPANSION": 243
+    },
+    "portfolio_return": 0.15138932870773392,
+    "max_dd": 0.07612564579278436,
+    "stress_return": 0.13281493995188565,
+    "stress_dd": 0.07946595540466084,
+    "july_return": -0.0096501134553304,
+    "august_return": 0.006279492081764371
+  },
+  "interpretation": [
+    "The hierarchical multi-tier engine increases trade frequency but does not improve the champion portfolio.",
+    "Shared position capacity allows lower-quality STANDARD/EXPANSION trades to crowd out some CORE opportunities.",
+    "CORE still has the best return/drawdown profile and should remain protected.",
+    "Next architecture should use a protected CORE sleeve plus a separate small satellite opportunity sleeve, so weaker signals cannot consume CORE position capacity."
+  ]
+}
