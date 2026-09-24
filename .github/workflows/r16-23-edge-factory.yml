@@ -1,0 +1,34 @@
+name: R16.23 Independent Edge Factory
+"on":
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/r16-23-edge-factory.yml
+  workflow_dispatch: {}
+permissions:
+  actions: read
+  contents: read
+jobs:
+  edge-factory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: r16-edge-first
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy
+      - run: mkdir -p r16_edge_lab/r16_23_inputs
+      - run: gh run download 35965811873 --repo sapuppo/IGOR -n r16-19b-cross-momentum -D r16_edge_lab/r16_23_inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: python r16_edge_lab/run_r16_23_edge_factory.py
+      - run: cat r16_edge_lab/r16_23_edge_factory/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-23-edge-factory
+          path: r16_edge_lab/r16_23_edge_factory/
+          retention-days: 90
