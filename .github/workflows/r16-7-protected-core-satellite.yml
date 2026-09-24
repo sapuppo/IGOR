@@ -33,3 +33,4 @@ jobs:
           name: r16-7-protected-core-satellite
           path: r16_edge_lab/r16_7_protected_core_satellite/
           retention-days: 30
+# rerun after true core protection fix
