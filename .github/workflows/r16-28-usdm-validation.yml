@@ -1,0 +1,33 @@
+name: R16.28 USD-M Dataset Validation
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-28-usdm-validation.yml"]
+  workflow_dispatch: {}
+permissions: {contents: read}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: python -m py_compile r16_edge_lab/run_r16_28_collect_usdm.py
+      - name: Validate BTC USD-M collector
+        run: python r16_edge_lab/run_r16_28_collect_usdm.py --start 2021-01-01 --end 2021-02-28 --symbols BTCUSDT --intervals 15m,1h,4h --output r16_edge_lab/usdm_validation
+      - name: Audit
+        run: |
+          python - <<'PY'
+          import json,pathlib,pandas as pd
+          p=pathlib.Path("r16_edge_lab/usdm_validation/manifest.json");m=json.loads(p.read_text())
+          assert m["venue"]=="Binance USD-M Futures" and m["contractType"]=="PERPETUAL"
+          assert len([x for x in m["files"] if x["kind"]=="kline"])==3
+          assert len([x for x in m["files"] if x["kind"]=="funding"])==1
+          assert all(x["sha256"] for x in m["files"])
+          print("R16.28 VALIDATION PASS",len(m["files"]))
+          PY
+      - uses: actions/upload-artifact@v4
+        with: {name: r16-28-usdm-validation, path: r16_edge_lab/usdm_validation/, retention-days: 30}
