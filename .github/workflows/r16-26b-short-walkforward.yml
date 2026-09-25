@@ -1,0 +1,26 @@
+name: R16.26B Causal Short Walk Forward
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-26b-short-walkforward.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-pre2024-history -D r16_edge_lab/pre2024_history
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - run: python -m py_compile r16_edge_lab/run_r16_26b_short_walkforward.py
+      - run: python r16_edge_lab/run_r16_26b_short_walkforward.py
+      - run: cat r16_edge_lab/r16_26b_short_walkforward/summary.json
+      - uses: actions/upload-artifact@v4
+        with: {name: r16-26b-short-walkforward, path: r16_edge_lab/r16_26b_short_walkforward/, retention-days: 90}
