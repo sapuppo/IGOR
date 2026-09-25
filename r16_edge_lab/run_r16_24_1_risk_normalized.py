@@ -79,21 +79,23 @@ def trade_stats(d):
  r=d.net_pct.to_numpy(float);gp=r[r>0].sum();gl=-r[r<0].sum()
  return {"trades":len(r),"pf":float(gp/gl) if gl else None,"win_rate":float((r>0).mean()),"avg_trade":float(r.mean()),
  "stop_rate":float(d.reason.str.startswith("STOP").mean()),"target_rate":float((d.reason=="TARGET").mean())}
-rows=[];cache={}
-for eng,c in CFG.items():
- for sm in STOPS:
-  for scen,cost in COST.items():
-   d=rebuild(eng,c,sm,cost);p=portfolio(d,c);t=trade_stats(d)
-   rows.append({"engine":eng,"stop_atr":sm,"scenario":scen,**t,**p});cache[(eng,sm,scen)]=d
-R=pd.DataFrame(rows);R.to_csv(OUT/"risk_normalized_grid.csv",index=False)
-sel={}
-for eng in CFG:
- z=R[(R.engine==eng)&(R.scenario=="stress")].copy()
- z["gate"]=(z["return"]>0)&(z.dd<=.35)&(z.monthly_median>0)&(z.positive_month>=.55)&(z.pf>=1.1)
- z["score"]=z.gate.astype(int)*1000+z.monthly_median*100+z.monthly_mean*20-z.dd*10+z.pf
- q=z.sort_values(["gate","score"],ascending=False).iloc[0];sel[eng]=q.to_dict()
- cache[(eng,float(q.stop_atr),"base")].to_csv(OUT/f"{eng.lower()}_selected_base.csv.gz",index=False,compression="gzip")
- cache[(eng,float(q.stop_atr),"stress")].to_csv(OUT/f"{eng.lower()}_selected_stress.csv.gz",index=False,compression="gzip")
-summary={"version":"R16.24.1","selected_stress":sel,"grid":R.to_dict("records"),
-"notes":["Frozen entries; only stop width changes.","Original target ATR preserved per engine.","Risk-normalized sizing with fixed equity risk and 40% notional cap; no leverage.","Stress selection requires positive return, DD<=35%, positive monthly median, >=55% positive months, PF>=1.10.","September 2026 untouched."]}
-(OUT/"summary.json").write_text(json.dumps(summary,indent=2,default=float),encoding="utf-8");print(json.dumps(summary,indent=2,default=float))
+if __name__ == '__main__':
+ rows=[];cache={}
+ for eng,c in CFG.items():
+  for sm in STOPS:
+   for scen,cost in COST.items():
+    d=rebuild(eng,c,sm,cost);p=portfolio(d,c);t=trade_stats(d)
+    rows.append({"engine":eng,"stop_atr":sm,"scenario":scen,**t,**p});cache[(eng,sm,scen)]=d
+ R=pd.DataFrame(rows);R.to_csv(OUT/"risk_normalized_grid.csv",index=False)
+ sel={}
+ for eng in CFG:
+  z=R[(R.engine==eng)&(R.scenario=="stress")].copy()
+  z["gate"]=(z["return"]>0)&(z.dd<=.35)&(z.monthly_median>0)&(z.positive_month>=.55)&(z.pf>=1.1)
+  z["score"]=z.gate.astype(int)*1000+z.monthly_median*100+z.monthly_mean*20-z.dd*10+z.pf
+  q=z.sort_values(["gate","score"],ascending=False).iloc[0];sel[eng]=q.to_dict()
+  cache[(eng,float(q.stop_atr),"base")].to_csv(OUT/f"{eng.lower()}_selected_base.csv.gz",index=False,compression="gzip")
+  cache[(eng,float(q.stop_atr),"stress")].to_csv(OUT/f"{eng.lower()}_selected_stress.csv.gz",index=False,compression="gzip")
+ summary={"version":"R16.24.1","selected_stress":sel,"grid":R.to_dict("records"),
+ "notes":["Frozen entries; only stop width changes.","Original target ATR preserved per engine.","Risk-normalized sizing with fixed equity risk and 40% notional cap; no leverage.","Stress selection requires positive return, DD<=35%, positive monthly median, >=55% positive months, PF>=1.10.","September 2026 untouched."]}
+ (OUT/"summary.json").write_text(json.dumps(summary,indent=2,default=float),encoding="utf-8");print(json.dumps(summary,indent=2,default=float))
+ 
