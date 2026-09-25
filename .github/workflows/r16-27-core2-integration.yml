@@ -1,4 +1,4 @@
-name: R16.27 Core2 Frozen Integration
+name: R16.27 Core2 Frozen Integration\n# registered
 "on":
   push:
     branches: [master]
