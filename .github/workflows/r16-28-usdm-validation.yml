@@ -23,7 +23,7 @@ jobs:
           python - <<'PY'
           import json,pathlib,pandas as pd
           p=pathlib.Path("r16_edge_lab/usdm_validation/manifest.json");m=json.loads(p.read_text())
-          assert m["venue"]=="Binance USD-M Futures" and m["contractType"]=="PERPETUAL"
+          assert m["venue"]=="Binance USD-M Futures public archive" and m["contractType"]=="PERPETUAL"
           assert len([x for x in m["files"] if x["kind"]=="kline"])==3
           assert len([x for x in m["files"] if x["kind"]=="funding"])==1
           assert all(x["sha256"] for x in m["files"])
@@ -31,4 +31,5 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with: {name: r16-28-usdm-validation, path: r16_edge_lab/usdm_validation/, retention-days: 30}
-\n# trigger vision validation 2\n
+\n
+# trigger corrected venue assertion
