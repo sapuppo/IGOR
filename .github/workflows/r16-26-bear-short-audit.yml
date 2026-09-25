@@ -1,0 +1,27 @@
+name: R16.26 Bear Short Audit
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-26-bear-short-audit.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: python -m py_compile r16_edge_lab/run_r16_26_bear_short_audit.py
+      - run: mkdir -p r16_edge_lab/r16_26_inputs/{short,baseline}
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35961453884 --repo sapuppo/IGOR -n r16-11-bear-short-map -D r16_edge_lab/r16_26_inputs/short
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 36097321546 --repo sapuppo/IGOR -n r16-24-2-portfolio -D r16_edge_lab/r16_26_inputs/baseline
+      - run: python r16_edge_lab/run_r16_26_bear_short_audit.py
+      - run: cat r16_edge_lab/r16_26_bear_short_audit/summary.json
+      - uses: actions/upload-artifact@v4
+        with: {name: r16-26-bear-short-audit, path: r16_edge_lab/r16_26_bear_short_audit/, retention-days: 90}
