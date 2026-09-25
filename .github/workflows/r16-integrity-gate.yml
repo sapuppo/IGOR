@@ -1,4 +1,4 @@
-name: R16 Backtest Integrity Gate
+name: R16 Backtest Integrity Gate\n# trigger integrity audit after workflow registration
 "on":
   push:
     branches: [master]
