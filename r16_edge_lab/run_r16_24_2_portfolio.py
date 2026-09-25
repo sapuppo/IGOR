@@ -19,11 +19,12 @@ def load_grid():
  return pd.read_csv(ff(ROOT/"r241","risk_normalized_grid.csv"))
 MOD=None
 def load_trade(eng,stop,scen):
- # R16.24.1 artifact saves selected only, so portfolio workflow also downloads source histories
- # and invokes its module to rebuild any region point exactly.
- import importlib.util
- spec=importlib.util.spec_from_file_location("r241",Path("r16_edge_lab/run_r16_24_1_risk_normalized.py"));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
- c=m.CFG[eng];d=m.rebuild(eng,c,stop,m.COST[scen]);d["engine"]=eng
+ global MOD
+ if MOD is None:
+  import importlib.util
+  spec=importlib.util.spec_from_file_location("r241",Path("r16_edge_lab/run_r16_24_1_risk_normalized.py"))
+  MOD=importlib.util.module_from_spec(spec);spec.loader.exec_module(MOD)
+ c=MOD.CFG[eng];d=MOD.rebuild(eng,c,stop,MOD.COST[scen]);d["engine"]=eng
  d["month"]=pd.to_datetime(d.entry_time,unit="ms",utc=True).dt.to_period("M").astype(str);return d
 def scores(F,lb=6):
  out={m:{} for m in MONTHS}
@@ -65,7 +66,12 @@ def sim(F,hot=1.5,cold=.5,gh=1.5,gc=.6,brake=.10):
 # exact drawdown is recomputed from monthly equity for comparable R16.22 reporting
 def adddd(m):
  a=np.array(m.pop("_monthly",[])) if "_monthly" in m else None;return m
-rows=[];cache={}
+rows=[]
+TRADE_CACHE={}
+for eng in REGION:
+ for stop in REGION[eng]:
+  for scen in ["base","stress"]:
+   TRADE_CACHE[(eng,stop,scen)]=load_trade(eng,stop,scen)
 for stops in itertools.product(REGION["CORE"],REGION["REV1H"],REGION["REV15M"]):
  key={"CORE":stops[0],"REV1H":stops[1],"REV15M":stops[2]}
  vals={}
