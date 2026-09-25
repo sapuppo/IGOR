@@ -20,7 +20,7 @@ jobs:
       - env: {GH_TOKEN: "${{ github.token }}"}
         run: gh run download 36100373340 --repo sapuppo/IGOR -n r16-25a-social-whale-intelligence -D r16_edge_lab/r16_25b_inputs/a
       - env: {GH_TOKEN: "${{ github.token }}"}
-        run: gh run download 36064688846 --repo sapuppo/IGOR -n r16-24-2-portfolio -D r16_edge_lab/r16_25b_inputs/baseline
+        run: gh run download 36097321546 --repo sapuppo/IGOR -n r16-24-2-portfolio -D r16_edge_lab/r16_25b_inputs/baseline
       - run: python r16_edge_lab/run_r16_25b_causal_validation.py
       - run: cat r16_edge_lab/r16_25b_validation/summary.json
       - uses: actions/upload-artifact@v4
