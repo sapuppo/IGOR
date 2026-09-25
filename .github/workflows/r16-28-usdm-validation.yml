@@ -1,4 +1,4 @@
-name: R16.28 USD-M Dataset Validation\n# rerun vision-only\n# registered
+name: R16.28 USD-M Dataset Validation
 "on":
   push:
     branches: [master]
@@ -32,4 +32,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with: {name: r16-28-usdm-validation, path: r16_edge_lab/usdm_validation/, retention-days: 30}
 \n
-# trigger corrected venue assertion
+# corrected workflow header
