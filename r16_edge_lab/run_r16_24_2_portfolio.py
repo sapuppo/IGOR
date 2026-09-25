@@ -71,7 +71,7 @@ for stops in itertools.product(REGION["CORE"],REGION["REV1H"],REGION["REV15M"]):
  vals={}
  for scen in ["base","stress"]:
   F={e:TRADE_CACHE[(e,key[e],scen)] for e in key};r=sim(F)
-  # conservative DD proxy: run-level equity DD unavailable in compact simulator; derive gate using worst month + R16.24.1 engine DD and return consistency.
+  # exact realized-equity DD is tracked inside sim().
   vals[scen]=r
  s=vals["stress"];rob=(s["return"]>0 and s["dd"]<=.35 and s["worst"]>=-.20 and s["active_month_median"]>0 and s["positive_active_month"]>=.55 and min(s["years"].values())>=-.15)
  rows.append({"core_stop":key["CORE"],"rev1h_stop":key["REV1H"],"rev15m_stop":key["REV15M"],
