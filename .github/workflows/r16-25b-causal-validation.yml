@@ -1,0 +1,27 @@
+name: R16.25B Causal Historical Forward Validation
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-25b-causal-validation.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: python -m py_compile r16_edge_lab/run_r16_25b_causal_validation.py
+      - run: mkdir -p r16_edge_lab/r16_25b_inputs/{a,baseline}
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 36100373340 --repo sapuppo/IGOR -n r16-25a-social-whale-intelligence -D r16_edge_lab/r16_25b_inputs/a
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 36064688846 --repo sapuppo/IGOR -n r16-24-2-portfolio -D r16_edge_lab/r16_25b_inputs/baseline
+      - run: python r16_edge_lab/run_r16_25b_causal_validation.py
+      - run: cat r16_edge_lab/r16_25b_validation/summary.json
+      - uses: actions/upload-artifact@v4
+        with: {name: r16-25b-causal-validation, path: r16_edge_lab/r16_25b_validation/, retention-days: 90}
