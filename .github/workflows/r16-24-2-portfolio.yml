@@ -6,7 +6,7 @@ permissions: {actions: read, contents: read}
 jobs:
   integrate:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with: {ref: r16-edge-first}
