@@ -1,0 +1,36 @@
+name: R16.27 Core2 Frozen Integration
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-27-core2-integration.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: python -m py_compile r16_edge_lab/r16_sim_core.py r16_edge_lab/run_r16_24_3_causal_revalidation.py r16_edge_lab/run_r16_27_core2_integration.py
+      - run: mkdir -p r16_edge_lab/r16_243_inputs/{core,rev1h,rev15m} r16_edge_lab/pre2024_history r16_edge_lab/pre2024_history_15m r15_regime_lab/history
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-extended-history-results -D r16_edge_lab/r16_243_inputs/core
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963085634 --repo sapuppo/IGOR -n r16-14-extreme-reversion -D r16_edge_lab/r16_243_inputs/rev1h
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-intraday-reversion -D r16_edge_lab/r16_243_inputs/rev15m
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35960805987 --repo sapuppo/IGOR -n r16-10-pre2024-history -D r16_edge_lab/pre2024_history
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35963832686 --repo sapuppo/IGOR -n r16-16-pre2024-15m -D r16_edge_lab/pre2024_history_15m
+      - env: {GH_TOKEN: "${{ github.token }}"}
+        run: gh run download 35829207633 --repo sapuppo/IGOR -n r15-2-history-2024-present -D r15_regime_lab/history
+      - run: python r16_edge_lab/run_r16_27_core2_integration.py
+      - run: cat r16_edge_lab/r16_27_core2_integration/summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: r16-27-core2-integration, path: r16_edge_lab/r16_27_core2_integration/, retention-days: 90}
