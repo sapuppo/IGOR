@@ -1,4 +1,4 @@
-name: R16.28 USD-M Dataset Validation
+name: R16.28 USD-M Dataset Validation\n# registered
 "on":
   push:
     branches: [master]
