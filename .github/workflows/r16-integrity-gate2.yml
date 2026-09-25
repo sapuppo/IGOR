@@ -1,4 +1,4 @@
-name: R16 Integrity Gate 2
+name: R16 Integrity Gate 2\n# registered
 "on":
   push:
     branches: [master]
