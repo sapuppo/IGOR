@@ -17,7 +17,7 @@ def ff(root,name):
  return h[0]
 def load_grid():
  return pd.read_csv(ff(ROOT/"r241","risk_normalized_grid.csv"))
-def load_trade(eng,stop,scen):
+MOD=None\ndef load_trade(eng,stop,scen):
  # R16.24.1 artifact saves selected only, so portfolio workflow also downloads source histories
  # and invokes its module to rebuild any region point exactly.
  import importlib.util
@@ -36,13 +36,13 @@ def sim(F,hot=1.5,cold=.5,gh=1.5,gc=.6,brake=.10):
  for e,d in F.items():
   for r in d.itertuples(index=False):ev.append((int(r.entry_time),e,int(r.exit_time),r.symbol,float(r.stop_pct),float(r.net_pct),r.month))
  pri={"CORE":0,"REV15M":1,"REV1H":2};ev.sort(key=lambda x:(x[0],pri[x[1]],x[3]))
- eq=peak=START;gross=0.;heap=[];held=set();uid=rej=0;acc={e:0 for e in F};monthly={}
+ eq=peak=START;maxdd=0.;gross=0.;heap=[];held=set();uid=rej=0;acc={e:0 for e in F};monthly={}
  def openrisk():return sum(h[6] for h in heap)
  def settle(t):
-  nonlocal eq,peak,gross
+  nonlocal eq,peak,maxdd,gross
   while heap and heap[0][0]<=t:
    ex,_,pnl,sym,e,no,ra=heapq.heappop(heap);eq+=pnl;gross-=no;held.discard(sym);peak=max(peak,eq)
-   mo=str(pd.to_datetime(ex,unit="ms",utc=True).to_period("M"));monthly[mo]=monthly.get(mo,0)+pnl
+   mo=str(pd.to_datetime(ex,unit="ms",utc=True).to_period("M"));monthly[mo]=monthly.get(mo,0)+pnl;maxdd=max(maxdd,1-eq/max(peak,1e-9))
  for et,e,xt,sym,sp,nr,mo in ev:
   settle(et);dd=1-eq/max(peak,1e-9);sv=sc.get(mo,{});vals=np.array(list(sv.values()),float);hotreg=(len(vals)>0 and vals.mean()>0 and sum(v>0 for v in sv.values())>=2)
   mult=hot if hotreg else cold;gcap=gh if hotreg else gc
@@ -58,7 +58,7 @@ def sim(F,hot=1.5,cold=.5,gh=1.5,gc=.6,brake=.10):
  a=np.array(vals);active=a[a!=0];years={}
  for mo,r in zip(MONTHS,a):years[mo[:4]]=years.get(mo[:4],1)*(1+r)
  years={y:v-1 for y,v in years.items()}
- return {"return":eq/START-1,"dd":1-min(eq,peak)/peak if False else None,"monthly_mean":float(a.mean()),"monthly_median":float(np.median(a)),
+ return {"return":eq/START-1,"dd":maxdd,"monthly_mean":float(a.mean()),"monthly_median":float(np.median(a)),
  "active_month_median":float(np.median(active)) if len(active) else 0.,"positive_month":float((a>0).mean()),
  "positive_active_month":float((active>0).mean()) if len(active) else 0.,"worst":float(a.min()),"best":float(a.max()),"years":years,"accepted":acc,"rejected":rej}
 # exact drawdown is recomputed from monthly equity for comparable R16.22 reporting
@@ -69,10 +69,10 @@ for stops in itertools.product(REGION["CORE"],REGION["REV1H"],REGION["REV15M"]):
  key={"CORE":stops[0],"REV1H":stops[1],"REV15M":stops[2]}
  vals={}
  for scen in ["base","stress"]:
-  F={e:load_trade(e,key[e],scen) for e in key};r=sim(F)
+  F={e:TRADE_CACHE[(e,key[e],scen)] for e in key};r=sim(F)
   # conservative DD proxy: run-level equity DD unavailable in compact simulator; derive gate using worst month + R16.24.1 engine DD and return consistency.
   vals[scen]=r
- s=vals["stress"];rob=(s["return"]>0 and s["worst"]>=-.20 and s["active_month_median"]>0 and s["positive_active_month"]>=.55 and min(s["years"].values())>=-.15)
+ s=vals["stress"];rob=(s["return"]>0 and s["dd"]<=.35 and s["worst"]>=-.20 and s["active_month_median"]>0 and s["positive_active_month"]>=.55 and min(s["years"].values())>=-.15)
  rows.append({"core_stop":key["CORE"],"rev1h_stop":key["REV1H"],"rev15m_stop":key["REV15M"],
  **{f"base_{k}":v for k,v in vals["base"].items() if k not in ["years","accepted"]},
  **{f"stress_{k}":v for k,v in s.items() if k not in ["years","accepted"]},"stress_years":s["years"],"stress_accepted":s["accepted"],"robust":rob})
