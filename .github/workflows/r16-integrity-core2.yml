@@ -1,4 +1,4 @@
-name: R16 Integrity Core 2
+name: R16 Integrity Core 2\n# registered
 "on":
   push:
     branches: [master]
