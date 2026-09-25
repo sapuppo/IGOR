@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install pandas numpy
-      - run: python -m py_compile r16_edge_lab/run_r16_24_1_risk_normalized.py r16_edge_lab/run_r16_24_2_portfolio.py
+      - run: python -m py_compile r16_edge_lab/run_r16_24_1_risk_normalized.py r16_edge_lab/run_r16_24_2_portfolio.py # verified-cache-rerun
       - run: mkdir -p r16_edge_lab/r16_242_inputs/{r241,core,rev1h,rev15m,pre2024,pre2024_15m,post}
       - env: {GH_TOKEN: "${{ github.token }}"}
         run: gh run download 36046951668 --repo sapuppo/IGOR -n r16-24-1-risk-normalized -D r16_edge_lab/r16_242_inputs/r241
