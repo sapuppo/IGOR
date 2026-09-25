@@ -1,0 +1,31 @@
+name: R16.25A Social Whale Intelligence
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-25-social-whale.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NANSEN_API_KEY: "${{ secrets.NANSEN_API_KEY }}"
+      CRYPTOQUANT_API_KEY: "${{ secrets.CRYPTOQUANT_API_KEY }}"
+      X_BEARER_TOKEN: "${{ secrets.X_BEARER_TOKEN }}"
+      R16_25_TOP_WALLETS: "40"
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - run: python -m py_compile r16_edge_lab/run_r16_25_social_whale_intelligence.py
+      - run: python r16_edge_lab/run_r16_25_social_whale_intelligence.py
+      - run: cat r16_edge_lab/r16_25_social_whale/source_readiness.json
+      - run: cat r16_edge_lab/r16_25_social_whale/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-25a-social-whale-intelligence
+          path: r16_edge_lab/r16_25_social_whale/
+          retention-days: 90
