@@ -17,7 +17,8 @@ def ff(root,name):
  return h[0]
 def load_grid():
  return pd.read_csv(ff(ROOT/"r241","risk_normalized_grid.csv"))
-MOD=None\ndef load_trade(eng,stop,scen):
+MOD=None
+def load_trade(eng,stop,scen):
  # R16.24.1 artifact saves selected only, so portfolio workflow also downloads source histories
  # and invokes its module to rebuild any region point exactly.
  import importlib.util
