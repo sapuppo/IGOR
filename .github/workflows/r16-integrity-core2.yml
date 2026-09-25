@@ -1,0 +1,26 @@
+name: R16 Integrity Core 2
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-integrity-core2.yml"]
+  workflow_dispatch: {}
+permissions: {contents: read}
+jobs:
+  ledger-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Compile
+        run: python -m py_compile r16_edge_lab/r16_sim_core.py r16_edge_lab/test_integrity_core2.py
+      - name: Run accounting invariants
+        run: python r16_edge_lab/test_integrity_core2.py
+      - name: Show result
+        run: cat r16_edge_lab/integrity_core2/summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-integrity-core2
+          path: r16_edge_lab/integrity_core2/
+          retention-days: 90
