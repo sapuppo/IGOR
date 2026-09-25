@@ -1,4 +1,4 @@
-name: R16.28 USD-M Dataset Validation\n# registered
+name: R16.28 USD-M Dataset Validation\n# rerun vision-only\n# registered
 "on":
   push:
     branches: [master]
