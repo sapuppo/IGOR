@@ -42,16 +42,22 @@ jobs:
               q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
           print("DATA FILES",len(list(dst.rglob("*.csv.gz"))))
           PY
+      - name: Download frozen R16.24.3 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: r16-24-3-causal-revalidation
+          path: frozen243
+          run-id: 36174189666
+          github-token: ${{ github.token }}
       - name: Materialize frozen CORE entries
         run: |
           mkdir -p r16_edge_lab/r16_29_inputs
           python - <<'PY'
-          import urllib.request,zipfile,io,pandas as pd,pathlib
-          url="https://api.github.com/repos/sapuppo/IGOR/actions/artifacts/10881595468/zip"
-          req=urllib.request.Request(url,headers={"Authorization":"Bearer ${{ github.token }}","Accept":"application/vnd.github+json"})
-          raw=urllib.request.urlopen(req).read()
-          z=zipfile.ZipFile(io.BytesIO(raw))
-          x=pd.read_csv(z.open("base_core_trades.csv.gz"))[["symbol","entry_time"]].drop_duplicates()
+          import pandas as pd,pathlib
+          root=pathlib.Path("frozen243")
+          hits=list(root.rglob("base_core_trades.csv.gz"))
+          assert hits, "base_core_trades.csv.gz missing from preserved R16.24.3 artifact"
+          x=pd.read_csv(hits[0])[["symbol","entry_time"]].drop_duplicates()
           p=pathlib.Path("r16_edge_lab/r16_29_inputs/core_entries.csv.gz")
           x.to_csv(p,index=False,compression="gzip")
           print("FROZEN CORE ENTRIES",len(x))
@@ -76,4 +82,4 @@ jobs:
           path: r16_edge_lab/r16_29_frozen_usdm/
           retention-days: 30
 
-# rerun materialized frozen config
+# rerun native artifact download
