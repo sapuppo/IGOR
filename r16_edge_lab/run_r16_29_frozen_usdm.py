@@ -24,10 +24,21 @@ def kline(sym,iv):
  p=ROOT/"klines"/iv/f"{sym}.csv.gz"
  if not p.exists():return pd.DataFrame()
  x=pd.read_csv(p)
- for c in ["open_time","open","high","low","close"]:x[c]=pd.to_numeric(x[c],errors="coerce")
+ for c in ["open_time","open","high","low","close","volume"]:x[c]=pd.to_numeric(x[c],errors="coerce")
  x=x.dropna(subset=["open_time","open","high","low","close"]).drop_duplicates("open_time").sort_values("open_time").reset_index(drop=True)
- pc=x.close.shift();tr=pd.concat([x.high-x.low,(x.high-pc).abs(),(x.low-pc).abs()],axis=1).max(axis=1)
- x["atr"]=tr.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
+ h,l,cl,v=x.high,x.low,x.close,x.volume;pc=cl.shift()
+ tr=pd.concat([h-l,(h-pc).abs(),(l-pc).abs()],axis=1).max(axis=1)
+ rma=lambda s,n:s.ewm(alpha=1/n,adjust=False,min_periods=n).mean()
+ x["atr"]=rma(tr,14)
+ gain=rma(cl.diff().clip(lower=0),14);loss=rma((-cl.diff()).clip(lower=0),14)
+ x["rsi14"]=100-(100/(1+gain/loss.replace(0,np.nan)))
+ x["body_pos"]=(cl-l)/(h-l).replace(0,np.nan)
+ if iv=="1h":
+  x["ret6"]=cl.pct_change(6)
+  x["volz48"]=(v-v.rolling(48,min_periods=36).mean())/v.rolling(48,min_periods=36).std().replace(0,np.nan)
+ if iv=="15m":
+  x["volz96"]=(v-v.rolling(96,min_periods=72).mean())/v.rolling(96,min_periods=72).std().replace(0,np.nan)
+  for hb in [4,8,16]:x[f"ret{hb}"]=cl.pct_change(hb)
  return x
 
 def funding(sym):
