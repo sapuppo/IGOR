@@ -85,3 +85,5 @@ jobs:
 # rerun native artifact download
 
 # trigger retry native artifact v2
+
+# trigger feature adapter fix
