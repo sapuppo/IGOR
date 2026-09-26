@@ -1,0 +1,61 @@
+name: R16.28.3 USD-M Consolidation Audit
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-28-3-consolidate.yml"]
+  workflow_dispatch: {}
+permissions:
+  actions: read
+  contents: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: r16-28-2-usdm-*
+          path: downloaded
+          merge-multiple: true
+          run-id: 36206227037
+          github-token: ${{ github.token }}
+      - name: Consolidate and audit
+        run: |
+          python - <<'PY'
+          import json,hashlib,pathlib,shutil
+          root=pathlib.Path("downloaded")
+          manifests=list(root.rglob("manifest.json"))
+          assert len(manifests)==5, f"expected 5 manifests, got {len(manifests)}"
+          symbols={}; files=[]
+          for p in manifests:
+              m=json.loads(p.read_text())
+              assert m["venue"]=="Binance USD-M Futures public archive"
+              assert m["contractType"]=="PERPETUAL"
+              for s in m["symbols"]:
+                  assert s["symbol"] not in symbols, f"duplicate {s['symbol']}"
+                  symbols[s["symbol"]]=s
+              files.extend(m["files"])
+          assert len(symbols)==39, f"expected 39 symbols, got {len(symbols)}"
+          eligible=[s for s in symbols.values() if s["eligible"]]
+          for s in eligible:
+              sf=[f for f in files if f["symbol"]==s["symbol"]]
+              assert len([f for f in sf if f["kind"]=="funding"])==1, s["symbol"]
+              assert {f["interval"] for f in sf if f["kind"]=="kline"}=={"15m","1h","4h"}, s["symbol"]
+              assert all(f.get("sha256") and f.get("rows",0)>0 for f in sf)
+              assert all(f["first"]>=s["firstFundingTime"] for f in sf if f["kind"]=="kline")
+          canonical={"version":"R16.28.3","source_run":36206227037,"venue":"Binance USD-M Futures public archive","period":["2021-01-01","2026-06-30"],"symbol_count":len(symbols),"eligible_count":len(eligible),"symbols":[symbols[k] for k in sorted(symbols)],"files":sorted(files,key=lambda x:(x["symbol"],x["kind"],x.get("interval","")))}
+          payload=json.dumps(canonical,sort_keys=True,separators=(",",":")).encode()
+          canonical["dataset_manifest_sha256"]=hashlib.sha256(payload).hexdigest()
+          out=pathlib.Path("r16_edge_lab/r16_28_3_consolidated");out.mkdir(parents=True,exist_ok=True)
+          (out/"manifest.json").write_text(json.dumps(canonical,indent=2))
+          summary={"status":"PASS","symbols":len(symbols),"eligible":len(eligible),"files":len(files),"dataset_manifest_sha256":canonical["dataset_manifest_sha256"],"source_run":36206227037}
+          (out/"summary.json").write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-28-3-consolidated-audit
+          path: r16_edge_lab/r16_28_3_consolidated/
+          retention-days: 30
