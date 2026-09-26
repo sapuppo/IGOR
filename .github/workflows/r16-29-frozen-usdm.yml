@@ -9,12 +9,14 @@ jobs:
   rebuild:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    env:
+      IGOR_CODE_SHA: c42577ba57095e45ea5d6972bde7bc6e03f8e8d8
     steps:
       - uses: actions/checkout@v4
-        with: {ref: 362e8ecb43493576f9198fe24b4912999b08446c}
+        with: {ref: c42577ba57095e45ea5d6972bde7bc6e03f8e8d8}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install pandas numpy
+      - run: pip install -r r16_edge_lab/requirements-r16-29.txt
       - uses: actions/download-artifact@v4
         with:
           pattern: r16-28-2-usdm-*
@@ -22,69 +24,61 @@ jobs:
           merge-multiple: true
           run-id: 36209442162
           github-token: ${{ github.token }}
-      - name: Materialize USD-M dataset
-        run: |
-          mkdir -p r16_edge_lab/usdm_history
-          find shards -type f -name '*.csv.gz' -print0 | while IFS= read -r -d '' f; do
-            rel="${f#*/}"
-            cp "$f" "r16_edge_lab/usdm_history/$rel" 2>/dev/null || true
-          done
-          python - <<'PY'
-          import pathlib,shutil
-          root=pathlib.Path("shards");dst=pathlib.Path("r16_edge_lab/usdm_history")
-          for p in root.rglob("*.csv.gz"):
-              parts=p.parts
-              if "funding" in parts:
-                  i=parts.index("funding");q=dst.joinpath(*parts[i:])
-              elif "klines" in parts:
-                  i=parts.index("klines");q=dst.joinpath(*parts[i:])
-              else: continue
-              q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
-          print("DATA FILES",len(list(dst.rglob("*.csv.gz"))))
-          PY
-      - name: Download frozen R16.24.3 artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
-          name: r16-24-3-causal-revalidation
-          path: frozen243
-          run-id: 36174189666
+          name: r16-28-3-consolidated-audit
+          path: frozen_manifest
+          run-id: 36213756825
           github-token: ${{ github.token }}
-      - name: Materialize frozen CORE entries
+      - name: Materialize original USD-M bytes and frozen manifest
         run: |
-          mkdir -p r16_edge_lab/r16_29_inputs
           python - <<'PY'
-          import pandas as pd,pathlib
-          root=pathlib.Path("frozen243")
-          hits=list(root.rglob("base_core_trades.csv.gz"))
-          assert hits, "base_core_trades.csv.gz missing from preserved R16.24.3 artifact"
-          x=pd.read_csv(hits[0])[["symbol","entry_time"]].drop_duplicates()
-          p=pathlib.Path("r16_edge_lab/r16_29_inputs/core_entries.csv.gz")
-          x.to_csv(p,index=False,compression="gzip")
-          print("FROZEN CORE ENTRIES",len(x))
+          import pathlib,shutil,hashlib,json
+          dst=pathlib.Path("r16_edge_lab/usdm_history")
+          for p in pathlib.Path("shards").rglob("*.csv.gz"):
+              parts=p.parts
+              i=next((i for i,x in enumerate(parts) if x in ("funding","klines")),None)
+              if i is None: continue
+              q=dst.joinpath(*parts[i:]);q.parent.mkdir(parents=True,exist_ok=True)
+              if q.exists(): assert hashlib.sha256(q.read_bytes()).digest()==hashlib.sha256(p.read_bytes()).digest()
+              else: shutil.copy2(p,q)
+          hits=[p for p in pathlib.Path("frozen_manifest").rglob("manifest.json") if json.loads(p.read_text()).get("dataset_manifest_sha256")=="a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041"]
+          assert len(hits)==1,hits
+          shutil.copy2(hits[0],dst/"manifest.json")
+          print("DATA_FILES",len(list(dst.rglob("*.csv.gz"))))
           PY
-      - run: python -m py_compile r16_edge_lab/run_r16_29_frozen_usdm.py
-      - name: Frozen rebuild
-        run: PYTHONPATH=r16_edge_lab python r16_edge_lab/run_r16_29_frozen_usdm.py
-      - name: Reconciliation audit
+      - name: Compile and retain original ledger fixture
+        run: |
+          python -m py_compile r16_edge_lab/run_r16_29_frozen_usdm.py r16_edge_lab/r16_usdm_engine.py r16_edge_lab/run_integrity_gate3.py
+          PYTHONPATH=r16_edge_lab python r16_edge_lab/test_integrity_core2.py
+      - name: Seek official supplementary funding mark prices
+        timeout-minutes: 15
+        run: python -u r16_edge_lab/collect_r16_29_funding_marks.py
+      - name: Native USD-M BASE STRESS and Integrity Gate 3
+        run: PYTHONPATH=r16_edge_lab python -u r16_edge_lab/run_r16_29_frozen_usdm.py
+      - name: Record classification without promoting blocked evidence
+        if: always()
         run: |
           python - <<'PY'
-          import json,pathlib
-          s=json.loads(pathlib.Path("r16_edge_lab/r16_29_frozen_usdm/summary.json").read_text())
-          l=s["ledger"]["final"]
-          assert s["dataset_manifest_sha256"]=="a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041"
-          assert abs(l["unrealized"])<1e-8 and l["positions"]==0
-          assert l["commissions"]>0 and l["slippage_cost"]>0
-          print("R16.29 RECONCILIATION PASS",json.dumps({"return":s["return"],"accepted":s["accepted"],"commissions":l["commissions"],"slippage":l["slippage_cost"],"funding":l["funding"],"ledger_sha256":s["ledger"]["ledger_sha256"],"status":s["status"]}))
+          import json,pathlib,os
+          p=pathlib.Path("r16_edge_lab/r16_29_frozen_usdm/summary.json")
+          if p.exists():
+              s=json.loads(p.read_text())
+              with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as f:
+                  f.write("## R16.29.2 integrity result\n\nStatus: **"+s["status"]+"**\n\nGate 3: "+json.dumps(s["gate3"])+"\n\nUntouched OOS: **not validated**\n\n")
+                  for b in s["blocking_reasons"]:f.write("- "+str(b)+"\n")
+              print(s["status"],json.dumps(s["gate3"]))
+          else: raise SystemExit("No completed audit summary; run is not validated")
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: r16-29-frozen-usdm
+          name: r16-29-2-native-usdm-gate3
           path: r16_edge_lab/r16_29_frozen_usdm/
-          retention-days: 30
-
-# rerun native artifact download
-
-# trigger retry native artifact v2
-
-# trigger feature adapter fix
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: r16-29-2-funding-mark-evidence
+          path: r16_edge_lab/r16_29_funding_marks/
+          retention-days: 90
