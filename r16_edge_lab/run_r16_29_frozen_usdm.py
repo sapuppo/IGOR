@@ -29,7 +29,7 @@ def main():
     source = Path(__file__).parent
     protocol = json.loads((source/"r16_29_validation_protocol.json").read_text())
     code_names = ["run_r16_29_frozen_usdm.py", "r16_usdm_engine.py", "r16_sim_core.py", "run_integrity_gate3.py",
-                  "r16_usdm_reports.py", "collect_r16_29_funding_marks.py", "r16_29_frozen_config.json",
+                  "r16_usdm_reports.py", "collect_r16_29_funding_marks.py", "collect_r16_29_gap_evidence.py", "r16_29_frozen_config.json",
                   "r16_29_validation_protocol.json", "requirements-r16-29.txt", "BACKTEST_INTEGRITY_CONTRACT.md"]
     fingerprints = {"dataset_manifest_sha256": CONFIG["dataset_manifest_sha256"],
                     "config_sha256": fingerprint(CONFIG), "protocol_sha256": fingerprint(protocol),
@@ -42,6 +42,9 @@ def main():
     save_json(out/"fingerprints.json", fingerprints)
     started = time.monotonic()
     data = Dataset(args.root)
+    fingerprints["supplements"] = data.supplements
+    fingerprints["effective_input_sha256"] = fingerprint({"original":CONFIG["dataset_manifest_sha256"],"supplements":data.supplements})
+    save_json(out/"fingerprints.json", fingerprints)
     print("FROZEN_DATA_VERIFIED", len(data.manifest["files"]), flush=True)
     signals = generate_signals(data)
     print("NATIVE_USDM_SIGNALS", dict(pd.Series([s["engine"] for s in signals]).value_counts()), flush=True)

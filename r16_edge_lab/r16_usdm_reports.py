@@ -53,7 +53,7 @@ def metrics(result):
         "monthly_mean": float(monthly.mean()), "monthly_median": float(monthly.median()),
         "positive_month_fraction": float((monthly > 0).mean()),
         "worst_month": float(monthly.min()), "best_month": float(monthly.max()),
-        "monthly": {str(k.to_period("M")): float(v) for k, v in monthly.items()},
+        "monthly": {k.strftime("%Y-%m"): float(v) for k, v in monthly.items()},
         "annual": {str(k.year): float(v) for k, v in annual.items()},
         "max_drawdown_mtm": float(dd.max()),
         "sharpe_daily_365_zero_rf": float(returns.mean())/std*math.sqrt(365) if std > 0 else None,

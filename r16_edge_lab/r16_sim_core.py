@@ -137,7 +137,15 @@ class PortfolioLedger:
         new_margin=new_notional/self.leverage
         if new_margin+entry_fee+entry_slip>self.available_collateral()+EPS:return False,"collateral"
         new_risk=max(0.0,-side*qty*(stop_price-fill_price))+abs(qty*stop_price)*(exit_fee_rate+exit_slip_rate)
-        if self.aggregate_stop_risk(exit_fee_rate)+new_risk > projected_equity*self.max_stop_risk_fraction+EPS:
+        # Reserve the risk budget against equity remaining if all current stops
+        # execute. Using today's MTM alone lets ordinary open losses push the
+        # same already-accepted stop commitments beyond the 6% ceiling.
+        remaining_loss=sum(max(0.0,p.side*p.qty*(p.mark_price-p.stop_price))+
+                           abs(p.qty*p.stop_price)*(max(exit_fee_rate,p.exit_fee_rate)+p.exit_slip_rate)
+                           for p in self.positions.values())
+        new_remaining_loss=max(0.0,side*qty*(ref-stop_price))+abs(qty*stop_price)*(exit_fee_rate+exit_slip_rate)
+        stop_floor_equity=projected_equity-remaining_loss-new_remaining_loss
+        if self.aggregate_stop_risk(exit_fee_rate)+new_risk > stop_floor_equity*self.max_stop_risk_fraction+EPS:
             return False,"aggregate_stop_risk"
         return True,"ok"
 

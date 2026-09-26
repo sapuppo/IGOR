@@ -109,6 +109,8 @@ def independent_audit(result, data, scenario):
             near(value, row[field], field)
         near(CONFIG["capital"]+gross-fees-slips+funding, cash, "independent cash identity")
         assert cash-margin >= -1e-7, "cash collateral deficit"
+        if positions:
+            assert min(p["margin"]+p["funding"]+p["side"]*p["qty"]*(p["mark"]-p["ref"]) for p in positions.values()) > 0, "isolated wallet requires liquidation modeling"
         if event == "OPEN":
             max_entry_gross = max(max_entry_gross, notional/equity)
             max_entry_risk = max(max_entry_risk, risk/equity)
@@ -124,6 +126,10 @@ def execution_fixture():
     assert exit_reference(p, [100, 115, 90, 112], 50) == (95., "STOP_AMBIGUOUS")
     assert exit_reference(p, [90, 115, 85, 112], 50, at_open=True) == (90., "STOP_GAP")
     assert exit_reference(p, [115, 120, 112, 116], 50, at_open=True) == (110., "TARGET_GAP")
+    risk_ledger = PortfolioLedger(10000.)
+    ok, reason = risk_ledger.can_open(side=1, qty=80, fill_price=100, stop_price=92.6,
+                                      entry_fee_rate=0, exit_fee_rate=0)
+    assert not ok and reason == "aggregate_stop_risk", "risk reserve ignored open-loss equity floor"
     for side in (1, -1):
         ledger = PortfolioLedger(10000., max_stop_risk_fraction=.5)
         fill = 100*(1+side*.0002)
@@ -163,7 +169,7 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
     cutoff = int(pd.Timestamp("2021-07-01", tz="UTC").timestamp()*1000)-1
     full_prefix = [e for e in base.ledger.events if e["timestamp"] <= cutoff]
     def perturb():
-        altered = Dataset(data.root, perturb_after=cutoff, verify=False)
+        altered = Dataset(data.root, perturb_after=cutoff, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
         changed_signals = generate_signals(altered)
         assert signals != changed_signals, "test failed to change future signals"
         assert [s for s in signals if s["timestamp"] <= cutoff] == [s for s in changed_signals if s["timestamp"] <= cutoff]
@@ -172,7 +178,7 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
         return {"cutoff": cutoff, "compared_events": len(full_prefix), "future_signals_changed": True}
     check(1, "future_data_perturbation", perturb)
     def prefix():
-        truncated = Dataset(data.root, cutoff=cutoff, verify=False)
+        truncated = Dataset(data.root, cutoff=cutoff, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
         prefix_signals = generate_signals(truncated)
         assert prefix_signals == [s for s in signals if s["timestamp"] <= cutoff]
         r = replay(truncated, prefix_signals, until=cutoff, liquidate_end=False)
@@ -198,6 +204,9 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
         return {name: row[field] for name, row in audit.items()}
     check(3, "next_observation_execution", lambda: audited("event_counts"))
     check(4, "no_prelisting_trades", lambda: {"events": audited("events"), "scope": "fixed cohort; first historical funding is a conservative tradability lower bound, not complete listing metadata"})
+    if results[-1]["status"] == "PASS" and (base.diagnostics["missing_active_bars"] or stress.diagnostics["missing_active_bars"]):
+        results[-1]["status"] = "BLOCKED"
+        results[-1]["blocking_reason"] = "No prelisting trades, but active-position observations are missing from the frozen dataset and its supplement."
     check(5, "conservative_intrabar_execution", execution_fixture)
     check(6, "closed_only_realized_regime", lambda: audited("event_counts"))
     check(7, "mtm_equity_reconciliation", lambda: {"errors": audited("maximum_absolute_reconciliation_error"), "mark_scope": "last-traded-price model, not exchange mark series"})
@@ -211,10 +220,11 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
         return {"entry": evidence, "all_event_max": {n: r["max_open_stop_risk_fraction"] for n, r in reports.items()}}
     check(10, "aggregate_stop_risk", risk_check)
     check(11, "modeled_fees_and_funding_arithmetic", lambda: {"reconciliation": audited("maximum_absolute_reconciliation_error"), "fixture": execution_fixture()})
-    if results[-1]["status"] == "PASS":
+    proxy_count = sum(r.diagnostics["funding_settlement_evidence"].get("proxy",0) for r in (base,stress))
+    if results[-1]["status"] == "PASS" and proxy_count:
         results[-1]["status"] = "BLOCKED"
         results[-1]["name"] = "historical_fee_funding_reconciliation"
-        results[-1]["blocking_reason"] = "Arithmetic and historical rates/timestamps reconcile. Frozen source lacks funding settlement markPrice; modeled cashflow is a price proxy. Fee is an assumption, not historical account evidence."
+        results[-1]["blocking_reason"] = f"Arithmetic and historical rates/timestamps reconcile, but {proxy_count} BASE+STRESS shadow/portfolio funding events lack official settlement markPrice and use an explicit price proxy. Fixed fees remain a declared modeling assumption."
     def deterministic():
         duplicate = replay(data, signals)
         expected, actual = base.ledger.manifest(), duplicate.ledger.manifest()

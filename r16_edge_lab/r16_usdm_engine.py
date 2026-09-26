@@ -12,6 +12,7 @@ from pathlib import Path
 import hashlib
 import json
 import math
+import gzip
 
 import numpy as np
 import pandas as pd
@@ -46,19 +47,45 @@ def verify_dataset(root):
 
 
 class Dataset:
-    def __init__(self, root, *, cutoff=None, perturb_after=None, verify=True):
+    def __init__(self, root, *, cutoff=None, perturb_after=None, verify=True,
+                 gap_root=None, funding_mark_root=None):
         self.root = Path(root)
         self.manifest = verify_dataset(root) if verify else json.loads((self.root / "manifest.json").read_text())
         self.pit = {r["symbol"]: int(r["firstFundingTime"]) for r in self.manifest["symbols"] if r["eligible"]}
         self.frames = {}
         self.bars = {}
         self.funding = []
+        self.funding_marks = {}
+        self.supplements = {}
+        self.gap_root = Path(gap_root) if gap_root else self.root.parent/"r16_29_gap_evidence"
+        self.funding_mark_root = Path(funding_mark_root) if funding_mark_root else self.root.parent/"r16_29_funding_marks"
+        gap_files = {}
+        if (self.gap_root/"manifest.json").exists():
+            gm = json.loads((self.gap_root/"manifest.json").read_text())
+            assert gm["parent_dataset_manifest_sha256"] == CONFIG["dataset_manifest_sha256"]
+            assert fingerprint({k:v for k,v in gm.items() if k != "supplement_sha256"}) == gm["supplement_sha256"]
+            gap_files = {(x["symbol"],x["interval"]):x for x in gm["files"]}
+            self.supplements["gaps"] = {"sha256": gm["supplement_sha256"], "status": gm["status"], "missing": gm["missing"], "recovered": gm["recovered"]}
+        mark_files = {}
+        if (self.funding_mark_root/"manifest.json").exists():
+            fm = json.loads((self.funding_mark_root/"manifest.json").read_text())
+            assert fm["source_dataset_sha256"] == CONFIG["dataset_manifest_sha256"]
+            mark_files = {x["symbol"]:x for x in fm["symbols"]}
+            self.supplements["funding_marks"] = {"manifest_sha256": fingerprint(fm), "status": fm["status"],
+                                                 "missing_marks": sum(x["missing_mark_price"] for x in fm["symbols"])}
         self.cutoff = cutoff
         for symbol in sorted(self.pit):
             for interval in INTERVAL:
                 frame = pd.read_csv(self.root / "klines" / interval / f"{symbol}.csv.gz",
                                     usecols=["open_time", "open", "high", "low", "close", "volume"])
                 frame.open_time = frame.open_time.astype("int64")
+                if (symbol,interval) in gap_files:
+                    entry = gap_files[(symbol,interval)]
+                    path = self.gap_root/entry["path"]
+                    assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"]
+                    extra = pd.read_csv(path, usecols=list(frame.columns))
+                    assert not extra.open_time.isin(frame.open_time).any(), "supplement may not replace frozen observations"
+                    frame = pd.concat([frame,extra],ignore_index=True).sort_values("open_time").reset_index(drop=True)
                 assert frame.open_time.is_monotonic_increasing and frame.open_time.is_unique
                 assert (frame.open_time >= self.pit[symbol]).all()
                 assert np.isfinite(frame.to_numpy()).all()
@@ -80,6 +107,12 @@ class Dataset:
                     self.bars[symbol] = (frame.open_time.to_numpy(), frame[["open", "high", "low", "close"]].to_numpy())
             funding = pd.read_csv(self.root / "funding" / f"{symbol}.csv.gz")
             assert funding.fundingTime.is_monotonic_increasing and funding.fundingTime.is_unique
+            marks = {}
+            if symbol in mark_files:
+                path = self.funding_mark_root/f"{symbol}.json.gz"
+                assert hashlib.sha256(path.read_bytes()).hexdigest() == mark_files[symbol]["sha256"]
+                rows = json.loads(gzip.decompress(path.read_bytes()))
+                marks = {int(x["fundingTime"]):x for x in rows if float(x.get("markPrice",0) or 0)>0}
             for row in funding.itertuples(index=False):
                 timestamp = int(row.fundingTime)
                 if cutoff is not None and timestamp > cutoff:
@@ -87,6 +120,13 @@ class Dataset:
                 rate = float(row.fundingRate)
                 if perturb_after is not None and timestamp > perturb_after:
                     rate = -rate * 7
+                if timestamp in marks:
+                    item = marks[timestamp]
+                    assert abs(float(item["fundingRate"])-float(row.fundingRate)) < 1e-12
+                    price = float(item["markPrice"])
+                    if perturb_after is not None and timestamp > perturb_after:
+                        price *= 1.73
+                    self.funding_marks[(timestamp,symbol)] = price
                 self.funding.append((timestamp, symbol, rate))
         self.funding.sort()
 
@@ -200,6 +240,7 @@ def replay(data, signals=None, *, scenario="BASE", until=END-1, trade_start=STAR
     max_risk = 0.
     max_gross = 0.
     data_gaps = set()
+    funding_evidence = Counter()
 
     def record(t, event, **payload):
         ledger._check_time(t)
@@ -240,10 +281,18 @@ def replay(data, signals=None, *, scenario="BASE", until=END-1, trade_start=STAR
             ledger.mark_many(t, prices)
 
     def fund(t, symbol, rate):
+        settlement_mark = data.funding_marks.get((t,symbol))
+        involved = any(p["symbol"] == symbol for p in shadow.values())
+        if involved:
+            funding_evidence["exact" if settlement_mark is not None else "proxy"] += 1
         for p in shadow.values():
             if p["symbol"] == symbol:
+                if settlement_mark is not None:
+                    p["mark"] = settlement_mark
                 p["funding"] -= p["mark"]*rate
         if any(p.symbol == symbol for p in ledger.positions.values()):
+            if settlement_mark is not None:
+                ledger.mark(t,symbol,settlement_mark)
             ledger.funding_event(t, symbol, rate)
 
     # All features before trade_start remain available for warmup. No outcome
@@ -382,6 +431,7 @@ def replay(data, signals=None, *, scenario="BASE", until=END-1, trade_start=STAR
                   {"scenario": scenario, "rejections": dict(rejected), "signals": len([s for s in signals if trade_start <= s["timestamp"] <= until]),
                    "open_positions": len(ledger.positions), "pending_orders": len(pending),
                    "missing_active_bars": len(data_gaps), "missing_active_bar_examples": sorted(data_gaps)[:20],
+                   "funding_settlement_evidence": dict(funding_evidence), "supplements": data.supplements,
                    "max_bar_close_stop_risk_fraction": max_risk, "max_bar_close_gross_equity": max_gross,
                    "minimum_isolated_equity": None if minimum_isolated == math.inf else minimum_isolated,
                    "coexposure_15m_bars": dict(coexposure.most_common()),
