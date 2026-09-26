@@ -4,6 +4,7 @@ PASS means a tested invariant, BLOCKED means missing source evidence. Neither a
 green workflow nor a fixed funding-rate assumption can override a BLOCKED gate.
 """
 from collections import Counter
+import copy
 import math
 import numpy as np
 import pandas as pd
@@ -72,6 +73,8 @@ def independent_audit(result, data, scenario):
                 p["funding"] += payment; net += payment
                 allocation = next(a for a in row["allocations"] if a["position_id"] == key)
                 near(payment, allocation["cashflow"], "funding allocation")
+                if (timestamp,row["symbol"]) in data.funding_marks:
+                    near(allocation["mark_price"],data.funding_marks[(timestamp,row["symbol"])],"official settlement mark")
             near(net, row["funding_cashflow"], "funding cashflow")
             cash += net; funding += net
         elif event == "CLOSE":
@@ -82,6 +85,7 @@ def independent_audit(result, data, scenario):
             near(pnl, row["gross_pnl_event"], "gross pnl")
             near(commission, row["commission"], "exit commission")
             near(slippage, row["slippage_cost_event"], "exit slippage")
+            near(row["fill_price"],row["reference_price"]*(1-model["slip"]),"adverse exit fill")
             assert slippage >= 0
             cash += pnl-commission-slippage; gross += pnl; fees += commission; slips += slippage
         elif event == "SHADOW_CLOSE":
@@ -116,6 +120,9 @@ def independent_audit(result, data, scenario):
             max_entry_risk = max(max_entry_risk, risk/equity)
             assert notional/equity <= 1+1e-9, "entry exposure breach"
             assert risk/equity <= CONFIG["max_stop_risk"]+1e-9, "entry stop-risk breach"
+            floor=cash+sum(p["side"]*p["qty"]*(min(p["mark"],p["stop"])-p["ref"])-
+                           abs(p["qty"]*p["stop"])*(model["fee"]+model["slip"]) for p in positions.values())
+            assert risk <= floor*CONFIG["max_stop_risk"]+1e-7, "loss-adjusted stop-risk reserve breach"
     return {"events": len(result.ledger.events), "event_counts": dict(count),
             "max_entry_gross_equity": max_entry_gross, "max_entry_stop_risk": max_entry_risk,
             "maximum_absolute_reconciliation_error": maximum_error}
@@ -234,13 +241,33 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
     def isolation():
         windows = protocol["historical_windows"]
         assert not protocol["optimization"] and not protocol["selection_on_evaluation_windows"]
+        fold_proofs=[]
         for i, window in enumerate(windows):
             assert window["feature_history_start"] < window["evaluation_start"] < window["evaluation_end_exclusive"]
             if i:
                 assert windows[i-1]["evaluation_end_exclusive"] <= window["evaluation_start"]
+            # Recompute features and run the real portfolio from physically
+            # truncated in-memory observations at each fold boundary. Future
+            # candles, funding rates and settlement marks are absent from view.
+            end=int(pd.Timestamp(window["evaluation_end_exclusive"],tz="UTC").timestamp()*1000)-1
+            view=copy.copy(data)
+            steps={"15m":BAR,"1h":4*BAR,"4h":16*BAR}
+            view.frames={key:frame.loc[frame.open_time+steps[key[1]]-1<=end].copy()
+                         for key,frame in data.frames.items()}
+            view.bars={s:(times[times+BAR-1<=end],values[times+BAR-1<=end]) for s,(times,values) in data.bars.items()}
+            view.funding=[x for x in data.funding if x[0]<=end]
+            view.funding_marks={key:v for key,v in data.funding_marks.items() if key[0]<=end}
+            view.cutoff=end
+            fold_signals=generate_signals(view)
+            assert fold_signals==[s for s in signals if s["timestamp"]<=end]
+            fold=replay(view,fold_signals,until=end,liquidate_end=end==END-1)
+            expected=[row for row in base.ledger.events if row["timestamp"]<=end]
+            assert fold.ledger.events==expected, f"future data changed fold ending {window['evaluation_end_exclusive']}"
+            fold_proofs.append({"end":end,"events":len(expected),"ledger_sha256":fold.ledger.manifest()["ledger_sha256"],"signals":len(fold_signals)})
+            print("WALKFORWARD_PREFIX_PASS",window["evaluation_end_exclusive"],len(expected),flush=True)
         assert fingerprint(CONFIG) == fingerprints["config_sha256"]
         assert results[0]["status"] == results[1]["status"] == "PASS"
-        return {"windows": len(windows), "fitting": False, "selection": False,
+        return {"windows": len(windows), "executed_fold_prefixes":fold_proofs,"fitting": False, "selection": False,
                 "causal_prefix_proof": results[0]["status"] == results[1]["status"] == "PASS",
                 "untouched_oos": False, "contamination": protocol["contamination"]}
     check(13, "chronological_walkforward_isolation", isolation)

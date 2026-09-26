@@ -28,10 +28,19 @@ def main():
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     source = Path(__file__).parent
     protocol = json.loads((source/"r16_29_validation_protocol.json").read_text())
+    original_alpha = {"stops":{e:c["stop_atr"] for e,c in CONFIG["engines"].items()}}
+    for engine,label in (("REV1H","rev1h"),("REV15M","rev15m")):
+        c=CONFIG["engines"][engine]
+        original_alpha[label]={k:c[k] for k in ("name","move","volz","body","cluster_h")}
+        original_alpha[label]["geom"]=c["source_geometry"]
+        if engine=="REV15M":original_alpha[label]["horizon_bars"]=c["horizon_bars"]
+    original_alpha_sha=hashlib.sha256(json.dumps(original_alpha,sort_keys=True,default=list).encode()).hexdigest()
+    assert original_alpha_sha=="cb1f770e39ee0e3814b0b37047abad71868c8b6ec517bb39cb7cfa47e91e3a5b", "frozen alpha changed"
     code_names = ["run_r16_29_frozen_usdm.py", "r16_usdm_engine.py", "r16_sim_core.py", "run_integrity_gate3.py",
                   "r16_usdm_reports.py", "collect_r16_29_funding_marks.py", "collect_r16_29_gap_evidence.py", "r16_29_frozen_config.json",
                   "r16_29_validation_protocol.json", "requirements-r16-29.txt", "BACKTEST_INTEGRITY_CONTRACT.md"]
     fingerprints = {"dataset_manifest_sha256": CONFIG["dataset_manifest_sha256"],
+                    "original_frozen_alpha_sha256":original_alpha_sha,
                     "config_sha256": fingerprint(CONFIG), "protocol_sha256": fingerprint(protocol),
                     "code_files": {n: hashlib.sha256((source/n).read_bytes()).hexdigest() for n in code_names},
                     "code_commit": os.environ.get("IGOR_CODE_SHA", "LOCAL_UNCOMMITTED"),
