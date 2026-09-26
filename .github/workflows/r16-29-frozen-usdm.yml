@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      IGOR_CODE_SHA: fc26f84daaf4e051016e4d3cde932dfcd0199b70
+      IGOR_CODE_SHA: 801be6122dc4da9406d4527ce74c7329a8e21bf3
     steps:
       - uses: actions/checkout@v4
-        with: {ref: fc26f84daaf4e051016e4d3cde932dfcd0199b70}
+        with: {ref: 801be6122dc4da9406d4527ce74c7329a8e21bf3}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r r16_edge_lab/requirements-r16-29.txt
@@ -58,9 +58,13 @@ jobs:
           path: r16_edge_lab/r16_29_funding_marks
           run-id: 36217774566
           github-token: ${{ github.token }}
-      - name: Recover missing candles from official USD-M sources
-        timeout-minutes: 30
-        run: python -u r16_edge_lab/collect_r16_29_gap_evidence.py
+      - name: Use checksum-verified missing-candle supplement
+        uses: actions/download-artifact@v4
+        with:
+          name: r16-29-2-gap-evidence
+          path: r16_edge_lab/r16_29_gap_evidence
+          run-id: 36246961701
+          github-token: ${{ github.token }}
       - name: Native USD-M BASE STRESS and Integrity Gate 3
         run: PYTHONPATH=r16_edge_lab python -u r16_edge_lab/run_r16_29_frozen_usdm.py
       - name: Record classification without promoting blocked evidence
