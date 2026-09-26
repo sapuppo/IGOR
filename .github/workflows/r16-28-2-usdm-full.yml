@@ -1,0 +1,51 @@
+name: R16.28.2 USD-M Full Dataset
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-28-2-usdm-full.yml"]
+  workflow_dispatch: {}
+permissions: {contents: read}
+jobs:
+  collect:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard:
+          - "BTCUSDT,ETHUSDT,BNBUSDT,XRPUSDT,SOLUSDT,TRXUSDT,ZECUSDT,DOGEUSDT"
+          - "LINKUSDT,ADAUSDT,XLMUSDT,UNIUSDT,BCHUSDT,NEARUSDT,AVAXUSDT,LTCUSDT"
+          - "SUIUSDT,HBARUSDT,TAOUSDT,AAVEUSDT,ENAUSDT,ONDOUSDT,DOTUSDT,ICPUSDT"
+          - "WLDUSDT,ETCUSDT,POLUSDT,TONUSDT,FILUSDT,ATOMUSDT,INJUSDT,APTUSDT"
+          - "FETUSDT,RENDERUSDT,PEPEUSDT,ALGOUSDT,VETUSDT,GRTUSDT,RUNEUSDT"
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - name: Collect shard
+        run: |
+          S="$(echo '\${{ matrix.shard }}' | tr ',' '_')"
+          python r16_edge_lab/run_r16_28_collect_usdm.py --start 2021-01-01 --end 2026-06-30 --symbols '\${{ matrix.shard }}' --intervals 15m,1h,4h --output "r16_edge_lab/usdm_full/$S"
+      - name: Audit shard
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          roots=list(pathlib.Path("r16_edge_lab/usdm_full").glob("*/manifest.json"))
+          assert len(roots)==1
+          m=json.loads(roots[0].read_text())
+          assert m["venue"]=="Binance USD-M Futures public archive"
+          assert m["contractType"]=="PERPETUAL"
+          assert all(x.get("sha256") for x in m["files"])
+          for s in [x for x in m["symbols"] if x["eligible"]]:
+              fs=[f for f in m["files"] if f["symbol"]==s["symbol"]]
+              assert any(f["kind"]=="funding" for f in fs)
+              assert len([f for f in fs if f["kind"]=="kline"])==3
+          print("SHARD PASS",len(m["symbols"]),len(m["files"]))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-28-2-usdm-dataset
+          path: r16_edge_lab/usdm_full/
+          retention-days: 30
