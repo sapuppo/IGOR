@@ -1,0 +1,159 @@
+name: R16.29 Audit Data Materialization
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-29-audit-data.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: r16-28-2-usdm-*
+          path: shards
+          merge-multiple: true
+          run-id: 36209442162
+          repository: sapuppo/IGOR
+          github-token: ${{ github.token }}
+      - name: Preserve exact dataset bytes in bounded audit bundles
+        run: |
+          python - <<'PY'
+          import pathlib,shutil,hashlib,json
+          root=pathlib.Path("shards");used=set();part=0;size=0;rows=[]
+          for p in sorted(root.rglob("*.csv.gz")):
+              if "klines" in p.parts:i=p.parts.index("klines")
+              elif "funding" in p.parts:i=p.parts.index("funding")
+              else:continue
+              rel=pathlib.Path(*p.parts[i:])
+              assert str(rel) not in used,str(rel)
+              used.add(str(rel))
+              n=p.stat().st_size
+              assert n<24*1024*1024
+              if size+n>24*1024*1024:part+=1;size=0
+              q=pathlib.Path("bundles")/f"{part:02}"/rel
+              q.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,q);size+=n
+              rows.append({"path":str(rel),"sha256":hashlib.sha256(p.read_bytes()).hexdigest(),"bundle":part})
+          assert len(rows)==152,len(rows)
+          pathlib.Path("audit_manifest.json").write_text(json.dumps(rows,indent=2))
+          print("unchanged dataset files",len(rows),"bundles",part+1)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/00/**') != ''
+        with:
+          name: r16-29-audit-data-00
+          path: bundles/00/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/01/**') != ''
+        with:
+          name: r16-29-audit-data-01
+          path: bundles/01/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/02/**') != ''
+        with:
+          name: r16-29-audit-data-02
+          path: bundles/02/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/03/**') != ''
+        with:
+          name: r16-29-audit-data-03
+          path: bundles/03/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/04/**') != ''
+        with:
+          name: r16-29-audit-data-04
+          path: bundles/04/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/05/**') != ''
+        with:
+          name: r16-29-audit-data-05
+          path: bundles/05/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/06/**') != ''
+        with:
+          name: r16-29-audit-data-06
+          path: bundles/06/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/07/**') != ''
+        with:
+          name: r16-29-audit-data-07
+          path: bundles/07/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/08/**') != ''
+        with:
+          name: r16-29-audit-data-08
+          path: bundles/08/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/09/**') != ''
+        with:
+          name: r16-29-audit-data-09
+          path: bundles/09/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/10/**') != ''
+        with:
+          name: r16-29-audit-data-10
+          path: bundles/10/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/11/**') != ''
+        with:
+          name: r16-29-audit-data-11
+          path: bundles/11/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/12/**') != ''
+        with:
+          name: r16-29-audit-data-12
+          path: bundles/12/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/13/**') != ''
+        with:
+          name: r16-29-audit-data-13
+          path: bundles/13/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/14/**') != ''
+        with:
+          name: r16-29-audit-data-14
+          path: bundles/14/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('bundles/15/**') != ''
+        with:
+          name: r16-29-audit-data-15
+          path: bundles/15/
+          compression-level: 0
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-29-audit-data-manifest
+          path: audit_manifest.json
+          retention-days: 30
