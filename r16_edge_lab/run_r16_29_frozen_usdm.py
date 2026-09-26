@@ -3,6 +3,7 @@
 from __future__ import annotations
 from pathlib import Path
 import importlib.util,json,hashlib,math
+from functools import lru_cache
 import pandas as pd,numpy as np
 from r16_sim_core import PortfolioLedger
 
@@ -20,6 +21,7 @@ R14=loadmod("r16_edge_lab/run_r16_14_extreme_reversion.py","r14")
 R16=loadmod("r16_edge_lab/run_r16_16_intraday_reversion.py","r16")
 R243=loadmod("r16_edge_lab/run_r16_24_3_causal_revalidation.py","r243")
 
+@lru_cache(maxsize=None)
 def kline(sym,iv):
  p=ROOT/"klines"/iv/f"{sym}.csv.gz"
  if not p.exists():return pd.DataFrame()
@@ -41,6 +43,7 @@ def kline(sym,iv):
   for hb in [4,8,16]:x[f"ret{hb}"]=cl.pct_change(hb)
  return x
 
+@lru_cache(maxsize=None)
 def funding(sym):
  p=ROOT/"funding"/f"{sym}.csv.gz"
  return pd.read_csv(p) if p.exists() else pd.DataFrame(columns=["fundingTime","fundingRate"])
@@ -74,7 +77,9 @@ def frozen_entries():
 def rebuild(ent,e,iv,bar,hold,target,stop):
  cache={};rows=[]
  for r in ent.sort_values(["entry_time","symbol"]).itertuples(index=False):
-  sym=str(r.symbol);z=cache.setdefault(sym,kline(sym,iv))
+  sym=str(r.symbol)
+  if sym not in cache:cache[sym]=kline(sym,iv)
+  z=cache[sym]
   if z.empty:continue
   a=z.open_time.to_numpy(np.int64);signal=int(r.entry_time)
   # next-observation fill: signal timestamp cannot fill on same observation.
@@ -104,6 +109,23 @@ def score(closed,t,lb=6):
   out[e]=float(q.net_pct.mean()) if len(q) else 0.
  return out
 
+def chronological_events(F):
+ # At an equal timestamp: mark -> funding -> close -> open.
+ # Existing positions pay funding at their exit timestamp; a new open does not.
+ ev=[];bounds={}
+ for e,d in F.items():
+  for i,r in d.iterrows():
+   ev.append((int(r.entry_time),3,e,i))
+   for t,p in r.marks:ev.append((int(t),0,e,i,float(p)))
+   ev.append((int(r.exit_time),2,e,i))
+   lo,hi=bounds.get(str(r.symbol),(int(r.entry_time),int(r.exit_time)))
+   bounds[str(r.symbol)]=(min(lo,int(r.entry_time)),max(hi,int(r.exit_time)))
+ for sym,(lo,hi) in bounds.items():
+  fd=funding(sym)
+  for r in fd[(fd.fundingTime>lo)&(fd.fundingTime<=hi)].itertuples():
+   ev.append((int(r.fundingTime),1,sym,0,float(r.fundingRate)))
+ return sorted(ev,key=lambda x:(x[0],x[1],x[2],x[3]))
+
 def main():
  ce,r1,r15,g1,g15=frozen_entries()
  cfg={"CORE":("4h",14400000,30,6.,ce),"REV1H":("1h",3600000,g1[2],g1[1],r1),"REV15M":("15m",900000,g15[2],g15[1],r15)}
@@ -116,16 +138,14 @@ def main():
    fr=float(q.fundingRate.sum()) if len(q) else 0.
    gross=float(r.exit_ref/r.entry_fill-1); nets.append(gross-2*TAKER-fr)
   d["net_pct"]=nets
- ev=[]
- for e,d in F.items():
-  for i,r in d.iterrows():
-   ev.append((int(r.entry_time),1,e,i))
-   for t,p in r.marks:ev.append((int(t),0,e,i,float(p)))
-   ev.append((int(r.exit_time),2,e,i))
- ev.sort(key=lambda x:(x[0],x[1],x[2],x[3]))
+ ev=chronological_events(F)
  L=PortfolioLedger(START_CAP,1.0,MAX_STOP_RISK);active={};acc={e:0 for e in F};rej={};peak=START_CAP
  for item in ev:
-  t,typ,e,i,*rest=item;r=F[e].iloc[i];key=f"{e}:{i}"
+  t,typ,e,i,*rest=item
+  if typ==1:
+   if any(p.symbol==e for p in L.positions.values()):L.funding_event(t,e,float(rest[0]))
+   continue
+  r=F[e].iloc[i];key=f"{e}:{i}"
   if typ==0:
    if key in active:L.mark(t,str(r.symbol),float(rest[0]))
    continue
@@ -146,13 +166,10 @@ def main():
   ok,why=L.open(t,key,e,str(r.symbol),1,qty,float(r.entry_fill),float(r.stop_price),TAKER,TAKER,float(r.entry_ref))
   if not ok:rej[why]=rej.get(why,0)+1;continue
   active[key]=True;acc[e]+=1
-  # historical funding events are applied as they are crossed; schedule immediately in event loop is required.
-  fd=funding(str(r.symbol));q=fd[(fd.fundingTime>t)&(fd.fundingTime<=int(r.exit_time))]
-  for fr in q.itertuples(): L.funding_event(int(fr.fundingTime),str(r.symbol),float(fr.fundingRate))
  # chronological event invariant: all positions should have closed.
  L.assert_reconciles();L.write_jsonl(OUT/"ledger.jsonl")
- m=L.manifest();ret=m["final_equity"]/START_CAP-1
- s={"version":"R16.29","status":"FROZEN_USDM_REBUILD","venue":"Binance USD-M Futures","dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+ m=L.manifest();ret=m["final"]["equity"]/START_CAP-1
+ s={"version":"R16.29.1","status":"TECHNICALLY_INVALID","blocking_reasons":["CORE entries still originate from Spot","full integrity and OOS gates pending"],"event_priority":["MARK","FUNDING","CLOSE","OPEN"],"venue":"Binance USD-M Futures","dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
  "frozen":{"stops":STOP,"rev1h":FROZEN_REV1H,"rev15m":FROZEN_REV15M,"config_sha256":FROZEN_CONFIG_SHA256},"accepted":acc,"rejections":rej,"ledger":m,"return":ret,
  "costs":{"commission_rate_each_side":TAKER,"slippage_each_side":SLIP,"funding":"historical archive"}}
  (OUT/"summary.json").write_text(json.dumps(s,indent=2,default=float));print(json.dumps(s,indent=2,default=float))
