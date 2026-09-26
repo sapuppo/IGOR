@@ -1,0 +1,63 @@
+name: R16.29 Frozen USD-M Rebuild
+"on":
+  push:
+    branches: [master]
+    paths: [".github/workflows/r16-29-frozen-usdm.yml"]
+  workflow_dispatch: {}
+permissions: {actions: read, contents: read}
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: r16-edge-first}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install pandas numpy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: r16-28-2-usdm-*
+          path: shards
+          merge-multiple: true
+          run-id: 36209442162
+          github-token: ${{ github.token }}
+      - name: Materialize USD-M dataset
+        run: |
+          mkdir -p r16_edge_lab/usdm_history
+          find shards -type f -name '*.csv.gz' -print0 | while IFS= read -r -d '' f; do
+            rel="${f#*/}"
+            cp "$f" "r16_edge_lab/usdm_history/$rel" 2>/dev/null || true
+          done
+          python - <<'PY'
+          import pathlib,shutil
+          root=pathlib.Path("shards");dst=pathlib.Path("r16_edge_lab/usdm_history")
+          for p in root.rglob("*.csv.gz"):
+              parts=p.parts
+              if "funding" in parts:
+                  i=parts.index("funding");q=dst.joinpath(*parts[i:])
+              elif "klines" in parts:
+                  i=parts.index("klines");q=dst.joinpath(*parts[i:])
+              else: continue
+              q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
+          print("DATA FILES",len(list(dst.rglob("*.csv.gz"))))
+          PY
+      - run: python -m py_compile r16_edge_lab/run_r16_29_frozen_usdm.py
+      - name: Frozen rebuild
+        run: PYTHONPATH=r16_edge_lab python r16_edge_lab/run_r16_29_frozen_usdm.py
+      - name: Reconciliation audit
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          s=json.loads(pathlib.Path("r16_edge_lab/r16_29_frozen_usdm/summary.json").read_text())
+          l=s["ledger"]
+          assert s["dataset_manifest_sha256"]=="a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041"
+          assert abs(l["unrealized"])<1e-8 and l["positions"]==0
+          assert l["commissions"]>0 and l["slippage_cost"]>0
+          print("R16.29 RECONCILIATION PASS",json.dumps({"return":s["return"],"accepted":s["accepted"],"commissions":l["commissions"],"slippage":l["slippage_cost"],"funding":l["funding"],"ledger_sha256":l["sha256"]}))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: r16-29-frozen-usdm
+          path: r16_edge_lab/r16_29_frozen_usdm/
+          retention-days: 30
