@@ -18,8 +18,8 @@ jobs:
         with:
           pattern: r16-28-2-usdm-*
           path: downloaded
-          merge-multiple: true
-          run-id: 36206227037
+          merge-multiple: false
+          run-id: 36209442162
           github-token: ${{ github.token }}
       - name: Consolidate and audit
         run: |
@@ -45,12 +45,12 @@ jobs:
               assert {f["interval"] for f in sf if f["kind"]=="kline"}=={"15m","1h","4h"}, s["symbol"]
               assert all(f.get("sha256") and f.get("rows",0)>0 for f in sf)
               assert all(f["first"]>=s["firstFundingTime"] for f in sf if f["kind"]=="kline")
-          canonical={"version":"R16.28.3","source_run":36206227037,"venue":"Binance USD-M Futures public archive","period":["2021-01-01","2026-06-30"],"symbol_count":len(symbols),"eligible_count":len(eligible),"symbols":[symbols[k] for k in sorted(symbols)],"files":sorted(files,key=lambda x:(x["symbol"],x["kind"],x.get("interval","")))}
+          canonical={"version":"R16.28.3","source_run":36209442162,"venue":"Binance USD-M Futures public archive","period":["2021-01-01","2026-06-30"],"symbol_count":len(symbols),"eligible_count":len(eligible),"symbols":[symbols[k] for k in sorted(symbols)],"files":sorted(files,key=lambda x:(x["symbol"],x["kind"],x.get("interval","")))}
           payload=json.dumps(canonical,sort_keys=True,separators=(",",":")).encode()
           canonical["dataset_manifest_sha256"]=hashlib.sha256(payload).hexdigest()
           out=pathlib.Path("r16_edge_lab/r16_28_3_consolidated");out.mkdir(parents=True,exist_ok=True)
           (out/"manifest.json").write_text(json.dumps(canonical,indent=2))
-          summary={"status":"PASS","symbols":len(symbols),"eligible":len(eligible),"files":len(files),"dataset_manifest_sha256":canonical["dataset_manifest_sha256"],"source_run":36206227037}
+          summary={"status":"PASS","symbols":len(symbols),"eligible":len(eligible),"files":len(files),"dataset_manifest_sha256":canonical["dataset_manifest_sha256"],"source_run":36209442162}
           (out/"summary.json").write_text(json.dumps(summary,indent=2))
           print(json.dumps(summary,indent=2))
           PY
@@ -59,3 +59,5 @@ jobs:
           name: r16-28-3-consolidated-audit
           path: r16_edge_lab/r16_28_3_consolidated/
           retention-days: 30
+
+# trigger corrected consolidation source
