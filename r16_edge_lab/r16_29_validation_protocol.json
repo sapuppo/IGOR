@@ -1,0 +1,27 @@
+{
+  "protocol_version": 1,
+  "alpha_config": "r16_29_frozen_config.json",
+  "optimization": false,
+  "selection_on_evaluation_windows": false,
+  "historical_windows": [
+    {"feature_history_start": "2021-01-01", "evaluation_start": "2022-01-01", "evaluation_end_exclusive": "2023-01-01"},
+    {"feature_history_start": "2021-01-01", "evaluation_start": "2023-01-01", "evaluation_end_exclusive": "2024-01-01"},
+    {"feature_history_start": "2021-01-01", "evaluation_start": "2024-01-01", "evaluation_end_exclusive": "2025-01-01"},
+    {"feature_history_start": "2021-01-01", "evaluation_start": "2025-01-01", "evaluation_end_exclusive": "2026-01-01"},
+    {"feature_history_start": "2021-01-01", "evaluation_start": "2026-01-01", "evaluation_end_exclusive": "2026-07-01"}
+  ],
+  "historical_label": "CHRONOLOGICAL_DIAGNOSTIC_NOT_UNTOUCHED_OOS",
+  "state_policy": "continuous portfolio and closed-shadow regime state across calendar boundaries",
+  "training_policy": "no estimator fit, no calibration, no model/parameter selection in this rebuild",
+  "purge_embargo": "not applicable to this no-fit chronological replay; any future fitting pipeline requires explicit label-horizon purge and embargo",
+  "contamination": "historical 2021-2026 sample already used to select these alphas; chronological replay does not erase prior selection bias",
+  "prospective_holdout": {
+    "status": "NOT_STARTED",
+    "start_rule": "first UTC day after all technical gates pass and code/config/data-source manifests are committed",
+    "duration_calendar_days": 180,
+    "minimum_closed_trades": 100,
+    "failure_to_meet_sample": "INCONCLUSIVE; do not tune or retrospectively shorten the window",
+    "economic_gate": "pre-register after TECHNICALLY_VALID, before first holdout observation; none inferred from retrospective performance",
+    "access_policy": "no alpha or risk retuning using holdout; access and every attempted variant must be logged"
+  }
+}

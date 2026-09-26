@@ -1,0 +1,30 @@
+{
+  "version": "R16.29.2",
+  "venue": "BINANCE_USDM_PERPETUAL",
+  "dataset_manifest_sha256": "a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+  "start": "2021-01-01T00:00:00Z",
+  "end_exclusive": "2026-07-01T00:00:00Z",
+  "capital": 10000.0,
+  "leverage": 1.0,
+  "max_stop_risk": 0.06,
+  "per_position_cap": 0.40,
+  "minimum_position": 0.005,
+  "regime_months": 6,
+  "regime_hot_multiplier": 1.5,
+  "regime_cold_multiplier": 0.5,
+  "allocation_source": "R16.29 frozen policy; no return-based retuning",
+  "engines": {
+    "CORE": {"interval": "4h", "donchian": 55, "adx": 30, "breadth": 0.55, "btc_strict": true, "stop_atr": 3.0, "target_atr": 6.0, "hold_bars": 30, "risk": 0.0075, "max_positions": 5},
+    "REV1H": {"interval": "1h", "name": "LONG_M8_V15_B60_G1_C3", "move": 0.08, "volz": 1.5, "body": 0.60, "rsi_max": 35, "cluster_h": 3, "horizon_bars": 6, "source_geometry": [1.5, 3.0, 24], "stop_atr": 3.0, "target_atr": 3.0, "hold_bars": 24, "risk": 0.01, "max_positions": 5},
+    "REV15M": {"interval": "15m", "name": "LONG_H4_M6_V15_B60_G0_C3", "move": 0.06, "volz": 1.5, "body": 0.60, "rsi_max": 35, "cluster_h": 3, "horizon_bars": 16, "source_geometry": [1.25, 2.5, 16], "stop_atr": 1.5, "target_atr": 2.5, "hold_bars": 16, "risk": 0.015, "max_positions": 5}
+  },
+  "scenarios": {
+    "BASE": {"fee": 0.0004, "slip": 0.0002, "latency_bars_15m": 0},
+    "STRESS": {"fee": 0.0006, "slip": 0.0004, "latency_bars_15m": 1}
+  },
+  "fee_scope": "fixed assumed taker rate per side, not historical account commission",
+  "funding_scope": "historical rates/timestamps; mark-price evidence required for historical cashflow validation",
+  "cohort_scope": "frozen 39-symbol research cohort, 38 eligible; not a survivorship-free reconstruction of the full exchange",
+  "oos_scope": "2021-2026 previously consulted during strategy selection; all retrospective folds are contaminated diagnostics",
+  "trial_registry": {"alpha_variants_this_rebuild": 1, "predefined_execution_scenarios": 2, "historical_alpha_attempt_count": null, "historical_attempt_count_reason": "complete prior search registry unavailable"}
+}
