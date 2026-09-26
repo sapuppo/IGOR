@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""R16.29 frozen USD-M rebuild. No alpha optimization."""
+from __future__ import annotations
+from pathlib import Path
+import importlib.util,json,hashlib,math
+import pandas as pd,numpy as np
+from r16_sim_core import PortfolioLedger
+
+ROOT=Path("r16_edge_lab/usdm_history")
+OUT=Path("r16_edge_lab/r16_29_frozen_usdm");OUT.mkdir(parents=True,exist_ok=True)
+START_CAP=10000.;PER=.40
+RISK={"CORE":.0075,"REV1H":.01,"REV15M":.015};MAXPOS={e:5 for e in RISK}
+STOP={"CORE":3.0,"REV1H":3.0,"REV15M":1.5}
+TAKER=.0004;SLIP=.0002;MAX_STOP_RISK=.06
+MONTHS=pd.period_range("2021-01","2026-06",freq="M").astype(str)
+
+def loadmod(path,name):
+ s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
+R14=loadmod("r16_edge_lab/run_r16_14_extreme_reversion.py","r14")
+R16=loadmod("r16_edge_lab/run_r16_16_intraday_reversion.py","r16")
+R243=loadmod("r16_edge_lab/run_r16_24_3_causal_revalidation.py","r243")
+
+def kline(sym,iv):
+ p=ROOT/"klines"/iv/f"{sym}.csv.gz"
+ if not p.exists():return pd.DataFrame()
+ x=pd.read_csv(p)
+ for c in ["open_time","open","high","low","close"]:x[c]=pd.to_numeric(x[c],errors="coerce")
+ x=x.dropna(subset=["open_time","open","high","low","close"]).drop_duplicates("open_time").sort_values("open_time").reset_index(drop=True)
+ pc=x.close.shift();tr=pd.concat([x.high-x.low,(x.high-pc).abs(),(x.low-pc).abs()],axis=1).max(axis=1)
+ x["atr"]=tr.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
+ return x
+
+def funding(sym):
+ p=ROOT/"funding"/f"{sym}.csv.gz"
+ return pd.read_csv(p) if p.exists() else pd.DataFrame(columns=["fundingTime","fundingRate"])
+
+def frozen_entries():
+ # Signal definitions/thresholds are frozen from 24.3 inputs. Signal features are recomputed on USD-M candles.
+ def ff(root,name):
+  h=list(Path(root).rglob(name))
+  if not h: raise FileNotFoundError(name)
+  return h[0]
+ def sel(root):
+  return json.loads(ff(root,"summary.json").read_text())["selected"]["LONG"]
+ def geom(s):
+  v=str(s).strip().strip("()").split(",");return float(v[0]),float(v[1]),int(float(v[2]))
+ inp=Path("r16_edge_lab/r16_243_inputs")
+ c1=sel(inp/"rev1h");g1=geom(c1["geom"])
+ c15=sel(inp/"rev15m");g15=geom(c15["geom"])
+ # Reuse feature builders but redirect their loaders to USD-M by constructing compatible frames.
+ def pair(sym):
+  return kline(sym,"1h")
+ def raw1(sym):
+  z=pair(sym)
+  if z.empty:return pd.DataFrame()
+  # R14 raw_events expects dict of frames in its native schema; USD-M columns are compatible with OHLCV.
+  return z
+ # Candidate generation uses existing source functions where possible through temporary loader-compatible data.
+ F1={s:raw1(s) for s in R14.SYMBOLS if not raw1(s).empty}
+ x1=R14.raw_events(F1,"LONG",g1,0.,0.)
+ m=(x1.ret6<=-float(c1["move"]))&(x1.volz48>=float(c1["volz"]))&(x1.rsi14<=35)&(x1.body_pos>=float(c1["body"]))
+ r1=R243.first3(x1[m].copy(),int(c1["cluster_h"]))[["symbol","entry_time"]]
+ # 15m source loader can be bypassed by its raw_for on compatible dict.
+ F15={s:kline(s,"15m") for s in R16.SYMBOLS if not kline(s,"15m").empty}
+ x15=R16.raw_for(F15,"LONG",int(c15["horizon_bars"]),g15,0.,0.)
+ m=(x15.move_ret<=-float(c15["move"]))&(x15.volz>=float(c15["volz"]))&(x15.rsi<=35)&(x15.body>=float(c15["body"]))
+ r15=R243.first3(x15[m].copy(),int(c15["cluster_h"]))[["symbol","entry_time"]]
+ # CORE entries are frozen signal timestamps from 24.3; venue conversion requires exact timestamp availability.
+ ce=R243.core()
+ return ce,r1,r15,g1,g15
+
+def rebuild(ent,e,iv,bar,hold,target,stop):
+ cache={};rows=[]
+ for r in ent.sort_values(["entry_time","symbol"]).itertuples(index=False):
+  sym=str(r.symbol);z=cache.setdefault(sym,kline(sym,iv))
+  if z.empty:continue
+  a=z.open_time.to_numpy(np.int64);signal=int(r.entry_time)
+  # next-observation fill: signal timestamp cannot fill on same observation.
+  ei=int(np.searchsorted(a,signal,side="right"))
+  if ei>=len(z):continue
+  atr=float(z.atr.iloc[ei-1]);ref=float(z.open.iloc[ei])
+  if not np.isfinite(atr) or atr<=0 or ref<=0:continue
+  fill=ref*(1+SLIP);sp=fill-stop*atr;tp=fill+target*atr;end=min(ei+hold-1,len(z)-1)
+  xp=float(z.close.iloc[end]);xi=end;reason="TIME"
+  for j in range(ei,end+1):
+   hs=float(z.low.iloc[j])<=sp;ht=float(z.high.iloc[j])>=tp
+   if hs and ht:xp=sp;xi=j;reason="STOP_AMBIGUOUS";break
+   if hs:xp=sp;xi=j;reason="STOP";break
+   if ht:xp=tp;xi=j;reason="TARGET";break
+  ex=int(z.open_time.iloc[xi])+bar
+  marks=[(int(z.open_time.iloc[j])+bar,float(z.close.iloc[j])) for j in range(ei,xi+1)]
+  rows.append({"engine":e,"symbol":sym,"signal_time":signal,"entry_time":int(z.open_time.iloc[ei]),"exit_time":ex,
+   "entry_ref":ref,"entry_fill":fill,"exit_ref":xp,"stop_price":sp,"stop_pct":max(1e-9,(fill-sp)/fill),
+   "reason":reason,"marks":marks})
+ return pd.DataFrame(rows)
+
+def score(closed,t,lb=6):
+ mo=pd.to_datetime(t,unit="ms",utc=True).to_period("M");st=int((mo-lb).start_time.tz_localize("UTC").timestamp()*1000)
+ out={}
+ for e,d in closed.items():
+  q=d[(d.exit_time<=t)&(d.exit_time>=st)]
+  out[e]=float(q.net_pct.mean()) if len(q) else 0.
+ return out
+
+def main():
+ ce,r1,r15,g1,g15=frozen_entries()
+ cfg={"CORE":("4h",14400000,30,6.,ce),"REV1H":("1h",3600000,g1[2],g1[1],r1),"REV15M":("15m",900000,g15[2],g15[1],r15)}
+ F={e:rebuild(en,e,iv,bar,hold,tp,STOP[e]) for e,(iv,bar,hold,tp,en) in cfg.items()}
+ # Precompute gross/net for causal regime scoring using actual fees+slippage+historical funding at unit notional.
+ for e,d in F.items():
+  nets=[]
+  for r in d.itertuples():
+   fd=funding(r.symbol); q=fd[(fd.fundingTime>r.entry_time)&(fd.fundingTime<=r.exit_time)]
+   fr=float(q.fundingRate.sum()) if len(q) else 0.
+   gross=float(r.exit_ref/r.entry_fill-1); nets.append(gross-2*TAKER-fr)
+  d["net_pct"]=nets
+ ev=[]
+ for e,d in F.items():
+  for i,r in d.iterrows():
+   ev.append((int(r.entry_time),1,e,i))
+   for t,p in r.marks:ev.append((int(t),0,e,i,float(p)))
+   ev.append((int(r.exit_time),2,e,i))
+ ev.sort(key=lambda x:(x[0],x[1],x[2],x[3]))
+ L=PortfolioLedger(START_CAP,1.0,MAX_STOP_RISK);active={};acc={e:0 for e in F};rej={};peak=START_CAP
+ for item in ev:
+  t,typ,e,i,*rest=item;r=F[e].iloc[i];key=f"{e}:{i}"
+  if typ==0:
+   if key in active:L.mark(t,str(r.symbol),float(rest[0]))
+   continue
+  if typ==2:
+   if key in active:
+    # exit reference receives adverse slippage.
+    xp=float(r.exit_ref)*(1-SLIP)
+    L.close(t,key,xp,exit_fee_rate=TAKER,reason=str(r.reason),reference_price=float(r.exit_ref))
+    del active[key]
+   continue
+  sv=score(F,t);vs=np.array(list(sv.values()),float);hot=(len(vs)>0 and vs.mean()>0 and sum(v>0 for v in sv.values())>=2);mult=1.5 if hot else .5
+  if sv.get(e,0)<0 and not(e=="CORE" and not hot):rej["regime"]=rej.get("regime",0)+1;continue
+  if sum(1 for x in active if x.startswith(e+":"))>=MAXPOS[e]:rej["engine_maxpos"]=rej.get("engine_maxpos",0)+1;continue
+  if any(p.symbol==str(r.symbol) for p in L.positions.values()):rej["symbol_held"]=rej.get("symbol_held",0)+1;continue
+  eq=L.equity();desired=min(eq*PER,eq*RISK[e]*mult/max(float(r.stop_pct),1e-12));notional=min(desired,max(0,L.available_collateral()))
+  if notional<eq*.005:rej["collateral_or_min_size"]=rej.get("collateral_or_min_size",0)+1;continue
+  qty=notional/float(r.entry_fill)
+  ok,why=L.open(t,key,e,str(r.symbol),1,qty,float(r.entry_fill),float(r.stop_price),TAKER,TAKER,float(r.entry_ref))
+  if not ok:rej[why]=rej.get(why,0)+1;continue
+  active[key]=True;acc[e]+=1
+  # historical funding events are applied as they are crossed; schedule immediately in event loop is required.
+  fd=funding(str(r.symbol));q=fd[(fd.fundingTime>t)&(fd.fundingTime<=int(r.exit_time))]
+  for fr in q.itertuples(): L.funding_event(int(fr.fundingTime),str(r.symbol),float(fr.fundingRate))
+ # chronological event invariant: all positions should have closed.
+ L.assert_reconciles();L.write_jsonl(OUT/"ledger.jsonl")
+ m=L.manifest();ret=m["final_equity"]/START_CAP-1
+ s={"version":"R16.29","status":"FROZEN_USDM_REBUILD","venue":"Binance USD-M Futures","dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+ "frozen":{"stops":STOP,"rev1h_geometry":g1,"rev15m_geometry":g15},"accepted":acc,"rejections":rej,"ledger":m,"return":ret,
+ "costs":{"commission_rate_each_side":TAKER,"slippage_each_side":SLIP,"funding":"historical archive"}}
+ (OUT/"summary.json").write_text(json.dumps(s,indent=2,default=float));print(json.dumps(s,indent=2,default=float))
+if __name__=="__main__":main()
