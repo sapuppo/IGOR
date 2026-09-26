@@ -26,8 +26,8 @@ jobs:
       - run: pip install pandas numpy
       - name: Collect shard
         run: |
-          S="$(echo '\${{ matrix.shard }}' | tr ',' '_')"
-          python r16_edge_lab/run_r16_28_collect_usdm.py --start 2021-01-01 --end 2026-06-30 --symbols '\${{ matrix.shard }}' --intervals 15m,1h,4h --output "r16_edge_lab/usdm_full/$S"
+          S="$(echo '${{ matrix.shard }}' | tr ',' '_')"
+          python r16_edge_lab/run_r16_28_collect_usdm.py --start 2021-01-01 --end 2026-06-30 --symbols '${{ matrix.shard }}' --intervals 15m,1h,4h --output "r16_edge_lab/usdm_full/$S"
       - name: Audit shard
         run: |
           python - <<'PY'
@@ -46,6 +46,8 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: r16-28-2-usdm-dataset
+          name: r16-28-2-usdm-${{ strategy.job-index }}
           path: r16_edge_lab/usdm_full/
           retention-days: 30
+
+# trigger full collection
