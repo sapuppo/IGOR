@@ -34,39 +34,30 @@ def funding(sym):
  p=ROOT/"funding"/f"{sym}.csv.gz"
  return pd.read_csv(p) if p.exists() else pd.DataFrame(columns=["fundingTime","fundingRate"])
 
+FROZEN_REV1H={"name":"LONG_M8_V15_B60_G1_C3","move":0.08,"volz":1.5,"body":0.60,"cluster_h":3,"geom":(1.5,3.0,24)}
+FROZEN_REV15M={"name":"LONG_H4_M6_V15_B60_G0_C3","move":0.06,"volz":1.5,"body":0.60,"cluster_h":3,"horizon_bars":16,"geom":(1.25,2.5,16)}
+FROZEN_CONFIG_SHA256=hashlib.sha256(json.dumps({"stops":STOP,"rev1h":FROZEN_REV1H,"rev15m":FROZEN_REV15M},sort_keys=True,default=list).encode()).hexdigest()
+
 def frozen_entries():
- # Signal definitions/thresholds are frozen from 24.3 inputs. Signal features are recomputed on USD-M candles.
- def ff(root,name):
-  h=list(Path(root).rglob(name))
-  if not h: raise FileNotFoundError(name)
-  return h[0]
- def sel(root):
-  return json.loads(ff(root,"summary.json").read_text())["selected"]["LONG"]
- def geom(s):
-  v=str(s).strip().strip("()").split(",");return float(v[0]),float(v[1]),int(float(v[2]))
- inp=Path("r16_edge_lab/r16_243_inputs")
- c1=sel(inp/"rev1h");g1=geom(c1["geom"])
- c15=sel(inp/"rev15m");g15=geom(c15["geom"])
- # Reuse feature builders but redirect their loaders to USD-M by constructing compatible frames.
- def pair(sym):
-  return kline(sym,"1h")
- def raw1(sym):
-  z=pair(sym)
-  if z.empty:return pd.DataFrame()
-  # R14 raw_events expects dict of frames in its native schema; USD-M columns are compatible with OHLCV.
-  return z
- # Candidate generation uses existing source functions where possible through temporary loader-compatible data.
- F1={s:raw1(s) for s in R14.SYMBOLS if not raw1(s).empty}
+ c1=FROZEN_REV1H;g1=c1["geom"];c15=FROZEN_REV15M;g15=c15["geom"]
+ F1={}
+ for s in R14.SYMBOLS:
+  z=kline(s,"1h")
+  if not z.empty:F1[s]=z
  x1=R14.raw_events(F1,"LONG",g1,0.,0.)
- m=(x1.ret6<=-float(c1["move"]))&(x1.volz48>=float(c1["volz"]))&(x1.rsi14<=35)&(x1.body_pos>=float(c1["body"]))
- r1=R243.first3(x1[m].copy(),int(c1["cluster_h"]))[["symbol","entry_time"]]
- # 15m source loader can be bypassed by its raw_for on compatible dict.
- F15={s:kline(s,"15m") for s in R16.SYMBOLS if not kline(s,"15m").empty}
- x15=R16.raw_for(F15,"LONG",int(c15["horizon_bars"]),g15,0.,0.)
- m=(x15.move_ret<=-float(c15["move"]))&(x15.volz>=float(c15["volz"]))&(x15.rsi<=35)&(x15.body>=float(c15["body"]))
- r15=R243.first3(x15[m].copy(),int(c15["cluster_h"]))[["symbol","entry_time"]]
- # CORE entries are frozen signal timestamps from 24.3; venue conversion requires exact timestamp availability.
- ce=R243.core()
+ m=(x1.ret6<=-c1["move"])&(x1.volz48>=c1["volz"])&(x1.rsi14<=35)&(x1.body_pos>=c1["body"])
+ r1=R243.first3(x1[m].copy(),c1["cluster_h"])[["symbol","entry_time"]]
+ F15={}
+ for s in R16.SYMBOLS:
+  z=kline(s,"15m")
+  if not z.empty:F15[s]=z
+ x15=R16.raw_for(F15,"LONG",c15["horizon_bars"],g15,0.,0.)
+ m=(x15.move_ret<=-c15["move"])&(x15.volz>=c15["volz"])&(x15.rsi<=35)&(x15.body>=c15["body"])
+ r15=R243.first3(x15[m].copy(),c15["cluster_h"])[["symbol","entry_time"]]
+ # CORE signal timestamps remain frozen from the preserved R16.24.3 artifact and are materialized by workflow.
+ p=Path("r16_edge_lab/r16_29_inputs/core_entries.csv.gz")
+ if not p.exists(): raise FileNotFoundError("materialized frozen CORE entries missing")
+ ce=pd.read_csv(p)[["symbol","entry_time"]].drop_duplicates().sort_values(["entry_time","symbol"])
  return ce,r1,r15,g1,g15
 
 def rebuild(ent,e,iv,bar,hold,target,stop):
@@ -151,7 +142,7 @@ def main():
  L.assert_reconciles();L.write_jsonl(OUT/"ledger.jsonl")
  m=L.manifest();ret=m["final_equity"]/START_CAP-1
  s={"version":"R16.29","status":"FROZEN_USDM_REBUILD","venue":"Binance USD-M Futures","dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
- "frozen":{"stops":STOP,"rev1h_geometry":g1,"rev15m_geometry":g15},"accepted":acc,"rejections":rej,"ledger":m,"return":ret,
+ "frozen":{"stops":STOP,"rev1h":FROZEN_REV1H,"rev15m":FROZEN_REV15M,"config_sha256":FROZEN_CONFIG_SHA256},"accepted":acc,"rejections":rej,"ledger":m,"return":ret,
  "costs":{"commission_rate_each_side":TAKER,"slippage_each_side":SLIP,"funding":"historical archive"}}
  (OUT/"summary.json").write_text(json.dumps(s,indent=2,default=float));print(json.dumps(s,indent=2,default=float))
 if __name__=="__main__":main()
