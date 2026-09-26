@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
-        with: {ref: r16-edge-first}
+        with: {ref: 362e8ecb43493576f9198fe24b4912999b08446c}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install pandas numpy
@@ -70,13 +70,14 @@ jobs:
           python - <<'PY'
           import json,pathlib
           s=json.loads(pathlib.Path("r16_edge_lab/r16_29_frozen_usdm/summary.json").read_text())
-          l=s["ledger"]
+          l=s["ledger"]["final"]
           assert s["dataset_manifest_sha256"]=="a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041"
           assert abs(l["unrealized"])<1e-8 and l["positions"]==0
           assert l["commissions"]>0 and l["slippage_cost"]>0
-          print("R16.29 RECONCILIATION PASS",json.dumps({"return":s["return"],"accepted":s["accepted"],"commissions":l["commissions"],"slippage":l["slippage_cost"],"funding":l["funding"],"ledger_sha256":l["sha256"]}))
+          print("R16.29 RECONCILIATION PASS",json.dumps({"return":s["return"],"accepted":s["accepted"],"commissions":l["commissions"],"slippage":l["slippage_cost"],"funding":l["funding"],"ledger_sha256":s["ledger"]["ledger_sha256"],"status":s["status"]}))
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: r16-29-frozen-usdm
           path: r16_edge_lab/r16_29_frozen_usdm/
