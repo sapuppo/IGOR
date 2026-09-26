@@ -46,8 +46,8 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: r16-28-2-usdm-${{ strategy.job-index }}
+          name: r16-28-2-usdm-${{ matrix.shard }}
           path: r16_edge_lab/usdm_full/
           retention-days: 30
 
-# trigger full collection
+# trigger unique artifacts
