@@ -1,0 +1,836 @@
+{
+  "subject": "R16.29.2 historical funding settlement mark source check",
+  "prior_code_sha": "f8c2307533265653f1faf0832fda836b21641f85",
+  "frozen_funding_manifest_sha256": "63f647b039737480b4ba375e483d690d404340495e6b6d8b94a0998c984041db",
+  "probe_workflow_commit": "26fd71cc74bea9cbbdc4feeda9d9bd82cd2aeaff",
+  "probe_workflow_run_id": 36285712977,
+  "prior_direct_api_run_id": 36285425944,
+  "prior_direct_api_error": "HTTP 451; stopped and used checksum-verified public archive without API retry",
+  "source_docs": [
+    "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+    "https://github.com/binance/binance-public-data"
+  ],
+  "summary": {
+    "archives_checked": 15,
+    "archives_checksum_verified": 14,
+    "archive_404": [
+      "SOLUSDT/2023-11-15"
+    ],
+    "missing_2021_funding_marks": 15,
+    "known_settlement_comparisons": 27,
+    "exact_same_minute_open": 16,
+    "nonexact_same_minute_open": 11,
+    "exact_same_minute_close": 0,
+    "exact_previous_minute_close": 6,
+    "conclusion": "1-minute OHLC open is not the exact fee settlement mark in general; substitute is not evidence sufficient for invariant 11; Gate 3 remains TECHNICALLY_INVALID"
+  },
+  "source_archive_results": {
+    "BTCUSDT/2021-01-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "e73ad21d1ddf98b47966737b6a8d50fde59d64d58bc732340fa621eb82f125db"
+    },
+    "BTCUSDT/2023-11-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "b47656ffdc61853d077fbacdd49bb7c8ceeff0dacd9c35d642d84c857854693b"
+    },
+    "BTCUSDT/2024-02-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "b233f75de6011d3e93ba041daa7446883a0fd3bf7901ebf8e08035507cffcbc3"
+    },
+    "ETHUSDT/2021-01-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "3254ea2856723ff0153c5145dae796de067d5d2a4a707a05878b56b4c3b7dbbf"
+    },
+    "ETHUSDT/2023-11-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "270b401dc591686372f87a14356ffcf8a667364db7833876807f91875a3fd56f"
+    },
+    "ETHUSDT/2024-02-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "54c9a6843dfae5c155d87fb4bad562a8b9f75618da7022caea1b5f31163aa08d"
+    },
+    "SOLUSDT/2021-01-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "267b57f5b1fae2b1f8694b972573aed4eb9f35d1dd781963cde77af4e726ccbb"
+    },
+    "SOLUSDT/2023-11-15": {
+      "error": "HTTP Error 404: Not Found"
+    },
+    "SOLUSDT/2024-02-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "8a31c7204d8d900680f644ce0e7d3484212d99a3db4d13579e08ea609f6872df"
+    },
+    "AAVEUSDT/2021-01-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "3c9f38ebb50369952a436e28228daa32a4a6b1012fbb6619517db287c72de8f8"
+    },
+    "AAVEUSDT/2023-11-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "33a1e0ac41646584707678b7c59d08714aa5ca4338d1df4fb3c8755059aa7bd1"
+    },
+    "AAVEUSDT/2024-02-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "5ef3143c50984fe8d3ab14bd212e0c44d5c802aed8a48561df5264fe3956c404"
+    },
+    "DOGEUSDT/2021-01-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "3ed66833b816ada59d279fd15bae03923212ed58e59dedb742dfa6210b2aa671"
+    },
+    "DOGEUSDT/2023-11-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "1204a910f3131fd6247117c82be64f3ba4cf50536e45c136b4cb5160cecc879c"
+    },
+    "DOGEUSDT/2024-02-15": {
+      "checksum_verified": true,
+      "rows": 1440,
+      "sha256": "c77fd44a5fd2f92a6d334578a86dd66834b1e25fed8edcab3451cbc540ec1c2c"
+    }
+  },
+  "matched_event_records": [
+    {
+      "symbol": "BTCUSDT",
+      "day": "2021-01-15",
+      "t": 1610668800002,
+      "settlement": null,
+      "candidate": {
+        "open": "39173.11000000",
+        "close": "39230.75000000",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2021-01-15",
+      "t": 1610697600000,
+      "settlement": null,
+      "candidate": {
+        "open": "38482.67499391",
+        "close": "38589.42811094",
+        "previous_close": "38476.18299391"
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2021-01-15",
+      "t": 1610726400004,
+      "settlement": null,
+      "candidate": {
+        "open": "35690.86434009",
+        "close": "35430.68263757",
+        "previous_close": "35667.48000000"
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2023-11-15",
+      "t": 1700006400000,
+      "settlement": "35560.60000000",
+      "candidate": {
+        "open": "35560.60000000",
+        "close": "35562.73416949",
+        "previous_close": null
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000060015002277801836864395",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2023-11-15",
+      "t": 1700035200000,
+      "settlement": "35596.70000000",
+      "candidate": {
+        "open": "35596.70000000",
+        "close": "35619.91719072",
+        "previous_close": "35596.80000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000652228738057179457646355",
+        "previous_close": "0.000002809249171973806560721"
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2023-11-15",
+      "t": 1700064000000,
+      "settlement": "36415.64025773",
+      "candidate": {
+        "open": "36415.39262887",
+        "close": "36422.70158763",
+        "previous_close": "36415"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "-0.0000068000688233796869188720",
+        "close": "0.000193909261241152595432011",
+        "previous_close": "-0.0000175819435129687600822768"
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2024-02-15",
+      "t": 1707955200000,
+      "settlement": "51816.90327305",
+      "candidate": {
+        "open": "51817.98284752",
+        "close": "51807",
+        "previous_close": null
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0.000020834407342159470148638",
+        "close": "-0.0001911205113477072216475103",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2024-02-15",
+      "t": 1707984000000,
+      "settlement": "51802.40000000",
+      "candidate": {
+        "open": "51802.40000000",
+        "close": "51778",
+        "previous_close": "51802.40000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "-0.0004710206476919988263092058",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "day": "2024-02-15",
+      "t": 1708012800000,
+      "settlement": "51961.58883688",
+      "candidate": {
+        "open": "51961.44202837",
+        "close": "51983.29503901",
+        "previous_close": "51961.58883688"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "-0.0000028253275792021570918367",
+        "close": "0.000417735535342097034888653",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2021-01-15",
+      "t": 1610668800002,
+      "settlement": null,
+      "candidate": {
+        "open": "1232.49265905",
+        "close": "1238.18608813",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2021-01-15",
+      "t": 1610697600000,
+      "settlement": null,
+      "candidate": {
+        "open": "1241.08856413",
+        "close": "1244.98733978",
+        "previous_close": "1240.56924595"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2021-01-15",
+      "t": 1610726400004,
+      "settlement": null,
+      "candidate": {
+        "open": "1143.57941276",
+        "close": "1125.62783644",
+        "previous_close": "1142.51000000"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2023-11-15",
+      "t": 1700006400000,
+      "settlement": "1979.75289030",
+      "candidate": {
+        "open": "1980.02529536",
+        "close": "1981.03481764",
+        "previous_close": null
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0.000137595485444004758779162",
+        "close": "0.000647518862723187812183491",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2023-11-15",
+      "t": 1700035200000,
+      "settlement": "1983.98000000",
+      "candidate": {
+        "open": "1983.98000000",
+        "close": "1986.16811172",
+        "previous_close": "1983.81000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.001102890008971864635732215",
+        "previous_close": "-0.0000856863476446335144507505"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2023-11-15",
+      "t": 1700064000000,
+      "settlement": "2022.15000000",
+      "candidate": {
+        "open": "2022.15000000",
+        "close": "2021.35000000",
+        "previous_close": "2022.31000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "-0.0003956185248374255124496205",
+        "previous_close": "0.000079123704967485102489924"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2024-02-15",
+      "t": 1707955200000,
+      "settlement": "2776.15000000",
+      "candidate": {
+        "open": "2776.15000000",
+        "close": "2775.16000000",
+        "previous_close": null
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "-0.0003566089728580948435783369",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2024-02-15",
+      "t": 1707984000000,
+      "settlement": "2773.76693182",
+      "candidate": {
+        "open": "2773.76693182",
+        "close": "2775.24058712",
+        "previous_close": "2773.76693182"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000531283029981565497081455",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2024-02-15",
+      "t": 1708012800000,
+      "settlement": "2827.40701515",
+      "candidate": {
+        "open": "2827.47406061",
+        "close": "2826.84901136",
+        "previous_close": "2827.40701515"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "0.000023712702006026215754825",
+        "close": "-0.0001973553107175822379404978",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2021-01-15",
+      "t": 1610668800002,
+      "settlement": null,
+      "candidate": {
+        "open": "3.28697801",
+        "close": "3.29255222",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2021-01-15",
+      "t": 1610697600000,
+      "settlement": null,
+      "candidate": {
+        "open": "3.36910000",
+        "close": "3.37486494",
+        "previous_close": "3.37010000"
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2021-01-15",
+      "t": 1610726400004,
+      "settlement": null,
+      "candidate": {
+        "open": "3.10280000",
+        "close": "3.07722534",
+        "previous_close": "3.10220000"
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2024-02-15",
+      "t": 1707955200000,
+      "settlement": "117.09173686",
+      "candidate": {
+        "open": "117.08685551",
+        "close": "117.05900000",
+        "previous_close": null
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "-0.0000416882534233509191111336",
+        "close": "-0.0002795830079721306134189323",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2024-02-15",
+      "t": 1707984000000,
+      "settlement": "115.09659855",
+      "candidate": {
+        "open": "115.09659855",
+        "close": "115.16719456",
+        "previous_close": "115.10147335"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000613363130530150667080682",
+        "previous_close": "0.000042353988401162876937166"
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2024-02-15",
+      "t": 1708012800000,
+      "settlement": "114.08665167",
+      "candidate": {
+        "open": "114.09366403",
+        "close": "114.02205522",
+        "previous_close": "114.09145654"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0.000061465209972885515923916",
+        "close": "-0.0005662051524384088359843789",
+        "previous_close": "0.000042115970007589232283760"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2021-01-15",
+      "t": 1610668800002,
+      "settlement": null,
+      "candidate": {
+        "open": "147.66137013",
+        "close": "148.00268565",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2021-01-15",
+      "t": 1610697600000,
+      "settlement": null,
+      "candidate": {
+        "open": "157.00660319",
+        "close": "157.28338678",
+        "previous_close": "157.07836472"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2021-01-15",
+      "t": 1610726400004,
+      "settlement": null,
+      "candidate": {
+        "open": "146.89500000",
+        "close": "145.41013659",
+        "previous_close": "146.84294161"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2023-11-15",
+      "t": 1700006400000,
+      "settlement": "90.77411446",
+      "candidate": {
+        "open": "90.77411446",
+        "close": "91.29278788",
+        "previous_close": null
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.005713891268292742759079294",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2023-11-15",
+      "t": 1700035200000,
+      "settlement": "93.46469044",
+      "candidate": {
+        "open": "93.46477843",
+        "close": "93.52953108",
+        "previous_close": "93.46330148"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "9.41425040684059211013E-7",
+        "close": "0.000693744768155249881122914",
+        "previous_close": "-0.0000148607992329643241473940"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2023-11-15",
+      "t": 1700064000000,
+      "settlement": "94.67026641",
+      "candidate": {
+        "open": "94.67026641",
+        "close": "94.62000000",
+        "previous_close": "94.67000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "-0.0005309630141136939893396461",
+        "previous_close": "-0.0000028140831340457616865811"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2024-02-15",
+      "t": 1707955200000,
+      "settlement": "91.10246359",
+      "candidate": {
+        "open": "91.10246092",
+        "close": "91.30739610",
+        "previous_close": null
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "-2.93076596920160191686E-8",
+        "close": "0.002249472757644445606149826",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2024-02-15",
+      "t": 1707984000000,
+      "settlement": "91.41000000",
+      "candidate": {
+        "open": "91.41000000",
+        "close": "91.46000583",
+        "previous_close": "91.41000000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000547049885132917623892353",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "day": "2024-02-15",
+      "t": 1708012800000,
+      "settlement": "92.19778808",
+      "candidate": {
+        "open": "92.19778808",
+        "close": "92.26000000",
+        "previous_close": "92.19680947"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000674765862560810363423634",
+        "previous_close": "-0.0000106142459638062067486424"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2021-01-15",
+      "t": 1610668800002,
+      "settlement": null,
+      "candidate": {
+        "open": "0.00941500",
+        "close": "0.00945900",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2021-01-15",
+      "t": 1610697600000,
+      "settlement": null,
+      "candidate": {
+        "open": "0.00955142",
+        "close": "0.00960834",
+        "previous_close": "0.00954617"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2021-01-15",
+      "t": 1610726400004,
+      "settlement": null,
+      "candidate": {
+        "open": "0.00867864",
+        "close": "0.00862997",
+        "previous_close": "0.00868264"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2023-11-15",
+      "t": 1700006400000,
+      "settlement": "0.07241858",
+      "candidate": {
+        "open": "0.07242788",
+        "close": "0.07248000",
+        "previous_close": null
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0.000128420082249610528126898",
+        "close": "0.000848124887287212756726243",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2023-11-15",
+      "t": 1700035200000,
+      "settlement": "0.07359227",
+      "candidate": {
+        "open": "0.07359227",
+        "close": "0.07367858",
+        "previous_close": "0.07364000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.001172813394667673656485933",
+        "previous_close": "0.000648573552629916158313910"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2023-11-15",
+      "t": 1700064000000,
+      "settlement": "0.07447024",
+      "candidate": {
+        "open": "0.07447023",
+        "close": "0.07446561",
+        "previous_close": "0.07447134"
+      },
+      "exact": {
+        "open": false,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "-1.342818285532583217135E-7",
+        "close": "-0.0000621724866201586029533408",
+        "previous_close": "0.000014771001140858415388483"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2024-02-15",
+      "t": 1707955200000,
+      "settlement": "0.08557000",
+      "candidate": {
+        "open": "0.08557000",
+        "close": "0.08564569",
+        "previous_close": null
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": null
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000884538973939464765688910",
+        "previous_close": null
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2024-02-15",
+      "t": 1707984000000,
+      "settlement": "0.08557730",
+      "candidate": {
+        "open": "0.08557730",
+        "close": "0.08560233",
+        "previous_close": "0.08557730"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": true
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "0.000292484105013829602008944",
+        "previous_close": "0"
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2024-02-15",
+      "t": 1708012800000,
+      "settlement": "0.08510000",
+      "candidate": {
+        "open": "0.08510000",
+        "close": "0.08501631",
+        "previous_close": "0.08511000"
+      },
+      "exact": {
+        "open": true,
+        "close": false,
+        "previous_close": false
+      },
+      "relative_diff": {
+        "open": "0",
+        "close": "-0.0009834312573443008225616921",
+        "previous_close": "0.000117508813160987074030552"
+      }
+    }
+  ]
+}
