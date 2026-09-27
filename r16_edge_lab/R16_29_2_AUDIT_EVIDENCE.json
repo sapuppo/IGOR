@@ -1,0 +1,149 @@
+{
+  "status": "TECHNICALLY_INVALID",
+  "code_commit": "f8c2307533265653f1faf0832fda836b21641f85",
+  "workflow_run_id": "36282775646",
+  "workflow_sha": "0d72beae4a22436644d8829ca109b8d4b4701933",
+  "gate3": {
+    "BLOCKED": 1,
+    "PASS": 14
+  },
+  "invariants": [
+    {
+      "number": 1,
+      "name": "future_data_perturbation",
+      "status": "PASS"
+    },
+    {
+      "number": 2,
+      "name": "prefix_replay",
+      "status": "PASS"
+    },
+    {
+      "number": 3,
+      "name": "next_observation_execution",
+      "status": "PASS"
+    },
+    {
+      "number": 4,
+      "name": "no_prelisting_trades",
+      "status": "PASS"
+    },
+    {
+      "number": 5,
+      "name": "conservative_intrabar_execution",
+      "status": "PASS"
+    },
+    {
+      "number": 6,
+      "name": "closed_only_realized_regime",
+      "status": "PASS"
+    },
+    {
+      "number": 7,
+      "name": "mtm_equity_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "number": 8,
+      "name": "cash_margin_collateral_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "number": 9,
+      "name": "exposure_at_entry",
+      "status": "PASS"
+    },
+    {
+      "number": 10,
+      "name": "aggregate_stop_risk",
+      "status": "PASS"
+    },
+    {
+      "number": 11,
+      "name": "historical_fee_funding_reconciliation",
+      "status": "BLOCKED"
+    },
+    {
+      "number": 12,
+      "name": "deterministic_full_replay",
+      "status": "PASS"
+    },
+    {
+      "number": 13,
+      "name": "chronological_walkforward_isolation",
+      "status": "PASS"
+    },
+    {
+      "number": 14,
+      "name": "ledger_monthly_yearly_reconciliation",
+      "status": "PASS"
+    },
+    {
+      "number": 15,
+      "name": "baseline_fingerprint",
+      "status": "PASS"
+    }
+  ],
+  "fingerprints": {
+    "dataset_manifest_sha256": "a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+    "original_frozen_alpha_sha256": "cb1f770e39ee0e3814b0b37047abad71868c8b6ec517bb39cb7cfa47e91e3a5b",
+    "config_sha256": "faa2a68688a311c8bddc73e7db2f21d8d8c0f53114fcbec7d36407977715a355",
+    "protocol_sha256": "4017cc95e11e2fdc420424b76d148da6daed500bc23735911f06b1fc729aa440",
+    "effective_input_sha256": "3285a4637202cda06e160563b5f579b1b2e95f7c47a49f740e74ab5648c6a2a8",
+    "supplements": {
+      "funding_marks": {
+        "manifest_sha256": "63f647b039737480b4ba375e483d690d404340495e6b6d8b94a0998c984041db",
+        "missing_marks": 85882,
+        "status": "INCOMPLETE"
+      },
+      "gaps": {
+        "missing": 6930,
+        "recovered": 6930,
+        "sha256": "b9fd79442a25fc2dd4b00c7cf7fab7e00671b284275458a587f98b6854776224",
+        "status": "COMPLETE"
+      }
+    }
+  },
+  "artifacts": {
+    "audit": {
+      "id": 10919576782,
+      "sha256": "6b9074669d441f0080ec51267d55d0cd69474b13896d3e2d9a0c1a3dc866a80a"
+    },
+    "funding": {
+      "id": 10919571692,
+      "sha256": "3351335aa9ac62239eb343b793b344f1f13a90ae9050b586a9cb58d5b7bb5f59"
+    },
+    "gaps": {
+      "id": 10919367740,
+      "sha256": "6e6804438d1bfc683abb5d815bb4c191b23c0b1d3ead44c33effa7c3d1b88eb9"
+    }
+  },
+  "scenarios": {
+    "BASE": {
+      "return": 1.3359390496722803,
+      "compound_monthly": 0.01293773472659776,
+      "cagr": 0.16695897401970772,
+      "max_drawdown_mtm": 0.4038960897127951,
+      "gross_pnl": 21669.84741026134,
+      "commissions": 4434.706922815515,
+      "slippage": 2217.3543282013925,
+      "funding_cashflow": -1658.3956625215164,
+      "trades": 1360
+    },
+    "STRESS": {
+      "return": 0.637398447915323,
+      "compound_monthly": 0.007499323612196074,
+      "cagr": 0.0938897055112149,
+      "max_drawdown_mtm": 0.27961891407920414,
+      "gross_pnl": 13186.263183121262,
+      "commissions": 3287.373642213989,
+      "slippage": 2191.584537944517,
+      "funding_cashflow": -1333.3205238094672,
+      "trades": 1010
+    }
+  },
+  "ledgers": {
+    "BASE": "8f97b40aa7161fbe8e03241551b5939a1ac4c89c6692beb30c0a234aafe5582c",
+    "STRESS": "2559948cc5f95d68dba300b8e96e0f64fd3fa7ecb9cf3c1a7e243984c81d4ad4"
+  }
+}
