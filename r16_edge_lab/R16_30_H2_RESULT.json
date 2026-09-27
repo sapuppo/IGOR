@@ -1,0 +1,139 @@
+{
+  "causal_prefix": {
+    "cutoff_utc": "2023-06-30T23:59:59.999Z",
+    "events": 98697,
+    "future_perturbation": true,
+    "ordinary": true
+  },
+  "dataset_manifest_sha256": "a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+  "hypothesis": "H2_CORE_SHORT_on_H1",
+  "prereg_commit": "b57d53559b79e2e746ae4cd50c148ced82f20625",
+  "scenario": {
+    "BASE": {
+      "elapsed_seconds": 10.98,
+      "funding_evidence": {
+        "exact": 12491,
+        "proxy": 9442
+      },
+      "h1_comparator": {
+        "compound_monthly": 0.013195773191243765,
+        "max_drawdown_mtm": 0.19938838710132822,
+        "return": 1.375540161539376,
+        "trades": 776
+      },
+      "h2_annual": {
+        "2021": 0.2359248262818172,
+        "2022": -0.0884087825911084,
+        "2023": 0.13770066761574284,
+        "2024": 0.35985952697636536,
+        "2025": 0.07886950209733179,
+        "2026": 0.1657221297639695
+      },
+      "h2_engine_attribution": {
+        "CORE": {
+          "commissions": 601.1922117521972,
+          "funding": -1356.083259219051,
+          "gross": 10357.583391483808,
+          "net": 8099.711400333169,
+          "slippage": 300.5965201793962,
+          "trades": 470
+        },
+        "CORE_SHORT": {
+          "commissions": 306.09291213399143,
+          "funding": -230.48856665815904,
+          "gross": 304.45620886748645,
+          "net": -385.1717381698851,
+          "slippage": 153.0464682452224,
+          "trades": 263
+        },
+        "REV1H": {
+          "commissions": 320.5999890613199,
+          "funding": 57.86596163202088,
+          "gross": 4630.395294650536,
+          "net": 4207.361087474785,
+          "slippage": 160.30017974645278,
+          "trades": 244
+        }
+      },
+      "h2_ledger_sha256": "d6282512d31fc63fd906e4151d60641bfc74b5e4839b426c4ccffc284489e4c4",
+      "h2_metrics": {
+        "commissions": 1227.8851129475092,
+        "compound_monthly": 0.01196343681301193,
+        "funding_cashflow": -1528.7058642451873,
+        "gross_pnl": 15292.434895001823,
+        "max_drawdown_mtm": 0.23587034525723016,
+        "max_open_stop_risk_fraction": 0.058938988933315,
+        "return": 1.1921900749638024,
+        "slippage": 613.943168171073,
+        "time_weighted_capital_utilization": 0.13221152303252975,
+        "trades": 977,
+        "worst_month": -0.1154464253571309
+      }
+    },
+    "STRESS": {
+      "elapsed_seconds": 11.09,
+      "funding_evidence": {
+        "exact": 12428,
+        "proxy": 9384
+      },
+      "h1_comparator": {
+        "compound_monthly": 0.012248881585200877,
+        "max_drawdown_mtm": 0.21882331630762186,
+        "return": 1.2333776688759626,
+        "trades": 783
+      },
+      "h2_annual": {
+        "2021": 0.22992778004759407,
+        "2022": -0.08610985937277216,
+        "2023": 0.04154197429077944,
+        "2024": 0.3894792974702035,
+        "2025": 0.05926884339532301,
+        "2026": 0.11786499606089818
+      },
+      "h2_engine_attribution": {
+        "CORE": {
+          "commissions": 839.4172234896428,
+          "funding": -1240.5263290949097,
+          "gross": 6984.605590624116,
+          "net": 4345.049438176311,
+          "slippage": 559.6125998632575,
+          "trades": 470
+        },
+        "CORE_SHORT": {
+          "commissions": 406.22329237580186,
+          "funding": -188.99878844776796,
+          "gross": 655.3556850147806,
+          "net": -210.68202891620527,
+          "slippage": 270.815633107415,
+          "trades": 254
+        },
+        "REV1H": {
+          "commissions": 458.3274855083319,
+          "funding": 84.7359592624052,
+          "gross": 5806.6275564308935,
+          "net": 5127.483444119036,
+          "slippage": 305.5525860659283,
+          "trades": 250
+        }
+      },
+      "h2_ledger_sha256": "8ed9fd5350606fc46407865aabbfdd821453f365c89f6dd4b21012b8ce9d9d60",
+      "h2_metrics": {
+        "commissions": 1703.968001373778,
+        "compound_monthly": 0.009981936017048554,
+        "funding_cashflow": -1344.789158280274,
+        "gross_pnl": 13446.588832069794,
+        "max_drawdown_mtm": 0.27664462204558393,
+        "max_open_stop_risk_fraction": 0.058905542867309355,
+        "return": 0.9261850853379197,
+        "slippage": 1135.9808190366,
+        "time_weighted_capital_utilization": 0.128380058951749,
+        "trades": 974,
+        "worst_month": -0.11484396313118872
+      }
+    }
+  },
+  "short_signal_count": 1707,
+  "short_signal_sha256": "4ecb227f3ae09d2700734c18b7ff42049abf37af93b009c4bf1e8a97aaf27798",
+  "source_alpha_commit": "f8c2307533265653f1faf0832fda836b21641f85",
+  "technical_status": "RESEARCH_DIAGNOSTIC_ONLY: funding settlement incomplete; no untouched OOS"
+}
