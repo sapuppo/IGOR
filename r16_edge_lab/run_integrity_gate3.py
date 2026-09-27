@@ -174,25 +174,34 @@ def run_gate(data, signals, base, stress, reports, protocol, fingerprints):
         print("GATE3", number, name, results[-1]["status"], flush=True)
 
     cutoff = int(pd.Timestamp("2021-07-01", tz="UTC").timestamp()*1000)-1
-    full_prefix = [e for e in base.ledger.events if e["timestamp"] <= cutoff]
+    intrabar_cutoff = next(e["timestamp"] for e in base.ledger.events if e["event"]=="FUNDING" and e["timestamp"]>cutoff and e["timestamp"]%BAR not in (0,BAR-1))
+    cutoffs = [cutoff,intrabar_cutoff]
     def perturb():
-        altered = Dataset(data.root, perturb_after=cutoff, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
-        changed_signals = generate_signals(altered)
-        assert signals != changed_signals, "test failed to change future signals"
-        assert [s for s in signals if s["timestamp"] <= cutoff] == [s for s in changed_signals if s["timestamp"] <= cutoff]
-        r = replay(altered, changed_signals, until=cutoff, liquidate_end=False)
-        assert r.ledger.events == full_prefix, "future perturbation changed past ledger"
-        return {"cutoff": cutoff, "compared_events": len(full_prefix), "future_signals_changed": True}
+        proofs=[]
+        for cut in cutoffs:
+            full_prefix=[e for e in base.ledger.events if e["timestamp"]<=cut]
+            altered = Dataset(data.root, perturb_after=cut, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
+            changed_signals = generate_signals(altered)
+            assert signals != changed_signals, "test failed to change future signals"
+            assert [s for s in signals if s["timestamp"] <= cut] == [s for s in changed_signals if s["timestamp"] <= cut]
+            r = replay(altered, changed_signals, until=cut, liquidate_end=False)
+            assert r.ledger.events == full_prefix, "future perturbation changed past ledger"
+            proofs.append({"cutoff":cut,"compared_events":len(full_prefix),"intrabar":cut%BAR not in (0,BAR-1)})
+        return {"cuts":proofs,"future_signals_changed":True}
     check(1, "future_data_perturbation", perturb)
     def prefix():
-        truncated = Dataset(data.root, cutoff=cutoff, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
-        prefix_signals = generate_signals(truncated)
-        assert prefix_signals == [s for s in signals if s["timestamp"] <= cutoff]
-        r = replay(truncated, prefix_signals, until=cutoff, liquidate_end=False)
-        assert r.ledger.events == full_prefix, "truncated replay differs from full prefix"
-        engine_counts = Counter(t["engine"] for t in r.trades)
-        assert set(engine_counts) == set(CONFIG["engines"]), "prefix fixture lacks engine coverage"
-        return {"compared_events": len(full_prefix), "trades_by_engine": dict(engine_counts), "open_positions_at_cut": len(r.ledger.positions)}
+        proofs=[]
+        for cut in cutoffs:
+            full_prefix=[e for e in base.ledger.events if e["timestamp"]<=cut]
+            truncated = Dataset(data.root, cutoff=cut, verify=False, gap_root=data.gap_root, funding_mark_root=data.funding_mark_root)
+            prefix_signals = generate_signals(truncated)
+            assert prefix_signals == [s for s in signals if s["timestamp"] <= cut]
+            r = replay(truncated, prefix_signals, until=cut, liquidate_end=False)
+            assert r.ledger.events == full_prefix, "truncated replay differs from full prefix"
+            engine_counts = Counter(t["engine"] for t in r.trades)
+            assert set(engine_counts) == set(CONFIG["engines"]), "prefix fixture lacks engine coverage"
+            proofs.append({"cutoff":cut,"compared_events":len(full_prefix),"trades_by_engine":dict(engine_counts),"open_positions_at_cut":len(r.ledger.positions)})
+        return {"cuts":proofs}
     check(2, "prefix_replay", prefix)
     audit = {}
     def accounting():

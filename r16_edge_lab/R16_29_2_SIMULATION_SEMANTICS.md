@@ -104,12 +104,18 @@ invariant failure remains a failure, not a reason to relabel the gate.
 ## Validation and promotion
 
 Gate 3 exercises the production engine: future-price/rate perturbation, truncated
-raw-input replay, full-history deterministic replay, independent event-by-event
+raw-input replay (including cuts inside a bar at an actual funding event),
+full-history deterministic replay, independent event-by-event
 cash/MTM/cost/margin reconstruction, and fixtures with nonzero slippage and both
 funding signs for long and short positions. Each of the five chronological
 window boundaries gets a new feature computation and portfolio replay from
 observations truncated at that boundary; every ledger event must match the
 corresponding full-history prefix.
+
+For intrabar cuts, closed feature frames and execution observations are distinct:
+an already-observed open remains available, while that bar's future high, low
+and close are masked. Future perturbation similarly cannot change an opening
+price already known at the cut.
 
 The 2021–June 2026 history was already available during alpha selection. These
 windows are **chronological diagnostics, not untouched OOS**. No estimator is

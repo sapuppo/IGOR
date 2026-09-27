@@ -93,18 +93,24 @@ class Dataset:
                 assert ((frame.high >= frame[["open", "close", "low"]].max(axis=1)) &
                         (frame.low <= frame[["open", "close", "high"]].min(axis=1))).all()
                 known = frame.open_time + INTERVAL[interval] - 1
-                if cutoff is not None:
-                    # A truncated replay contains only fully known observations.
-                    frame = frame.loc[known <= cutoff].copy()
-                    known = frame.open_time + INTERVAL[interval] - 1
                 if perturb_after is not None:
                     mask = known > perturb_after
-                    # Deterministic severe future-only price/volume perturbation.
-                    frame.loc[mask, ["open", "high", "low", "close"]] *= 1.73
+                    # The open is already known before a still-future close.
+                    frame.loc[mask, ["high", "low", "close"]] *= 1.73
+                    frame.loc[frame.open_time > perturb_after, "open"] *= 1.73
                     frame.loc[mask, "volume"] *= 3.11
-                self.frames[(symbol, interval)] = frame.reset_index(drop=True)
+                    frame.loc[mask,"high"] = frame.loc[mask,["open","high","close"]].max(axis=1)
+                    frame.loc[mask,"low"] = frame.loc[mask,["open","low","close"]].min(axis=1)
                 if interval == "15m":
-                    self.bars[symbol] = (frame.open_time.to_numpy(), frame[["open", "high", "low", "close"]].to_numpy())
+                    execution = frame if cutoff is None else frame.loc[frame.open_time <= cutoff].copy()
+                    if cutoff is not None:
+                        execution.loc[execution.open_time+BAR-1>cutoff,["high","low","close"]] = np.nan
+                    self.bars[symbol] = (execution.open_time.to_numpy(), execution[["open", "high", "low", "close"]].to_numpy())
+                if cutoff is not None:
+                    # Feature frames contain closed bars only. Execution keeps
+                    # already-observed opens with unknown future HLC masked.
+                    frame = frame.loc[known <= cutoff].copy()
+                self.frames[(symbol, interval)] = frame.reset_index(drop=True)
             funding = pd.read_csv(self.root / "funding" / f"{symbol}.csv.gz")
             assert funding.fundingTime.is_monotonic_increasing and funding.fundingTime.is_unique
             marks = {}
