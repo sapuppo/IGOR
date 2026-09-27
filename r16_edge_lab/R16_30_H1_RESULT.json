@@ -1,0 +1,128 @@
+{
+  "code_commit": "f8c2307533265653f1faf0832fda836b21641f85",
+  "data_fingerprint": "a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+  "prereg_branch": "r16-30-research",
+  "scenario": {
+    "BASE": {
+      "baseline_ledger_sha256": "8f97b40aa7161fbe8e03241551b5939a1ac4c89c6692beb30c0a234aafe5582c",
+      "baseline_metrics": {
+        "commissions": 4434.706922815515,
+        "compound_monthly": 0.01293773472659776,
+        "funding_cashflow": -1658.3956625215164,
+        "gross_pnl": 21669.84741026134,
+        "max_drawdown_mtm": 0.4038960897127951,
+        "return": 1.3359390496722803,
+        "slippage": 2217.3543282013925,
+        "time_weighted_capital_utilization": 0.10528771389680706,
+        "trades": 1360
+      },
+      "elapsed_seconds": 7.41,
+      "funding_evidence": {
+        "exact": 6008,
+        "proxy": 4072
+      },
+      "h1_annual": {
+        "2021": 0.4549856816329403,
+        "2022": -0.07159007152658137,
+        "2023": 0.19054237430650423,
+        "2024": 0.3480663928245711,
+        "2025": 0.06711566598241037,
+        "2026": 0.026824556401380484
+      },
+      "h1_engine_attribution": {
+        "CORE": {
+          "commissions": 796.4654291638676,
+          "funding": -1572.8132325870233,
+          "gross": 10056.526349932865,
+          "net": 7289.01457133903,
+          "slippage": 398.2331168429366,
+          "trades": 502
+        },
+        "REV1H": {
+          "commissions": 460.33557345704367,
+          "funding": 106.92148924554087,
+          "gross": 7049.969196993419,
+          "net": 6466.387044054653,
+          "slippage": 230.16806872726193,
+          "trades": 274
+        }
+      },
+      "h1_ledger_sha256": "f40c6f9ac8d8d55e63c5fa5bf89a60e6ca95cfae55d92f8b69a994212fda5353",
+      "h1_metrics": {
+        "commissions": 1256.8010026209108,
+        "compound_monthly": 0.013195773191243765,
+        "funding_cashflow": -1465.8917433414822,
+        "gross_pnl": 17106.49554692629,
+        "max_drawdown_mtm": 0.19938838710132822,
+        "max_gross_equity": 1.001098949733133,
+        "max_open_stop_risk_fraction": 0.058927633663320725,
+        "return": 1.375540161539376,
+        "slippage": 628.4011855701989,
+        "time_weighted_capital_utilization": 0.09829280730283178,
+        "trades": 776
+      }
+    },
+    "STRESS": {
+      "baseline_ledger_sha256": "2559948cc5f95d68dba300b8e96e0f64fd3fa7ecb9cf3c1a7e243984c81d4ad4",
+      "baseline_metrics": {
+        "commissions": 3287.373642213989,
+        "compound_monthly": 0.007499323612196074,
+        "funding_cashflow": -1333.3205238094672,
+        "gross_pnl": 13186.263183121262,
+        "max_drawdown_mtm": 0.27961891407920414,
+        "return": 0.637398447915323,
+        "slippage": 2191.584537944517,
+        "time_weighted_capital_utilization": 0.10384317207371536,
+        "trades": 1010
+      },
+      "elapsed_seconds": 7.51,
+      "funding_evidence": {
+        "exact": 6054,
+        "proxy": 4032
+      },
+      "h1_annual": {
+        "2021": 0.41586786480762483,
+        "2022": -0.08897052670811056,
+        "2023": 0.26942167607693657,
+        "2024": 0.29287684967073746,
+        "2025": 0.060644522008014956,
+        "2026": -0.005341278585581755
+      },
+      "h1_engine_attribution": {
+        "CORE": {
+          "commissions": 1206.5912596124103,
+          "funding": -1543.3496019477036,
+          "gross": 10226.514553992596,
+          "net": 6672.177883115291,
+          "slippage": 804.3958093171766,
+          "trades": 505
+        },
+        "REV1H": {
+          "commissions": 687.9679876378499,
+          "funding": 140.31057021218945,
+          "gross": 6667.902615026368,
+          "net": 5661.598805644446,
+          "slippage": 458.6463919562655,
+          "trades": 278
+        }
+      },
+      "h1_ledger_sha256": "d35cd263e8f521225da7f4c102294aa5c3b0a6f8976cb901fa3614baaca6f378",
+      "h1_metrics": {
+        "commissions": 1894.559247250262,
+        "compound_monthly": 0.012248881585200877,
+        "funding_cashflow": -1403.0390317355088,
+        "gross_pnl": 16894.417169018947,
+        "max_drawdown_mtm": 0.21882331630762186,
+        "max_gross_equity": 1.000905440755806,
+        "max_open_stop_risk_fraction": 0.05890554286730935,
+        "return": 1.2333776688759626,
+        "slippage": 1263.0422012734418,
+        "time_weighted_capital_utilization": 0.10080893587517128,
+        "trades": 783
+      }
+    }
+  },
+  "signals_sha256": "c6a01e1e0a7f32640861213e3dba83fcdfebbef5eb8d172dc1ecc955579be71d",
+  "technical_status": "TECHNICALLY_INVALID: historical funding markPrice incomplete; no OOS",
+  "trial": "H1_remove_REV15M"
+}
