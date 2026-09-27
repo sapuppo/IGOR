@@ -11,78 +11,61 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
-      - name: Compare settlement mark and historical mark price minute candles
+      - name: Compare checksummed public archive and frozen funding record
         run: |
-          cat > /tmp/igor_funding_mark_probe.py <<'PY'
-          """Read only source equivalence probe; does not modify IGOR strategy or data."""
+          cat > /tmp/igor_funding_archive_probe.py <<'PY'
+          """Compare archived minute mark candles to frozen independent funding API records."""
           import csv
           import hashlib
           import io
           import json
           import time
-          import urllib.parse
           import urllib.request
-          from collections import defaultdict
           from datetime import datetime, timezone
           from decimal import Decimal
           from zipfile import ZipFile
           
-          SYMBOLS = ('BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'AAVEUSDT', 'DOGEUSDT')
-          DAYS = ('2021-01-15', '2023-11-15', '2024-02-15')
-          BASE = 'https://fapi.binance.com/fapi/v1/'
+          SAMPLES = {(s, d): v for s, d, v in [('BTCUSDT', '2021-01-15', [{'t': 1610668800002, 'mark': None}, {'t': 1610697600000, 'mark': None}, {'t': 1610726400004, 'mark': None}]), ('BTCUSDT', '2023-11-15', [{'t': 1700006400000, 'mark': '35560.60000000'}, {'t': 1700035200000, 'mark': '35596.70000000'}, {'t': 1700064000000, 'mark': '36415.64025773'}]), ('BTCUSDT', '2024-02-15', [{'t': 1707955200000, 'mark': '51816.90327305'}, {'t': 1707984000000, 'mark': '51802.40000000'}, {'t': 1708012800000, 'mark': '51961.58883688'}]), ('ETHUSDT', '2021-01-15', [{'t': 1610668800002, 'mark': None}, {'t': 1610697600000, 'mark': None}, {'t': 1610726400004, 'mark': None}]), ('ETHUSDT', '2023-11-15', [{'t': 1700006400000, 'mark': '1979.75289030'}, {'t': 1700035200000, 'mark': '1983.98000000'}, {'t': 1700064000000, 'mark': '2022.15000000'}]), ('ETHUSDT', '2024-02-15', [{'t': 1707955200000, 'mark': '2776.15000000'}, {'t': 1707984000000, 'mark': '2773.76693182'}, {'t': 1708012800000, 'mark': '2827.40701515'}]), ('SOLUSDT', '2021-01-15', [{'t': 1610668800002, 'mark': None}, {'t': 1610697600000, 'mark': None}, {'t': 1610726400004, 'mark': None}]), ('SOLUSDT', '2023-11-15', [{'t': 1700006400000, 'mark': '56.83822924'}, {'t': 1700035200000, 'mark': '59.18296065'}, {'t': 1700064000000, 'mark': '62.47600000'}]), ('SOLUSDT', '2024-02-15', [{'t': 1707955200000, 'mark': '117.09173686'}, {'t': 1707984000000, 'mark': '115.09659855'}, {'t': 1708012800000, 'mark': '114.08665167'}]), ('AAVEUSDT', '2021-01-15', [{'t': 1610668800002, 'mark': None}, {'t': 1610697600000, 'mark': None}, {'t': 1610726400004, 'mark': None}]), ('AAVEUSDT', '2023-11-15', [{'t': 1700006400000, 'mark': '90.77411446'}, {'t': 1700035200000, 'mark': '93.46469044'}, {'t': 1700064000000, 'mark': '94.67026641'}]), ('AAVEUSDT', '2024-02-15', [{'t': 1707955200000, 'mark': '91.10246359'}, {'t': 1707984000000, 'mark': '91.41000000'}, {'t': 1708012800000, 'mark': '92.19778808'}]), ('DOGEUSDT', '2021-01-15', [{'t': 1610668800002, 'mark': None}, {'t': 1610697600000, 'mark': None}, {'t': 1610726400004, 'mark': None}]), ('DOGEUSDT', '2023-11-15', [{'t': 1700006400000, 'mark': '0.07241858'}, {'t': 1700035200000, 'mark': '0.07359227'}, {'t': 1700064000000, 'mark': '0.07447024'}]), ('DOGEUSDT', '2024-02-15', [{'t': 1707955200000, 'mark': '0.08557000'}, {'t': 1707984000000, 'mark': '0.08557730'}, {'t': 1708012800000, 'mark': '0.08510000'}])]}
+          ROOT = 'https://data.binance.vision/data/futures/um/daily/markPriceKlines/'
           
           def get(url):
               for attempt in range(3):
                   try:
-                      with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'IGOR funding source probe/1.0'}), timeout=25) as f:
-                          return f.read()
+                      with urllib.request.urlopen(url, timeout=30) as res:
+                          return res.read()
                   except Exception as exc:
                       if attempt == 2:
-                          raise RuntimeError(url.split('?')[0] + ': ' + str(exc)) from exc
-                      time.sleep(1 + attempt * 2)
+                          raise RuntimeError(str(exc)) from exc
+                      time.sleep(1+attempt)
           
-          def api(endpoint, **kwargs):
-              return json.loads(get(BASE + endpoint + '?' + urllib.parse.urlencode(kwargs)))
-          
-          results = []
-          for day in DAYS:
-              start = int(datetime.fromisoformat(day).replace(tzinfo=timezone.utc).timestamp() * 1000)
-              for symbol in SYMBOLS:
-                  funding = api('fundingRate', symbol=symbol, startTime=start, endTime=start + 86400000 - 1, limit=100)
-                  for ev in funding:
-                      ts = ev['fundingTime']; minute = ts // 60000 * 60000
-                      bars = api('markPriceKlines', symbol=symbol, interval='1m', startTime=minute - 60000, endTime=minute + 60000, limit=4)
-                      by_time = {bar[0]: bar for bar in bars}
-                      row = {'day': day, 'symbol': symbol, 'funding_time': ts, 'funding_mark': ev.get('markPrice') or None,
-                             'same_minute_open': None, 'previous_minute_close': None, 'same_minute_close': None}
-                      if minute in by_time:
-                          row['same_minute_open'] = by_time[minute][1]
-                          row['same_minute_close'] = by_time[minute][4]
-                      if minute - 60000 in by_time:
-                          row['previous_minute_close'] = by_time[minute - 60000][4]
-                      results.append(row)
-              print('completed day',day,flush=True)
-          
-          for day in DAYS:
-              subset = [x for x in results if x['day'] == day]
-              print('DAY',day,'EVENTS',len(subset),'OFFICIAL_MARK_PRESENT',sum(x['funding_mark'] is not None for x in subset),'MINUTE_BARS_PRESENT',sum(x['same_minute_open'] is not None for x in subset))
-              for key in ('same_minute_open', 'previous_minute_close', 'same_minute_close'):
-                  both = [x for x in subset if x['funding_mark'] is not None and x[key] is not None]
-                  exact = [x for x in both if Decimal(x['funding_mark']) == Decimal(x[key])]
-                  rel = sorted(abs((Decimal(x[key]) / Decimal(x['funding_mark'])) - 1) for x in both)
-                  print('CANDIDATE',key,'COVERAGE',len(both),'EXACT',len(exact),'MEDIAN_REL',str(rel[len(rel)//2]) if rel else 'N/A','MAX_REL',str(rel[-1]) if rel else 'N/A')
-          
-          archive = 'https://data.binance.vision/data/futures/um/daily/markPriceKlines/BTCUSDT/1m/BTCUSDT-1m-2021-01-15.zip'
-          try:
-              data = get(archive)
-              check = get(archive+'.CHECKSUM').decode().strip()
-              digest = hashlib.sha256(data).hexdigest()
-              with ZipFile(io.BytesIO(data)) as z:
-                  rows = list(csv.reader(io.TextIOWrapper(z.open(z.namelist()[0]))))
-              print('ARCHIVE','UTC_DAY','2021-01-15','SIZE',len(data),'SHA256',digest,'CHECKSUM_MATCH',digest in check,'ROWS',len(rows),'FIRST_ROW',rows[0][:7],flush=True)
-          except Exception as exc:
-              print('ARCHIVE_ERROR',str(exc)[:280],flush=True)
-          
-          print('DETAILS',json.dumps(results[:8],separators=(',', ':')),flush=True)
+          summary = {}
+          details = []
+          for (symbol, day), items in SAMPLES.items():
+              url = ROOT + symbol + '/1m/' + symbol + '-1m-' + day + '.zip'
+              try:
+                  binary = get(url); checksum = get(url+'.CHECKSUM').decode()
+                  digest = hashlib.sha256(binary).hexdigest()
+                  if digest not in checksum:
+                      raise ValueError('checksum mismatch')
+                  with ZipFile(io.BytesIO(binary)) as z:
+                      rows = list(csv.reader(io.TextIOWrapper(z.open(z.namelist()[0]))))
+                  times = {int(r[0]):r for r in rows if r[0].isdigit()}
+                  summary[symbol+'/'+day] = {'checksum_verified':True,'rows':len(times),'sha256':digest}
+                  for ev in items:
+                      minute = ev['t']//60000*60000
+                      bar=times.get(minute); prev=times.get(minute-60000)
+                      cand={'open':bar[1] if bar else None,'close':bar[4] if bar else None,'previous_close':prev[4] if prev else None}
+                      det={'symbol':symbol,'day':day,'t':ev['t'],'settlement':ev['mark'],'candidate':cand}
+                      if ev['mark'] and bar:
+                          det['exact']={k:(Decimal(v)==Decimal(ev['mark']) if v else None) for k,v in cand.items()}
+                          det['relative_diff']={k:(str(Decimal(v)/Decimal(ev['mark'])-1) if v else None) for k,v in cand.items()}
+                      details.append(det)
+              except Exception as exc:
+                  summary[symbol+'/'+day]={'error':str(exc)[:140]}
+                  print('ARCHIVE_ERROR',symbol,day,repr(exc)[:140],flush=True)
+              else:
+                  print('ARCHIVE_OK',symbol,day,'rows',len(times),'sample_events',len(items),flush=True)
+          result={'archive':summary,'details':details}
+          print('PROBE_RESULT_JSON',json.dumps(result,separators=(',',':')),flush=True)
           PY
-          python3 /tmp/igor_funding_mark_probe.py
+          python3 /tmp/igor_funding_archive_probe.py
