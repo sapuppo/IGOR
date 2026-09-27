@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      IGOR_CODE_SHA: 801be6122dc4da9406d4527ce74c7329a8e21bf3
+      IGOR_CODE_SHA: f8c2307533265653f1faf0832fda836b21641f85
     steps:
       - uses: actions/checkout@v4
-        with: {ref: 801be6122dc4da9406d4527ce74c7329a8e21bf3}
+        with: {ref: f8c2307533265653f1faf0832fda836b21641f85}
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install -r r16_edge_lab/requirements-r16-29.txt
