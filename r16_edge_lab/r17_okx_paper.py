@@ -20,6 +20,8 @@ SLIPPAGE = Decimal('0.001')
 STOP = Decimal('0.025')
 TAKE = Decimal('0.05')
 MAX_AGE_MS = 120000
+WARMUP_SHA256 = 'e86a8f2d0b6e8079e45b8bf3e03f3650e69eb9a547380b8198dacf29d3f80fed'
+WARMUP_SOURCE_SHA256 = '21165075a2ee651742c60370e5cbc66c7b0e9980dc8b48fd767be4e8038ae447'
 
 
 def timestamp(iso):
@@ -234,7 +236,8 @@ def main():
         raise CaptureError('fonte inicial ou warmup ausente')
     warmup,whash=file_value(warmups[0])
     first,first_hash=file_value(captures[0])
-    if (warmup['status']!='COMPLETE' or warmup['universe']!=first['universe']
+    if (whash!=WARMUP_SHA256 or warmup['source_sha256']!=WARMUP_SOURCE_SHA256
+            or warmup['status']!='COMPLETE' or warmup['universe']!=first['universe']
             or warmup['first_capture_file_sha256']!=first_hash
             or warmup['cutoff_exclusive_utc']!='2026-09-28T12:00:00Z'
             or not warmups[0].name.endswith(whash[:16]+'.json')):
