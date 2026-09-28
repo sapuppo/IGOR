@@ -215,7 +215,14 @@ def main():
     report = {'candidate': 'R17-CSMOM-W1', 'scope': 'RETROSPECTIVE_DEVELOPMENT',
               'funding': 'official fundingRate and markPrice, sha256 checked',
               'start_utc': iso(START), 'end_exclusive_utc': iso(END),
-              'signals_weeks': len(signals), 'result': {}}
+              'signals_weeks': len(signals),
+              'provenance_sha256': {
+                  'replay_code': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  'signals_code': hashlib.sha256(Path(__file__).with_name('r17_candidate_signals.py').read_bytes()).hexdigest(),
+                  'frozen_protocol': hashlib.sha256(Path(__file__).with_name('R17_00_PROTOCOL_PT.md').read_bytes()).hexdigest(),
+                  'funding_archive': hashlib.sha256(Path(args.marks_zip).read_bytes()).hexdigest(),
+              },
+              'result': {}}
     for scenario in SCENARIOS:
         report['result'][scenario] = run_scenario(bars, funding, signals, scenario)
     Path(args.out).write_text(json.dumps(report, indent=2, allow_nan=False, ensure_ascii=False) + '\n')
