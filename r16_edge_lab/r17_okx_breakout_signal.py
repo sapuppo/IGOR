@@ -80,13 +80,27 @@ def signal(history, current, portfolio_equity='10000', open_symbols=()):
             continue
         executable_price = ask if direction == 'BUY' else bid
         top_size = number(quote['askSz'] if direction == 'BUY' else quote['bidSz'], 'topQty')
-        if executable_price * top_size < equity * Decimal('0.20'):
+        instrument = observation['instrument']
+        base, quote_ccy, _ = symbol.split('-')
+        unit = instrument.get('ctValCcy')
+        face = number(instrument['ctVal'], 'ctVal') * number(instrument['ctMult'], 'ctMult')
+        if face <= 0 or unit not in (base, quote_ccy):
+            continue
+        contract_usdt = face * executable_price if unit == base else face
+        lot = number(instrument['lotSz'], 'lotSz')
+        min_size = number(instrument['minSz'], 'minSz')
+        if lot <= 0 or min_size <= 0:
+            continue
+        contracts = (equity * Decimal('0.10') / contract_usdt // lot) * lot
+        if contracts < min_size or top_size * contract_usdt < 2 * contracts * contract_usdt:
             continue
         distance = close / ceiling - 1 if direction == 'BUY' else 1 - close / floor
         candidates.append({'symbol': symbol, 'side': direction, 'distance': str(distance),
                            'close': str(close), 'bid': str(bid), 'ask': str(ask),
                            'quote_time_ms': int(quote['ts']), 'signal_time_ms': target,
-                           'observed_at_ms': end_ms})
+                           'observed_at_ms': end_ms, 'contracts': str(contracts),
+                           'contract_notional_usdt': str(contract_usdt),
+                           'entry_notional_usdt': str(contracts * contract_usdt)})
     candidates.sort(key=lambda x: (-Decimal(x['distance']), x['symbol']))
     return {'status': 'PAPER_CANDIDATES_ONLY', 'candidates': candidates[:min(2, 4-len(positions))],
             'funding_net_verified': False, 'live': False}
