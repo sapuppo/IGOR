@@ -1,0 +1,81 @@
+name: R17.03 OKX frozen cohort observation
+
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/r17-03-okx-cohort.yml]
+  workflow_dispatch: {}
+  schedule:
+    - cron: '7,17 0,4,8,12,16,20 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: r17-03-okx-cohort-capture
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Immutable research collector
+        uses: actions/checkout@v4
+        with:
+          ref: 48503686d095dd4ecc1f6226e7174959ed7ca814
+          path: research
+          persist-credentials: false
+      - name: Isolated raw-data branch
+        uses: actions/checkout@v4
+        with:
+          ref: r17-03-okx-market-data
+          path: archive
+      - name: Observe fixed USDT swap cohort by public GET only
+        run: |
+          python3 research/r16_edge_lab/r17_okx_cohort_capture.py \
+            --manifest research/r16_edge_lab/R17_03_OKX_UNIVERSE.json \
+            --out-dir archive/r17_03_market_data
+      - name: Verify chain and persist regardless of incomplete prices
+        run: |
+          python3 research/r16_edge_lab/r17_forward_capture.py verify \
+            --out-dir archive/r17_03_market_data
+          git -C archive config user.name 'github-actions[bot]'
+          git -C archive config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C archive add r17_03_market_data
+          if ! git -C archive diff --cached --quiet; then
+            git -C archive commit -m 'R17.03: archive fixed OKX cohort market observation'
+            git -C archive push origin HEAD:r17-03-okx-market-data
+          fi
+      - name: Publish completeness and eligibility
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, os
+          files=sorted(pathlib.Path('archive/r17_03_market_data').glob('capture-*.json'))
+          assert files, 'no R17.03 cohort snapshot'
+          item=json.loads(files[-1].read_text())
+          valid=sum(v['status']=='COMPLETE' for v in item['observations'].values())
+          summary=('## R17.03 coorte OKX\n\n'
+                   f"Status: **{item['status']}**  \n"
+                   f"Tempo: **{item['snapshot_class']}**  \n"
+                   f"Contratos válidos: **{valid}/{len(item['universe'])}**  \n"
+                   f"Fim da vela: {item['end_exclusive_utc']}  \n"
+                   f"Problemas: {item['problems']}  \n"
+                   'Alpha e lucro mensal validados: **não**\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out: out.write(summary)
+          print(summary)
+          if item['status']!='COMPLETE': raise SystemExit('raw data retained; incomplete source(s)')
+          PY
+      - name: Prepare recovery file
+        if: always()
+        run: |
+          mkdir -p recovery
+          find archive/r17_03_market_data -maxdepth 1 -name 'capture-*.json' -print 2>/dev/null | sort | tail -n 1 | while read -r file; do cp "$file" recovery/; done
+      - name: Short-term recovery artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r17-03-cohort-${{ github.run_id }}
+          path: recovery/capture-*.json
+          if-no-files-found: warn
+          retention-days: 7
