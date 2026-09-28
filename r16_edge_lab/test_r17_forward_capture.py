@@ -6,6 +6,7 @@ import tempfile
 import unittest
 
 from r17_forward_capture import BAR_MS, CaptureError, PublicUSDm, capture_batch, fixed_universe, save_snapshot, verify_chain
+from r17_cloud_capture import next_window
 
 START = 1790640000000  # 2026-09-29 00:00 UTC
 END = START + 2 * BAR_MS
@@ -67,9 +68,28 @@ class CaptureTest(unittest.TestCase):
         fake = FakePublic()
         value = capture(fake)
         self.assertEqual(value['status'], 'COMPLETE')
-        self.assertEqual(value['snapshot_class'], 'TIMELY_OBSERVATION')
+        self.assertEqual(value['snapshot_class'], 'MIXED_BACKFILL_AND_TIMELY_QUOTE')
         self.assertEqual(fake.calls[-2:], ['/fapi/v1/ticker/bookTicker', '/fapi/v1/time'])
         self.assertEqual(len(value['observations']['BTCUSDT']['klines']), 2)
+
+    def test_four_hour_window_without_funding_is_valid(self):
+        fake = FakePublic()
+        for symbol in fake.bars:
+            fake.bars[symbol] = fake.bars[symbol][:1]
+            fake.funding[symbol] = []
+        value = capture_batch(fake, ['BTCUSDT', 'ETHUSDT'], START, START + BAR_MS,
+                              clock_ms=SERVER, source_sha='fake-code-hash')
+        self.assertEqual(value['status'], 'COMPLETE')
+        self.assertEqual(value['observations']['BTCUSDT']['funding'], [])
+
+    def test_cloud_window_advances_and_skips_duplicate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(next_window(tmp, SERVER), (START + BAR_MS, END))
+            save_snapshot(tmp, capture(FakePublic()))
+            self.assertIsNone(next_window(tmp, SERVER))
+            self.assertEqual(next_window(tmp, END + BAR_MS + 60_001), (END, END + BAR_MS))
+            with self.assertRaisesRegex(CaptureError, 'lacuna superior'):
+                next_window(tmp, END + 32 * 60 * 60 * 1000)
 
     def test_gap_and_missing_mark_are_visible(self):
         fake = FakePublic()
