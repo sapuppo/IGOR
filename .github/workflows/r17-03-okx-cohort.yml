@@ -69,7 +69,7 @@ jobs:
       - name: Pinned R17.04 paper engine
         uses: actions/checkout@v4
         with:
-          ref: dd036fb07bcde96c8b24b0affe575fb23bfdc7a0
+          ref: c7972c4963e19bdabf89ca42846076515cd2a393
           path: paper-research
           persist-credentials: false
       - name: Separate append-only paper ledger
@@ -92,6 +92,22 @@ jobs:
             git -C paper-data commit -m 'R17.04: archive causal OKX paper decisions'
             git -C paper-data push origin HEAD:r17-04-paper-data
           fi
+      - name: Explain paper state without claiming validated return
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          files=sorted(pathlib.Path('paper-data/r17_04_paper_data').glob('decision-*.json'))
+          assert files, 'paper decision missing'
+          item=json.loads(files[-1].read_text())
+          events=', '.join(x['type'] for x in item['events'])
+          summary=(f"\n## R17.04 paper\n\nDecisão: {events}  \n"
+                   f"Posições abertas: {len(item['state']['positions'])}  \n"
+                   f"Trades encerrados: {item['state']['closed_trades']}  \n"
+                   'Retorno mensal prospectivo validado: **N/A**  \n'
+                   'Operações reais: **nenhuma**\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out: out.write(summary)
+          print(summary)
+          PY
       - name: Prepare recovery file
         if: always()
         run: |
