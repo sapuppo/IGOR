@@ -1,0 +1,6273 @@
+{
+  "strategy": "R17-RR7-BTC30-W1-DQ",
+  "data_sha256": "a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+  "period": [
+    "2023-01-01",
+    "2026-07-01 exclusive"
+  ],
+  "interpretation": "RETROSPECTIVE_CONTAMINATED_FUNDING_MARK_PROXY_SPREAD_UNKNOWN",
+  "final_cash": 4419.743665294713,
+  "return": -0.5580256334705287,
+  "monthly": {
+    "2023-01": -0.04137617240199776,
+    "2023-02": -0.037120826457840095,
+    "2023-03": 0.017499168767899143,
+    "2023-04": 0.07620461310938409,
+    "2023-05": -0.05092575909715458,
+    "2023-06": 0.16477775073854128,
+    "2023-07": 0.00529774119220372,
+    "2023-08": 0.023888080864641115,
+    "2023-09": -0.01643505969123238,
+    "2023-10": -0.04232543480449191,
+    "2023-11": -0.02918421276951666,
+    "2023-12": -0.08007625411233166,
+    "2024-01": -0.08925675100195396,
+    "2024-02": 0.08199597621132781,
+    "2024-03": 0.012835309768927106,
+    "2024-04": -0.016463005666528696,
+    "2024-05": -0.0636430860181939,
+    "2024-06": -0.03557058136131164,
+    "2024-07": 0.03340954888593273,
+    "2024-08": -0.14568287668036495,
+    "2024-09": -0.09076673470063001,
+    "2024-10": -0.03410853925998747,
+    "2024-11": 0.10280141392327002,
+    "2024-12": -0.0532876334544613,
+    "2025-01": -0.13912499661016664,
+    "2025-02": 0.046637629999049635,
+    "2025-03": -0.04822277240261341,
+    "2025-04": -0.09448767005337821,
+    "2025-05": 0.034679929807764465,
+    "2025-06": -0.01908112553153496,
+    "2025-07": 0.12176104506989005,
+    "2025-08": -0.027356117761765497,
+    "2025-09": -0.0807166441949686,
+    "2025-10": -0.07494302873126224,
+    "2025-11": 0.11171062554906075,
+    "2025-12": -0.01366161214157302,
+    "2026-01": -0.09399474846506839,
+    "2026-02": 0.009853674121519385,
+    "2026-03": -0.08099156004214736,
+    "2026-04": -0.0018814306075233267,
+    "2026-05": -0.06550121130895237,
+    "2026-06": 0.012301533008426624
+  },
+  "annual": {
+    "2023": -0.03250434257442014,
+    "2024": -0.2824145906112199,
+    "2025": -0.1981465161118784,
+    "2026": -0.2060750734461887
+  },
+  "best_month": 0.16477775073854128,
+  "worst_month": -0.14568287668036495,
+  "months_at_least_20pct": 0,
+  "months": 42,
+  "max_daily_drawdown": 0.647270208378,
+  "average_daily_gross_exposure": 0.21739143949973438,
+  "closed_trades": 688,
+  "entry_weeks": 172,
+  "skipped_weeks": 11,
+  "costs_and_ambiguity": {
+    "commissions": 947.9465227151653,
+    "slippage_proxy": 631.9637540833456,
+    "ambiguous_funding_abs_upper": 47.756738159033,
+    "funding_proxy": -285.38713147203515,
+    "ambiguous_stop_funding_bars": 288.0
+  },
+  "trades": [
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-01-02T04:00:00Z",
+      "exit_utc": "2023-01-02T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -77.44749690111557,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2023-01-02T04:00:00Z",
+      "exit_utc": "2023-01-02T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -77.44749690111576,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-01-02T04:00:00Z",
+      "exit_utc": "2023-01-03T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -77.26669612630742,
+      "funding_proxy_usdt": 0.1808007748083019
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": -1,
+      "entry_utc": "2023-01-02T04:00:00Z",
+      "exit_utc": "2023-01-09T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.09139458925927,
+      "funding_proxy_usdt": 2.3561023118562714
+    },
+    {
+      "symbol": "ETCUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-09T04:00:00Z",
+      "exit_utc": "2023-01-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.20481180666273,
+      "funding_proxy_usdt": -0.28294964501930675
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-09T04:00:00Z",
+      "exit_utc": "2023-01-10T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.20268248385817,
+      "funding_proxy_usdt": -0.28082032221470193
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-09T04:00:00Z",
+      "exit_utc": "2023-01-10T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.34959978605158,
+      "funding_proxy_usdt": -0.4277376244080323
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-09T04:00:00Z",
+      "exit_utc": "2023-01-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 645.7089778651136,
+      "funding_proxy_usdt": -1.6873256623165596
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-16T04:00:00Z",
+      "exit_utc": "2023-01-16T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.32591374865642,
+      "funding_proxy_usdt": -0.15795660216690494
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-16T04:00:00Z",
+      "exit_utc": "2023-01-16T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.38719458800622,
+      "funding_proxy_usdt": -0.21923744151695024
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-16T04:00:00Z",
+      "exit_utc": "2023-01-18T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.74800589991389,
+      "funding_proxy_usdt": -1.580048753424304
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-16T04:00:00Z",
+      "exit_utc": "2023-01-18T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.2394927728495,
+      "funding_proxy_usdt": -1.071535626359991
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-23T04:00:00Z",
+      "exit_utc": "2023-01-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.74519505225405,
+      "funding_proxy_usdt": -0.0175035568697966
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-23T04:00:00Z",
+      "exit_utc": "2023-01-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.25060945590604,
+      "funding_proxy_usdt": -0.5229179605219239
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-23T04:00:00Z",
+      "exit_utc": "2023-01-24T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.56859583571342,
+      "funding_proxy_usdt": -0.8409043403292851
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-23T04:00:00Z",
+      "exit_utc": "2023-01-25T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.46648489383801,
+      "funding_proxy_usdt": -0.7387933984539294
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-30T04:00:00Z",
+      "exit_utc": "2023-01-30T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.51179061719589,
+      "funding_proxy_usdt": -0.14189120470602884
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-30T04:00:00Z",
+      "exit_utc": "2023-01-30T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.44004284237441,
+      "funding_proxy_usdt": -0.07014342988472985
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-30T04:00:00Z",
+      "exit_utc": "2023-01-31T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.64701108004243,
+      "funding_proxy_usdt": -0.2771116675526498
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-01-30T04:00:00Z",
+      "exit_utc": "2023-02-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 539.7980283233842,
+      "funding_proxy_usdt": -9.067425062304398
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-06T04:00:00Z",
+      "exit_utc": "2023-02-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.03398275053155,
+      "funding_proxy_usdt": -2.196774797120645
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-06T04:00:00Z",
+      "exit_utc": "2023-02-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -77.47262598597676,
+      "funding_proxy_usdt": -1.6354180325658985
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-06T04:00:00Z",
+      "exit_utc": "2023-02-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.83720795341085,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-06T04:00:00Z",
+      "exit_utc": "2023-02-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 251.12933127927687,
+      "funding_proxy_usdt": -5.7413384579574425
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2023-02-13T04:00:00Z",
+      "exit_utc": "2023-02-13T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.1382624972981,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2023-02-13T04:00:00Z",
+      "exit_utc": "2023-02-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.98853952090809,
+      "funding_proxy_usdt": 0.14972297638978913
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-02-13T04:00:00Z",
+      "exit_utc": "2023-02-14T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.867398502879,
+      "funding_proxy_usdt": 0.2708639944190408
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-02-13T04:00:00Z",
+      "exit_utc": "2023-02-15T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.20390110190228,
+      "funding_proxy_usdt": 0.9343613953957258
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-20T04:00:00Z",
+      "exit_utc": "2023-02-20T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.064298870354,
+      "funding_proxy_usdt": -0.4177804052544667
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-20T04:00:00Z",
+      "exit_utc": "2023-02-21T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.72960103373845,
+      "funding_proxy_usdt": -1.0830825686389587
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-20T04:00:00Z",
+      "exit_utc": "2023-02-21T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.21747655697838,
+      "funding_proxy_usdt": -0.5709580918785914
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": 1,
+      "entry_utc": "2023-02-20T04:00:00Z",
+      "exit_utc": "2023-02-22T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.35333875882785,
+      "funding_proxy_usdt": -0.7068202937282559
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-06T04:00:00Z",
+      "exit_utc": "2023-03-13T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.36125279967206,
+      "funding_proxy_usdt": -1.8741989920103843
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-06T04:00:00Z",
+      "exit_utc": "2023-03-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 38.517088578895205,
+      "funding_proxy_usdt": -2.7573429523207946
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-06T04:00:00Z",
+      "exit_utc": "2023-03-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -0.5039167212543193,
+      "funding_proxy_usdt": -0.2397662880068859
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-06T04:00:00Z",
+      "exit_utc": "2023-03-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 68.43893481576077,
+      "funding_proxy_usdt": 1.78371148463188
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-13T04:00:00Z",
+      "exit_utc": "2023-03-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.60799874365715,
+      "funding_proxy_usdt": 0.13533544428857866
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-13T04:00:00Z",
+      "exit_utc": "2023-03-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.60801852247785,
+      "funding_proxy_usdt": 0.1353156654678337
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-13T04:00:00Z",
+      "exit_utc": "2023-03-13T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.62128577746059,
+      "funding_proxy_usdt": 0.12204841048530887
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2023-03-13T04:00:00Z",
+      "exit_utc": "2023-03-13T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.6068372905518,
+      "funding_proxy_usdt": 0.13649689739390053
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-20T04:00:00Z",
+      "exit_utc": "2023-03-21T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.69908058080478,
+      "funding_proxy_usdt": -0.30943775391270933
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-20T04:00:00Z",
+      "exit_utc": "2023-03-21T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.07471870138097,
+      "funding_proxy_usdt": 0.3149241255111129
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-20T04:00:00Z",
+      "exit_utc": "2023-03-21T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -68.11567644309972,
+      "funding_proxy_usdt": 1.2739663837924056
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-20T04:00:00Z",
+      "exit_utc": "2023-03-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -6.941570529292662,
+      "funding_proxy_usdt": 14.914626747185263
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-27T04:00:00Z",
+      "exit_utc": "2023-03-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.81819614305293,
+      "funding_proxy_usdt": -0.08139954366075448
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-27T04:00:00Z",
+      "exit_utc": "2023-04-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 164.90096377597294,
+      "funding_proxy_usdt": -1.4109537750710208
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-27T04:00:00Z",
+      "exit_utc": "2023-04-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 211.64707950061262,
+      "funding_proxy_usdt": -1.8076846194838354
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2023-03-27T04:00:00Z",
+      "exit_utc": "2023-04-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 91.26470235973102,
+      "funding_proxy_usdt": -2.311696059667468
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-03T04:00:00Z",
+      "exit_utc": "2023-04-04T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.67179810587761,
+      "funding_proxy_usdt": 0.15682960845654503
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-03T04:00:00Z",
+      "exit_utc": "2023-04-04T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.96640420506613,
+      "funding_proxy_usdt": -0.13777649073222048
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-03T04:00:00Z",
+      "exit_utc": "2023-04-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 255.23886078018072,
+      "funding_proxy_usdt": 34.32571158862779
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-03T04:00:00Z",
+      "exit_utc": "2023-04-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -48.7207507214036,
+      "funding_proxy_usdt": -0.8015074575345569
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-10T04:00:00Z",
+      "exit_utc": "2023-04-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 944.8356897361143,
+      "funding_proxy_usdt": 35.268201853166026
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-10T04:00:00Z",
+      "exit_utc": "2023-04-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 97.66349379461604,
+      "funding_proxy_usdt": -3.5445461631361397
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-10T04:00:00Z",
+      "exit_utc": "2023-04-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 229.00193471968976,
+      "funding_proxy_usdt": -2.925639534016164
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-10T04:00:00Z",
+      "exit_utc": "2023-04-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 117.20741285980839,
+      "funding_proxy_usdt": -3.846649861648421
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-17T04:00:00Z",
+      "exit_utc": "2023-04-17T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.06440572499534,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-17T04:00:00Z",
+      "exit_utc": "2023-04-17T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.61174896474519,
+      "funding_proxy_usdt": -0.547343239749804
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-17T04:00:00Z",
+      "exit_utc": "2023-04-19T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.62469473964708,
+      "funding_proxy_usdt": -2.560289014651749
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2023-04-17T04:00:00Z",
+      "exit_utc": "2023-04-21T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.258570745002,
+      "funding_proxy_usdt": -2.1941650200067437
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-04-24T04:00:00Z",
+      "exit_utc": "2023-04-25T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -80.39260197103303,
+      "funding_proxy_usdt": -0.7515718207902241
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-04-24T04:00:00Z",
+      "exit_utc": "2023-04-26T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.9192590055818,
+      "funding_proxy_usdt": 0.7217711446608216
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2023-04-24T04:00:00Z",
+      "exit_utc": "2023-04-26T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.68375317633074,
+      "funding_proxy_usdt": 0.9572769739120062
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2023-04-24T04:00:00Z",
+      "exit_utc": "2023-05-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 76.70728435754064,
+      "funding_proxy_usdt": 3.164689075440481
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-01T04:00:00Z",
+      "exit_utc": "2023-05-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.38639476281963,
+      "funding_proxy_usdt": -0.14700533480563802
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-01T04:00:00Z",
+      "exit_utc": "2023-05-06T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.80417028517854,
+      "funding_proxy_usdt": 11.43521914283546
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-01T04:00:00Z",
+      "exit_utc": "2023-05-08T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.74940997942484,
+      "funding_proxy_usdt": -1.5100205514109823
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-01T04:00:00Z",
+      "exit_utc": "2023-05-08T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.80465267119938,
+      "funding_proxy_usdt": -1.565263243185614
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-08T04:00:00Z",
+      "exit_utc": "2023-05-08T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.98742960752719,
+      "funding_proxy_usdt": 0.0442919395819902
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-08T04:00:00Z",
+      "exit_utc": "2023-05-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 160.78728795856526,
+      "funding_proxy_usdt": 2.4678049309785766
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-08T04:00:00Z",
+      "exit_utc": "2023-05-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 35.253327792511804,
+      "funding_proxy_usdt": 1.3922489673608025
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-08T04:00:00Z",
+      "exit_utc": "2023-05-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -2.773928525304585,
+      "funding_proxy_usdt": 0.17134834984681502
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-15T04:00:00Z",
+      "exit_utc": "2023-05-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -77.59734397181366,
+      "funding_proxy_usdt": -0.6573239306089508
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-15T04:00:00Z",
+      "exit_utc": "2023-05-17T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.95964409841339,
+      "funding_proxy_usdt": 0.9803759427912313
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-15T04:00:00Z",
+      "exit_utc": "2023-05-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 33.4169626315029,
+      "funding_proxy_usdt": 2.9956866502096005
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-15T04:00:00Z",
+      "exit_utc": "2023-05-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 81.72178279730093,
+      "funding_proxy_usdt": 0.9131839061544099
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-22T04:00:00Z",
+      "exit_utc": "2023-05-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.01254649942126,
+      "funding_proxy_usdt": 0.6299338689914099
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-22T04:00:00Z",
+      "exit_utc": "2023-05-28T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.32846320148779,
+      "funding_proxy_usdt": 2.3140171669250993
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-22T04:00:00Z",
+      "exit_utc": "2023-05-29T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.98423097644327,
+      "funding_proxy_usdt": 2.65824939196951
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2023-05-22T04:00:00Z",
+      "exit_utc": "2023-05-29T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.7227102894786,
+      "funding_proxy_usdt": 1.919770078934185
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-29T04:00:00Z",
+      "exit_utc": "2023-06-01T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.60378387313608,
+      "funding_proxy_usdt": -1.4219490890129804
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-29T04:00:00Z",
+      "exit_utc": "2023-06-05T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -5.966038207027763,
+      "funding_proxy_usdt": -3.0891225180676076
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-29T04:00:00Z",
+      "exit_utc": "2023-06-05T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -30.340259669059783,
+      "funding_proxy_usdt": -3.0599564441219433
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-05-29T04:00:00Z",
+      "exit_utc": "2023-06-05T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 51.665589472307914,
+      "funding_proxy_usdt": -3.074343176894786
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-05T04:00:00Z",
+      "exit_utc": "2023-06-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 514.8688024844936,
+      "funding_proxy_usdt": 0.1218295256337364
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-05T04:00:00Z",
+      "exit_utc": "2023-06-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 207.23825611716805,
+      "funding_proxy_usdt": -2.2104840552229716
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-05T04:00:00Z",
+      "exit_utc": "2023-06-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 370.73218629843785,
+      "funding_proxy_usdt": -1.0948249756562805
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-05T04:00:00Z",
+      "exit_utc": "2023-06-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 353.9221859168936,
+      "funding_proxy_usdt": -0.9322237065758135
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-12T04:00:00Z",
+      "exit_utc": "2023-06-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.33441832305076,
+      "funding_proxy_usdt": -0.26976285012409873
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-12T04:00:00Z",
+      "exit_utc": "2023-06-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.06465547292649,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-12T04:00:00Z",
+      "exit_utc": "2023-06-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.87950811864458,
+      "funding_proxy_usdt": 0.1851473542820914
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-12T04:00:00Z",
+      "exit_utc": "2023-06-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.07142676496757,
+      "funding_proxy_usdt": -0.006771292040854551
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-19T04:00:00Z",
+      "exit_utc": "2023-06-20T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.66308106301618,
+      "funding_proxy_usdt": -1.2343512143403834
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-19T04:00:00Z",
+      "exit_utc": "2023-06-21T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.43312420144836,
+      "funding_proxy_usdt": -1.0043943527722843
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-19T04:00:00Z",
+      "exit_utc": "2023-06-21T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.2341130581037,
+      "funding_proxy_usdt": 0.19461679057221343
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": -1,
+      "entry_utc": "2023-06-19T04:00:00Z",
+      "exit_utc": "2023-06-22T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.61361528889026,
+      "funding_proxy_usdt": -0.18488544021402992
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2023-06-26T04:00:00Z",
+      "exit_utc": "2023-06-26T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.70647899585039,
+      "funding_proxy_usdt": -0.003926777934570844
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-06-26T04:00:00Z",
+      "exit_utc": "2023-06-28T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -80.94377696936614,
+      "funding_proxy_usdt": -1.2412247514503436
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2023-06-26T04:00:00Z",
+      "exit_utc": "2023-07-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 845.9302868411309,
+      "funding_proxy_usdt": 29.010264151292713
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": 1,
+      "entry_utc": "2023-06-26T04:00:00Z",
+      "exit_utc": "2023-07-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 224.9687310628681,
+      "funding_proxy_usdt": -2.421118023164335
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-03T04:00:00Z",
+      "exit_utc": "2023-07-03T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.81270575448136,
+      "funding_proxy_usdt": 0.9257809482038784
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-03T04:00:00Z",
+      "exit_utc": "2023-07-03T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.15048176885405,
+      "funding_proxy_usdt": -0.41199506616884873
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-03T04:00:00Z",
+      "exit_utc": "2023-07-04T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.97911427035673,
+      "funding_proxy_usdt": -0.2406275676713027
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-03T04:00:00Z",
+      "exit_utc": "2023-07-05T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.18197185624236,
+      "funding_proxy_usdt": 1.556514846442953
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-10T04:00:00Z",
+      "exit_utc": "2023-07-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 513.168112313367,
+      "funding_proxy_usdt": -2.311422156694406
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-10T04:00:00Z",
+      "exit_utc": "2023-07-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 65.27905663182426,
+      "funding_proxy_usdt": -2.8050829496862733
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-10T04:00:00Z",
+      "exit_utc": "2023-07-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 134.96310889440795,
+      "funding_proxy_usdt": -2.5985167782726526
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-10T04:00:00Z",
+      "exit_utc": "2023-07-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 56.699115996190216,
+      "funding_proxy_usdt": 2.450355915038162
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-17T04:00:00Z",
+      "exit_utc": "2023-07-17T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -90.19318370559766,
+      "funding_proxy_usdt": -0.16969669567699985
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-17T04:00:00Z",
+      "exit_utc": "2023-07-17T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -90.02348700992084,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-17T04:00:00Z",
+      "exit_utc": "2023-07-17T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -90.19252371878207,
+      "funding_proxy_usdt": -0.16903670886123598
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2023-07-17T04:00:00Z",
+      "exit_utc": "2023-07-18T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -90.48519217526209,
+      "funding_proxy_usdt": -0.461705165341449
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-24T04:00:00Z",
+      "exit_utc": "2023-07-26T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.86227269962075,
+      "funding_proxy_usdt": 0.5416499780371213
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-24T04:00:00Z",
+      "exit_utc": "2023-07-27T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.90249053856014,
+      "funding_proxy_usdt": 1.5014321390978318
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-24T04:00:00Z",
+      "exit_utc": "2023-07-31T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 18.79510727312818,
+      "funding_proxy_usdt": 2.2205486103370182
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-24T04:00:00Z",
+      "exit_utc": "2023-07-31T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 74.60713915550825,
+      "funding_proxy_usdt": -4.345453600842792
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-31T04:00:00Z",
+      "exit_utc": "2023-08-07T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -10.172040182238938,
+      "funding_proxy_usdt": -5.125045635612675
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-31T04:00:00Z",
+      "exit_utc": "2023-08-07T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 64.63403421485117,
+      "funding_proxy_usdt": 0.6562415597026849
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-31T04:00:00Z",
+      "exit_utc": "2023-08-07T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 81.83281574916946,
+      "funding_proxy_usdt": 2.1435650889018767
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2023-07-31T04:00:00Z",
+      "exit_utc": "2023-08-07T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 56.22164811675158,
+      "funding_proxy_usdt": 2.4975658897321473
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-07T04:00:00Z",
+      "exit_utc": "2023-08-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.69810971395218,
+      "funding_proxy_usdt": -1.4178380861103534
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-07T04:00:00Z",
+      "exit_utc": "2023-08-09T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.3745134579039,
+      "funding_proxy_usdt": 0.9057581699379182
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-07T04:00:00Z",
+      "exit_utc": "2023-08-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 22.000150273081744,
+      "funding_proxy_usdt": 2.7716860992243437
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-07T04:00:00Z",
+      "exit_utc": "2023-08-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 36.89255550354164,
+      "funding_proxy_usdt": 1.3877096394018007
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-14T04:00:00Z",
+      "exit_utc": "2023-08-18T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -98.24957188226581,
+      "funding_proxy_usdt": -10.884574133048078
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-14T04:00:00Z",
+      "exit_utc": "2023-08-21T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 206.89315900578774,
+      "funding_proxy_usdt": -2.3473599866378865
+    },
+    {
+      "symbol": "ETCUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-14T04:00:00Z",
+      "exit_utc": "2023-08-21T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 185.1902603584709,
+      "funding_proxy_usdt": 0.284079711050501
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-14T04:00:00Z",
+      "exit_utc": "2023-08-21T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 222.43587924966292,
+      "funding_proxy_usdt": 0.8018196868225663
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-21T04:00:00Z",
+      "exit_utc": "2023-08-21T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -91.36337755533654,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-21T04:00:00Z",
+      "exit_utc": "2023-08-28T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 36.45182377385604,
+      "funding_proxy_usdt": 0.6986606456476132
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-21T04:00:00Z",
+      "exit_utc": "2023-08-28T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 86.21195560969025,
+      "funding_proxy_usdt": 1.4748011126735143
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-21T04:00:00Z",
+      "exit_utc": "2023-08-28T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 47.35929923727486,
+      "funding_proxy_usdt": 1.2340949307747324
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-28T04:00:00Z",
+      "exit_utc": "2023-08-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -94.56980648936138,
+      "funding_proxy_usdt": -2.597229238573352
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-28T04:00:00Z",
+      "exit_utc": "2023-08-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -95.04318122904371,
+      "funding_proxy_usdt": -3.0706039782558765
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-28T04:00:00Z",
+      "exit_utc": "2023-08-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -92.12705884475152,
+      "funding_proxy_usdt": -0.15448159396379688
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2023-08-28T04:00:00Z",
+      "exit_utc": "2023-08-29T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -92.63462846692465,
+      "funding_proxy_usdt": -0.6620512161368359
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-04T04:00:00Z",
+      "exit_utc": "2023-09-06T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -90.15493401579893,
+      "funding_proxy_usdt": -1.0817949134358251
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-04T04:00:00Z",
+      "exit_utc": "2023-09-08T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.58779280567968,
+      "funding_proxy_usdt": -0.5146537033166878
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-04T04:00:00Z",
+      "exit_utc": "2023-09-11T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 126.71337497076826,
+      "funding_proxy_usdt": 1.0951930344502607
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-04T04:00:00Z",
+      "exit_utc": "2023-09-11T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 115.38560609442648,
+      "funding_proxy_usdt": -4.19319103179845
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-11T04:00:00Z",
+      "exit_utc": "2023-09-14T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -91.27767668936558,
+      "funding_proxy_usdt": -1.7216040062721438
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-11T04:00:00Z",
+      "exit_utc": "2023-09-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 38.398237619099184,
+      "funding_proxy_usdt": 2.3716534370017217
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-11T04:00:00Z",
+      "exit_utc": "2023-09-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 28.76399688295876,
+      "funding_proxy_usdt": -0.9941928380857883
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-11T04:00:00Z",
+      "exit_utc": "2023-09-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -52.81713009825234,
+      "funding_proxy_usdt": -4.835496836002226
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-09-18T04:00:00Z",
+      "exit_utc": "2023-09-20T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.2286415978957,
+      "funding_proxy_usdt": 1.5585449904570334
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2023-09-18T04:00:00Z",
+      "exit_utc": "2023-09-22T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.0344173207968,
+      "funding_proxy_usdt": 2.7527692675560385
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": 1,
+      "entry_utc": "2023-09-18T04:00:00Z",
+      "exit_utc": "2023-09-25T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.55206933793437,
+      "funding_proxy_usdt": 1.235117250418491
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2023-09-18T04:00:00Z",
+      "exit_utc": "2023-09-25T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 402.22870384517944,
+      "funding_proxy_usdt": 8.93511264998814
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-25T04:00:00Z",
+      "exit_utc": "2023-09-27T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.68772942851683,
+      "funding_proxy_usdt": 0.36773248492574423
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-25T04:00:00Z",
+      "exit_utc": "2023-09-28T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.09108088326165,
+      "funding_proxy_usdt": 0.9643810301809168
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-25T04:00:00Z",
+      "exit_utc": "2023-10-01T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.57183201672511,
+      "funding_proxy_usdt": 2.4836298967173143
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": -1,
+      "entry_utc": "2023-09-25T04:00:00Z",
+      "exit_utc": "2023-10-02T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.24551069661652,
+      "funding_proxy_usdt": 0.8099512168258404
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-02T04:00:00Z",
+      "exit_utc": "2023-10-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.29857393993427,
+      "funding_proxy_usdt": -0.16695080372287266
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-02T04:00:00Z",
+      "exit_utc": "2023-10-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.16571039938434,
+      "funding_proxy_usdt": -0.03408726317303806
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-02T04:00:00Z",
+      "exit_utc": "2023-10-03T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.79064898291864,
+      "funding_proxy_usdt": -0.659025846707283
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-02T04:00:00Z",
+      "exit_utc": "2023-10-03T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -85.57780885907626,
+      "funding_proxy_usdt": 1.5538142771350174
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-23T04:00:00Z",
+      "exit_utc": "2023-10-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.59871974580783,
+      "funding_proxy_usdt": -0.1557334833591287
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-23T04:00:00Z",
+      "exit_utc": "2023-10-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.43935375350269,
+      "funding_proxy_usdt": 0.003632508945941054
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-23T04:00:00Z",
+      "exit_utc": "2023-10-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.25332507306885,
+      "funding_proxy_usdt": 0.18966118938002594
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-23T04:00:00Z",
+      "exit_utc": "2023-10-30T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 94.23575807564333,
+      "funding_proxy_usdt": -3.566214392725378
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-30T04:00:00Z",
+      "exit_utc": "2023-10-31T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.52641473813891,
+      "funding_proxy_usdt": -0.31287817423675157
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-30T04:00:00Z",
+      "exit_utc": "2023-10-31T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.9393305419968,
+      "funding_proxy_usdt": -1.7257939780945155
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-30T04:00:00Z",
+      "exit_utc": "2023-10-31T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.87656785861861,
+      "funding_proxy_usdt": -0.6630312947165653
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-10-30T04:00:00Z",
+      "exit_utc": "2023-11-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 626.10321495328,
+      "funding_proxy_usdt": -4.2528195507476845
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-06T04:00:00Z",
+      "exit_utc": "2023-11-07T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.19113185684773,
+      "funding_proxy_usdt": -1.0885419614869574
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-06T04:00:00Z",
+      "exit_utc": "2023-11-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -87.07960772255376,
+      "funding_proxy_usdt": -0.9770178271931524
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-06T04:00:00Z",
+      "exit_utc": "2023-11-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -88.03028617371214,
+      "funding_proxy_usdt": -1.9276962783513276
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-06T04:00:00Z",
+      "exit_utc": "2023-11-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 634.5773805452327,
+      "funding_proxy_usdt": -7.771712477481859
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-13T04:00:00Z",
+      "exit_utc": "2023-11-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.29644128628067,
+      "funding_proxy_usdt": -0.3162731375124014
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-13T04:00:00Z",
+      "exit_utc": "2023-11-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.73712305070607,
+      "funding_proxy_usdt": -0.7569549019378176
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-13T04:00:00Z",
+      "exit_utc": "2023-11-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.55026513946831,
+      "funding_proxy_usdt": -0.5700969907000318
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-13T04:00:00Z",
+      "exit_utc": "2023-11-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.14858480437353,
+      "funding_proxy_usdt": -0.16841665560543762
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-20T04:00:00Z",
+      "exit_utc": "2023-11-20T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.21500994674305,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-20T04:00:00Z",
+      "exit_utc": "2023-11-20T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.3775624257235,
+      "funding_proxy_usdt": -0.16255247898034608
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-20T04:00:00Z",
+      "exit_utc": "2023-11-20T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.88374576629802,
+      "funding_proxy_usdt": -0.6687358195550407
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-20T04:00:00Z",
+      "exit_utc": "2023-11-21T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -86.72078332772354,
+      "funding_proxy_usdt": -0.5057733809804564
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-27T04:00:00Z",
+      "exit_utc": "2023-11-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.69566166831508,
+      "funding_proxy_usdt": -0.15664561092057303
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-27T04:00:00Z",
+      "exit_utc": "2023-11-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -83.69658869061534,
+      "funding_proxy_usdt": -0.1575726332209948
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-27T04:00:00Z",
+      "exit_utc": "2023-11-28T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.01401815360884,
+      "funding_proxy_usdt": -0.4750020962146494
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2023-11-27T04:00:00Z",
+      "exit_utc": "2023-12-04T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 7.798486586952414,
+      "funding_proxy_usdt": -3.8278263761687668
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-04T04:00:00Z",
+      "exit_utc": "2023-12-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.12924535744379,
+      "funding_proxy_usdt": -0.47324025845770923
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-04T04:00:00Z",
+      "exit_utc": "2023-12-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.40666488819163,
+      "funding_proxy_usdt": -0.7506597892057938
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-04T04:00:00Z",
+      "exit_utc": "2023-12-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.47995316356646,
+      "funding_proxy_usdt": -0.8239480645804401
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-04T04:00:00Z",
+      "exit_utc": "2023-12-11T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 254.08211642535446,
+      "funding_proxy_usdt": -9.070025032519096
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-11T04:00:00Z",
+      "exit_utc": "2023-12-11T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -81.71062499560453,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-11T04:00:00Z",
+      "exit_utc": "2023-12-11T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.01833111082071,
+      "funding_proxy_usdt": -0.3077061152160042
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-11T04:00:00Z",
+      "exit_utc": "2023-12-11T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.01818894619424,
+      "funding_proxy_usdt": -0.3075639505894086
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-11T04:00:00Z",
+      "exit_utc": "2023-12-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -6.86052171769184,
+      "funding_proxy_usdt": -4.534470673434289
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-18T04:00:00Z",
+      "exit_utc": "2023-12-18T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.75804777928332,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-18T04:00:00Z",
+      "exit_utc": "2023-12-18T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.75804777928316,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-18T04:00:00Z",
+      "exit_utc": "2023-12-18T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.9152637866471,
+      "funding_proxy_usdt": -0.157216007363802
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-18T04:00:00Z",
+      "exit_utc": "2023-12-18T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.96536519230179,
+      "funding_proxy_usdt": -0.20731741301846893
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-25T04:00:00Z",
+      "exit_utc": "2023-12-26T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.47747249191693,
+      "funding_proxy_usdt": -2.1882601809832103
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-25T04:00:00Z",
+      "exit_utc": "2023-12-26T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -81.78216460952697,
+      "funding_proxy_usdt": -4.492952298593529
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-25T04:00:00Z",
+      "exit_utc": "2023-12-26T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -78.63834419249174,
+      "funding_proxy_usdt": -1.349131881558055
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2023-12-25T04:00:00Z",
+      "exit_utc": "2023-12-29T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -84.1597856925678,
+      "funding_proxy_usdt": -6.870573381634026
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-01T04:00:00Z",
+      "exit_utc": "2024-01-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.35947005463191,
+      "funding_proxy_usdt": 0.5706468756784776
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-01T04:00:00Z",
+      "exit_utc": "2024-01-01T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.41882192479417,
+      "funding_proxy_usdt": 0.5112950055162654
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-01T04:00:00Z",
+      "exit_utc": "2024-01-01T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.44528191882688,
+      "funding_proxy_usdt": 0.4848350114835507
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-01T04:00:00Z",
+      "exit_utc": "2024-01-02T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.72309725392903,
+      "funding_proxy_usdt": 1.207019676381369
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-22T04:00:00Z",
+      "exit_utc": "2024-01-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.63033929092514,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-22T04:00:00Z",
+      "exit_utc": "2024-01-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.94534820207629,
+      "funding_proxy_usdt": 0.6849910888486263
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-22T04:00:00Z",
+      "exit_utc": "2024-01-25T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.73014098719432,
+      "funding_proxy_usdt": 0.900198303730472
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-22T04:00:00Z",
+      "exit_utc": "2024-01-28T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.41071506830805,
+      "funding_proxy_usdt": 2.2196242226170386
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-29T04:00:00Z",
+      "exit_utc": "2024-01-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.27062000603138,
+      "funding_proxy_usdt": 0.13917142309646963
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-29T04:00:00Z",
+      "exit_utc": "2024-01-30T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.99349134415033,
+      "funding_proxy_usdt": 0.41630008497753873
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-29T04:00:00Z",
+      "exit_utc": "2024-01-30T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.85902151172593,
+      "funding_proxy_usdt": 0.5507699174018277
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2024-01-29T04:00:00Z",
+      "exit_utc": "2024-01-31T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.76884234047563,
+      "funding_proxy_usdt": 0.6409490886521544
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-02-05T04:00:00Z",
+      "exit_utc": "2024-02-07T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.30294390721514,
+      "funding_proxy_usdt": 0.9391542336991655
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2024-02-05T04:00:00Z",
+      "exit_utc": "2024-02-08T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.16899475115265,
+      "funding_proxy_usdt": 1.073103389761778
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-02-05T04:00:00Z",
+      "exit_utc": "2024-02-09T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.67991739227965,
+      "funding_proxy_usdt": 1.5621807486347625
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2024-02-05T04:00:00Z",
+      "exit_utc": "2024-02-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.66022309661467,
+      "funding_proxy_usdt": 1.5818750442998313
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-12T04:00:00Z",
+      "exit_utc": "2024-02-17T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -68.05177053415288,
+      "funding_proxy_usdt": -2.012532548080728
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-12T04:00:00Z",
+      "exit_utc": "2024-02-19T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 490.83846273108594,
+      "funding_proxy_usdt": -11.61347638591939
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-12T04:00:00Z",
+      "exit_utc": "2024-02-19T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 75.07729771337098,
+      "funding_proxy_usdt": -7.152811057123094
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-12T04:00:00Z",
+      "exit_utc": "2024-02-19T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 24.36348081749848,
+      "funding_proxy_usdt": -4.345649059049563
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-19T04:00:00Z",
+      "exit_utc": "2024-02-19T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.34195616767502,
+      "funding_proxy_usdt": -0.2660653194100885
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-19T04:00:00Z",
+      "exit_utc": "2024-02-20T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.46743187790833,
+      "funding_proxy_usdt": -1.3915410296433404
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-19T04:00:00Z",
+      "exit_utc": "2024-02-26T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 558.7415143087029,
+      "funding_proxy_usdt": -8.864151347611811
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-19T04:00:00Z",
+      "exit_utc": "2024-02-26T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 356.9710578456848,
+      "funding_proxy_usdt": -13.175601492931527
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-26T04:00:00Z",
+      "exit_utc": "2024-02-26T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.05791722240265,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-26T04:00:00Z",
+      "exit_utc": "2024-02-26T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.05791722240266,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-26T04:00:00Z",
+      "exit_utc": "2024-02-26T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.78942967780888,
+      "funding_proxy_usdt": -0.7315124554062596
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-02-26T04:00:00Z",
+      "exit_utc": "2024-02-26T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -76.91385326688447,
+      "funding_proxy_usdt": -0.8559360444818003
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-04T04:00:00Z",
+      "exit_utc": "2024-03-04T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.62176152664846,
+      "funding_proxy_usdt": -0.9277291718939715
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-04T04:00:00Z",
+      "exit_utc": "2024-03-05T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.24102250306032,
+      "funding_proxy_usdt": -5.546990148305774
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-04T04:00:00Z",
+      "exit_utc": "2024-03-05T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -82.28627515559117,
+      "funding_proxy_usdt": -8.592242800836603
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-04T04:00:00Z",
+      "exit_utc": "2024-03-05T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -79.52108084134068,
+      "funding_proxy_usdt": -5.82704848658598
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-11T04:00:00Z",
+      "exit_utc": "2024-03-12T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.79696664967457,
+      "funding_proxy_usdt": -1.5429644459028986
+    },
+    {
+      "symbol": "GRTUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-11T04:00:00Z",
+      "exit_utc": "2024-03-12T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.27758098989865,
+      "funding_proxy_usdt": -1.0235787861270331
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-11T04:00:00Z",
+      "exit_utc": "2024-03-16T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -89.7771189254745,
+      "funding_proxy_usdt": -18.523116721702813
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-11T04:00:00Z",
+      "exit_utc": "2024-03-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 320.4445272227508,
+      "funding_proxy_usdt": -18.82866722520892
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-18T04:00:00Z",
+      "exit_utc": "2024-03-18T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.91560789348317,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-18T04:00:00Z",
+      "exit_utc": "2024-03-19T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.84842759049768,
+      "funding_proxy_usdt": -0.9328196970143179
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-18T04:00:00Z",
+      "exit_utc": "2024-03-19T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.33847083718047,
+      "funding_proxy_usdt": -1.422862943697252
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-18T04:00:00Z",
+      "exit_utc": "2024-03-19T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.0078132121925,
+      "funding_proxy_usdt": -1.0922053187091811
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-25T04:00:00Z",
+      "exit_utc": "2024-03-25T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.95026796532585,
+      "funding_proxy_usdt": -1.2848505930737057
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-25T04:00:00Z",
+      "exit_utc": "2024-04-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 521.1975245521108,
+      "funding_proxy_usdt": -19.056307181241984
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-25T04:00:00Z",
+      "exit_utc": "2024-04-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 120.27548113350731,
+      "funding_proxy_usdt": -12.07172171510741
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2024-03-25T04:00:00Z",
+      "exit_utc": "2024-04-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 57.38317625908432,
+      "funding_proxy_usdt": -12.760390445164322
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-04-01T04:00:00Z",
+      "exit_utc": "2024-04-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.51893111276878,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2024-04-01T04:00:00Z",
+      "exit_utc": "2024-04-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.5189311127691,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-04-01T04:00:00Z",
+      "exit_utc": "2024-04-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -74.5189311127689,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-04-01T04:00:00Z",
+      "exit_utc": "2024-04-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.52346369510208,
+      "funding_proxy_usdt": -1.0045325823329774
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-15T04:00:00Z",
+      "exit_utc": "2024-04-15T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.34788050633236,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-15T04:00:00Z",
+      "exit_utc": "2024-04-15T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.34788050633249,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-15T04:00:00Z",
+      "exit_utc": "2024-04-15T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.3478805063323,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-15T04:00:00Z",
+      "exit_utc": "2024-04-15T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.34788050633239,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-22T04:00:00Z",
+      "exit_utc": "2024-04-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.10661560580591,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-22T04:00:00Z",
+      "exit_utc": "2024-04-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 185.35057874359578,
+      "funding_proxy_usdt": 3.312973580069382
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-22T04:00:00Z",
+      "exit_utc": "2024-04-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 126.56293276707821,
+      "funding_proxy_usdt": -4.906153003337878
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-22T04:00:00Z",
+      "exit_utc": "2024-04-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 114.67938762592735,
+      "funding_proxy_usdt": 2.137539892718329
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-29T04:00:00Z",
+      "exit_utc": "2024-04-30T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.62435400058986,
+      "funding_proxy_usdt": 0.2431586391202793
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-29T04:00:00Z",
+      "exit_utc": "2024-05-03T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.11602014163711,
+      "funding_proxy_usdt": 1.7514924980729052
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-29T04:00:00Z",
+      "exit_utc": "2024-05-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.89763679143809,
+      "funding_proxy_usdt": 0.9698758482718867
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2024-04-29T04:00:00Z",
+      "exit_utc": "2024-05-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 87.37135055594736,
+      "funding_proxy_usdt": -3.6883508955697715
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-06T04:00:00Z",
+      "exit_utc": "2024-05-06T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.8741194614979,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-06T04:00:00Z",
+      "exit_utc": "2024-05-06T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.87411946149793,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-06T04:00:00Z",
+      "exit_utc": "2024-05-06T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.87411946149791,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-06T04:00:00Z",
+      "exit_utc": "2024-05-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 179.9799583384268,
+      "funding_proxy_usdt": 0.48839930959858696
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-13T04:00:00Z",
+      "exit_utc": "2024-05-13T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.59807799478642,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-13T04:00:00Z",
+      "exit_utc": "2024-05-13T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.59807799478638,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-13T04:00:00Z",
+      "exit_utc": "2024-05-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.45898611656979,
+      "funding_proxy_usdt": 0.13909187821659919
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2024-05-13T04:00:00Z",
+      "exit_utc": "2024-05-15T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.93141006400323,
+      "funding_proxy_usdt": 0.6666679307830629
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-20T04:00:00Z",
+      "exit_utc": "2024-05-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.516486504232,
+      "funding_proxy_usdt": -1.2651884054765408
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-20T04:00:00Z",
+      "exit_utc": "2024-05-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.45934458327784,
+      "funding_proxy_usdt": -1.208046484522379
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-20T04:00:00Z",
+      "exit_utc": "2024-05-24T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.00151070582156,
+      "funding_proxy_usdt": -1.7502126070661008
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-20T04:00:00Z",
+      "exit_utc": "2024-05-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 435.1848216303805,
+      "funding_proxy_usdt": -15.035919756982038
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-27T04:00:00Z",
+      "exit_utc": "2024-05-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.20328140384055,
+      "funding_proxy_usdt": 0.7733397827473709
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-27T04:00:00Z",
+      "exit_utc": "2024-05-27T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.23985751964503,
+      "funding_proxy_usdt": -0.2632363330569734
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-27T04:00:00Z",
+      "exit_utc": "2024-05-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.2065710798017,
+      "funding_proxy_usdt": -1.2299498932138424
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-05-27T04:00:00Z",
+      "exit_utc": "2024-05-29T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -75.83314833016435,
+      "funding_proxy_usdt": -4.8565271435764465
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-03T04:00:00Z",
+      "exit_utc": "2024-06-03T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -68.7390104247126,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-03T04:00:00Z",
+      "exit_utc": "2024-06-06T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.90548875609127,
+      "funding_proxy_usdt": -2.1664783313786575
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-03T04:00:00Z",
+      "exit_utc": "2024-06-06T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.17670835843016,
+      "funding_proxy_usdt": -1.4376979337175047
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-03T04:00:00Z",
+      "exit_utc": "2024-06-07T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -72.39132022306951,
+      "funding_proxy_usdt": -3.6523097983568684
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-10T04:00:00Z",
+      "exit_utc": "2024-06-10T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.55759701428688,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-10T04:00:00Z",
+      "exit_utc": "2024-06-11T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.80649404373418,
+      "funding_proxy_usdt": -0.24889702944734754
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-10T04:00:00Z",
+      "exit_utc": "2024-06-11T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.9350972051238,
+      "funding_proxy_usdt": -0.377500190836718
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2024-06-10T04:00:00Z",
+      "exit_utc": "2024-06-11T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.2189339632095,
+      "funding_proxy_usdt": -0.6613369489225909
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-17T04:00:00Z",
+      "exit_utc": "2024-06-20T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -64.81729122792811,
+      "funding_proxy_usdt": -0.20182209277795227
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-17T04:00:00Z",
+      "exit_utc": "2024-06-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 202.14072314367482,
+      "funding_proxy_usdt": 1.774507932888571
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-17T04:00:00Z",
+      "exit_utc": "2024-06-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 211.75560138279585,
+      "funding_proxy_usdt": 1.6655831792807647
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-17T04:00:00Z",
+      "exit_utc": "2024-06-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 53.90138674133538,
+      "funding_proxy_usdt": 1.4840654554881445
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-24T04:00:00Z",
+      "exit_utc": "2024-06-24T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.60208111968633,
+      "funding_proxy_usdt": 0.13437049868882417
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-24T04:00:00Z",
+      "exit_utc": "2024-06-25T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.47535655256068,
+      "funding_proxy_usdt": 0.26109506581430236
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-24T04:00:00Z",
+      "exit_utc": "2024-06-25T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.35548155286008,
+      "funding_proxy_usdt": -1.6190299344849255
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2024-06-24T04:00:00Z",
+      "exit_utc": "2024-07-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 4.527454997506123,
+      "funding_proxy_usdt": 2.057953050948282
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-01T04:00:00Z",
+      "exit_utc": "2024-07-03T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -65.62143365951101,
+      "funding_proxy_usdt": 0.5668001767358022
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-01T04:00:00Z",
+      "exit_utc": "2024-07-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 291.1926966510896,
+      "funding_proxy_usdt": 0.6384986254756615
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-01T04:00:00Z",
+      "exit_utc": "2024-07-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 405.0662706122647,
+      "funding_proxy_usdt": -11.488030716591732
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-01T04:00:00Z",
+      "exit_utc": "2024-07-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 269.0024896375174,
+      "funding_proxy_usdt": 2.0308825167413977
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-08T04:00:00Z",
+      "exit_utc": "2024-07-08T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.28622035662,
+      "funding_proxy_usdt": -0.13049972916250782
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-08T04:00:00Z",
+      "exit_utc": "2024-07-08T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.38794954157788,
+      "funding_proxy_usdt": -0.2322289141205771
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-08T04:00:00Z",
+      "exit_utc": "2024-07-08T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.18946649947026,
+      "funding_proxy_usdt": -0.0337458720128652
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-07-08T04:00:00Z",
+      "exit_utc": "2024-07-08T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -73.25726192274918,
+      "funding_proxy_usdt": -0.10154129529167938
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-22T04:00:00Z",
+      "exit_utc": "2024-07-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.81340031830875,
+      "funding_proxy_usdt": -0.06572792100328591
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-22T04:00:00Z",
+      "exit_utc": "2024-07-22T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -70.41914735943722,
+      "funding_proxy_usdt": 0.3285250378683939
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-22T04:00:00Z",
+      "exit_utc": "2024-07-23T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.152252308633,
+      "funding_proxy_usdt": -0.404579911327525
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-22T04:00:00Z",
+      "exit_utc": "2024-07-23T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -71.11453439091771,
+      "funding_proxy_usdt": -0.36686199361216354
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-29T04:00:00Z",
+      "exit_utc": "2024-07-31T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -68.65653908692497,
+      "funding_proxy_usdt": -0.10022670740832666
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-29T04:00:00Z",
+      "exit_utc": "2024-08-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -68.72831908974779,
+      "funding_proxy_usdt": -0.1720067102309455
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-29T04:00:00Z",
+      "exit_utc": "2024-08-01T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.81596436356374,
+      "funding_proxy_usdt": -1.2596519840469214
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2024-07-29T04:00:00Z",
+      "exit_utc": "2024-08-05T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -69.74182122013387,
+      "funding_proxy_usdt": -1.18550884061713
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-05T04:00:00Z",
+      "exit_utc": "2024-08-05T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.96061026002687,
+      "funding_proxy_usdt": -0.4155204555089815
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-05T04:00:00Z",
+      "exit_utc": "2024-08-05T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.49047861297302,
+      "funding_proxy_usdt": 0.054611191544842216
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-05T04:00:00Z",
+      "exit_utc": "2024-08-05T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -67.07521485929699,
+      "funding_proxy_usdt": -0.5301250547790685
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-05T04:00:00Z",
+      "exit_utc": "2024-08-05T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -66.5165264632544,
+      "funding_proxy_usdt": 0.028563341263343728
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-12T04:00:00Z",
+      "exit_utc": "2024-08-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -64.62708406036346,
+      "funding_proxy_usdt": -0.15017413224903514
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-12T04:00:00Z",
+      "exit_utc": "2024-08-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -64.60173461110675,
+      "funding_proxy_usdt": -0.12482468299237127
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-12T04:00:00Z",
+      "exit_utc": "2024-08-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -64.55775187712565,
+      "funding_proxy_usdt": -0.08084194901129389
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-12T04:00:00Z",
+      "exit_utc": "2024-08-12T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -64.53208906444185,
+      "funding_proxy_usdt": -0.05517913632743929
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-19T04:00:00Z",
+      "exit_utc": "2024-08-19T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -62.52155151895124,
+      "funding_proxy_usdt": -0.04525494982503304
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-19T04:00:00Z",
+      "exit_utc": "2024-08-20T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -65.25478647251808,
+      "funding_proxy_usdt": -2.778489903391888
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-19T04:00:00Z",
+      "exit_utc": "2024-08-21T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -62.7704354507486,
+      "funding_proxy_usdt": -0.29413888162247487
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-08-19T04:00:00Z",
+      "exit_utc": "2024-08-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -62.401052367626114,
+      "funding_proxy_usdt": 0.0752442015000758
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2024-08-26T04:00:00Z",
+      "exit_utc": "2024-08-26T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -60.512975648324584,
+      "funding_proxy_usdt": -0.11342652031671055
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-08-26T04:00:00Z",
+      "exit_utc": "2024-08-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -60.35366707356542,
+      "funding_proxy_usdt": 0.04588205444232746
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2024-08-26T04:00:00Z",
+      "exit_utc": "2024-08-27T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -60.56747103328162,
+      "funding_proxy_usdt": -0.16792190527373574
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2024-08-26T04:00:00Z",
+      "exit_utc": "2024-08-28T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -60.66254347266379,
+      "funding_proxy_usdt": -0.2629943446560182
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-02T04:00:00Z",
+      "exit_utc": "2024-09-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.79863867009641,
+      "funding_proxy_usdt": -0.15633770756760063
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-02T04:00:00Z",
+      "exit_utc": "2024-09-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.63504274936166,
+      "funding_proxy_usdt": 0.00725821316710441
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-02T04:00:00Z",
+      "exit_utc": "2024-09-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.7510547025658,
+      "funding_proxy_usdt": -0.10875374003711474
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-02T04:00:00Z",
+      "exit_utc": "2024-09-03T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.63818507535731,
+      "funding_proxy_usdt": 0.0041158871714232145
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-09T04:00:00Z",
+      "exit_utc": "2024-09-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.82365621635425,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-09T04:00:00Z",
+      "exit_utc": "2024-09-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.71217693604168,
+      "funding_proxy_usdt": 0.11147928031252985
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-09T04:00:00Z",
+      "exit_utc": "2024-09-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.709841834779766,
+      "funding_proxy_usdt": 0.11381438157458729
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2024-09-09T04:00:00Z",
+      "exit_utc": "2024-09-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.79275119655648,
+      "funding_proxy_usdt": 0.030905019797724705
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-16T04:00:00Z",
+      "exit_utc": "2024-09-16T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.99102873608624,
+      "funding_proxy_usdt": -0.032851909324943585
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-16T04:00:00Z",
+      "exit_utc": "2024-09-16T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.9234091874854,
+      "funding_proxy_usdt": 0.03476763927579864
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-16T04:00:00Z",
+      "exit_utc": "2024-09-17T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -55.12312609858012,
+      "funding_proxy_usdt": -0.16494927181868885
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-16T04:00:00Z",
+      "exit_utc": "2024-09-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 192.33589213046704,
+      "funding_proxy_usdt": -2.1158786171192845
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-23T04:00:00Z",
+      "exit_utc": "2024-09-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -55.169184252582795,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-23T04:00:00Z",
+      "exit_utc": "2024-09-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -55.19682873394244,
+      "funding_proxy_usdt": -0.027644481359739938
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-23T04:00:00Z",
+      "exit_utc": "2024-09-27T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.17561102088648,
+      "funding_proxy_usdt": -1.0064267683037293
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-23T04:00:00Z",
+      "exit_utc": "2024-09-30T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -9.696243077686741,
+      "funding_proxy_usdt": -2.2656109426073785
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-30T04:00:00Z",
+      "exit_utc": "2024-09-30T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.90862646353039,
+      "funding_proxy_usdt": -0.10170507621669075
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-30T04:00:00Z",
+      "exit_utc": "2024-10-01T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.78564040938651,
+      "funding_proxy_usdt": 0.021280977927268623
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-30T04:00:00Z",
+      "exit_utc": "2024-10-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.09891369499148,
+      "funding_proxy_usdt": -0.2919923076777335
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2024-09-30T04:00:00Z",
+      "exit_utc": "2024-10-01T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.35091925179858,
+      "funding_proxy_usdt": -0.5439978644846114
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-14T04:00:00Z",
+      "exit_utc": "2024-10-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.42853559495986,
+      "funding_proxy_usdt": -0.2923396062302219
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-14T04:00:00Z",
+      "exit_utc": "2024-10-17T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.099543284526426,
+      "funding_proxy_usdt": -0.9633472957968227
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-14T04:00:00Z",
+      "exit_utc": "2024-10-19T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.80714336329893,
+      "funding_proxy_usdt": -1.670947374569224
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-14T04:00:00Z",
+      "exit_utc": "2024-10-21T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 97.77829700256038,
+      "funding_proxy_usdt": 5.894456385275744
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-21T04:00:00Z",
+      "exit_utc": "2024-10-21T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.51773232387978,
+      "funding_proxy_usdt": 0.1426481392659277
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-21T04:00:00Z",
+      "exit_utc": "2024-10-21T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.85871108686667,
+      "funding_proxy_usdt": -0.19833062372102422
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-21T04:00:00Z",
+      "exit_utc": "2024-10-22T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.85464452164385,
+      "funding_proxy_usdt": -0.19426405849825581
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-21T04:00:00Z",
+      "exit_utc": "2024-10-22T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.05079135891217,
+      "funding_proxy_usdt": -0.39041089576655275
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-28T04:00:00Z",
+      "exit_utc": "2024-11-01T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.148800671048264,
+      "funding_proxy_usdt": -1.0906434501151732
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-28T04:00:00Z",
+      "exit_utc": "2024-11-03T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.06715129256399,
+      "funding_proxy_usdt": -2.0089940716310366
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-28T04:00:00Z",
+      "exit_utc": "2024-11-04T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 10.599731501232633,
+      "funding_proxy_usdt": -0.6465353687496752
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-10-28T04:00:00Z",
+      "exit_utc": "2024-11-04T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 52.952028987370944,
+      "funding_proxy_usdt": -2.2716490219629555
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-11T04:00:00Z",
+      "exit_utc": "2024-11-11T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.75156558985514,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-11T04:00:00Z",
+      "exit_utc": "2024-11-11T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.751565589855,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-11T04:00:00Z",
+      "exit_utc": "2024-11-11T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.75156558985511,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-11T04:00:00Z",
+      "exit_utc": "2024-11-13T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.80821185372176,
+      "funding_proxy_usdt": 0.9433537361333142
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-18T04:00:00Z",
+      "exit_utc": "2024-11-18T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.22060206954433,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-18T04:00:00Z",
+      "exit_utc": "2024-11-20T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.32805011699934,
+      "funding_proxy_usdt": -1.107448047455001
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-18T04:00:00Z",
+      "exit_utc": "2024-11-25T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 1306.681460971891,
+      "funding_proxy_usdt": -5.018102693669474
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-18T04:00:00Z",
+      "exit_utc": "2024-11-25T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 120.76600648556841,
+      "funding_proxy_usdt": -5.314832999427932
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-25T04:00:00Z",
+      "exit_utc": "2024-11-25T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.613974256532394,
+      "funding_proxy_usdt": -0.11367577115486804
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-25T04:00:00Z",
+      "exit_utc": "2024-11-26T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.728612283068294,
+      "funding_proxy_usdt": -0.2283137976906469
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-25T04:00:00Z",
+      "exit_utc": "2024-11-26T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.81043289395672,
+      "funding_proxy_usdt": -0.3101344085792206
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": 1,
+      "entry_utc": "2024-11-25T04:00:00Z",
+      "exit_utc": "2024-11-26T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.72657074500378,
+      "funding_proxy_usdt": -0.2262722596262554
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-02T04:00:00Z",
+      "exit_utc": "2024-12-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.79047474727904,
+      "funding_proxy_usdt": -0.10572106394663237
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-02T04:00:00Z",
+      "exit_utc": "2024-12-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -57.00742276717152,
+      "funding_proxy_usdt": -0.3226690838391008
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-02T04:00:00Z",
+      "exit_utc": "2024-12-03T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -57.987655142412905,
+      "funding_proxy_usdt": -1.3029014590804766
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-02T04:00:00Z",
+      "exit_utc": "2024-12-09T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 348.56281672354396,
+      "funding_proxy_usdt": -12.559382343008014
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-09T04:00:00Z",
+      "exit_utc": "2024-12-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.20264302433998,
+      "funding_proxy_usdt": -0.1514571079983951
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-09T04:00:00Z",
+      "exit_utc": "2024-12-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.406612946049606,
+      "funding_proxy_usdt": -0.35542702970790524
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-09T04:00:00Z",
+      "exit_utc": "2024-12-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.35781852879699,
+      "funding_proxy_usdt": -0.3066326124552538
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-09T04:00:00Z",
+      "exit_utc": "2024-12-10T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -58.553108109527024,
+      "funding_proxy_usdt": -0.5019221931854535
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-16T04:00:00Z",
+      "exit_utc": "2024-12-16T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.2461489040345,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-16T04:00:00Z",
+      "exit_utc": "2024-12-17T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.39007975401156,
+      "funding_proxy_usdt": 2.856069150022992
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-16T04:00:00Z",
+      "exit_utc": "2024-12-18T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -56.67318380831183,
+      "funding_proxy_usdt": -0.4270349042773578
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2024-12-16T04:00:00Z",
+      "exit_utc": "2024-12-19T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -57.14226228935238,
+      "funding_proxy_usdt": -0.8961133853178594
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-23T04:00:00Z",
+      "exit_utc": "2024-12-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.41560449361397,
+      "funding_proxy_usdt": 0.20960122515998048
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-23T04:00:00Z",
+      "exit_utc": "2024-12-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.64644761186947,
+      "funding_proxy_usdt": -0.021241893095441583
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-23T04:00:00Z",
+      "exit_utc": "2024-12-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.47961186461573,
+      "funding_proxy_usdt": 0.14559385415828655
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-23T04:00:00Z",
+      "exit_utc": "2024-12-24T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.34699372373577,
+      "funding_proxy_usdt": 0.2782119950382536
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-30T04:00:00Z",
+      "exit_utc": "2024-12-31T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.731530105606744,
+      "funding_proxy_usdt": 0.20618249901412908
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-30T04:00:00Z",
+      "exit_utc": "2025-01-02T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -53.832228350770826,
+      "funding_proxy_usdt": -0.8945157461499103
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-30T04:00:00Z",
+      "exit_utc": "2025-01-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.044699035058585,
+      "funding_proxy_usdt": 0.8930135695623049
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2024-12-30T04:00:00Z",
+      "exit_utc": "2025-01-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.02772633108368,
+      "funding_proxy_usdt": 0.9099862735372313
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-06T04:00:00Z",
+      "exit_utc": "2025-01-07T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.16224682322982,
+      "funding_proxy_usdt": 0.044330212200600544
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-06T04:00:00Z",
+      "exit_utc": "2025-01-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.60588631085733,
+      "funding_proxy_usdt": -0.39930927542700145
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-06T04:00:00Z",
+      "exit_utc": "2025-01-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.59739127970002,
+      "funding_proxy_usdt": -0.3908142442697593
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-06T04:00:00Z",
+      "exit_utc": "2025-01-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.608703014893514,
+      "funding_proxy_usdt": -0.4021259794631875
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2025-01-13T04:00:00Z",
+      "exit_utc": "2025-01-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -50.15793907072486,
+      "funding_proxy_usdt": -0.4467698195390726
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-01-13T04:00:00Z",
+      "exit_utc": "2025-01-15T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -50.07737006815005,
+      "funding_proxy_usdt": -0.36620081696415624
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2025-01-13T04:00:00Z",
+      "exit_utc": "2025-01-15T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.255090485732346,
+      "funding_proxy_usdt": 0.45607876545352055
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-01-13T04:00:00Z",
+      "exit_utc": "2025-01-15T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.213892306291285,
+      "funding_proxy_usdt": 0.4972769448945438
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-20T04:00:00Z",
+      "exit_utc": "2025-01-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.61758434314593,
+      "funding_proxy_usdt": -0.5390440254397982
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-20T04:00:00Z",
+      "exit_utc": "2025-01-27T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.56902282216849,
+      "funding_proxy_usdt": -1.4904825044623855
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-20T04:00:00Z",
+      "exit_utc": "2025-01-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -24.232872277526102,
+      "funding_proxy_usdt": -0.3713676719722732
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-20T04:00:00Z",
+      "exit_utc": "2025-01-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -17.187699864409236,
+      "funding_proxy_usdt": -1.690322494143381
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-27T04:00:00Z",
+      "exit_utc": "2025-01-27T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.999421061210725,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-27T04:00:00Z",
+      "exit_utc": "2025-01-27T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.999421061210555,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ETCUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-27T04:00:00Z",
+      "exit_utc": "2025-01-27T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.999421061210676,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2025-01-27T04:00:00Z",
+      "exit_utc": "2025-02-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.01379520922878,
+      "funding_proxy_usdt": -1.0143741480180914
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-03T04:00:00Z",
+      "exit_utc": "2025-02-03T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.62718050848757,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-03T04:00:00Z",
+      "exit_utc": "2025-02-03T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.627180508487555,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-03T04:00:00Z",
+      "exit_utc": "2025-02-03T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.62718050848754,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-03T04:00:00Z",
+      "exit_utc": "2025-02-03T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.62718050848758,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "VETUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-10T04:00:00Z",
+      "exit_utc": "2025-02-10T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.12556918551538,
+      "funding_proxy_usdt": 0.08812695455710953
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-10T04:00:00Z",
+      "exit_utc": "2025-02-10T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.19276264105035,
+      "funding_proxy_usdt": 0.020933499022196496
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-10T04:00:00Z",
+      "exit_utc": "2025-02-11T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.06249690357942,
+      "funding_proxy_usdt": 0.1511992364929764
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-10T04:00:00Z",
+      "exit_utc": "2025-02-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 50.029554990543474,
+      "funding_proxy_usdt": -6.11875525477987
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-17T04:00:00Z",
+      "exit_utc": "2025-02-17T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.72025456853286,
+      "funding_proxy_usdt": -0.14434843023544378
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-17T04:00:00Z",
+      "exit_utc": "2025-02-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 112.91833092628823,
+      "funding_proxy_usdt": -0.21546631076219785
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-17T04:00:00Z",
+      "exit_utc": "2025-02-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 56.743312966496596,
+      "funding_proxy_usdt": 0.6510110034882879
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-17T04:00:00Z",
+      "exit_utc": "2025-02-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 124.62903507516891,
+      "funding_proxy_usdt": 2.60527053167528
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-24T04:00:00Z",
+      "exit_utc": "2025-03-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.990281479513726,
+      "funding_proxy_usdt": 1.52622987550222
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-24T04:00:00Z",
+      "exit_utc": "2025-03-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.962129562038854,
+      "funding_proxy_usdt": 0.5543817929771078
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-24T04:00:00Z",
+      "exit_utc": "2025-03-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.130620263405646,
+      "funding_proxy_usdt": 0.38589109161029195
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-02-24T04:00:00Z",
+      "exit_utc": "2025-03-03T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 69.24377503374025,
+      "funding_proxy_usdt": 0.8339282474863484
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-03T04:00:00Z",
+      "exit_utc": "2025-03-05T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.87298101199167,
+      "funding_proxy_usdt": 0.1413665331105968
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-03T04:00:00Z",
+      "exit_utc": "2025-03-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 227.87733524051507,
+      "funding_proxy_usdt": -0.38745993303288667
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-03T04:00:00Z",
+      "exit_utc": "2025-03-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 261.32987816082937,
+      "funding_proxy_usdt": 0.05083390649899481
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-03T04:00:00Z",
+      "exit_utc": "2025-03-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 135.69443920612284,
+      "funding_proxy_usdt": 0.3244559280378728
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-10T04:00:00Z",
+      "exit_utc": "2025-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.64793999366464,
+      "funding_proxy_usdt": -0.14141557396736631
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-10T04:00:00Z",
+      "exit_utc": "2025-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.507207171560246,
+      "funding_proxy_usdt": -0.0006827518630342123
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-10T04:00:00Z",
+      "exit_utc": "2025-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.506524419697215,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-10T04:00:00Z",
+      "exit_utc": "2025-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.70108603244634,
+      "funding_proxy_usdt": -0.19456161274908976
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-17T04:00:00Z",
+      "exit_utc": "2025-03-17T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -47.90936769303952,
+      "funding_proxy_usdt": 0.060886821070884375
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-17T04:00:00Z",
+      "exit_utc": "2025-03-18T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.645062680080876,
+      "funding_proxy_usdt": -0.6748081659703906
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-17T04:00:00Z",
+      "exit_utc": "2025-03-19T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -47.634599203956775,
+      "funding_proxy_usdt": 0.3356553101536486
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-17T04:00:00Z",
+      "exit_utc": "2025-03-19T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -48.04547741838528,
+      "funding_proxy_usdt": -0.07522290427495285
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-31T04:00:00Z",
+      "exit_utc": "2025-04-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.45091602802606,
+      "funding_proxy_usdt": 0.03053034760239443
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-31T04:00:00Z",
+      "exit_utc": "2025-04-01T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.482795433540446,
+      "funding_proxy_usdt": -0.0013490579118092469
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-31T04:00:00Z",
+      "exit_utc": "2025-04-01T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.69224772895541,
+      "funding_proxy_usdt": -0.21080135332666514
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-03-31T04:00:00Z",
+      "exit_utc": "2025-04-01T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.778237880184236,
+      "funding_proxy_usdt": -0.2967915045557111
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2025-04-07T04:00:00Z",
+      "exit_utc": "2025-04-07T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.03779252812967,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-04-07T04:00:00Z",
+      "exit_utc": "2025-04-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.99330689704824,
+      "funding_proxy_usdt": 0.044485631081524646
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-04-07T04:00:00Z",
+      "exit_utc": "2025-04-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.97006647923244,
+      "funding_proxy_usdt": 0.06772604889731326
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-04-07T04:00:00Z",
+      "exit_utc": "2025-04-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.255042801885345,
+      "funding_proxy_usdt": -0.21725027375563316
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-14T04:00:00Z",
+      "exit_utc": "2025-04-14T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.16201207577019,
+      "funding_proxy_usdt": 0.39484090713086023
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-14T04:00:00Z",
+      "exit_utc": "2025-04-15T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.828756904110584,
+      "funding_proxy_usdt": 0.7280960787904919
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-14T04:00:00Z",
+      "exit_utc": "2025-04-15T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.1477754468813,
+      "funding_proxy_usdt": 0.40907753601977603
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-14T04:00:00Z",
+      "exit_utc": "2025-04-16T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.943033722899436,
+      "funding_proxy_usdt": -0.38618073999842023
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-21T04:00:00Z",
+      "exit_utc": "2025-04-21T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.07496421936472,
+      "funding_proxy_usdt": 0.1440230115548762
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-21T04:00:00Z",
+      "exit_utc": "2025-04-21T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.242652658656624,
+      "funding_proxy_usdt": -0.023665427737142995
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-21T04:00:00Z",
+      "exit_utc": "2025-04-28T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 133.5951810884531,
+      "funding_proxy_usdt": 0.6327446260973546
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-21T04:00:00Z",
+      "exit_utc": "2025-04-28T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 51.27669026985214,
+      "funding_proxy_usdt": -0.04738928047777344
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-28T04:00:00Z",
+      "exit_utc": "2025-04-28T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.99962808313538,
+      "funding_proxy_usdt": -0.0033883293109226477
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-28T04:00:00Z",
+      "exit_utc": "2025-04-30T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.016378416816195,
+      "funding_proxy_usdt": 0.9798613370084013
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-28T04:00:00Z",
+      "exit_utc": "2025-04-30T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.36085399910248,
+      "funding_proxy_usdt": -0.3646142452779272
+    },
+    {
+      "symbol": "POLUSDT",
+      "side": 1,
+      "entry_utc": "2025-04-28T04:00:00Z",
+      "exit_utc": "2025-04-30T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.86630252259386,
+      "funding_proxy_usdt": 0.12993723123063322
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-05T04:00:00Z",
+      "exit_utc": "2025-05-06T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.776663076353884,
+      "funding_proxy_usdt": -0.1040787081391853
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-05T04:00:00Z",
+      "exit_utc": "2025-05-07T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.85530649477219,
+      "funding_proxy_usdt": -0.18272212655752865
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-05T04:00:00Z",
+      "exit_utc": "2025-05-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 125.95701549033693,
+      "funding_proxy_usdt": 3.511433606388197
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-05T04:00:00Z",
+      "exit_utc": "2025-05-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 323.44441463674383,
+      "funding_proxy_usdt": -1.2696825037198542
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-12T04:00:00Z",
+      "exit_utc": "2025-05-12T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.62732638551394,
+      "funding_proxy_usdt": -0.12745999439418526
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-12T04:00:00Z",
+      "exit_utc": "2025-05-12T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.669952027321514,
+      "funding_proxy_usdt": -0.17008563620171202
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-12T04:00:00Z",
+      "exit_utc": "2025-05-13T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.67314114559937,
+      "funding_proxy_usdt": -0.17327475447962115
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-12T04:00:00Z",
+      "exit_utc": "2025-05-19T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.59975589878452,
+      "funding_proxy_usdt": -1.0998895076646957
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-19T04:00:00Z",
+      "exit_utc": "2025-05-19T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.11184583809586,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-19T04:00:00Z",
+      "exit_utc": "2025-05-26T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 199.83730367293444,
+      "funding_proxy_usdt": -1.3390657793997012
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-19T04:00:00Z",
+      "exit_utc": "2025-05-26T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -4.5861917471003295,
+      "funding_proxy_usdt": -0.7444690055021336
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-19T04:00:00Z",
+      "exit_utc": "2025-05-26T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 26.767201280452852,
+      "funding_proxy_usdt": -1.2295765963670522
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-26T04:00:00Z",
+      "exit_utc": "2025-05-26T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.534747988190624,
+      "funding_proxy_usdt": -0.04001185027924041
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-26T04:00:00Z",
+      "exit_utc": "2025-05-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.84337576725485,
+      "funding_proxy_usdt": -0.3486396293435481
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-26T04:00:00Z",
+      "exit_utc": "2025-05-30T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.04843682354286,
+      "funding_proxy_usdt": -0.5537006856315537
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2025-05-26T04:00:00Z",
+      "exit_utc": "2025-05-31T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.71133311950727,
+      "funding_proxy_usdt": 0.7834030184040367
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-09T04:00:00Z",
+      "exit_utc": "2025-06-13T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.99403353725392,
+      "funding_proxy_usdt": 0.12375313175854756
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-09T04:00:00Z",
+      "exit_utc": "2025-06-13T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.649159890978204,
+      "funding_proxy_usdt": -0.5313732219657666
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-09T04:00:00Z",
+      "exit_utc": "2025-06-13T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.57898653952733,
+      "funding_proxy_usdt": -0.4611998705147219
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-09T04:00:00Z",
+      "exit_utc": "2025-06-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 83.59826015359268,
+      "funding_proxy_usdt": -1.1735179812868437
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-16T04:00:00Z",
+      "exit_utc": "2025-06-16T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.92883171781306,
+      "funding_proxy_usdt": -0.08809112973568227
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-16T04:00:00Z",
+      "exit_utc": "2025-06-16T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.78414081121743,
+      "funding_proxy_usdt": 0.056599776860018734
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-16T04:00:00Z",
+      "exit_utc": "2025-06-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 136.28386633095366,
+      "funding_proxy_usdt": -0.4198737268048764
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-16T04:00:00Z",
+      "exit_utc": "2025-06-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 116.25145472372004,
+      "funding_proxy_usdt": -0.1608317520585324
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-23T04:00:00Z",
+      "exit_utc": "2025-06-23T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.14132890310023,
+      "funding_proxy_usdt": -0.008590982975141983
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-23T04:00:00Z",
+      "exit_utc": "2025-06-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.07711739752283,
+      "funding_proxy_usdt": 0.0556205226022015
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-23T04:00:00Z",
+      "exit_utc": "2025-06-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.31765165723677,
+      "funding_proxy_usdt": -0.1849137371117441
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2025-06-23T04:00:00Z",
+      "exit_utc": "2025-06-24T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.108121602909264,
+      "funding_proxy_usdt": 0.024616317215650933
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-30T04:00:00Z",
+      "exit_utc": "2025-07-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.18131028303017,
+      "funding_proxy_usdt": 0.5001683095937008
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-30T04:00:00Z",
+      "exit_utc": "2025-07-01T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.72464289446871,
+      "funding_proxy_usdt": -0.043164301844936054
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-30T04:00:00Z",
+      "exit_utc": "2025-07-01T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.6536888794339,
+      "funding_proxy_usdt": 0.02778971318983865
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-06-30T04:00:00Z",
+      "exit_utc": "2025-07-01T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.87864999887358,
+      "funding_proxy_usdt": -0.19717140624961088
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-07T04:00:00Z",
+      "exit_utc": "2025-07-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 464.05772814330885,
+      "funding_proxy_usdt": -1.0839580554067882
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-07T04:00:00Z",
+      "exit_utc": "2025-07-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 794.6521892157562,
+      "funding_proxy_usdt": 0.27388602905288767
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-07T04:00:00Z",
+      "exit_utc": "2025-07-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 37.24542139996472,
+      "funding_proxy_usdt": -0.5698124338928782
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-07T04:00:00Z",
+      "exit_utc": "2025-07-14T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 99.8241461874114,
+      "funding_proxy_usdt": -1.4775112028501924
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-14T04:00:00Z",
+      "exit_utc": "2025-07-14T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.152977720295894,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-14T04:00:00Z",
+      "exit_utc": "2025-07-14T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.15297772029583,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-14T04:00:00Z",
+      "exit_utc": "2025-07-14T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.24868183542577,
+      "funding_proxy_usdt": -0.09570411512984349
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-14T04:00:00Z",
+      "exit_utc": "2025-07-14T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -52.30038346508125,
+      "funding_proxy_usdt": -0.14740574478531646
+    },
+    {
+      "symbol": "ETCUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-21T04:00:00Z",
+      "exit_utc": "2025-07-22T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -50.82403968058972,
+      "funding_proxy_usdt": -0.2854450874069626
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-21T04:00:00Z",
+      "exit_utc": "2025-07-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -50.82968492746302,
+      "funding_proxy_usdt": -0.29109033428013703
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-21T04:00:00Z",
+      "exit_utc": "2025-07-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -50.51708445289636,
+      "funding_proxy_usdt": 0.021510140286473613
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-21T04:00:00Z",
+      "exit_utc": "2025-07-23T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -51.31159276715498,
+      "funding_proxy_usdt": -0.7729981739721136
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-28T04:00:00Z",
+      "exit_utc": "2025-07-28T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.115129016259765,
+      "funding_proxy_usdt": -0.1493889084999591
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-28T04:00:00Z",
+      "exit_utc": "2025-07-28T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.05984442463418,
+      "funding_proxy_usdt": -0.09410431687432315
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-28T04:00:00Z",
+      "exit_utc": "2025-07-28T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.17925210894502,
+      "funding_proxy_usdt": -0.2135120011849638
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2025-07-28T04:00:00Z",
+      "exit_utc": "2025-07-30T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -49.393782546470874,
+      "funding_proxy_usdt": -0.4280424387109769
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-04T04:00:00Z",
+      "exit_utc": "2025-08-04T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -47.55550787196491,
+      "funding_proxy_usdt": -0.01808859302057001
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-04T04:00:00Z",
+      "exit_utc": "2025-08-07T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -47.20114665475792,
+      "funding_proxy_usdt": 0.33627262418631015
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-04T04:00:00Z",
+      "exit_utc": "2025-08-08T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.94206755597422,
+      "funding_proxy_usdt": 0.5953517229700188
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-04T04:00:00Z",
+      "exit_utc": "2025-08-08T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.50838088617943,
+      "funding_proxy_usdt": 1.029038392764774
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": 1,
+      "entry_utc": "2025-08-11T04:00:00Z",
+      "exit_utc": "2025-08-11T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.07520602268245,
+      "funding_proxy_usdt": -0.08504693660141323
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2025-08-11T04:00:00Z",
+      "exit_utc": "2025-08-11T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.032470629944456,
+      "funding_proxy_usdt": -0.042311543863572595
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2025-08-11T04:00:00Z",
+      "exit_utc": "2025-08-11T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.07465862053658,
+      "funding_proxy_usdt": -0.08449953445561255
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": 1,
+      "entry_utc": "2025-08-11T04:00:00Z",
+      "exit_utc": "2025-08-18T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -1.0409224838779418,
+      "funding_proxy_usdt": -1.4598867262828699
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-18T04:00:00Z",
+      "exit_utc": "2025-08-22T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.052846432642816,
+      "funding_proxy_usdt": 0.9487066615361345
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-18T04:00:00Z",
+      "exit_utc": "2025-08-22T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.46386851782372,
+      "funding_proxy_usdt": 0.5376845763553121
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-18T04:00:00Z",
+      "exit_utc": "2025-08-24T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.18975893069968,
+      "funding_proxy_usdt": 0.8117941634793627
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-18T04:00:00Z",
+      "exit_utc": "2025-08-25T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 6.782248050828337,
+      "funding_proxy_usdt": 0.9480201903473656
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-25T04:00:00Z",
+      "exit_utc": "2025-09-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 109.34541457845874,
+      "funding_proxy_usdt": 0.09650273616956725
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-25T04:00:00Z",
+      "exit_utc": "2025-09-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 47.904117436250885,
+      "funding_proxy_usdt": 0.8051902081504854
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-25T04:00:00Z",
+      "exit_utc": "2025-09-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 101.30206149371784,
+      "funding_proxy_usdt": 0.7109066651540412
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2025-08-25T04:00:00Z",
+      "exit_utc": "2025-09-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 58.688524306673436,
+      "funding_proxy_usdt": 0.5862930683266689
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-01T04:00:00Z",
+      "exit_utc": "2025-09-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.20583300201293,
+      "funding_proxy_usdt": 0.27741378732857824
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-01T04:00:00Z",
+      "exit_utc": "2025-09-03T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.81232937713456,
+      "funding_proxy_usdt": 0.6709174122068822
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-01T04:00:00Z",
+      "exit_utc": "2025-09-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -23.157817173376596,
+      "funding_proxy_usdt": 1.6089491004614687
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-01T04:00:00Z",
+      "exit_utc": "2025-09-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -4.317587440156421,
+      "funding_proxy_usdt": 1.6988527230834998
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-08T04:00:00Z",
+      "exit_utc": "2025-09-09T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.28770115680507,
+      "funding_proxy_usdt": 0.2700978665993928
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-08T04:00:00Z",
+      "exit_utc": "2025-09-09T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.29028798875845,
+      "funding_proxy_usdt": 0.2675110346462308
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-08T04:00:00Z",
+      "exit_utc": "2025-09-11T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -46.04067828621356,
+      "funding_proxy_usdt": -0.4828792628089629
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-08T04:00:00Z",
+      "exit_utc": "2025-09-12T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.917330685498314,
+      "funding_proxy_usdt": 0.6404683379062991
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-15T04:00:00Z",
+      "exit_utc": "2025-09-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.146848421401586,
+      "funding_proxy_usdt": -0.08089292643155563
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-15T04:00:00Z",
+      "exit_utc": "2025-09-15T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.15037733995657,
+      "funding_proxy_usdt": -0.08442184498669693
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-15T04:00:00Z",
+      "exit_utc": "2025-09-15T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.11259660288159,
+      "funding_proxy_usdt": -0.0466411079116635
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-15T04:00:00Z",
+      "exit_utc": "2025-09-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 59.74188250556205,
+      "funding_proxy_usdt": -0.973846770945435
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-22T04:00:00Z",
+      "exit_utc": "2025-09-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.50425534730946,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-22T04:00:00Z",
+      "exit_utc": "2025-09-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.50425534730933,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-22T04:00:00Z",
+      "exit_utc": "2025-09-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.50425534730946,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2025-09-22T04:00:00Z",
+      "exit_utc": "2025-09-22T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.59953518394359,
+      "funding_proxy_usdt": -0.09527983663424036
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-29T04:00:00Z",
+      "exit_utc": "2025-10-02T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.784935625651165,
+      "funding_proxy_usdt": 0.4556613369253209
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-29T04:00:00Z",
+      "exit_utc": "2025-10-02T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.82725272205226,
+      "funding_proxy_usdt": 0.4133442405241902
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-29T04:00:00Z",
+      "exit_utc": "2025-10-02T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.724761326233995,
+      "funding_proxy_usdt": 0.5158356363424355
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2025-09-29T04:00:00Z",
+      "exit_utc": "2025-10-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.70755898629112,
+      "funding_proxy_usdt": 0.5330379762853199
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-06T04:00:00Z",
+      "exit_utc": "2025-10-07T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.10377750539016,
+      "funding_proxy_usdt": -0.2365561907102855
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-06T04:00:00Z",
+      "exit_utc": "2025-10-08T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.96111173953539,
+      "funding_proxy_usdt": 2.906109575144421
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-06T04:00:00Z",
+      "exit_utc": "2025-10-11T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.00949431130574,
+      "funding_proxy_usdt": -0.14227299662590373
+    },
+    {
+      "symbol": "LTCUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-06T04:00:00Z",
+      "exit_utc": "2025-10-11T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.788109445466546,
+      "funding_proxy_usdt": -0.9208881307867359
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-13T04:00:00Z",
+      "exit_utc": "2025-10-13T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.69329456337973,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-13T04:00:00Z",
+      "exit_utc": "2025-10-14T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.65556877385687,
+      "funding_proxy_usdt": 0.03772578952285118
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-13T04:00:00Z",
+      "exit_utc": "2025-10-20T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 165.12729768586894,
+      "funding_proxy_usdt": 0.8936574709251595
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-13T04:00:00Z",
+      "exit_utc": "2025-10-20T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 100.4894046202239,
+      "funding_proxy_usdt": -14.538571891755666
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-20T04:00:00Z",
+      "exit_utc": "2025-10-21T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.78023601872925,
+      "funding_proxy_usdt": -0.6443436672177295
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-20T04:00:00Z",
+      "exit_utc": "2025-10-26T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -54.06567471130349,
+      "funding_proxy_usdt": -12.929782359791911
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-20T04:00:00Z",
+      "exit_utc": "2025-10-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 41.18667088237439,
+      "funding_proxy_usdt": 1.0208950986963548
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": -1,
+      "entry_utc": "2025-10-20T04:00:00Z",
+      "exit_utc": "2025-10-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -19.067503631826757,
+      "funding_proxy_usdt": -1.1191725810679993
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-27T04:00:00Z",
+      "exit_utc": "2025-10-27T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.48598254116587,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-27T04:00:00Z",
+      "exit_utc": "2025-10-28T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.874991876573304,
+      "funding_proxy_usdt": 0.6109906645926719
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-27T04:00:00Z",
+      "exit_utc": "2025-10-30T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.81264882676212,
+      "funding_proxy_usdt": -0.32666628559617655
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": 1,
+      "entry_utc": "2025-10-27T04:00:00Z",
+      "exit_utc": "2025-10-30T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.63930947578802,
+      "funding_proxy_usdt": 0.8466730653780279
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-03T04:00:00Z",
+      "exit_utc": "2025-11-07T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.07080592275693,
+      "funding_proxy_usdt": 0.24863534418753563
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-03T04:00:00Z",
+      "exit_utc": "2025-11-07T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.89100368391596,
+      "funding_proxy_usdt": 0.4284375830284802
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-03T04:00:00Z",
+      "exit_utc": "2025-11-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 17.710580624354627,
+      "funding_proxy_usdt": -1.8465059825800925
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-03T04:00:00Z",
+      "exit_utc": "2025-11-10T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 10.481725755965154,
+      "funding_proxy_usdt": 0.8154616129229443
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-10T04:00:00Z",
+      "exit_utc": "2025-11-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 118.93724389511041,
+      "funding_proxy_usdt": -0.5567814452879842
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-10T04:00:00Z",
+      "exit_utc": "2025-11-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 142.39003838818343,
+      "funding_proxy_usdt": -4.83871403205019
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-10T04:00:00Z",
+      "exit_utc": "2025-11-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 122.93750958338462,
+      "funding_proxy_usdt": -0.37519761547457464
+    },
+    {
+      "symbol": "LINKUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-10T04:00:00Z",
+      "exit_utc": "2025-11-17T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 103.79474234711405,
+      "funding_proxy_usdt": 0.5095731371672785
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-17T04:00:00Z",
+      "exit_utc": "2025-11-17T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.642912939469824,
+      "funding_proxy_usdt": 0.07097490914366579
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-17T04:00:00Z",
+      "exit_utc": "2025-11-17T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.677668405547,
+      "funding_proxy_usdt": 0.036219443066432835
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-17T04:00:00Z",
+      "exit_utc": "2025-11-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 158.5480035755001,
+      "funding_proxy_usdt": 1.0134288527381408
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-17T04:00:00Z",
+      "exit_utc": "2025-11-24T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 151.94675213723573,
+      "funding_proxy_usdt": 1.0604890954616653
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-24T04:00:00Z",
+      "exit_utc": "2025-11-24T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.51226225398289,
+      "funding_proxy_usdt": -0.054456788213931
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-24T04:00:00Z",
+      "exit_utc": "2025-11-24T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.50120205290787,
+      "funding_proxy_usdt": -0.04339658713883842
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-24T04:00:00Z",
+      "exit_utc": "2025-11-24T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.41304332753621,
+      "funding_proxy_usdt": 0.044762138232829304
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": -1,
+      "entry_utc": "2025-11-24T04:00:00Z",
+      "exit_utc": "2025-12-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 95.7440423771907,
+      "funding_proxy_usdt": -2.032871471737802
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-01T04:00:00Z",
+      "exit_utc": "2025-12-01T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.11246417752366,
+      "funding_proxy_usdt": 0.05350002712166539
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-01T04:00:00Z",
+      "exit_utc": "2025-12-02T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.19641118854837,
+      "funding_proxy_usdt": -0.030446983902946492
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-01T04:00:00Z",
+      "exit_utc": "2025-12-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -45.20125187550505,
+      "funding_proxy_usdt": -1.0352876708596679
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-01T04:00:00Z",
+      "exit_utc": "2025-12-05T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.952606634788374,
+      "funding_proxy_usdt": 0.2133575698569579
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-08T04:00:00Z",
+      "exit_utc": "2025-12-08T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.79155975145004,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-08T04:00:00Z",
+      "exit_utc": "2025-12-09T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -43.008536952623295,
+      "funding_proxy_usdt": -0.21697720117323333
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-08T04:00:00Z",
+      "exit_utc": "2025-12-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.6437390867807,
+      "funding_proxy_usdt": 0.14782066466935243
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-08T04:00:00Z",
+      "exit_utc": "2025-12-09T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.67718171492271,
+      "funding_proxy_usdt": 0.11437803652737494
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-15T04:00:00Z",
+      "exit_utc": "2025-12-21T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.31089153908748,
+      "funding_proxy_usdt": 0.15537876506318507
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-15T04:00:00Z",
+      "exit_utc": "2025-12-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 85.73660067924229,
+      "funding_proxy_usdt": -0.06535197716945775
+    },
+    {
+      "symbol": "HBARUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-15T04:00:00Z",
+      "exit_utc": "2025-12-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 50.45180597720888,
+      "funding_proxy_usdt": -0.002665257778498227
+    },
+    {
+      "symbol": "FILUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-15T04:00:00Z",
+      "exit_utc": "2025-12-22T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 24.559679538777118,
+      "funding_proxy_usdt": -2.1804389116488694
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-22T04:00:00Z",
+      "exit_utc": "2025-12-28T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -44.30252256122715,
+      "funding_proxy_usdt": -1.911241080775611
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-22T04:00:00Z",
+      "exit_utc": "2025-12-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -31.727459034524205,
+      "funding_proxy_usdt": 0.44210838357083737
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-22T04:00:00Z",
+      "exit_utc": "2025-12-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 24.58419078299576,
+      "funding_proxy_usdt": 0.2815827610970764
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-22T04:00:00Z",
+      "exit_utc": "2025-12-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -24.608472012824397,
+      "funding_proxy_usdt": -0.03900065059853727
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-29T04:00:00Z",
+      "exit_utc": "2026-01-02T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.76603895195306,
+      "funding_proxy_usdt": 0.036221300048493985
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-29T04:00:00Z",
+      "exit_utc": "2026-01-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.55116047452206,
+      "funding_proxy_usdt": 0.2510997774793916
+    },
+    {
+      "symbol": "XRPUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-29T04:00:00Z",
+      "exit_utc": "2026-01-03T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.93909841555752,
+      "funding_proxy_usdt": -0.1368381635561045
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2025-12-29T04:00:00Z",
+      "exit_utc": "2026-01-05T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -41.02724788135854,
+      "funding_proxy_usdt": 0.7750123706429698
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-05T04:00:00Z",
+      "exit_utc": "2026-01-05T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.43561934330818,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-05T04:00:00Z",
+      "exit_utc": "2026-01-06T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.644776198009914,
+      "funding_proxy_usdt": -0.20915685470169576
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-05T04:00:00Z",
+      "exit_utc": "2026-01-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.66609822668539,
+      "funding_proxy_usdt": -0.2304788833772731
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-05T04:00:00Z",
+      "exit_utc": "2026-01-12T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 60.3970494371214,
+      "funding_proxy_usdt": 1.0407474113360795
+    },
+    {
+      "symbol": "POLUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-12T04:00:00Z",
+      "exit_utc": "2026-01-12T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.99921771265413,
+      "funding_proxy_usdt": -0.0378101332485285
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-12T04:00:00Z",
+      "exit_utc": "2026-01-12T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.96140757940561,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-12T04:00:00Z",
+      "exit_utc": "2026-01-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.94095866217665,
+      "funding_proxy_usdt": 0.02044891722898503
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-12T04:00:00Z",
+      "exit_utc": "2026-01-16T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.58282968591425,
+      "funding_proxy_usdt": 0.3785778934913272
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-19T04:00:00Z",
+      "exit_utc": "2026-01-20T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.65827524076208,
+      "funding_proxy_usdt": 0.07036835957040638
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-19T04:00:00Z",
+      "exit_utc": "2026-01-20T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.69442616944984,
+      "funding_proxy_usdt": 0.034217430882692086
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-19T04:00:00Z",
+      "exit_utc": "2026-01-20T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.83936583012462,
+      "funding_proxy_usdt": -0.11072222979202048
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": 1,
+      "entry_utc": "2026-01-19T04:00:00Z",
+      "exit_utc": "2026-01-21T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.73870605394115,
+      "funding_proxy_usdt": -0.010062453608550391
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-01-26T04:00:00Z",
+      "exit_utc": "2026-01-28T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.283626892985,
+      "funding_proxy_usdt": 0.3206059082577873
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2026-01-26T04:00:00Z",
+      "exit_utc": "2026-01-28T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.41343327732782,
+      "funding_proxy_usdt": 0.19079952391495766
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-01-26T04:00:00Z",
+      "exit_utc": "2026-02-02T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 162.28370756385738,
+      "funding_proxy_usdt": 0.6068018685466324
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2026-01-26T04:00:00Z",
+      "exit_utc": "2026-02-02T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 137.46897278373925,
+      "funding_proxy_usdt": -1.1188825903279411
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-02T04:00:00Z",
+      "exit_utc": "2026-02-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.327422844276725,
+      "funding_proxy_usdt": 0.019809401591991
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-02T04:00:00Z",
+      "exit_utc": "2026-02-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.34334228533725,
+      "funding_proxy_usdt": 0.0038899605313480433
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-02T04:00:00Z",
+      "exit_utc": "2026-02-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.411010771763756,
+      "funding_proxy_usdt": -0.06377852589512222
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-02T04:00:00Z",
+      "exit_utc": "2026-02-02T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.60642563085696,
+      "funding_proxy_usdt": -0.25919338498836486
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-09T04:00:00Z",
+      "exit_utc": "2026-02-13T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.91701081490678,
+      "funding_proxy_usdt": 0.2089657810108904
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-09T04:00:00Z",
+      "exit_utc": "2026-02-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 34.852874218823224,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-09T04:00:00Z",
+      "exit_utc": "2026-02-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 18.68506278506617,
+      "funding_proxy_usdt": -1.015621773685512
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-09T04:00:00Z",
+      "exit_utc": "2026-02-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 97.37609294817152,
+      "funding_proxy_usdt": -2.8029242063891653
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-16T04:00:00Z",
+      "exit_utc": "2026-02-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 93.1038473659911,
+      "funding_proxy_usdt": -3.9968855096495632
+    },
+    {
+      "symbol": "ETHUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-16T04:00:00Z",
+      "exit_utc": "2026-02-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 35.607892716814106,
+      "funding_proxy_usdt": -0.2695426811017257
+    },
+    {
+      "symbol": "BNBUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-16T04:00:00Z",
+      "exit_utc": "2026-02-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 27.435110750352564,
+      "funding_proxy_usdt": -0.053142929226205664
+    },
+    {
+      "symbol": "SOLUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-16T04:00:00Z",
+      "exit_utc": "2026-02-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 64.2931736907764,
+      "funding_proxy_usdt": -1.0151399805796466
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-23T04:00:00Z",
+      "exit_utc": "2026-02-23T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.7083630364835,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-23T04:00:00Z",
+      "exit_utc": "2026-02-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.70836303648344,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-23T04:00:00Z",
+      "exit_utc": "2026-02-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.70836303648342,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2026-02-23T04:00:00Z",
+      "exit_utc": "2026-02-23T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.73924292101929,
+      "funding_proxy_usdt": -0.030879884535813015
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-02T04:00:00Z",
+      "exit_utc": "2026-03-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -42.37835967749357,
+      "funding_proxy_usdt": -2.9313401260332768
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-02T04:00:00Z",
+      "exit_utc": "2026-03-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -39.065691244975206,
+      "funding_proxy_usdt": 0.3813283064850728
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-02T04:00:00Z",
+      "exit_utc": "2026-03-04T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -40.26490961727228,
+      "funding_proxy_usdt": -0.8178900658119107
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-02T04:00:00Z",
+      "exit_utc": "2026-03-09T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 46.37801327108301,
+      "funding_proxy_usdt": -4.933945116004758
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-09T04:00:00Z",
+      "exit_utc": "2026-03-09T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.94520351146794,
+      "funding_proxy_usdt": -0.08160329052233697
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-09T04:00:00Z",
+      "exit_utc": "2026-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.858772854663165,
+      "funding_proxy_usdt": 0.004827366282403628
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-09T04:00:00Z",
+      "exit_utc": "2026-03-10T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.908567783185745,
+      "funding_proxy_usdt": -0.044967562240160894
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-09T04:00:00Z",
+      "exit_utc": "2026-03-16T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -18.977862287529945,
+      "funding_proxy_usdt": -0.5027811492744156
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "side": 1,
+      "entry_utc": "2026-03-16T04:00:00Z",
+      "exit_utc": "2026-03-17T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -38.00721819460731,
+      "funding_proxy_usdt": -0.2680667637526663
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2026-03-16T04:00:00Z",
+      "exit_utc": "2026-03-18T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.94397009073333,
+      "funding_proxy_usdt": -0.2048186598787583
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2026-03-16T04:00:00Z",
+      "exit_utc": "2026-03-18T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.9731499120893,
+      "funding_proxy_usdt": 0.7660015187653185
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": 1,
+      "entry_utc": "2026-03-16T04:00:00Z",
+      "exit_utc": "2026-03-23T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 36.154949669289806,
+      "funding_proxy_usdt": 4.253411987452491
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-23T04:00:00Z",
+      "exit_utc": "2026-03-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.218152289729375,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-23T04:00:00Z",
+      "exit_utc": "2026-03-23T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.218152289729396,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-23T04:00:00Z",
+      "exit_utc": "2026-03-23T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.20255764892093,
+      "funding_proxy_usdt": 0.015594640808408694
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-23T04:00:00Z",
+      "exit_utc": "2026-03-25T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -37.83178893126295,
+      "funding_proxy_usdt": -0.6136366415336032
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-30T04:00:00Z",
+      "exit_utc": "2026-04-04T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.688504593904526,
+      "funding_proxy_usdt": 0.37203491657536303
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-30T04:00:00Z",
+      "exit_utc": "2026-04-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 71.7706373715741,
+      "funding_proxy_usdt": 0.15939345177767367
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-30T04:00:00Z",
+      "exit_utc": "2026-04-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 2.277461573103846,
+      "funding_proxy_usdt": -2.9265480182032633
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": -1,
+      "entry_utc": "2026-03-30T04:00:00Z",
+      "exit_utc": "2026-04-06T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 16.220890783946633,
+      "funding_proxy_usdt": 0.3118450804884201
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-04-06T04:00:00Z",
+      "exit_utc": "2026-04-06T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.41131701341352,
+      "funding_proxy_usdt": 0.0719346923996334
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2026-04-06T04:00:00Z",
+      "exit_utc": "2026-04-08T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.55768848522636,
+      "funding_proxy_usdt": -0.07443677941326464
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": -1,
+      "entry_utc": "2026-04-06T04:00:00Z",
+      "exit_utc": "2026-04-08T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.72288147894663,
+      "funding_proxy_usdt": -0.23962977313339834
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2026-04-06T04:00:00Z",
+      "exit_utc": "2026-04-13T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 10.309498513853022,
+      "funding_proxy_usdt": -0.07769535445810036
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-13T04:00:00Z",
+      "exit_utc": "2026-04-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.71352951652551,
+      "funding_proxy_usdt": -0.0694464158149711
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-13T04:00:00Z",
+      "exit_utc": "2026-04-18T00:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.86373133350071,
+      "funding_proxy_usdt": -0.21964823279011986
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-13T04:00:00Z",
+      "exit_utc": "2026-04-20T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 163.7435701465385,
+      "funding_proxy_usdt": -0.2342439342512737
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-13T04:00:00Z",
+      "exit_utc": "2026-04-20T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -6.368043829791242,
+      "funding_proxy_usdt": -0.4397266354242694
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-20T04:00:00Z",
+      "exit_utc": "2026-04-21T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.194285734031915,
+      "funding_proxy_usdt": 0.11299077047399388
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-20T04:00:00Z",
+      "exit_utc": "2026-04-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 46.55887626011787,
+      "funding_proxy_usdt": -0.7250993001755566
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-20T04:00:00Z",
+      "exit_utc": "2026-04-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 18.282810277175376,
+      "funding_proxy_usdt": -0.6300395194949654
+    },
+    {
+      "symbol": "UNIUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-20T04:00:00Z",
+      "exit_utc": "2026-04-27T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 13.205767541037574,
+      "funding_proxy_usdt": -0.42375430147111004
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-27T04:00:00Z",
+      "exit_utc": "2026-04-28T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.70585378897464,
+      "funding_proxy_usdt": -0.07506555584715773
+    },
+    {
+      "symbol": "NEARUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-27T04:00:00Z",
+      "exit_utc": "2026-04-28T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.90524785896491,
+      "funding_proxy_usdt": -0.274459625837305
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-27T04:00:00Z",
+      "exit_utc": "2026-04-29T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.73098130890808,
+      "funding_proxy_usdt": -0.1001930757804927
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2026-04-27T04:00:00Z",
+      "exit_utc": "2026-05-04T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 88.37409995901375,
+      "funding_proxy_usdt": -0.6051521868345477
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-04T04:00:00Z",
+      "exit_utc": "2026-05-04T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.46098268589884,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-04T04:00:00Z",
+      "exit_utc": "2026-05-04T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.52893545817532,
+      "funding_proxy_usdt": -0.06795277227654563
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-04T04:00:00Z",
+      "exit_utc": "2026-05-07T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -36.60691283879181,
+      "funding_proxy_usdt": -0.14593015289299857
+    },
+    {
+      "symbol": "TRXUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-04T04:00:00Z",
+      "exit_utc": "2026-05-11T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 21.763052033643618,
+      "funding_proxy_usdt": -0.9497980829399454
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-11T04:00:00Z",
+      "exit_utc": "2026-05-11T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.71628039945148,
+      "funding_proxy_usdt": 0.06577500845780127
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-11T04:00:00Z",
+      "exit_utc": "2026-05-12T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.91797576299023,
+      "funding_proxy_usdt": -0.13592035508090428
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-11T04:00:00Z",
+      "exit_utc": "2026-05-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.66333714547674,
+      "funding_proxy_usdt": 0.11871826243244923
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": 1,
+      "entry_utc": "2026-05-11T04:00:00Z",
+      "exit_utc": "2026-05-13T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.79620480080592,
+      "funding_proxy_usdt": -0.014149392896622412
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-18T04:00:00Z",
+      "exit_utc": "2026-05-18T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.75642377305674,
+      "funding_proxy_usdt": -0.012848197422967002
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-18T04:00:00Z",
+      "exit_utc": "2026-05-19T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.68733083581379,
+      "funding_proxy_usdt": 0.0562447398200283
+    },
+    {
+      "symbol": "ICPUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-18T04:00:00Z",
+      "exit_utc": "2026-05-22T08:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.69290813323446,
+      "funding_proxy_usdt": 0.05066744239916258
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-18T04:00:00Z",
+      "exit_utc": "2026-05-22T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.42378985312223,
+      "funding_proxy_usdt": 0.31978572251149723
+    },
+    {
+      "symbol": "TONUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-25T04:00:00Z",
+      "exit_utc": "2026-05-25T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -33.77943096626301,
+      "funding_proxy_usdt": -0.10897141292792914
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-25T04:00:00Z",
+      "exit_utc": "2026-05-26T16:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -33.49337305696307,
+      "funding_proxy_usdt": 0.17708649637205592
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-25T04:00:00Z",
+      "exit_utc": "2026-06-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 78.82988139040816,
+      "funding_proxy_usdt": -3.613339411307102
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "side": -1,
+      "entry_utc": "2026-05-25T04:00:00Z",
+      "exit_utc": "2026-06-01T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 5.059745714022389,
+      "funding_proxy_usdt": 0.6023014574193017
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-01T04:00:00Z",
+      "exit_utc": "2026-06-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.57977867204187,
+      "funding_proxy_usdt": -0.7806259832979415
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-01T04:00:00Z",
+      "exit_utc": "2026-06-02T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.00482081530634,
+      "funding_proxy_usdt": -0.2056681265625087
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-01T04:00:00Z",
+      "exit_utc": "2026-06-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 106.2373671654349,
+      "funding_proxy_usdt": 0.2982388494515814
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-01T04:00:00Z",
+      "exit_utc": "2026-06-08T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 170.0387518799093,
+      "funding_proxy_usdt": -1.8858699423576548
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-08T04:00:00Z",
+      "exit_utc": "2026-06-08T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -35.39798641618882,
+      "funding_proxy_usdt": 0.009685104290637334
+    },
+    {
+      "symbol": "APTUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-08T04:00:00Z",
+      "exit_utc": "2026-06-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -18.663731387588903,
+      "funding_proxy_usdt": -0.9300276876056781
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-08T04:00:00Z",
+      "exit_utc": "2026-06-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 3.309094973008113,
+      "funding_proxy_usdt": -0.46979961469104864
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-08T04:00:00Z",
+      "exit_utc": "2026-06-15T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -11.767574691317211,
+      "funding_proxy_usdt": -0.5080738621790365
+    },
+    {
+      "symbol": "BCHUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-15T04:00:00Z",
+      "exit_utc": "2026-06-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.93713697872154,
+      "funding_proxy_usdt": -0.013668738626924698
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-15T04:00:00Z",
+      "exit_utc": "2026-06-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.96976257401454,
+      "funding_proxy_usdt": -0.046294333919871054
+    },
+    {
+      "symbol": "ENAUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-15T04:00:00Z",
+      "exit_utc": "2026-06-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.88908707284582,
+      "funding_proxy_usdt": 0.0343811672487995
+    },
+    {
+      "symbol": "INJUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-15T04:00:00Z",
+      "exit_utc": "2026-06-15T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.98416403311246,
+      "funding_proxy_usdt": -0.06069579301790199
+    },
+    {
+      "symbol": "SUIUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-22T04:00:00Z",
+      "exit_utc": "2026-06-22T12:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -33.84090596159691,
+      "funding_proxy_usdt": 0.0
+    },
+    {
+      "symbol": "TAOUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-22T04:00:00Z",
+      "exit_utc": "2026-06-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 58.184026965273155,
+      "funding_proxy_usdt": 0.3392514165554042
+    },
+    {
+      "symbol": "FETUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-22T04:00:00Z",
+      "exit_utc": "2026-06-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": -1.1729664018091313,
+      "funding_proxy_usdt": 0.13794483017060813
+    },
+    {
+      "symbol": "ADAUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-22T04:00:00Z",
+      "exit_utc": "2026-06-29T04:00:00Z",
+      "reason": "WEEK",
+      "net_trade_usdt": 51.256722249255674,
+      "funding_proxy_usdt": -1.0009415377929896
+    },
+    {
+      "symbol": "ZECUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-29T04:00:00Z",
+      "exit_utc": "2026-06-29T20:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.38082794651969,
+      "funding_proxy_usdt": 0.03649554650591182
+    },
+    {
+      "symbol": "XLMUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-29T04:00:00Z",
+      "exit_utc": "2026-06-30T04:00:00Z",
+      "reason": "STOP",
+      "net_trade_usdt": -34.68122253372098,
+      "funding_proxy_usdt": -0.2638990406953837
+    },
+    {
+      "symbol": "WLDUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-29T04:00:00Z",
+      "exit_utc": "2026-07-01T00:00:00Z",
+      "reason": "END",
+      "net_trade_usdt": 45.14980896982375,
+      "funding_proxy_usdt": 0.20519991333709642
+    },
+    {
+      "symbol": "DOTUSDT",
+      "side": -1,
+      "entry_utc": "2026-06-29T04:00:00Z",
+      "exit_utc": "2026-07-01T00:00:00Z",
+      "reason": "END",
+      "net_trade_usdt": -0.2996592436183576,
+      "funding_proxy_usdt": 0.22278279980873147
+    }
+  ],
+  "oos_validated": false,
+  "live": false
+}
