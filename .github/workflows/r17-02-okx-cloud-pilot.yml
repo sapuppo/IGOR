@@ -1,0 +1,75 @@
+name: R17.02 OKX public data pilot
+
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/r17-02-okx-cloud-pilot.yml]
+  workflow_dispatch: {}
+  schedule:
+    - cron: '7 0,4,8,12,16,20 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: r17-02-okx-public-pilot
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Frozen OKX public pilot code
+        uses: actions/checkout@v4
+        with:
+          ref: 2b896951b809818acb6487dfec37777b490e5d81
+          path: research
+          persist-credentials: false
+      - name: Separate public data branch
+        uses: actions/checkout@v4
+        with:
+          ref: r17-02-okx-market-data
+          path: archive
+      - name: Public 4h market observation
+        run: python3 research/r16_edge_lab/r17_okx_public_capture.py --out-dir archive/r17_okx_market_data
+      - name: Verify chain and archive capture
+        run: |
+          python3 research/r16_edge_lab/r17_forward_capture.py verify --out-dir archive/r17_okx_market_data
+          git -C archive config user.name 'github-actions[bot]'
+          git -C archive config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C archive add r17_okx_market_data
+          if ! git -C archive diff --cached --quiet; then
+            git -C archive commit -m 'R17.02: archive public OKX pilot observation'
+            git -C archive push origin HEAD:r17-02-okx-market-data
+          fi
+      - name: Classify evidence without inferring PnL
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, os
+          files=sorted(pathlib.Path('archive/r17_okx_market_data').glob('capture-*.json'))
+          assert files, 'no OKX snapshot'
+          item=json.loads(files[-1].read_text())
+          summary=('## R17.02 OKX public market pilot\n\n'
+                   f"Status: **{item['status']}**  \n"
+                   f"Class: **{item['snapshot_class']}**  \n"
+                   f"End UTC: {item['end_exclusive_utc']}  \n"
+                   f"Problems: {item['problems']}  \n"
+                   'Profit / alpha validated: **no**\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as output: output.write(summary)
+          print(summary)
+          if item['status'] != 'COMPLETE': raise SystemExit('incomplete quote or market data; snapshot archived')
+          PY
+      - name: Stage recent file for short-term recovery
+        if: always()
+        run: |
+          mkdir -p recovery
+          find archive/r17_okx_market_data -maxdepth 1 -name 'capture-*.json' -print 2>/dev/null | sort | tail -n 1 | while read -r file; do cp "$file" recovery/; done
+      - name: Recovery artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r17-02-okx-${{ github.run_id }}
+          path: recovery/capture-*.json
+          if-no-files-found: warn
+          retention-days: 7
