@@ -45,7 +45,8 @@ jobs:
               print(label,'HTTP',err.code,'ERROR',err.read(300).decode('utf-8','replace')[:150])
             except Exception as err:
               print(label,'ERROR',type(err).__name__,str(err)[:150])
-          with urllib.request.urlopen('https://www.okx.com/api/v5/public/instruments?instType=SWAP',timeout=15) as response:
+          catalog_request=urllib.request.Request('https://www.okx.com/api/v5/public/instruments?instType=SWAP',headers={'User-Agent':'IGOR-R17-public-probe/1.0'})
+          with urllib.request.urlopen(catalog_request,timeout=15) as response:
             catalog=json.load(response)
           assert catalog['code']=='0'
           source=json.load(open('r16_edge_lab/R17_01_UNIVERSE.json'))['symbols']
