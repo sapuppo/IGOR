@@ -10,3 +10,7 @@ Registro técnico em 28/09/2026 UTC. A R16.24.2 continua sendo o baseline valida
 - O campo `realizedRate`/`fundingRate` é guardado quando há evento no período; ausência de um evento numa janela de 4h é admissível. Este piloto **não estima custos de negociação da Binance**, não reproduz preço de execução na Binance nem calcula lucro ou perda. Uma pesquisa de estratégia na OKX exige universo, regras completas, riscos, custos e hipóteses congelados previamente em protocolo novo.
 
 Porta de aceite desta etapa: ao menos uma execução real da coleta OKX, validação dos arquivos e commit no branch de dados. Mesmo com essa porta concluída, não promover robô, não afirmar retorno mensal e não tratar o histórico já consultado como teste fora da amostra.
+
+## Primeira verificação real
+
+Execução [36448091271](https://github.com/sapuppo/IGOR/actions/runs/36448091271) concluída com sucesso em 28/09/2026 UTC. Captura [1790611353448](https://github.com/sapuppo/IGOR/blob/r17-02-okx-market-data/r17_okx_market_data/capture-1790611353448-371f3cc4f4d1dcf0.json) arquivada no branch de dados, vela 12:00–16:00 UTC confirmada, livro com 376 ms de idade na verificação, sem evento de funding dentro da janela, `status=COMPLETE` e `problems=[]`. Classe `MIXED_BACKFILL_AND_TIMELY_QUOTE`: foi observada antes de 29/09/2026 e, portanto, não valida uma estratégia. O cron ainda precisará ser verificado após a primeira execução agendada.
