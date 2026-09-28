@@ -14,6 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Read frozen Binance observation cohort
+        uses: actions/checkout@v4
+        with:
+          ref: f5ef90cb63e69b6d6c8c5e0044bf2bd9c402f7e0
+          persist-credentials: false
       - name: Probe public exchanges and official archive without keys
         run: |
           python3 - <<'PY'
@@ -40,4 +45,13 @@ jobs:
               print(label,'HTTP',err.code,'ERROR',err.read(300).decode('utf-8','replace')[:150])
             except Exception as err:
               print(label,'ERROR',type(err).__name__,str(err)[:150])
+          with urllib.request.urlopen('https://www.okx.com/api/v5/public/instruments?instType=SWAP',timeout=15) as response:
+            catalog=json.load(response)
+          assert catalog['code']=='0'
+          source=json.load(open('r16_edge_lab/R17_01_UNIVERSE.json'))['symbols']
+          available={x['instId'] for x in catalog['data'] if x.get('state')=='live' and x.get('ctType')=='linear'}
+          mapping={s:s[:-4]+'-USDT-SWAP' for s in source}
+          present={s:inst for s,inst in mapping.items() if inst in available}
+          missing=[s for s,inst in mapping.items() if inst not in available]
+          print('OKX_FROZEN_COHORT',json.dumps({'source_count':len(source),'present_count':len(present),'mapping':present,'missing':missing},sort_keys=True))
           PY
