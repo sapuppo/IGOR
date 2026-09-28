@@ -24,8 +24,9 @@ def fixture():
                    '1', '1', '2000000', '1']
             candles.append(row)
         older[symbol] = {'status': 'COMPLETE', 'klines': candles[:-1], 'ticker': None}
-        newest[symbol] = {'status': 'COMPLETE', 'klines': candles[-1:],
-                          'instrument': {'ctVal':'0.1','ctMult':'1','ctValCcy':symbol.split('-')[0],
+        newest[symbol] = {'status': 'COMPLETE', 'klines': candles[-1:], 'funding':[],
+                          'instrument': {'ctVal':'0.1','ctMult':'1','ctType':'linear',
+                                         'ctValCcy':symbol.split('-')[0],
                                          'lotSz':'0.01','minSz':'0.01'},
                           'ticker': {'bidPx': '102.9', 'askPx': '103', 'askSz': '300',
                                      'bidSz': '300', 'ts': str(SERVER-1000)}}
@@ -34,6 +35,7 @@ def fixture():
        'snapshot_class':'RETROSPECTIVE_BACKFILL'}
     b={'schema':'IGOR_R17_03_OKX_COHORT_CAPTURE_V1','universe':SYMBOLS,
        'observations':newest,'server_time_ms':SERVER,
+       'status':'COMPLETE',
        'snapshot_class':'TIMELY_OBSERVATION',
        'end_exclusive_utc':datetime.fromtimestamp(END/1000,timezone.utc).isoformat().replace('+00:00','Z')}
     return a,b
@@ -47,7 +49,7 @@ class SignalTest(unittest.TestCase):
         self.assertEqual([(x['symbol'],x['side']) for x in result['candidates']],
                          [('ETH-USDT-SWAP','BUY')])
         self.assertEqual(result['candidates'][0]['signal_time_ms'],END)
-        self.assertEqual(result['candidates'][0]['contracts'],'97.08')
+        self.assertEqual(result['candidates'][0]['contracts'],'96.99')
         self.assertEqual(result['candidates'][0]['contract_notional_usdt'],'10.3')
 
     def test_late_quote_and_missing_warmup_do_not_trade(self):
