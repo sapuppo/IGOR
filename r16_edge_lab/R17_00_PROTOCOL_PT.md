@@ -1,0 +1,23 @@
+# R17.00 — protocolo congelado antes do teste do candidato
+
+Congelado em 27/09/2026; ramo `r16-33-research`. Status inicial: `RESEARCH_ONLY`, `LIVE=false`, `OOS_VALIDATED=false`. A baseline operacional R16.24.2 fica intacta. Janela 2021–30/06/2026 inteira já foi vista no projeto: qualquer resultado nela será desenvolvimento, mesmo quando o código deste candidato tenha sido registrado previamente.
+
+## Uma hipótese, uma execução retrospectiva
+
+ID `R17-CSMOM-W1`. Hipótese: a dispersão semanal entre ativos líquidos de USD-M permite capturar persistência relativa com duas posições compradas e duas vendidas, limitando exposição ao mercado. Isto é hipótese econômica a testar, não vantagem demonstrada. **Não** criar variantes com outra semana, ranking, tamanho, stop, filtros ou coorte após o primeiro resultado.
+
+Conjunto fixo: 38 pares marcados `eligible=true` no manifesto SHA-256 `a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041`. Para um par ser negociável, exigir 28 dias completos de candles 4h já encerrados, cobertura sem lacuna dos 42 candles anteriores, e mediana dos últimos 42 `quote_volume` 4h >= 5.000.000 USDT. Se menos de 20 pares forem elegíveis, não abrir carteira naquele ciclo. Nada de substituição manual de pares. Seleção histórica da coorte **não** é livre de viés de sobrevivência.
+
+Relógio UTC: segunda-feira às 00:00, medir retorno dos 42 candles 4h encerrados até esse instante: `close[-1]/close[-43]-1`; índice `-1` termina às 00:00. Ordenar retorno decrescente, desempate por símbolo: comprar os dois maiores, vender os dois menores. Encerrar todas as posições existentes na abertura do candle das **04:00** da mesma segunda-feira; abrir nova carteira nessa abertura, com preços da mesma vela de execução apenas para a abertura e o controle de stop, nunca para o ranking. Quatro legs com notional 15% da equidade marcada individualmente, limite de exposição bruta 60%, exposição assinada aproximadamente zero, sem reaproveitar capital via alavancagem extra. Se preço, candle ou filtro ausente, não imputar; registrar falha e não negociar nesse ciclo.
+
+Stop individual: 4% contra o preço de abertura preenchido; se o `high/low` da vela 4h atravessar o nível, preencher conservadoramente no pior entre o nível de stop e a abertura da vela (ajustado pelos custos); não reabrir antes da próxima segunda-feira. No candle de entrada, o stop só é avaliado após a abertura. Marcar diariamente todas as posições a preço disponível; nenhuma posição simultânea no mesmo par em direções opostas.
+
+Custos: BASE comissão 0,04%/lado + deslizamento 0,02%/lado; STRESS comissão 0,06%/lado + deslizamento 0,04%/lado, com execução na abertura 4h indicada acima; não ajustar após resultado. Funding pago/recebido em cada evento com taxa e preço oficial de liquidação correspondente e sinal da posição; se faltar `markPrice`, classificar `FUNDING_UNVERIFIED` e impedir alegação de PnL líquido verificável. O conjunto local contém taxas, não os `markPrice` oficiais em todos os eventos. Não considerar financiamento, liquidação, margens dinâmicas ou restrições históricas de empréstimo implícitas como automaticamente cobertas pela simulação.
+
+## Verificações e decisão
+
+1. Checar SHA de todos os 152 arquivos, ordenação temporal, coorte e disponibilidade à época. Registrar código e parâmetros por hash, transações, estado antes/depois, seis meses de 2026, retorno total/mês, drawdown marcado, concentração, taxa e funding. Antes de comparar retorno líquido, exigir custos de execução reais conciliados por fill, funding e referência de preço registrada pelo robô.
+2. Uma execução retrospectiva de desenvolvimento nas janelas 01/11/2023–30/06/2026 e 01/01/2021–30/06/2026, ambas sinalizadas contaminadas; usar 2021 somente como diagnóstico de regime. Não selecionar nova variante olhando 2026. Comparar STRESS na primeira janela com H1 (+30,63%, DD21,88%); só manter hipótese em pesquisa se retorno STRESS maior e DD não maior, integralidade aprovada e nenhum custo obrigatório desconhecido. Se não, descartar a hipótese.
+3. Começar a validação prospectiva apenas depois do congelamento do código e das regras, em dados coletados depois do congelamento; exigir no mínimo 180 dias consecutivos, 100 operações fechadas, resultado líquido positivo com custos observados, drawdown máximo definido antes de começar, e reconciliação mensal com saldo da conta. Qualquer ajuste de alpha após observar este holdout invalida esse holdout.
+
+Meta de 20% ao mês: indicador a reportar, não limiar para aumentar risco ou escolher entre variantes retroativamente. Qualquer proposta de uso real depende de evidência futura; não ativar trades nem solicitar chaves de API neste protocolo.
