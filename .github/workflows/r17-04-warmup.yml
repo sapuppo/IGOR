@@ -1,0 +1,45 @@
+name: R17.04 freeze causal OKX indicator warmup
+
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/r17-04-warmup.yml]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  warmup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Frozen R17.04 research source
+        uses: actions/checkout@v4
+        with:
+          ref: c7a173e2384270ca4a921cbaad0a2ad57ced0e30
+          path: research
+          persist-credentials: false
+      - name: Isolated cohort archive
+        uses: actions/checkout@v4
+        with:
+          ref: r17-03-okx-market-data
+          path: archive
+      - name: Validate implementation
+        run: python3 -m unittest discover -s research/r16_edge_lab -p 'test_r17_okx*.py' -v
+      - name: Retrieve only candles completed before the first observation
+        run: |
+          python3 research/r16_edge_lab/r17_okx_warmup.py \
+            --manifest research/r16_edge_lab/R17_03_OKX_UNIVERSE.json \
+            --captures archive/r17_03_market_data \
+            --out-dir archive/r17_03_market_data
+      - name: Commit immutable warmup file
+        if: always()
+        run: |
+          git -C archive config user.name 'github-actions[bot]'
+          git -C archive config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C archive add r17_03_market_data/warmup-*.json
+          if ! git -C archive diff --cached --quiet; then
+            git -C archive commit -m 'R17.04: archive pre-observation indicator warmup'
+            git -C archive push origin HEAD:r17-03-okx-market-data
+          fi
