@@ -66,6 +66,32 @@ jobs:
           print(summary)
           if item['status']!='COMPLETE': raise SystemExit('raw data retained; incomplete source(s)')
           PY
+      - name: Pinned R17.04 paper engine
+        uses: actions/checkout@v4
+        with:
+          ref: dd036fb07bcde96c8b24b0affe575fb23bfdc7a0
+          path: paper-research
+          persist-credentials: false
+      - name: Separate append-only paper ledger
+        uses: actions/checkout@v4
+        with:
+          ref: r17-04-paper-data
+          path: paper-data
+      - name: Verify paper engine
+        run: python3 -m unittest discover -s paper-research/r16_edge_lab -p 'test_r17_okx*.py' -v
+      - name: Record paper decision using the same timely capture
+        run: |
+          python3 paper-research/r16_edge_lab/r17_okx_paper.py \
+            --archive archive/r17_03_market_data \
+            --out-dir paper-data/r17_04_paper_data \
+            --event-name '${{ github.event_name }}'
+          git -C paper-data config user.name 'github-actions[bot]'
+          git -C paper-data config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C paper-data add r17_04_paper_data
+          if ! git -C paper-data diff --cached --quiet; then
+            git -C paper-data commit -m 'R17.04: archive causal OKX paper decisions'
+            git -C paper-data push origin HEAD:r17-04-paper-data
+          fi
       - name: Prepare recovery file
         if: always()
         run: |
