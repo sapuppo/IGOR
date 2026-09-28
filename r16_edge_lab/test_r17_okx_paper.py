@@ -28,6 +28,13 @@ class PaperTest(unittest.TestCase):
         self.assertFalse(state['positions'])
         self.assertEqual(events[0]['type'],'SKIP')
 
+    def test_processing_expiry_after_funding_blocks_fill(self):
+        old,now=fixture()
+        state,events=step(init_state(),warmup(),[old],now,SERVER+1000,FakeMark(),True,
+                          live_clock=lambda:SERVER+120001)
+        self.assertFalse(state['positions'])
+        self.assertEqual(events[-1]['reason'],'PROCESSING_EXCEEDED_120S')
+
     def test_entry_next_candle_exit_cooldown_and_fees(self):
         old,now=fixture()
         initial,events=step(init_state(),warmup(),[old],now,SERVER+1000,FakeMark(),True)
