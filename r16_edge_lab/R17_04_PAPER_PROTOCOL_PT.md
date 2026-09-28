@@ -5,6 +5,7 @@ Registro em 28/09/2026 UTC, antes de qualquer sinal paper R17.03. O único arqui
 ## Correções de unidade e preparação
 
 - Tickers de swaps mostram `bidSz`/`askSz` em **contratos**. Valor por contrato = `ctVal × ctMult` na unidade de `ctValCcy`. Se for moeda base, multiplicar pelo preço para obter USDT; se for USDT, o valor já está em USDT. Aplicar `lotSz` e `minSz` do catálogo. Qualquer denominação diferente ou não conversível bloqueia entrada. A tentativa inicial R17.03 que multiplicava a quantidade de contratos pelo preço da moeda não pode produzir sinais paper válidos.
+- Na R17.04 a quantidade é arredondada usando o **preço de entrada com piora de 0,10%**, de forma que o notional efetivo não exceda os 10% da equidade. O motor paper aceita apenas os contratos lineares cuja `ctValCcy` é a moeda base (verificado na primeira captura para os 35 instrumentos); outra forma de liquidação bloqueia entrada.
 - Antes da avaliação, arquivar somente 49 velas 4h por símbolo com abertura **antes de 28/09/2026 12:00 UTC** em arquivo `WARMUP_ONLY`, mantendo hash do primeiro snapshot observado e origem. Não computar posições ou retornos com esse período. Para o sinal, associar o warmup mais capturas recentes do mesmo contrato sem lacunas e sem revisão posterior de velas.
 - Prosseguir com todos os demais parâmetros de entrada/saída do protocolo R17.03 (canal24, BTC média48, volume1M, spread0,20%, no máximo duas entradas por ciclo, quatro posições/40% bruto, notional10% por entrada, 2,5% perda/5% ganho ou48h, cooldown seis velas) sem ajuste por resultados.
 
