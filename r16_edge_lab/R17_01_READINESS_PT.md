@@ -12,7 +12,7 @@ Data: 27/09/2026 no horário de São Paulo. Pesquisa em `r17-01-research`; R16.2
 
 ## Situação da execução
 
-Este ambiente tentou consultar `https://fapi.binance.com/fapi/v1/time` com prazo de 5 s; a conexão expirou (`HTTP 000`). **Isso é apenas uma restrição deste ambiente, não uma necessidade de acessar o PC do usuário.** A execução na nuvem por GitHub Actions consulta rotas públicas, sem conta nem chaves da Binance, arquiva os JSON em `r17-01-market-data` e mantém o robô principal intocado. O script PowerShell local continua disponível como alternativa opcional, mas nenhuma configuração no computador do usuário é pré-requisito para a coleta na nuvem.
+Este ambiente tentou consultar `https://fapi.binance.com/fapi/v1/time` com prazo de 5 s; a conexão expirou (`HTTP 000`). **Isso é apenas uma restrição deste ambiente, não uma necessidade de acessar o PC do usuário.** O fluxo Binance no GitHub Actions também falhou com HTTP 451 na mesma rota em 28/09/2026; está sem agendamento e o branch `r17-01-market-data` ainda não tem capturas. A OKX respondeu às rotas públicas no GitHub e tem piloto separado no branch `r17-02-okx-market-data`. O script PowerShell local continua alternativa opcional, sem necessidade de conta nem credencial para dados públicos.
 
 Em um checkout da ramificação `r17-01-research`, execute PowerShell na raiz do repositório:
 
@@ -26,7 +26,7 @@ Para verificar uma pasta já produzida:
 py -3 .\r16_edge_lab\r17_forward_capture.py verify --out-dir "$env:LOCALAPPDATA\IGOR\R17\captures"
 ```
 
-Para observação no horário da decisão, o agendador em nuvem tenta executar após cada fronteira de 4 h UTC. Uma coleta atrasada rotula o histórico como `RETROSPECTIVE_BACKFILL` ou `MIXED_BACKFILL_AND_TIMELY_QUOTE`, nunca inventa preço de execução passado. Dados brutos ou snapshots futuros em falta são bloqueios, não zeros. GitHub Actions pode atrasar ou descartar agendamentos; verificar cada execução e registrar lacunas. **Coletar dados não é validar estratégia e não representa lucro.**
+Para observação no horário da decisão na Binance, ainda falta uma fonte que disponibilize também a cotação de livro na mesma bolsa a partir do local da execução; o arquivo público histórico Binance fornece velas antigas, sem recriar bid/ask histórico em cada decisão. O agendador OKX independente tenta executar após cada fronteira de 4 h UTC. Captura atrasada fica marcada como backfill; lacunas não são zeros. **Coletar dados não é validar estratégia e não representa lucro.**
 
 ## Dados oficiais consultados para o esquema
 
