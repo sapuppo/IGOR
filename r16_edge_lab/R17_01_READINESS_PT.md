@@ -7,6 +7,7 @@ Data: 27/09/2026 no horário de São Paulo. Pesquisa em `r17-01-research`; R16.2
 - Protocolo `R17_01_FORWARD_PROTOCOL_PT.md` registrado antes de consultar dados novos, com primeiro dia elegível 29/09/2026 00:00 UTC e critérios explícitos de integridade e rejeição.
 - `R17_01_UNIVERSE.json` contém os 38 pares predefinidos; SHA-256 do arquivo `87099ccc30eb68b3d18b5902accab599280f17a9b587fcacf8242ee142e83d53`. A rotina rejeita uma lista editada.
 - `r17_forward_capture.py` consulta apenas cinco rotas públicas USD-M (`time`, `exchangeInfo`, `klines`, `fundingRate`, `bookTicker`) via GET. Registra resposta bruta, timestamp de servidor e local, tempo da consulta de bid/ask, cobertura de velas, preço oficial de funding, status de negociação e problemas por par. Capturas sucessivas têm cadeia de SHA-256, e código ou universo alterado obrigam nova cadeia de pesquisa.
+- Essa cadeia acusa alterações isoladas nos arquivos. Sem publicar periodicamente o último hash em um registro externo, ela **não comprova** que ninguém reescreveu todos os arquivos da série; essa ancoragem será necessária antes de chamar a evidência de auditável independentemente.
 - `test_r17_forward_capture.py` exercita com dados **sintéticos**: respostas válidas, vela faltante, candle ainda aberto, `markPrice` ausente, bid/ask antigo, adulteração do arquivo, carimbo regressivo e código alterado. Os testes sintéticos não substituem uma captura real.
 
 ## Situação da execução
