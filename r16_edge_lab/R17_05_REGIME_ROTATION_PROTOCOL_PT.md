@@ -19,3 +19,9 @@ Hipótese econômica `R17-RR7-BTC30-W1`: o retorno relativo de 7 dias pode persi
 - Reversão 15m/1h e momentum neutro semanal já foram experimentados em versões anteriores; testar seus parâmetros de novo após observar 2026 adicionaria busca retrospectiva sem validação nova.
 
 A meta de 20% mensais equivale a ~792% anuais compostos caso ocorra nos 12 meses. Não é um limiar de otimização nem promessa.
+
+## Addendum de integridade, antes de qualquer resultado da hipótese
+
+A primeira execução de `R17-RR7-BTC30-W1` **abortou sem gerar PnL**: uma posição VETUSDT ficou sem candle em 26/02/2022. Auditoria detectou 11 pares com as mesmas duas lacunas (18 velas de 26–28/02/2022 e 12 velas de 01–02/04/2022), também no histórico 15m. Não inventar fill, marcar carteira ou escolher apenas moedas sem lacuna usando conhecimento futuro. Preservar esse teste como `ABORTED_SOURCE_GAP`.
+
+Nova execução técnica única `R17-RR7-BTC30-W1-DQ`: mesmas regras, mesmo universo de 38 pares com disponibilidade temporal, **janela de diagnóstico 01/01/2023–30/06/2026**, iniciando capital 10.000 USDT na nova janela. A escolha do recorte é reação à falha de dados; é uma limitação de seleção metodológica adicional, não período fora da amostra. Os resultados de 2021–22 para esta hipótese ficam indisponíveis, não extrapolar. Exigir mais tarde fonte íntegra independente para ampliar a janela. Comparar métricas com R16.29.2 STRESS no mesmo recorte de 2023–jun/2026, sem escolher outro recorte após visualizar a performance.
