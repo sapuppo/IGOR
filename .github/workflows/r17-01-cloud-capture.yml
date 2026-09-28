@@ -1,12 +1,7 @@
 name: R17.01 public USD-M forward capture
 
 on:
-  push:
-    branches: [master]
-    paths: [.github/workflows/r17-01-cloud-capture.yml]
   workflow_dispatch: {}
-  schedule:
-    - cron: '7 0,4,8,12,16,20 * * *'
 
 permissions:
   contents: write
