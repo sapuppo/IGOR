@@ -13,7 +13,7 @@ import pandas as pd
 
 from r17_candidate_signals import BAR_MS, iso, verified_history
 
-START = int(datetime(2021, 1, 1, tzinfo=timezone.utc).timestamp()*1000)
+START = int(datetime(2023, 1, 1, tzinfo=timezone.utc).timestamp()*1000)
 END = int(datetime(2026, 7, 1, tzinfo=timezone.utc).timestamp()*1000)
 FEE = .0006
 SLIP = .0004
@@ -178,8 +178,8 @@ def replay(data,funding):
     for d in daily:
         peak=max(peak,d['equity']);drawdown=max(drawdown,1-d['equity']/peak)
     utilization=sum(d.get('gross',0)/d['equity'] for d in daily if 'gross' in d)/max(1,len(daily)-1)
-    return {'strategy':'R17-RR7-BTC30-W1','data_sha256':ROOT_HASH,
-            'period':['2021-01-01','2026-07-01 exclusive'],
+    return {'strategy':'R17-RR7-BTC30-W1-DQ','data_sha256':ROOT_HASH,
+            'period':['2023-01-01','2026-07-01 exclusive'],
             'interpretation':'RETROSPECTIVE_CONTAMINATED_FUNDING_MARK_PROXY_SPREAD_UNKNOWN',
             'final_cash':cash,'return':cash/10000-1,'monthly':monthly,'annual':yearly,
             'best_month':max(monthly.values()),'worst_month':min(monthly.values()),
