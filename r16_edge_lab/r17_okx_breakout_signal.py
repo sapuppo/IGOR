@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Frozen R17-OKX-DB24-BTC48 paper candidates from completed 4h bars only."""
+"""R17-OKX-DB24-BTC48-CV1 paper candidates from completed 4h bars only."""
 from decimal import Decimal
 from datetime import datetime
 import statistics
@@ -12,7 +12,7 @@ MIN_QUOTE_USDT_4H = Decimal('1000000')
 MAX_SPREAD = Decimal('0.002')
 
 
-def signal(history, current, portfolio_equity='10000', open_symbols=()):
+def signal(history, current, portfolio_equity='10000', open_symbols=(), blocked_symbols=()):
     """Return ranked candidates; never place orders or imply fills/profit."""
     if current.get('schema') != 'IGOR_R17_03_OKX_COHORT_CAPTURE_V1':
         raise CaptureError('snapshot de coorte OKX inválido')
@@ -20,7 +20,8 @@ def signal(history, current, portfolio_equity='10000', open_symbols=()):
         return {'status': 'SKIP_NOT_TIMELY', 'candidates': []}
     end_ms = int(current['server_time_ms'])
     positions = set(open_symbols)
-    if len(positions) > 4 or any(s not in current['universe'] for s in positions):
+    blocked = set(blocked_symbols)
+    if (len(positions) > 4 or any(s not in current['universe'] for s in positions | blocked)):
         raise CaptureError('estado de carteira inválido')
     bars = {}
     for snap in history:
@@ -56,7 +57,7 @@ def signal(history, current, portfolio_equity='10000', open_symbols=()):
         raise CaptureError('equidade inválida')
     candidates = []
     for symbol in current['universe']:
-        if symbol in positions:
+        if symbol in positions or symbol in blocked:
             continue
         observation = current['observations'][symbol]
         if observation['status'] != 'COMPLETE':
@@ -91,7 +92,8 @@ def signal(history, current, portfolio_equity='10000', open_symbols=()):
         min_size = number(instrument['minSz'], 'minSz')
         if lot <= 0 or min_size <= 0:
             continue
-        contracts = (equity * Decimal('0.10') / contract_usdt // lot) * lot
+        # Size at the adverse entry fill, never above the 10% notional cap.
+        contracts = (equity * Decimal('0.10') / (contract_usdt * Decimal('1.001')) // lot) * lot
         if contracts < min_size or top_size * contract_usdt < 2 * contracts * contract_usdt:
             continue
         distance = close / ceiling - 1 if direction == 'BUY' else 1 - close / floor
