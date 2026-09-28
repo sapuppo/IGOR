@@ -173,7 +173,9 @@ def capture_batch(client, symbols, start_ms, end_ms, clock_ms=None, source_sha=N
             raise CaptureError(f'funding repetido ou desordenado: {symbol}')
         if len(raw_funding) == 1000:
             symbol_errors.append('FUNDING_PAGE_LIMIT')
-        if not raw_funding and statuses.get(symbol) == 'TRADING':
+        # A four-hour capture can legitimately have no funding settlement.
+        # An empty full-day window is an actionable data-quality gap.
+        if not raw_funding and statuses.get(symbol) == 'TRADING' and end_ms - start_ms >= 24 * 60 * ONE_MINUTE:
             symbol_errors.append('FUNDING_EMPTY')
         if raw_funding and statuses.get(symbol) == 'TRADING':
             intervals = [funding_times[0] - start_ms,
@@ -198,7 +200,7 @@ def capture_batch(client, symbols, start_ms, end_ms, clock_ms=None, source_sha=N
         problems.extend(f'{symbol}:{name}' for name in symbol_errors)
     last_candle_end = end_ms
     timely = (first_server_ms >= START_PROSPECTIVE and 0 <= final_server_ms - last_candle_end <= 10 * ONE_MINUTE)
-    capture_class = ('TIMELY_OBSERVATION' if timely and start_ms >= START_PROSPECTIVE
+    capture_class = ('TIMELY_OBSERVATION' if timely and start_ms >= START_PROSPECTIVE and end_ms - start_ms == BAR_MS
                      else 'MIXED_BACKFILL_AND_TIMELY_QUOTE' if timely
                      else 'RETROSPECTIVE_BACKFILL')
     return {'schema': 'IGOR_R17_01_MARKET_CAPTURE_V1', 'start_utc': utc(start_ms),
