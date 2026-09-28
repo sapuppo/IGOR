@@ -1,0 +1,25 @@
+name: R17.04 OKX public funding mark probe
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/r17-04-mark-probe.yml]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check historical 1m mark around known public funding event
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,urllib.parse
+          root='https://www.okx.com/api/v5/market/history-mark-price-candles'
+          params=urllib.parse.urlencode({'instId':'ENA-USDT-SWAP','bar':'1m','after':1790596860000,'limit':5})
+          request=urllib.request.Request(root+'?'+params,headers={'User-Agent':'IGOR-R17-public-probe/1.0'})
+          with urllib.request.urlopen(request,timeout=15) as res: raw=json.load(res)
+          print('MARK_HISTORY',json.dumps({'code':raw.get('code'),'sample':raw.get('data',[])[:3]}))
+          assert raw.get('code')=='0'
+          assert any(int(x[0])==1790596800000 and x[-1]=='1' for x in raw['data'])
+          PY
