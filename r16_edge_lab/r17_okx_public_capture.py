@@ -18,7 +18,8 @@ from r17_cloud_capture import next_window
 SYMBOL = 'BTC-USDT-SWAP'
 PATHS = frozenset({'/api/v5/public/time', '/api/v5/public/instruments',
                    '/api/v5/market/candles', '/api/v5/public/funding-rate-history',
-                   '/api/v5/market/ticker', '/api/v5/market/tickers'})
+                   '/api/v5/market/ticker', '/api/v5/market/tickers',
+                   '/api/v5/market/history-mark-price-candles'})
 
 
 class PublicOKX:
