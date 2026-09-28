@@ -1,0 +1,79 @@
+name: R17.01 public USD-M forward capture
+
+on:
+  push:
+    branches: [master]
+    paths: [.github/workflows/r17-01-cloud-capture.yml]
+  workflow_dispatch: {}
+  schedule:
+    - cron: '7 0,4,8,12,16,20 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: r17-01-public-market-data
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Frozen research collector
+        uses: actions/checkout@v4
+        with:
+          ref: f5ef90cb63e69b6d6c8c5e0044bf2bd9c402f7e0
+          path: research
+          persist-credentials: false
+      - name: Durable data branch
+        uses: actions/checkout@v4
+        with:
+          ref: r17-01-market-data
+          path: archive
+      - name: Capture public market data without account credentials
+        run: |
+          python3 research/r16_edge_lab/r17_cloud_capture.py \
+            --manifest research/r16_edge_lab/R17_01_UNIVERSE.json \
+            --out-dir archive/r17_market_data
+      - name: Verify and retain complete raw snapshot
+        run: |
+          python3 research/r16_edge_lab/r17_forward_capture.py verify \
+            --out-dir archive/r17_market_data
+          git -C archive config user.name 'github-actions[bot]'
+          git -C archive config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C archive add r17_market_data
+          if ! git -C archive diff --cached --quiet; then
+            git -C archive commit -m 'R17.01: archive public forward market capture'
+            git -C archive push origin HEAD:r17-01-market-data
+          fi
+      - name: Publish observation classification
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, os
+          files=sorted(pathlib.Path('archive/r17_market_data').glob('capture-*.json'))
+          assert files, 'no captured market data'
+          item=json.loads(files[-1].read_text())
+          summary=('## R17.01 observation\n\n'
+                   f"Status: **{item['status']}**  \n"
+                   f"Class: **{item['snapshot_class']}**  \n"
+                   f"End UTC: {item['end_exclusive_utc']}  \n"
+                   f"Problems: {len(item['problems'])}  \n"
+                   'PnL validated: **no**\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as stream: stream.write(summary)
+          print(summary)
+          if item['status'] != 'COMPLETE': raise SystemExit('incomplete capture; archived for audit')
+          PY
+      - name: Stage latest snapshot for short-term recovery
+        if: always()
+        run: |
+          mkdir -p recovery
+          find archive/r17_market_data -maxdepth 1 -name 'capture-*.json' -print 2>/dev/null | sort | tail -n 1 | while read -r file; do cp "$file" recovery/; done
+      - name: Keep short-term recovery artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r17-01-capture-${{ github.run_id }}
+          path: recovery/capture-*.json
+          if-no-files-found: warn
+          retention-days: 7
