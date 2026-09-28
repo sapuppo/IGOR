@@ -69,7 +69,7 @@ jobs:
       - name: Pinned R17.04 paper engine
         uses: actions/checkout@v4
         with:
-          ref: c7972c4963e19bdabf89ca42846076515cd2a393
+          ref: 2e5fb0efea518c49d229d33afa8e96ffb3e3e175
           path: paper-research
           persist-credentials: false
       - name: Separate append-only paper ledger
