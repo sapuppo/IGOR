@@ -12,7 +12,7 @@ Data: 27/09/2026 no horário de São Paulo. Pesquisa em `r17-01-research`; R16.2
 
 ## Situação da execução
 
-Este ambiente tentou consultar `https://fapi.binance.com/fapi/v1/time` com prazo de 5 s; a conexão expirou (`HTTP 000`). **Nenhum arquivo de preço novo foi obtido**. O script PowerShell `r17_01_capture_windows.ps1` permite rodar uma coleta de leitura no computador do usuário com Python 3 e acesso à Binance; ele grava capturas fora do repositório, em `%LOCALAPPDATA%\IGOR\R17\captures`, e verifica hashes depois de coletar.
+Este ambiente tentou consultar `https://fapi.binance.com/fapi/v1/time` com prazo de 5 s; a conexão expirou (`HTTP 000`). **Isso é apenas uma restrição deste ambiente, não uma necessidade de acessar o PC do usuário.** A execução na nuvem por GitHub Actions consulta rotas públicas, sem conta nem chaves da Binance, arquiva os JSON em `r17-01-market-data` e mantém o robô principal intocado. O script PowerShell local continua disponível como alternativa opcional, mas nenhuma configuração no computador do usuário é pré-requisito para a coleta na nuvem.
 
 Em um checkout da ramificação `r17-01-research`, execute PowerShell na raiz do repositório:
 
@@ -26,7 +26,7 @@ Para verificar uma pasta já produzida:
 py -3 .\r16_edge_lab\r17_forward_capture.py verify --out-dir "$env:LOCALAPPDATA\IGOR\R17\captures"
 ```
 
-Para observação no horário da decisão, a máquina precisa estar ligada e executar a coleta a cada fronteira de 4 h UTC, idealmente entre 1 e 5 minutos após a fronteira. Uma coleta atrasada rotula o histórico como `RETROSPECTIVE_BACKFILL` ou `MIXED_BACKFILL_AND_TIMELY_QUOTE`, nunca inventa preço de execução passado. O relógio local precisa estar sincronizado; dados brutos ou snapshots futuros em falta são bloqueios, não zeros. A execução da coleta **não foi programada no computador do usuário**; não afirmar que está em operação contínua.
+Para observação no horário da decisão, o agendador em nuvem tenta executar após cada fronteira de 4 h UTC. Uma coleta atrasada rotula o histórico como `RETROSPECTIVE_BACKFILL` ou `MIXED_BACKFILL_AND_TIMELY_QUOTE`, nunca inventa preço de execução passado. Dados brutos ou snapshots futuros em falta são bloqueios, não zeros. GitHub Actions pode atrasar ou descartar agendamentos; verificar cada execução e registrar lacunas. **Coletar dados não é validar estratégia e não representa lucro.**
 
 ## Dados oficiais consultados para o esquema
 
