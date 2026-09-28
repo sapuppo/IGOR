@@ -141,7 +141,7 @@ def value(state,current):
     return equity,gross
 
 
-def step(previous,warmup,history,current,now_ms,client,enabled=False):
+def step(previous,warmup,history,current,now_ms,client,enabled=False,live_clock=None):
     state=json.loads(json.dumps(previous))
     decisions=[]
     clock=int(current['server_time_ms'])
@@ -157,6 +157,13 @@ def step(previous,warmup,history,current,now_ms,client,enabled=False):
         decisions.append({'type':'SKIP','reason':'NOT_TIMELY_OR_UNVERIFIED'})
         return state,decisions
     decisions.extend(settle_funding(state,current,client))
+    if live_clock is not None and live_clock()-clock>MAX_AGE_MS:
+        if state['positions']:
+            state['risk_gaps']+=1
+            state['funding_data_gaps']+=1
+            state['pnl_unverified']=True
+        decisions.append({'type':'SKIP','reason':'PROCESSING_EXCEEDED_120S'})
+        return state,decisions
     for symbol,pos in list(state['positions'].items()):
         row=current['observations'][symbol]
         book=quote(row,clock)
@@ -193,6 +200,9 @@ def step(previous,warmup,history,current,now_ms,client,enabled=False):
     decisions.append({'type':'SIGNAL','status':candidate['status'],
                       'candidate_symbols':[x['symbol'] for x in candidate['candidates']]})
     for item in candidate['candidates']:
+        if live_clock is not None and live_clock()-clock>MAX_AGE_MS:
+            decisions.append({'type':'SKIP_ENTRY','reason':'PROCESSING_EXCEEDED_120S'})
+            break
         symbol=item['symbol']
         if symbol in state['positions'] or len(state['positions'])>=4:
             continue
@@ -270,7 +280,8 @@ def main():
             past.append(capture)
             continue
         state,events=step(prior,warmup,past,capture,current_time,PublicOKX(),
-                          enabled=args.event_name=='schedule')
+                          enabled=args.event_name=='schedule',
+                          live_clock=lambda: int(time.time()*1000))
         state['last_capture_sha256']=digest
         result={'schema':SCHEMA,'strategy':'R17-OKX-DB24-BTC48-CV1',
                 'capture_sha256':digest,'capture_file':file.name,
