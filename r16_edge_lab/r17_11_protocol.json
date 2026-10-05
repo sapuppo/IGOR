@@ -1,0 +1,10 @@
+{
+ "version":"R17.11","registered_before_portfolio_combinations":true,
+ "components":{"A":"R17.07 pair_fixed, 1x research sleeve, net daily MTM from verified replay","B":"R17.10 short_20d_7d, 1x research sleeve, net daily MTM from verified replay"},
+ "selection_warning":"B was chosen after seeing that 2026 H1 was +24.12%; all hybrid outcomes including 2026 are exploratory, not untouched holdout. Preserve full trial ledger R17.07-11.",
+ "model":"Independent segregated sleeves, each scaled linearly from $10000 base without transfer or rebalancing. Initial capital fractions sum to one. Daily combined equity=w*A+(1-w)*B; no borrowed capital across sleeves. Preserve each sleeve's recorded fees, funding, slippage and trade-delay assumptions. Compute event-level drawdown only after reconstructing aligned full event series, otherwise daily drawdown lower bound only. Do not infer exact portfolio intrabar peak from asynchronous events.",
+ "weights_A":[0.8,0.6,0.4,0.2],
+ "evaluation":"2023-01-01 to 2026-07-01 exclusive, 42 calendar months; 2023-2024 criterion positive return and <=20% daily MTM drawdown. 2025-2026 diagnostic only. Rank eligible by training return.",
+ "robustness":"Recompute the breakout short sleeve with double taker fee and slippage, same signal and history, then compare fixed weights. Do not select weights using 2026.",
+ "limitations":"Exploratory strategy choice contaminated by 2026; official mark-price funding missing; 38-symbol survivorship/selection bias; 2026 Q3 absent. Neither paper trade nor live account performance. Independent event-level cross-sleeve risk may exceed daily drawdown."
+}
