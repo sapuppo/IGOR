@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "id": "control",
+      "cash_from_independent_trade_sum": 12890.11075716193,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "core_only",
+      "cash_from_independent_trade_sum": 12273.189425543012,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "rev1h_only",
+      "cash_from_independent_trade_sum": 11416.749019688505,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "core_rev1h",
+      "cash_from_independent_trade_sum": 16279.400966397265,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "core_fixed",
+      "cash_from_independent_trade_sum": 14761.588009545778,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "pair_fixed",
+      "cash_from_independent_trade_sum": 19031.214331145013,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "pair_fixed_risk150",
+      "cash_from_independent_trade_sum": 20906.07263072792,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "pair_fixed_risk150_cap60",
+      "cash_from_independent_trade_sum": 20903.33338104638,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    },
+    {
+      "id": "pair_fixed_double_cost",
+      "cash_from_independent_trade_sum": 17430.331417238755,
+      "monthly_compounding_reconciles": true,
+      "active_bar_gaps": 0,
+      "source_artifact_hashes_match": true
+    }
+  ],
+  "core_ledger_determinism_collateral_funding_checks": "PASS",
+  "scope": "Accounting and artifacts; NOT an official mark-price or untouched OOS validation"
+}
