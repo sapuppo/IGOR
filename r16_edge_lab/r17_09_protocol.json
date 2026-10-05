@@ -1,0 +1,16 @@
+{
+ "version":"R17.09","registered_before_performance":true,"base":"R17.08 daily momentum, same verified dataset, 4h bars, fees/slippage/funding and 04:00 UTC fills",
+ "hypothesis":"R17.08's turnover destroys returns. Hold current coins until they leave their rank cohort; only replace changed names. This is a new turnover-aware test, with original 5% stops.",
+ "candidate_rules":"At 00:00 UTC use all completed bars for 5- or 20-day momentum. Rank prior liquid universe by momentum. At 04:00 UTC keep an existing position if selected in the same direction, close only deselected positions, and allocate spare gross capacity equally to newly selected coins. No intraday reentry after stop. For long selection require positive score, for shorts require negative score. At most 1x total gross entry exposure. Funding and ambiguous stop treatment match R17.08. Use the same 38 previously selected symbols.",
+ "variants":[
+  {"id":"sticky_m5_long2","lookback_days":5,"long":2,"short":0,"gross":1,"regime":"none"},
+  {"id":"sticky_m5_long4","lookback_days":5,"long":4,"short":0,"gross":1,"regime":"none"},
+  {"id":"sticky_m20_long4","lookback_days":20,"long":4,"short":0,"gross":1,"regime":"none"},
+  {"id":"sticky_m5_neutral2","lookback_days":5,"long":2,"short":2,"gross":1,"regime":"none"},
+  {"id":"sticky_m5_neutral4","lookback_days":5,"long":4,"short":4,"gross":1,"regime":"none"},
+  {"id":"sticky_m20_neutral4","lookback_days":20,"long":4,"short":4,"gross":1,"regime":"none"},
+  {"id":"sticky_m5_btc_direction","lookback_days":5,"long":4,"short":4,"gross":1,"regime":"btc_30day"}
+ ],
+ "selection":"2023-2024 positive return and <=20% daily MTM drawdown; rank return then drawdown. Previously consulted 2025-2026 diagnostics not untouched OOS. Historical trial counts incomplete. Reject missing active bars.",
+ "interpretation":"No live promotion or inferred guarantee of returns. Compare to R17.07 already selected on same historical data, including its 2026 results."
+}
