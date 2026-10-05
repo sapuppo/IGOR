@@ -1,0 +1,15 @@
+[Unit]
+Description=IGOR public market capture and paper ledger
+After=network-online.target time-sync.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=igor
+WorkingDirectory=/opt/igor/research/r16_edge_lab
+ExecStart=/usr/bin/python3 /opt/igor/research/r16_edge_lab/r17_06_clock_runner.py --archive /var/lib/igor/market --paper /var/lib/igor/paper --once
+TimeoutStartSec=600
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/igor/market /var/lib/igor/paper
