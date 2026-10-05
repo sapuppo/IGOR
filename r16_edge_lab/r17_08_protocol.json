@@ -1,0 +1,21 @@
+{
+ "version":"R17.08", "registered_before_performance":true,
+ "sources":["https://onlinelibrary.wiley.com/doi/10.1002/fut.22425","https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/trend-factor-for-the-cross-section-of-cryptocurrency-returns/4C1509ACBA33D5DCAF0AC24379148178"],
+ "hypothesis":"Daily cross-sectional 5-day momentum long/short may produce different payoffs from the weekly and breakout strategies; published findings on different markets and years are inspiration, not validation.",
+ "dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+ "window":"2023-01-01 through 2026-06-30 UTC inclusive; warmup from earlier verified bars",
+ "common_rules":"At 00:00 UTC rank with last completed 4h bar at 20:00 previous day. Enter/rebalance at next 04:00 bar open. Positions checked at each 4h bar for 5% stop or gap; daily closed-equity reported at 00:00 UTC boundary. Min median 4h quote turnover over prior 7 days $5m, complete 5 or 20-day history. No orders when insufficient eligible pairs. Explicit fees 0.06% per side, adverse slippage 0.04% per side, actual archived funding events at last trade price proxy; favorable intrabar funding on a stop bar excluded. Exit at next 04:00 rebalance or stop, positions of losing stopped pairs never re-enter before next daily rebalance.",
+ "variants":[
+  {"id":"m5_long4","lookback_days":5,"long":4,"short":0,"gross":1,"regime":"none"},
+  {"id":"m5_short4","lookback_days":5,"long":0,"short":4,"gross":1,"regime":"none"},
+  {"id":"m5_market_neutral","lookback_days":5,"long":4,"short":4,"gross":1,"regime":"none"},
+  {"id":"m20_market_neutral","lookback_days":20,"long":4,"short":4,"gross":1,"regime":"none"},
+  {"id":"m5_btc_regime","lookback_days":5,"long":4,"short":4,"gross":1,"regime":"btc_30day"},
+  {"id":"m5_regime_longonly","lookback_days":5,"long":4,"short":0,"gross":1,"regime":"btc_positive_only"},
+  {"id":"m5_market_neutral_1p5x","lookback_days":5,"long":4,"short":4,"gross":1.5,"regime":"none"},
+  {"id":"m5_btc_regime_1p5x","lookback_days":5,"long":4,"short":4,"gross":1.5,"regime":"btc_30day"}
+ ],
+ "selection":"Study the 2023-2024 window only. Eligible if its 2023-2024 return positive and maximum daily marked-to-market drawdown <=20%, and all active bars present. Rank by return; tie by smaller drawdown. 2025-2026 diagnostic, previously seen, not untouched out of sample. Prior strategy trial count incomplete.",
+ "decision":"Compare selected daily family against prior R17.07 pair_fixed; do not promote if 2026 does not materially improve and independent production-quality venue data are absent.",
+ "interpretation":"Retrospective research. Earlier study used different instruments, smaller universe, and older period. Official mark-price funding history and true orderbook spreads are unavailable. No claim of 20% monthly or risk-free returns."
+}
