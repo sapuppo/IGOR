@@ -1,0 +1,12 @@
+[Unit]
+Description=IGOR paper at 4h UTC boundary plus 90 seconds
+
+[Timer]
+OnCalendar=*-*-* 00,04,08,12,16,20:01:30 UTC
+AccuracySec=1s
+RandomizedDelaySec=0
+Persistent=false
+Unit=igor-paper.service
+
+[Install]
+WantedBy=timers.target
