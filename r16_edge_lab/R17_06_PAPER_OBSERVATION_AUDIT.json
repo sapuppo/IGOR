@@ -1,0 +1,490 @@
+{
+  "observed_at_utc": "2026-10-05T00:17:07.638Z",
+  "source": "GitHub cohort and paper branch metadata",
+  "rows": [
+    {
+      "capture_file": "capture-1790616886230-4a0ee7e0fe156993.json",
+      "capture_sha256": "4a0ee7e0fe156993ffea52a460f91ea78557ddad064d9836d703f6e4b6a5d900",
+      "event_name": "push",
+      "server_time_ms": 1790616886230,
+      "start_utc": "2026-09-28T12:00:00Z",
+      "end_exclusive_utc": "2026-09-28T16:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 5686230,
+      "processing_lag_ms": 1282042,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790641248846-b09028df319d63f3.json",
+      "capture_sha256": "b09028df319d63f340f514706db9b53928940c3c3b44e85914e1137b39266c71",
+      "event_name": "schedule",
+      "server_time_ms": 1790641248846,
+      "start_utc": "2026-09-28T16:00:00Z",
+      "end_exclusive_utc": "2026-09-29T00:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 1248846,
+      "processing_lag_ms": 6382,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790678262288-9b9b750eef6f6f7b.json",
+      "capture_sha256": "9b9b750eef6f6f7b11806f5399104bd59ed826d3b4c4454f60eb6ad68193b1e1",
+      "event_name": "schedule",
+      "server_time_ms": 1790678262288,
+      "start_utc": "2026-09-29T00:00:00Z",
+      "end_exclusive_utc": "2026-09-29T08:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 9462288,
+      "processing_lag_ms": 6979,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790704984283-d4034c65168de411.json",
+      "capture_sha256": "d4034c65168de411390bbe44a9d9aa5533ba8ecd7c838450fd00919d146df64a",
+      "event_name": "schedule",
+      "server_time_ms": 1790704984283,
+      "start_utc": "2026-09-29T08:00:00Z",
+      "end_exclusive_utc": "2026-09-29T16:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 7384283,
+      "processing_lag_ms": 7024,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790725216283-1499fa6f939483ca.json",
+      "capture_sha256": "1499fa6f939483cab2b3380eb55a94ccbab52c14212ca0a271dbf193b14b5b09",
+      "event_name": "schedule",
+      "server_time_ms": 1790725216283,
+      "start_utc": "2026-09-29T16:00:00Z",
+      "end_exclusive_utc": "2026-09-29T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 13216283,
+      "processing_lag_ms": 7936,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790745963992-a65b4569c036ec21.json",
+      "capture_sha256": "a65b4569c036ec21e78d86c6becaf538e29ed7f110354a35e9d96a65120c8c89",
+      "event_name": "schedule",
+      "server_time_ms": 1790745963992,
+      "start_utc": "2026-09-29T20:00:00Z",
+      "end_exclusive_utc": "2026-09-30T04:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 5163992,
+      "processing_lag_ms": 6166,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790779999905-b98d263acbef852c.json",
+      "capture_sha256": "b98d263acbef852c93fa9382e51eb78946e46ddf1e2c56ae108143a15e4ac2eb",
+      "event_name": "schedule",
+      "server_time_ms": 1790779999905,
+      "start_utc": "2026-09-30T04:00:00Z",
+      "end_exclusive_utc": "2026-09-30T12:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 10399905,
+      "processing_lag_ms": 8948,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790801188701-c89136025e012092.json",
+      "capture_sha256": "c89136025e012092ed22b69bcbfdf41b5b6e5b828c5b3eed78d08b1c6fe2da83",
+      "event_name": "schedule",
+      "server_time_ms": 1790801188701,
+      "start_utc": "2026-09-30T12:00:00Z",
+      "end_exclusive_utc": "2026-09-30T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 2788701,
+      "processing_lag_ms": 6894,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790833438736-52ebbe356f25f281.json",
+      "capture_sha256": "52ebbe356f25f28179f8d418261e5cb39a86d7a6e7e1ef64a0ef03548ef15cee",
+      "event_name": "schedule",
+      "server_time_ms": 1790833438736,
+      "start_utc": "2026-09-30T20:00:00Z",
+      "end_exclusive_utc": "2026-10-01T04:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 6238736,
+      "processing_lag_ms": 5948,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790868286937-0680ca8ff403bd4b.json",
+      "capture_sha256": "0680ca8ff403bd4b9b41130be69158ddcc444c57f0cb6cdc7e889793ae98fc91",
+      "event_name": "schedule",
+      "server_time_ms": 1790868286937,
+      "start_utc": "2026-10-01T04:00:00Z",
+      "end_exclusive_utc": "2026-10-01T12:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 12286937,
+      "processing_lag_ms": 6960,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790888405847-3be9d010c57a8240.json",
+      "capture_sha256": "3be9d010c57a8240bd0a39d8faf031a09dfedf7a1e68ce6827d9f8ee077500c5",
+      "event_name": "schedule",
+      "server_time_ms": 1790888405847,
+      "start_utc": "2026-10-01T12:00:00Z",
+      "end_exclusive_utc": "2026-10-01T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 3605847,
+      "processing_lag_ms": 7089,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790918885544-66ed104100717bad.json",
+      "capture_sha256": "66ed104100717bad42de8c05b18d1f723204bdef3a7b9fff3ea834fcfba22845",
+      "event_name": "schedule",
+      "server_time_ms": 1790918885544,
+      "start_utc": "2026-10-01T20:00:00Z",
+      "end_exclusive_utc": "2026-10-02T04:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 5285544,
+      "processing_lag_ms": 5753,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790952146587-50fccc17172595a0.json",
+      "capture_sha256": "50fccc17172595a0d56b61dd3caac71d96f961e131122f0d69f7a5caff56cf8e",
+      "event_name": "schedule",
+      "server_time_ms": 1790952146587,
+      "start_utc": "2026-10-02T04:00:00Z",
+      "end_exclusive_utc": "2026-10-02T12:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 9746587,
+      "processing_lag_ms": 5780,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1790973630410-a2cd79133eec7e18.json",
+      "capture_sha256": "a2cd79133eec7e1806dd2c73d93cf72556d93a716936886540ff178420d097b9",
+      "event_name": "schedule",
+      "server_time_ms": 1790973630410,
+      "start_utc": "2026-10-02T12:00:00Z",
+      "end_exclusive_utc": "2026-10-02T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 2430410,
+      "processing_lag_ms": 5712,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791004277307-7d3513fa266872d4.json",
+      "capture_sha256": "7d3513fa266872d452cb6cbe5b59846641e6af8b5dacf7b72af2220dbbbe333d",
+      "event_name": "schedule",
+      "server_time_ms": 1791004277307,
+      "start_utc": "2026-10-02T20:00:00Z",
+      "end_exclusive_utc": "2026-10-03T04:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 4277307,
+      "processing_lag_ms": 6012,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791033587939-baa5479843e91e4b.json",
+      "capture_sha256": "baa5479843e91e4b8b4d41c012ce36c4ac3566441b5b9ce8c37ac3079b5382d9",
+      "event_name": "schedule",
+      "server_time_ms": 1791033587939,
+      "start_utc": "2026-10-03T04:00:00Z",
+      "end_exclusive_utc": "2026-10-03T12:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 4787939,
+      "processing_lag_ms": 7248,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791054683469-670bcb5f271c7f16.json",
+      "capture_sha256": "670bcb5f271c7f1607037b6cf97430f36fb59e4c6654bd93ce9bbb504aac5bbb",
+      "event_name": "schedule",
+      "server_time_ms": 1791054683469,
+      "start_utc": "2026-10-03T12:00:00Z",
+      "end_exclusive_utc": "2026-10-03T16:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 11483469,
+      "processing_lag_ms": 3457,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791067881174-a20f4ede31114a9c.json",
+      "capture_sha256": "a20f4ede31114a9caa430c3a1600aad8678eb8d45c0a1dd87ce8857f6f64639c",
+      "event_name": "schedule",
+      "server_time_ms": 1791067881174,
+      "start_utc": "2026-10-03T16:00:00Z",
+      "end_exclusive_utc": "2026-10-03T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 10281174,
+      "processing_lag_ms": 5102,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791092658394-f4958f0bf7bcb713.json",
+      "capture_sha256": "f4958f0bf7bcb7133fa8496d9b11fdb536c4267be54ebfb2d0416b453da0971d",
+      "event_name": "schedule",
+      "server_time_ms": 1791092658394,
+      "start_utc": "2026-10-03T20:00:00Z",
+      "end_exclusive_utc": "2026-10-04T04:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 6258394,
+      "processing_lag_ms": 4566,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791122054453-5888dfed31054ae0.json",
+      "capture_sha256": "5888dfed31054ae0f766da7f3ef0f538757043ef9d3ab5bae8d283ba28ee2860",
+      "event_name": "schedule",
+      "server_time_ms": 1791122054453,
+      "start_utc": "2026-10-04T04:00:00Z",
+      "end_exclusive_utc": "2026-10-04T12:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 6854453,
+      "processing_lag_ms": 3978,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791142437458-c419671105f2e407.json",
+      "capture_sha256": "c419671105f2e407158c99cbe7344e772b4a39500f21848c5d985ece6ddbe0f8",
+      "event_name": "schedule",
+      "server_time_ms": 1791142437458,
+      "start_utc": "2026-10-04T12:00:00Z",
+      "end_exclusive_utc": "2026-10-04T16:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 12837458,
+      "processing_lag_ms": 4050,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    },
+    {
+      "capture_file": "capture-1791154964849-20d76216a40ad903.json",
+      "capture_sha256": "20d76216a40ad9033104eb369209b1f522efb4449c020e6c4d635e7ae6d8db70",
+      "event_name": "schedule",
+      "server_time_ms": 1791154964849,
+      "start_utc": "2026-10-04T16:00:00Z",
+      "end_exclusive_utc": "2026-10-04T20:00:00Z",
+      "snapshot_class": "RETROSPECTIVE_BACKFILL",
+      "status": "COMPLETE",
+      "problems": [],
+      "observation_lag_ms": 10964849,
+      "processing_lag_ms": 3594,
+      "events": [
+        {
+          "reason": "NOT_TIMELY_OR_UNVERIFIED",
+          "type": "SKIP"
+        }
+      ],
+      "open_positions": 0,
+      "closed_trades": 0,
+      "cash": "10000"
+    }
+  ]
+}
