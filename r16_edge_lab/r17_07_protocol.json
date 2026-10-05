@@ -1,0 +1,22 @@
+{
+  "version": "R17.07",
+  "purpose": "Finite portfolio ablations, genuine portfolio replays; no production promotion",
+  "start": "2023-01-01T00:00:00Z",
+  "end_exclusive": "2026-07-01T00:00:00Z",
+  "scenario": "STRESS",
+  "signal_cache_sha256": "0389c6b3218b1cb971a72e2bda03539b24fa33d8def98fb1a1352be8954a0ada",
+  "variants": [
+    {"id":"control","engines":["CORE","REV1H","REV15M"],"risk_scale":1,"cap":0.4,"fixed_multiplier":null},
+    {"id":"core_only","engines":["CORE"],"risk_scale":1,"cap":0.4,"fixed_multiplier":null},
+    {"id":"rev1h_only","engines":["REV1H"],"risk_scale":1,"cap":0.4,"fixed_multiplier":null},
+    {"id":"core_rev1h","engines":["CORE","REV1H"],"risk_scale":1,"cap":0.4,"fixed_multiplier":null},
+    {"id":"core_fixed","engines":["CORE"],"risk_scale":1,"cap":0.4,"fixed_multiplier":1},
+    {"id":"pair_fixed","engines":["CORE","REV1H"],"risk_scale":1,"cap":0.4,"fixed_multiplier":1},
+    {"id":"pair_fixed_risk150","engines":["CORE","REV1H"],"risk_scale":1.5,"cap":0.4,"fixed_multiplier":1},
+    {"id":"pair_fixed_risk150_cap60","engines":["CORE","REV1H"],"risk_scale":1.5,"cap":0.6,"fixed_multiplier":1}
+  ],
+  "selection": "Rank 2023-2024 compound return, eligible only when event drawdown in that same selection window <=20%; tie by smaller drawdown; select no candidate if none positive. 2025 and 2026 are diagnostic only, previously consulted, not untouched OOS.",
+  "extra_stress": "Run only selected candidate once with doubled STRESS fee and slippage; unchanged 15-minute entry delay.",
+  "policy": "No leverage increase, no new indicator threshold search. Preserve rolling shadow-score entry gate. A single remaining engine never triggers original two-positive-engine hot regime; fixed_multiplier variants explicitly override sizing multiplier only.",
+  "limitations": ["Historical funding uses trade-price proxies, official mark series unavailable", "Previously selected 38-symbol cohort has survivorship/selection bias", "Prior trial count incomplete", "2026 July-December excluded; no verified complete data beyond June", "All retrospective returns are simulations, not executed account returns"]
+}
