@@ -1,0 +1,17 @@
+{
+ "version":"R17.10","registered_before_performance":true,
+ "motivation":"R17.08 and R17.09 daily cross-sectional rotation was too costly/unstable. Test causal 4h breakout and breakdown entry events with low turnover and both directions.",
+ "dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041",
+ "shared":"2023-01-01 to 2026-07-01 exclusive. Signal at end of 4h bar from close above previous N highs for long, below previous N lows for short; next 4h open fill, stop5% target10% priority to stop on simultaneous hits, max 3/7 day hold; taker fee 0.06% and adverse slip 0.04% per side, 4 positions max each up to 25% of marked equity, maximum 1x gross at entry, no duplicate symbol. Median prior 7d 4h quote turnover >=$5m. Funding archived rates with trade-price proxy, skip favorable payment on ambiguous stop bar. BTC trend as prior 30-day 4h mean when enabled. Missing active bars fail.",
+ "variants":[
+  {"id":"short_5d_3d","lookback_bars":30,"direction":"short","btc_gate":false,"hold_bars":18},
+  {"id":"short_20d_7d","lookback_bars":120,"direction":"short","btc_gate":false,"hold_bars":42},
+  {"id":"short_5d_btc_3d","lookback_bars":30,"direction":"short","btc_gate":true,"hold_bars":18},
+  {"id":"short_20d_btc_7d","lookback_bars":120,"direction":"short","btc_gate":true,"hold_bars":42},
+  {"id":"long_5d_3d","lookback_bars":30,"direction":"long","btc_gate":false,"hold_bars":18},
+  {"id":"long_20d_7d","lookback_bars":120,"direction":"long","btc_gate":false,"hold_bars":42},
+  {"id":"both_20d_7d","lookback_bars":120,"direction":"both","btc_gate":true,"hold_bars":42}
+ ],
+ "selection":"2023-2024 return positive and <=20% event-level marked equity drawdown; rank train return then smaller drawdown. 2025/2026 previously viewed, diagnostic only. Compare R17.07 pair_fixed; no live promotion on retrospective data.",
+ "limitations":"38-coin preselected cohort, incomplete prior trial registry, no official historical funding mark series or orderbook spread. Even a few +20% months with catastrophic drawdown does not meet goal."
+}
