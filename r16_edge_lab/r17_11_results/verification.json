@@ -1,0 +1,206 @@
+{
+  "checks": [
+    {
+      "family": 8,
+      "id": "m5_long4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_short4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_market_neutral",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m20_market_neutral",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_btc_regime",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_regime_longonly",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_market_neutral_1p5x",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 8,
+      "id": "m5_btc_regime_1p5x",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m5_long2",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m5_long4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m20_long4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m5_neutral2",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m5_neutral4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m20_neutral4",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 9,
+      "id": "sticky_m5_btc_direction",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "short_5d_3d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "short_20d_7d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "short_5d_btc_3d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "short_20d_btc_7d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "long_5d_3d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "long_20d_7d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 10,
+      "id": "both_20d_7d",
+      "cash_trade_reconciled": true,
+      "monthly_compounding_reconciled": true,
+      "daily_count": 1277,
+      "months": 42
+    },
+    {
+      "family": 11,
+      "id": "0.8",
+      "weights_reconciled": true,
+      "months": 42
+    },
+    {
+      "family": 11,
+      "id": "0.6",
+      "weights_reconciled": true,
+      "months": 42
+    },
+    {
+      "family": 11,
+      "id": "0.4",
+      "weights_reconciled": true,
+      "months": 42
+    },
+    {
+      "family": 11,
+      "id": "0.2",
+      "weights_reconciled": true,
+      "months": 42
+    }
+  ],
+  "status": "PASS",
+  "scope": "Accounting, calendar and segregated-capital checks. Intrabar joint sleeve drawdown not known."
+}
