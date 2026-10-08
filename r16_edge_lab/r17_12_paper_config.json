@@ -1,0 +1,11 @@
+{
+ "version":"R17.12_PAPER_EXECUTION_VARIANT",
+ "venue":"BINANCE_USDM_PERPETUAL","capital":10000,
+ "wallets":{"LONG":{"weight":0.8,"cap":0.4,"max_positions":10,"max_stop_risk":0.06},"SHORT":{"weight":0.2,"cap":0.25,"max_positions":4,"max_stop_risk":0.06}},
+ "fee":0.0006,"slip":0.0004,"max_quote_age_ms":5000,"max_capture_age_ms":120000,"max_spread":0.002,
+ "epoch_initialization":"Fresh capital and empty shadow history; no imported historical profits. Warmup only contains feature data.",
+ "execution":"Fresh observed ask for long entry, bid for short entry, adverse slippage; exits at fresh opposite book after observed stop/target/time. Previous OHLC never becomes a retroactive fill.",
+ "entry_latency":"CORE and REV1H wait until knowledge timestamp+1+15min. SHORT20D may enter on first fresh quote after its 4h signal. LONG shadow score gating preserved with new execution prices.",
+ "risk_model":"15-minute observation; intrabar stop priority; both-hit ambiguity recorded. Execution and monitoring differ from R17.11 backtest; this is a new paper variant, not a validated reproduction of its returns.",
+ "dataset_manifest_sha256":"a50c67ce220cb55dfc4249c08fb484ad8a2f55fe6d4b19dab58423209bee4041"
+}

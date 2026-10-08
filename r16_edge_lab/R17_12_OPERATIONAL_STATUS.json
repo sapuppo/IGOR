@@ -1,0 +1,23 @@
+{
+  "version": "R17.12_PAPER_EXECUTION_VARIANT",
+  "date_utc": "2026-10-08",
+  "unit_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "historical_signal_parity": "PASS_AT_VERIFIED_BOUNDARIES",
+  "warmup_missing_series": 114,
+  "public_source_probe": {
+    "endpoint": "https://fapi.binance.com/fapi/v1/time",
+    "observed_http_status": 451
+  },
+  "continuous_paper_active": false,
+  "live_orders": false,
+  "monthly_performance": null,
+  "baseline": "R16.24.2",
+  "historical_reference_only": {
+    "version": "R17.11_80_20",
+    "monthly_compound_pct": 1.3763,
+    "h1_2026_return_pct": 3.10934
+  }
+}

@@ -1,0 +1,24 @@
+test_funding_sign_and_dedup (test_r17_12_hybrid_paper.PaperTests.test_funding_sign_and_dedup) ... ok
+test_future_signal_and_pre_epoch_signal (test_r17_12_hybrid_paper.PaperTests.test_future_signal_and_pre_epoch_signal) ... ok
+test_gap_freezes_future_entries (test_r17_12_hybrid_paper.PaperTests.test_gap_freezes_future_entries) ... ok
+test_incomplete_funding_with_open_positions_rejected (test_r17_12_hybrid_paper.PaperTests.test_incomplete_funding_with_open_positions_rejected) ... ok
+test_journal_restart_idempotence_and_config_pin (test_r17_12_hybrid_paper.PaperTests.test_journal_restart_idempotence_and_config_pin) ... ok
+test_late_funding_fails_instead_of_losing_closed_trade_charge (test_r17_12_hybrid_paper.PaperTests.test_late_funding_fails_instead_of_losing_closed_trade_charge) ... ok
+test_long_latency_and_current_ask (test_r17_12_hybrid_paper.PaperTests.test_long_latency_and_current_ask) ... ok
+test_official_mark_values_position_and_missing_mark_blocks_risk (test_r17_12_hybrid_paper.PaperTests.test_official_mark_values_position_and_missing_mark_blocks_risk) ... ok
+test_open_candle_is_excluded_and_nonpublic_endpoint_rejected (test_r17_12_hybrid_paper.PaperTests.test_open_candle_is_excluded_and_nonpublic_endpoint_rejected) ... ok
+test_out_of_order_fails (test_r17_12_hybrid_paper.PaperTests.test_out_of_order_fails) ... ok
+test_revised_funding_rejected (test_r17_12_hybrid_paper.PaperTests.test_revised_funding_rejected) ... ok
+test_risk_gross_and_collateral_after_every_entry (test_r17_12_hybrid_paper.PaperTests.test_risk_gross_and_collateral_after_every_entry) ... ok
+test_same_coin_opposite_sides_in_segregated_wallets (test_r17_12_hybrid_paper.PaperTests.test_same_coin_opposite_sides_in_segregated_wallets) ... ok
+test_short_current_bid_no_cross_wallet_borrow (test_r17_12_hybrid_paper.PaperTests.test_short_current_bid_no_cross_wallet_borrow) ... ok
+test_short_loss_and_fee_reconciliation (test_r17_12_hybrid_paper.PaperTests.test_short_loss_and_fee_reconciliation) ... ok
+test_stale_and_backfill_cannot_enter (test_r17_12_hybrid_paper.PaperTests.test_stale_and_backfill_cannot_enter) ... ok
+test_stale_book_cannot_fill (test_r17_12_hybrid_paper.PaperTests.test_stale_book_cannot_fill) ... ok
+test_stop_exit_uses_fresh_bid_not_old_stop (test_r17_12_hybrid_paper.PaperTests.test_stop_exit_uses_fresh_bid_not_old_stop) ... ok
+test_transaction_rollback_and_tamper_detect (test_r17_12_hybrid_paper.PaperTests.test_transaction_rollback_and_tamper_detect) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.008s
+
+OK

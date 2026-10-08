@@ -1,0 +1,46 @@
+{
+  "version": "R17.12_PAPER_EXECUTION_VARIANT",
+  "ready": false,
+  "gap_count": 114,
+  "gap_examples": [
+    {
+      "symbol": "AAVEUSDT",
+      "interval": "15m",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "interval": "1h",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "interval": "4h",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    },
+    {
+      "symbol": "ADAUSDT",
+      "interval": "15m",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    },
+    {
+      "symbol": "ADAUSDT",
+      "interval": "1h",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    },
+    {
+      "symbol": "ADAUSDT",
+      "interval": "4h",
+      "required_through_ms": 1791446400000,
+      "last_observed_end_ms": 1782864000000
+    }
+  ],
+  "epoch_ms": 1791446400000,
+  "paper_started": false,
+  "live_orders": false
+}

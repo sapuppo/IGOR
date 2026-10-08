@@ -1,0 +1,11 @@
+[Unit]
+Description=Observe R17.12 at each 15-minute boundary plus 30 seconds
+
+[Timer]
+OnCalendar=*-*-* *:00,15,30,45:30 UTC
+AccuracySec=1s
+Persistent=false
+Unit=igor-r17-12-paper.service
+
+[Install]
+WantedBy=timers.target

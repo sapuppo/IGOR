@@ -1,0 +1,16 @@
+[Unit]
+Description=IGOR R17.12 public data and segregated paper wallets
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=igor
+WorkingDirectory=/opt/igor/r16_edge_lab
+EnvironmentFile=/etc/igor-r17-12.env
+ExecStart=/opt/igor/.venv/bin/python r17_12_runner.py --db ${IGOR_PAPER_DB} --history-root ${IGOR_HISTORY_ROOT} --epoch-ms ${IGOR_EPOCH_MS} --capture
+TimeoutStartSec=180
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/igor-r17-12

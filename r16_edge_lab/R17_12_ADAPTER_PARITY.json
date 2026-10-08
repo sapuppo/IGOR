@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "mode": "HISTORICAL_SIGNAL_PARITY_ONLY",
+  "boundary_ms": 1778544000000,
+  "core_rev1h_signal_count": 1,
+  "short_signal_count_at_core_boundary": 0,
+  "second_short_boundary_ms": 1782820800000,
+  "nonzero_short_signal_count": 1,
+  "warmup_gap_count": 0,
+  "live_orders": false,
+  "performance_result": null
+}
