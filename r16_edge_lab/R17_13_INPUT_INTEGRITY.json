@@ -1,0 +1,11 @@
+{
+  "verified_files": 151,
+  "failed_files": [
+    {
+      "path": "usdm_history/klines/15m/TAOUSDT.csv.gz",
+      "expected": "83ae10302e4449669c8af86dee7ce3683b7ec0d1782270be19c089931187569d",
+      "actual": "14067f6390472238565e27fe4128be60cfcf8dda3bbe4042b9c279e3781df177"
+    }
+  ],
+  "backtest_started": false
+}

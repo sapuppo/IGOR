@@ -1,0 +1,8 @@
+{
+  "future_truncation_invariance": "PASS",
+  "variants_checked": 8,
+  "research_input_sha_files_verified": 76,
+  "replays_completed": 16,
+  "trade_cash_reconciliation": "PASS_IN_ALL_REPLAYS",
+  "full_execution_dataset_cleared": false
+}

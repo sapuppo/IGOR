@@ -1,0 +1,94 @@
+{
+  "version": "R17.13",
+  "purpose": "Finite strategy rejection diagnostic, not independent OOS",
+  "registered_before_current_run": true,
+  "variants": [
+    {
+      "id": "filtered_breakout_long_3_18",
+      "family": "filtered_breakout",
+      "direction": "long",
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "filtered_breakout_long_5_42",
+      "family": "filtered_breakout",
+      "direction": "long",
+      "stop": 0.05,
+      "target": 0.1,
+      "hold_bars": 42,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "filtered_breakout_short_3_18",
+      "family": "filtered_breakout",
+      "direction": "short",
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "filtered_breakout_short_5_42",
+      "family": "filtered_breakout",
+      "direction": "short",
+      "stop": 0.05,
+      "target": 0.1,
+      "hold_bars": 42,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "trend_pullback_long_3_18",
+      "family": "trend_pullback",
+      "direction": "long",
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "trend_pullback_long_5_42",
+      "family": "trend_pullback",
+      "direction": "long",
+      "stop": 0.05,
+      "target": 0.1,
+      "hold_bars": 42,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "trend_pullback_short_3_18",
+      "family": "trend_pullback",
+      "direction": "short",
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18,
+      "lookback_bars": 120,
+      "btc_gate": true
+    },
+    {
+      "id": "trend_pullback_short_5_42",
+      "family": "trend_pullback",
+      "direction": "short",
+      "stop": 0.05,
+      "target": 0.1,
+      "hold_bars": 42,
+      "lookback_bars": 120,
+      "btc_gate": true
+    }
+  ],
+  "selection": "2023-2024 positive return and daily DD<=20%; choose largest train return. Then inspect 2025 and H1 2026, both previously consulted. Require positive 2025/H1 2026 and positive double-cost total; no live promotion.",
+  "cost_scenarios": [
+    1,
+    2
+  ],
+  "filters": "Median 42-bar quote_volume>=5m; ATR14/close<=6%; EMA20 and EMA120 alignment plus BTC previous 180-bar mean gate. Breakout: close penetrates prior120-bar extreme with volume>=1.2*prior42 median. Pullback: previous close across EMA20, current close crosses back in trend direction. Features only completed bars.",
+  "execution": "Inherited R17.10 next 4h open, stop priority, 4 positions/25% each, gross entry cap1x; historical funding trade-close proxy, daily DD; preselected38 cohort; all prior dataset exposure disclosed."
+}
