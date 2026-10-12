@@ -1,0 +1,19 @@
+{
+  "version": "R17.14",
+  "registered_before_run": true,
+  "reference": "R17.07 pair_fixed CORE/REV1H",
+  "tests": [
+    "control",
+    "double_cost",
+    "exclude_train_top1",
+    "exclude_train_top3",
+    "exclude_train_top3_double_cost",
+    "exclude_full_top3_adversarial",
+    "train_negative_regime_filter",
+    "train_negative_regime_filter_double_cost"
+  ],
+  "selection": "Rank symbols using net cash P&L of baseline trades both entered and exited in 2023-2024. Remove top1/top3, rerun actual portfolio including shadow gate. Full-period top3 is retrospective fragility diagnostic only.",
+  "regime": "BTC previous 180 completed 4h bars return at signal knowledge; UP >5%, DOWN <-5%, otherwise SIDEWAYS; missing ->UNKNOWN. No future prices.",
+  "filter_rule": "Per engine, use baseline 2023-2024 trades completed before cutoff; exclude the single lowest-net regime only if count>=30 and net<0. Freeze exclusions before 2025/2026 comparison. Filtering removes signals including shadow outcomes: new strategy variant, not posthoc subtraction.",
+  "limits": "Same frozen capital/risk/sizing/leverage/alpha; double fee/slip only; funding historical trade proxy; 38 preselected symbols; previously consulted history; no independent OOS or live promotion."
+}

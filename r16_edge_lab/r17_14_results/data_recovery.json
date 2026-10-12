@@ -1,0 +1,7 @@
+{
+  "source": "attachments/95951a5a-7229-4884-b11d-ac60ff7e5e89/r16-29-audit-data-10.zip",
+  "member": "klines/15m/TAOUSDT.csv.gz",
+  "previous_sha256": "14067f6390472238565e27fe4128be60cfcf8dda3bbe4042b9c279e3781df177",
+  "restored_sha256": "83ae10302e4449669c8af86dee7ce3683b7ec0d1782270be19c089931187569d",
+  "verified_dataset_files": 152
+}

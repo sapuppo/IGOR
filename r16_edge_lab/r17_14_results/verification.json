@@ -1,0 +1,9 @@
+{
+  "restored_dataset_files_sha_verified": 152,
+  "control_exact_trade_ids_and_net_pnl": "PASS",
+  "portfolio_reconciliations": 8,
+  "btc_regime_future_perturbation_and_truncation": "PASS",
+  "observations_checked": 8765,
+  "regime_selection_outcome_cutoff": "2025-01-01T00:00:00Z",
+  "live_promotion": false
+}
