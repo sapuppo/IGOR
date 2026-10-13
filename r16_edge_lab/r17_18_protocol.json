@@ -1,0 +1,67 @@
+{
+  "version": "R17.18",
+  "registered_before_run": true,
+  "variants": [
+    {
+      "id": "monthly_mom_30d_long",
+      "direction": "long",
+      "lookback_bars": 180,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    },
+    {
+      "id": "monthly_mom_30d_both",
+      "direction": "both",
+      "lookback_bars": 180,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    },
+    {
+      "id": "monthly_mom_90d_long",
+      "direction": "long",
+      "lookback_bars": 540,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    },
+    {
+      "id": "monthly_mom_90d_both",
+      "direction": "both",
+      "lookback_bars": 540,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    },
+    {
+      "id": "monthly_mom_180d_long",
+      "direction": "long",
+      "lookback_bars": 1080,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    },
+    {
+      "id": "monthly_mom_180d_both",
+      "direction": "both",
+      "lookback_bars": 1080,
+      "btc_gate": true,
+      "hold_bars": 180,
+      "stop": 0.05,
+      "target": 0.3
+    }
+  ],
+  "signal": "At UTC month start, rank preceding30/90/180day close return, select up to4 highestpositive forlong or4 lowestnegative forshort. Direction BTC previous180bar mean; shortonly if both variant and BTC bearish. Medianprevious42bar quotevolume>=5m. Features known at lastcompleted4h close. Monthlyrank must not use newmonth prices.",
+  "execution": "Same R17.10 audited forward4h engine, hold180bars=30days, stop5%target30%, 4x25%positions max1xentrygross, no leverage; existing positions not forcibly rotated before stop/time; no reentry withinmonth after stop. Rebalance as monthlyentryopportunity with time-bound exits. Fundingcloseproxy, stopfirst ambiguity.",
+  "selection": "Trainpositive with dailyDD<=25%, rank trainreturn; targetfullmonthly>=5%, full4hDD<=25% and all segmentspositive in both costs. Retrospectivealreadyviewed fixedcohort, no OOS or promotion.",
+  "costs": [
+    1,
+    2
+  ]
+}

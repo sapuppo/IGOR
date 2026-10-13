@@ -1,0 +1,67 @@
+{
+  "version": "R17.16",
+  "registered_before_current_run": true,
+  "variants": [
+    {
+      "id": "band_reversion_long_3",
+      "direction": "long",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 18,
+      "stop": 0.03,
+      "target": 0.06
+    },
+    {
+      "id": "band_reversion_long_5",
+      "direction": "long",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 42,
+      "stop": 0.05,
+      "target": 0.1
+    },
+    {
+      "id": "band_reversion_short_3",
+      "direction": "short",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 18,
+      "stop": 0.03,
+      "target": 0.06
+    },
+    {
+      "id": "band_reversion_short_5",
+      "direction": "short",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 42,
+      "stop": 0.05,
+      "target": 0.1
+    },
+    {
+      "id": "band_reversion_both_3",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 18,
+      "stop": 0.03,
+      "target": 0.06
+    },
+    {
+      "id": "band_reversion_both_5",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 42,
+      "stop": 0.05,
+      "target": 0.1
+    }
+  ],
+  "signal": "Previous4h close outside20bar mean +/-2sample std; currentclose reenters band and moves towards mean; previousRSI14<=30 forlong/>=70 forshort; 42bar median quotevolume>=5m; strongest previousband penetration first. No BTC trend gate.",
+  "execution": "Reuse audited R17.10 side-aware portfolio4h, nextopen, max4positions/cap25%/1x gross entry, stopfirst ambiguity, historicalfundingproxy, fee.06/slip.04% eachside +2xstress",
+  "selection": "Train2023-24 positive and event4hDD<=25%, rank trainreturn. Target fullcompoundmonthly>=5%, all train/2025/H12026 positive, DD<=25% in both costs. Historicalalreadyviewed, no independentOOS.",
+  "costs": [
+    1,
+    2
+  ]
+}

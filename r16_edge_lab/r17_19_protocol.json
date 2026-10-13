@@ -1,0 +1,61 @@
+{
+  "version": "R17.19",
+  "registered_before_run": true,
+  "variants": [
+    {
+      "id": "trail2_hold180",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 180,
+      "trail_atr": 2
+    },
+    {
+      "id": "trail2_hold540",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 540,
+      "trail_atr": 2
+    },
+    {
+      "id": "trail3_hold180",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 180,
+      "trail_atr": 3
+    },
+    {
+      "id": "trail3_hold540",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 540,
+      "trail_atr": 3
+    },
+    {
+      "id": "trail4_hold180",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 180,
+      "trail_atr": 4
+    },
+    {
+      "id": "trail4_hold540",
+      "lookback_bars": 55,
+      "direction": "both",
+      "btc_gate": true,
+      "hold_bars": 540,
+      "trail_atr": 4
+    }
+  ],
+  "signal": "Cross of prior55bar high/low with EMA50/200 aligned side, ADX14>=20 and median42bar quotevolume>=5m. BTC previous180bar mean gate. All completed4h observations.",
+  "exit": "Initialstop5%, no target; ratcheting stop from close +/-2/3/4ATR14 calculated after candleclose and applied nextbar. Hold30/90days. Same 4positions25%/1xentrygross, no leverage escalation; gaps filled currentopen adverse slip. Funding archived closeproxy.",
+  "costs": [
+    1,
+    2
+  ],
+  "selection": "Trainpositive and dailyDD<=25%, select trainreturn. Fullmonthly>=5%, full4hDD<=25%, all segmentspositive in both costs. Previouslyconsultedfixedcohort; no OOS/livepromotion."
+}

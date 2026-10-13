@@ -1,0 +1,11 @@
+test_long_stop_only_next_bar (test_r17_19_trailing.TrailingKnowledgeTests.test_long_stop_only_next_bar) ... /workspace/scratch/8e098ec99472/IGOR/r16_edge_lab/r17_19_trailing_engine.py:113: UserWarning: Converting to Period representation will drop timezone information.
+  'max_4h_mtm_drawdown':maxdd,'max_gross_equity':maxgross,'monthly':{str(k.to_period('M')):float(x) for k,x in mr.items()},
+ok
+test_short_stop_only_next_bar (test_r17_19_trailing.TrailingKnowledgeTests.test_short_stop_only_next_bar) ... /workspace/scratch/8e098ec99472/IGOR/r16_edge_lab/r17_19_trailing_engine.py:113: UserWarning: Converting to Period representation will drop timezone information.
+  'max_4h_mtm_drawdown':maxdd,'max_gross_equity':maxgross,'monthly':{str(k.to_period('M')):float(x) for k,x in mr.items()},
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.063s
+
+OK

@@ -1,0 +1,89 @@
+{
+  "version": "R17.15",
+  "registered_before_performance": true,
+  "variants": [
+    {
+      "id": "breakout20_runner",
+      "families": [
+        "breakout20"
+      ],
+      "stop": 3,
+      "target": 12,
+      "hold": 90
+    },
+    {
+      "id": "breakout55_runner",
+      "families": [
+        "breakout55"
+      ],
+      "stop": 3,
+      "target": 12,
+      "hold": 90
+    },
+    {
+      "id": "squeeze20_runner",
+      "families": [
+        "squeeze20"
+      ],
+      "stop": 2,
+      "target": 8,
+      "hold": 60
+    },
+    {
+      "id": "pullback_trend",
+      "families": [
+        "pullback"
+      ],
+      "stop": 2,
+      "target": 6,
+      "hold": 30
+    },
+    {
+      "id": "reversal4",
+      "families": [
+        "reversal4"
+      ],
+      "stop": 3,
+      "target": 3,
+      "hold": 24
+    },
+    {
+      "id": "reversal8_runner",
+      "families": [
+        "reversal8"
+      ],
+      "stop": 3,
+      "target": 6,
+      "hold": 48
+    },
+    {
+      "id": "pair_break20_rev4",
+      "families": [
+        "breakout20",
+        "reversal4"
+      ],
+      "stop": 3,
+      "target": 9,
+      "hold": 60
+    },
+    {
+      "id": "pair_squeeze_rev8",
+      "families": [
+        "squeeze20",
+        "reversal8"
+      ],
+      "stop": 3,
+      "target": 9,
+      "hold": 60
+    }
+  ],
+  "target": "5% equivalent compound monthly after costs; does not mean every month >=5%",
+  "costs": [
+    1,
+    2
+  ],
+  "risk": "Original1x gross at entry, risk per trade and maxstoprisk unchanged, cap40%; no leverage/risk escalation",
+  "selection": "Select highest 2023-2024 compound return among positive candidates with event DD<=25%. Evaluate previously consulted 2025/H12026. Qualified only if full monthly>=5%, all evaluation segments positive, full eventDD<=25%, and doubled costs also pass these full/segment requirements. No genuine OOS claims.",
+  "features": "4h breakout20/55 prior high cross, EMA50>EMA200 and close>EMA50, ADX>=20, breadth>=.45, BTC close>EMA200; squeeze additionally priorATR/close<prior252bar median and bar range>1.5priorATR; pullback priorclose<=priorEMA20 then close>EMA20 in same trend context. 1h reversal4:6hmove<=-4%,volz>=2,RSI<=30,body>=.6; reversal8: original8%/1.5/35/.6. Complete candles only, next15m delayed fill. All families use existing CORE or REV1H identifiers and unchanged rolling shadow-score gate. Pair stop/target/hold overrides both engines, hold measured in engine interval.",
+  "limitations": "Previously consulted historical fixed38cohort, funding price proxy, OHLC stop assumptions, finite tests registered per batch; valid negative results must be retained."
+}

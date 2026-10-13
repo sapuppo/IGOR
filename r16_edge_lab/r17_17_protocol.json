@@ -1,0 +1,67 @@
+{
+  "version": "R17.17",
+  "registered_before_current_run": true,
+  "hypothesis": "Failed countertrend signals may identify trend persistence; test continuation after band re-entry, not negated historical PnL. This hypothesis is informed by R17.16 failures and is not independent OOS.",
+  "signal": "Same causal extreme/reentry events as R17.16, opposite trade direction: long after overbought pullback, short after oversold bounce. Fresh forward execution replay with new stops/targets/funding sign/costs. Optional BTC prior180closemean alignment.",
+  "variants": [
+    {
+      "id": "continuation_3_6",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 18,
+      "stop": 0.03,
+      "target": 0.06
+    },
+    {
+      "id": "continuation_6_3",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 18,
+      "stop": 0.06,
+      "target": 0.03
+    },
+    {
+      "id": "continuation_5_10",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 42,
+      "stop": 0.05,
+      "target": 0.1
+    },
+    {
+      "id": "continuation_10_5",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": false,
+      "hold_bars": 42,
+      "stop": 0.1,
+      "target": 0.05
+    },
+    {
+      "id": "continuation_btc_3_6",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": true,
+      "hold_bars": 18,
+      "stop": 0.03,
+      "target": 0.06
+    },
+    {
+      "id": "continuation_btc_5_10",
+      "direction": "both",
+      "lookback_bars": 120,
+      "btc_gate": true,
+      "hold_bars": 42,
+      "stop": 0.05,
+      "target": 0.1
+    }
+  ],
+  "costs": [
+    1,
+    2
+  ],
+  "selection": "Trainpositive and dailyDD<=25%; select trainreturn. Target>=5%fullcompoundmonthly and full4hDD<=25%, alltrain/2025/H12026positive in both costs. No risk/leverage escalation; no independentOOS/livepromotion."
+}
