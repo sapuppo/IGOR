@@ -1,0 +1,16 @@
+{
+  "decision": "For each family choose side with greatest sum normalized trade net among exits strictly before 2025; positive score required, min30 closed trades; tie long. Derived after first audit batch. 2025-26 not untouched.",
+  "selection_period": "2023-2024",
+  "test_start": "2025-01-01",
+  "costs": [
+    1,
+    2
+  ],
+  "risk": {
+    "risk_fraction": 0.0025,
+    "max_weight": 0.15,
+    "max_exposure": 0.6,
+    "atr_stop": 2
+  },
+  "live_promotion": false
+}

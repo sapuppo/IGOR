@@ -1,0 +1,140 @@
+{
+  "version": "R17.20",
+  "costs": [
+    1,
+    2
+  ],
+  "variants": [
+    {
+      "id": "failed_break_gate0_hold18",
+      "lookback_bars": 20,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "failed_break_gate0_hold42",
+      "lookback_bars": 20,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    },
+    {
+      "id": "failed_break_gate1_hold18",
+      "lookback_bars": 20,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "failed_break_gate1_hold42",
+      "lookback_bars": 20,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    },
+    {
+      "id": "relative_btc_gate0_hold18",
+      "lookback_bars": 42,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "relative_btc_gate0_hold42",
+      "lookback_bars": 42,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    },
+    {
+      "id": "relative_btc_gate1_hold18",
+      "lookback_bars": 42,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "relative_btc_gate1_hold42",
+      "lookback_bars": 42,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    },
+    {
+      "id": "volume_impulse_gate0_hold18",
+      "lookback_bars": 6,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "volume_impulse_gate0_hold42",
+      "lookback_bars": 6,
+      "direction": "both",
+      "btc_gate": false,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    },
+    {
+      "id": "volume_impulse_gate1_hold18",
+      "lookback_bars": 6,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.03,
+      "target": 0.06,
+      "hold_bars": 18
+    },
+    {
+      "id": "volume_impulse_gate1_hold42",
+      "lookback_bars": 6,
+      "direction": "both",
+      "btc_gate": true,
+      "stop": 0.05,
+      "target": 0.15,
+      "hold_bars": 42
+    }
+  ],
+  "goal_monthly": 0.15,
+  "max_drawdown": 0.25,
+  "created_before_results": true,
+  "selection": "2023-2024 positive return and DD<=25%; highest training return; require positive 2025 and H1 2026 and full monthly>=15% with DD<=25% under BOTH costs",
+  "data_status": "Previously consulted fixed universe; retrospective research, NOT untouched OOS",
+  "risk": "4 positions max, each 25% equity, total entry exposure <=100%; no leverage increase",
+  "causality": "Closed bar signals, next open entry; prefix invariance asserted at 2025 boundary",
+  "limitations": [
+    "Survivorship and universe selection bias",
+    "Funding uses traded close proxy, not historical mark",
+    "No historical bid-ask order book",
+    "4h stop ambiguity conservative stop first",
+    "Intrabar equity drawdown may exceed measured 4h drawdown"
+  ],
+  "hypotheses": {
+    "failed_break": "Pierce prior20 high/low then close inside with opposite candle",
+    "relative_btc": "7day return minus BTC crosses +/-5%, EMA50 aligned",
+    "volume_impulse": "24h return crosses +/-4%, volume >=2x prior42 median"
+  },
+  "sources": [
+    "https://www.binance.com/en/support/faq/detail/360033525031"
+  ],
+  "stretch_goal_monthly": 0.2
+}

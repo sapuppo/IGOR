@@ -1,0 +1,36 @@
+{
+  "version": "R17.21",
+  "goal_monthly": 0.15,
+  "stretch_goal": 0.2,
+  "max_dd": 0.25,
+  "costs": [
+    1,
+    2
+  ],
+  "hypotheses": [
+    "Original versus corrected engine separates accounting from alpha changes",
+    "ATR stop and risk-normalized sizing reduce uneven trade losses",
+    "24h per-symbol cooldown reduces repeated failed entries"
+  ],
+  "variants": [
+    "legacy",
+    "corrected",
+    "risk",
+    "risk_cooldown"
+  ],
+  "signals": [
+    "trail55",
+    "volume_impulse"
+  ],
+  "risk": {
+    "risk_fraction": 0.0025,
+    "max_weight": 0.15,
+    "max_exposure": 0.6,
+    "atr_stop": 2,
+    "cooldown_bars": 6
+  },
+  "dataset": "Fixed existing 38 symbols 152 files Jan2023-Jun2026 already consulted NOT independent OOS",
+  "walk_forward": "Diagnostic annual/half-year segments only. New rules designed after observing historical failures. No claim of untouched validation.",
+  "funding": "Existing positions settle at bar open before exits; new positions after settlement; open/close traded proxies, no official historical mark",
+  "promotion": "No live deployment; 15% monthly, <=25% DD and positive segments both costs required"
+}

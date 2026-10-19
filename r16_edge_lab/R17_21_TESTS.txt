@@ -1,0 +1,12 @@
+test_ambiguous_bar_stop_first (test_r17_21_audit.Audit.test_ambiguous_bar_stop_first) ... ok
+test_cooldown_prevents_reentry_after_stop (test_r17_21_audit.Audit.test_cooldown_prevents_reentry_after_stop) ... ok
+test_existing_position_pays_funding_before_time_exit (test_r17_21_audit.Audit.test_existing_position_pays_funding_before_time_exit) ... ok
+test_independent_trade_accounting (test_r17_21_audit.Audit.test_independent_trade_accounting) ... ok
+test_new_entry_after_boundary_does_not_receive_old_funding (test_r17_21_audit.Audit.test_new_entry_after_boundary_does_not_receive_old_funding) ... ok
+test_risk_budget_position_size (test_r17_21_audit.Audit.test_risk_budget_position_size) ... ok
+test_terminal_cost_in_drawdown_and_cash (test_r17_21_audit.Audit.test_terminal_cost_in_drawdown_and_cash) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.038s
+
+OK
