@@ -1,0 +1,8 @@
+test_no_same_timestamp_or_future (test_r17_22_flow.Causality.test_no_same_timestamp_or_future) ... ok
+test_oi_required_not_synthesized_from_volume (test_r17_22_flow.Causality.test_oi_required_not_synthesized_from_volume) ... ok
+test_stale_and_missing_fail_closed (test_r17_22_flow.Causality.test_stale_and_missing_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+OK

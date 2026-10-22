@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "version": "R17.22",
+  "goal_achieved": false,
+  "historical_flow_funding_monthly": 0.003126599168936206,
+  "recent_full_hypothesis_return": 0,
+  "recent_full_hypothesis_trades": 0,
+  "simulations": 14,
+  "remaining": "Long independent OI history and enough trades not validated",
+  "running_jobs": false,
+  "report": "r16_edge_lab/R17_22_RESULTADO_PT.md"
+}
