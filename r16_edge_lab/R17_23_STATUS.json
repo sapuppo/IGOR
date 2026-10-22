@@ -1,1 +1,12 @@
-{"status":"running","version":"R17.23","stage":"Collecting and checking daily historical OI; no results yet"}
+{
+  "status": "completed",
+  "version": "R17.23",
+  "verified_archives": 6420,
+  "missing_or_error": 0,
+  "months": 42,
+  "goal_achieved": false,
+  "full_hypothesis_monthly": 0.0001298943947762865,
+  "full_hypothesis_dd": 0.004484792240209368,
+  "full_hypothesis_trades": 2,
+  "running_jobs": false
+}
