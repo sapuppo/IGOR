@@ -1,0 +1,19 @@
+{
+  "csv_equity_trade_monthly_reconciliations": [
+    "hb_bollinger_gate0_cost1",
+    "hb_bollinger_gate0_cost2",
+    "hb_bollinger_gate1_cost1",
+    "hb_bollinger_gate1_cost2",
+    "hb_macd_bb_gate0_cost1",
+    "hb_macd_bb_gate0_cost2",
+    "hb_macd_bb_gate1_cost1",
+    "hb_macd_bb_gate1_cost2",
+    "ft_ema_ha_gate0_cost1",
+    "ft_ema_ha_gate0_cost2",
+    "ft_ema_ha_gate1_cost1",
+    "ft_ema_ha_gate1_cost2",
+    "control_volume_gate1_cost1",
+    "control_volume_gate1_cost2"
+  ],
+  "passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "version": "R17.24",
+  "status": "completed",
+  "completed_date": "2026-10-25",
+  "replays": 14,
+  "tests_passed": 14,
+  "goal_achieved": false,
+  "live_promotion": false,
+  "report": "R17_24_RESULTADO_PT.md",
+  "best_new": "ft_ema_ha_gate1_cost1",
+  "best_new_monthly": 0.003753922819220712
+}
