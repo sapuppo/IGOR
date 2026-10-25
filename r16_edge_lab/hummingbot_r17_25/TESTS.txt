@@ -1,0 +1,15 @@
+test_ambiguous_bar_stop_first (test_research.ResearchTests.test_ambiguous_bar_stop_first) ... ok
+test_entry_latency_and_trade_accounting (test_research.ResearchTests.test_entry_latency_and_trade_accounting) ... ok
+test_funding_existing_only_at_boundary (test_research.ResearchTests.test_funding_existing_only_at_boundary) ... ok
+test_maker_dual_fill_and_touch_rejected (test_research.ResearchTests.test_maker_dual_fill_and_touch_rejected) ... ok
+test_maker_no_entry_bar_target_profit (test_research.ResearchTests.test_maker_no_entry_bar_target_profit) ... ok
+test_no_future_feature_leakage (test_research.ResearchTests.test_no_future_feature_leakage) ... ok
+test_prior_breakout_excludes_signal_bar (test_research.ResearchTests.test_prior_breakout_excludes_signal_bar) ... ok
+test_regime_routing (test_research.ResearchTests.test_regime_routing) ... ok
+test_risk_drawdown_and_streak (test_research.ResearchTests.test_risk_drawdown_and_streak) ... ok
+test_tick_lot_and_min_notional (test_research.ResearchTests.test_tick_lot_and_min_notional) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.077s
+
+OK
