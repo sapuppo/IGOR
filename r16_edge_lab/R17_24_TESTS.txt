@@ -1,0 +1,19 @@
+test_bollinger_macd_predicates (test_r17_24_online.OnlineStrategies.test_bollinger_macd_predicates) ... ok
+test_flat_price_no_signal (test_r17_24_online.OnlineStrategies.test_flat_price_no_signal) ... ok
+test_ft_cross_not_persistent_no_short (test_r17_24_online.OnlineStrategies.test_ft_cross_not_persistent_no_short) ... ok
+test_heikin_ashi_uses_prior_bar (test_r17_24_online.OnlineStrategies.test_heikin_ashi_uses_prior_bar) ... ok
+test_liquidity_and_duplicate_guard (test_r17_24_online.OnlineStrategies.test_liquidity_and_duplicate_guard) ... ok
+test_next_open_and_prefix_invariance (test_r17_24_online.OnlineStrategies.test_next_open_and_prefix_invariance) ... ok
+test_seeded_ema_known_recurrence (test_r17_24_online.OnlineStrategies.test_seeded_ema_known_recurrence) ... ok
+test_ambiguous_bar_stop_first (test_r17_21_audit.Audit.test_ambiguous_bar_stop_first) ... ok
+test_cooldown_prevents_reentry_after_stop (test_r17_21_audit.Audit.test_cooldown_prevents_reentry_after_stop) ... ok
+test_existing_position_pays_funding_before_time_exit (test_r17_21_audit.Audit.test_existing_position_pays_funding_before_time_exit) ... ok
+test_independent_trade_accounting (test_r17_21_audit.Audit.test_independent_trade_accounting) ... ok
+test_new_entry_after_boundary_does_not_receive_old_funding (test_r17_21_audit.Audit.test_new_entry_after_boundary_does_not_receive_old_funding) ... ok
+test_risk_budget_position_size (test_r17_21_audit.Audit.test_risk_budget_position_size) ... ok
+test_terminal_cost_in_drawdown_and_cash (test_r17_21_audit.Audit.test_terminal_cost_in_drawdown_and_cash) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.098s
+
+OK

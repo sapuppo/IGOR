@@ -1,0 +1,32 @@
+{
+  "retrieved_utc": "2026-10-25",
+  "sources": [
+    {
+      "project": "Hummingbot",
+      "commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+      "files": [
+        {
+          "path": "controllers/directional_trading/bollinger_v1.py",
+          "blob_sha": "afa0d77241972276b88a0e287bbc37e38b6988c1",
+          "url": "https://github.com/hummingbot/hummingbot/blob/9af100d6822da7d2d0291a906c730ef172284ee2/controllers/directional_trading/bollinger_v1.py"
+        },
+        {
+          "path": "controllers/directional_trading/macd_bb_v1.py",
+          "blob_sha": "151a2990dbdf7f344c12d39d93cb4749b2f04344",
+          "url": "https://github.com/hummingbot/hummingbot/blob/9af100d6822da7d2d0291a906c730ef172284ee2/controllers/directional_trading/macd_bb_v1.py"
+        }
+      ]
+    },
+    {
+      "project": "Freqtrade strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "files": [
+        {
+          "path": "user_data/strategies/Strategy001.py",
+          "blob_sha": "352c344fdb07a56274357e1f534206cac8cc4995",
+          "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/Strategy001.py"
+        }
+      ]
+    }
+  ]
+}

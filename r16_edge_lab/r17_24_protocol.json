@@ -1,0 +1,18 @@
+{
+  "version": "R17.24",
+  "registered_before_replays": true,
+  "start": "2023-01-01T00:00Z",
+  "end_exclusive": "2026-07-01T00:00Z",
+  "modes": ["hb_bollinger", "hb_macd_bb", "ft_ema_ha", "control_volume"],
+  "btc_gates": [false, true],
+  "costs": [1, 2],
+  "risk": {"risk_fraction": 0.0025, "max_weight": 0.15, "max_exposure": 0.6, "atr_stop": 2},
+  "target": 0.15,
+  "hold_bars": 42,
+  "goal_monthly": 0.15,
+  "max_drawdown": 0.25,
+  "minimum_trades": 100,
+  "changes_from_sources": ["4h instead of original 3m/5m", "IGOR ATR stop, 15% target and 7-day time exit instead of source exit management", "4 simultaneous positions, 0.25% planned risk, 15% weight and 60% entry exposure caps", "42-bar median quote liquidity >=5m USDT", "BTC gate off/on finite comparison", "SMA-seeded recursive EMA and population Bollinger deviation; no dependency on TA-Lib/pandas-ta", "Full available causal warmup rather than rolling source feed window", "FT signal only long; perpetual execution includes funding", "Next-open taker fills with adverse slippage instead of source limit execution"],
+  "selection": "Report all six adaptations and control; no post-result parameter search; previously consulted data is not independent OOS",
+  "live_promotion": false
+}
