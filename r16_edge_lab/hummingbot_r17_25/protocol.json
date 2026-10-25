@@ -1,0 +1,18 @@
+{
+ "version":"R17.25-HB", "base_commit":"d3d2248731cd2d96b71098a239aa5e9a649390ac",
+ "branch":"research-hummingbot-r17-25-isolated", "baseline":"Frozen R17.24 volume impulse comparator; not live R16.24.2 parity",
+ "symbols":["BTCUSDT","ETHUSDT","SOLUSDT","BNBUSDT","XRPUSDT"],
+ "signal_interval":"4h", "execution_interval":"15m", "training_start":"2023-01-01", "historical_end":"2026-07-01",
+ "fresh_holdout":["2026-07-01","2026-09-01"], "holdout_reason":"Not used in prior R17 tests available in this conversation; only 62 days, not prospective live evidence",
+ "folds":[["2023-01-01","2024-01-01","2024-07-01"],["2023-07-01","2024-07-01","2025-01-01"],["2024-01-01","2025-01-01","2025-07-01"],["2024-07-01","2025-07-01","2026-01-01"],["2025-01-01","2026-01-01","2026-07-01"],["2025-07-01","2026-07-01","2026-09-01"]],
+ "selection":"Within family use training net return / max(DD,0.01); require >=20 closed trades, positive net, PF>1 and DD<20%, otherwise cash. Tie lexicographic. Train ends 7 days before validation; flat portfolios at boundaries; liquidation costs included. Choose on normal costs only, freeze same choice for stress. Holdout opened only after final training selection written.",
+ "candidates":[{"id":"trend20","family":"trend","breakout":20,"spread_atr":1},{"id":"trend55","family":"trend","breakout":55,"spread_atr":1},{"id":"trend_relaxed","family":"trend","breakout":0,"spread_atr":1},{"id":"pmm1","family":"pmm","breakout":20,"spread_atr":1},{"id":"pmm2","family":"pmm","breakout":20,"spread_atr":2},{"id":"hybrid20","family":"hybrid","breakout":20,"spread_atr":1},{"id":"hybrid55","family":"hybrid","breakout":55,"spread_atr":2},{"id":"hybrid_trend_only","family":"hybrid","breakout":20,"spread_atr":0}],
+ "alternatives":"trend_relaxed removes breakout and requires fresh momentum sign transition; hybrid_trend_only stays cash in range instead of quoting; fixed before performance",
+ "risk":{"fraction":0.0025,"max_symbol_weight":0.15,"gross_entry_cap":0.6,"max_positions":4,"soft_dd":0.08,"hard_dd":0.20,"loss_streak":3,"pause_hours":24},
+ "fees":{"taker":0.0006,"maker":0.0002,"half_spread":0.0002,"slippage":0.0004,"stress_multiplier":2},
+ "execution":"One 15m latency, post-only crossing rejection, quotes expire next 4h decision, penetration 2bps base/10bps stress, no target profit on maker entry bar, stop-first ambiguity, skip dual-side fills, prior 15m quote-volume participation <=0.1%, current tick/lot/min-notional snapshot. Funding uses traded open proxy, conservative new-maker intrabar funding. No queue/L2 reconstruction; market-making profitability provisional.",
+ "promotion":"No auto-promotion. Require net improvement over reference, >=5% equivalent monthly, DD<=20%, Sharpe>=1, PF>=1.2, >=100 OOS trades, positive 4/5 historical folds and positive holdout under both costs. Prior history remains research-contaminated.",
+ "hummingbot_commit":"9af100d6822da7d2d0291a906c730ef172284ee2",
+ "sources":["controllers/directional_trading/supertrend_v1.py","controllers/market_making/pmm_dynamic.py"],
+ "adaptations":"SuperTrend20x4 plus 42-bar momentum and prior-high/low breakout replaces 1% proximity rule. PMM causal rolling142 MACD z-score, clipped to +/-3, NATR14 quotes, one level each side. Hybrid efficiency ratio42: >=0.35 trend, <=0.20 range, transition cash. Long/short perpetual positions, no accumulating DCA."
+}
