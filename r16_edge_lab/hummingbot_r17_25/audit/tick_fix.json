@@ -1,0 +1,6 @@
+{
+  "reason": "Regression test identified entry price tick rounding could slightly exceed planned notional; quantity re-floored after final price",
+  "parameter_changes": false,
+  "first_holdout_already_observed": true,
+  "rerun_required": true
+}

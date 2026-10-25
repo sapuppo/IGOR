@@ -6,10 +6,13 @@ test_maker_no_entry_bar_target_profit (test_research.ResearchTests.test_maker_no
 test_no_future_feature_leakage (test_research.ResearchTests.test_no_future_feature_leakage) ... ok
 test_prior_breakout_excludes_signal_bar (test_research.ResearchTests.test_prior_breakout_excludes_signal_bar) ... ok
 test_regime_routing (test_research.ResearchTests.test_regime_routing) ... ok
+test_resting_quote_gap_gets_adverse_stop_price (test_research.ResearchTests.test_resting_quote_gap_gets_adverse_stop_price) ... ok
 test_risk_drawdown_and_streak (test_research.ResearchTests.test_risk_drawdown_and_streak) ... ok
+test_risk_sizing_includes_execution_costs (test_research.ResearchTests.test_risk_sizing_includes_execution_costs) ... ok
+test_same_bar_loss_cannot_change_other_entry_size (test_research.ResearchTests.test_same_bar_loss_cannot_change_other_entry_size) ... ok
 test_tick_lot_and_min_notional (test_research.ResearchTests.test_tick_lot_and_min_notional) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.077s
+Ran 13 tests in 0.093s
 
 OK

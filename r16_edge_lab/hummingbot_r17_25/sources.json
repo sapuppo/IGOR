@@ -1,0 +1,15 @@
+{
+  "hummingbot_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+  "retrieved_date": "2026-10-25",
+  "sources": [
+    {
+      "path": "controllers/market_making/pmm_dynamic.py",
+      "url": "https://github.com/hummingbot/hummingbot/blob/9af100d6822da7d2d0291a906c730ef172284ee2/controllers/market_making/pmm_dynamic.py"
+    },
+    {
+      "path": "controllers/directional_trading/supertrend_v1.py",
+      "url": "https://github.com/hummingbot/hummingbot/blob/9af100d6822da7d2d0291a906c730ef172284ee2/controllers/directional_trading/supertrend_v1.py"
+    }
+  ],
+  "implementation": "Independent mathematical adaptation; no Hummingbot runtime vendored."
+}

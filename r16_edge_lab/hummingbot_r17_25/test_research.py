@@ -59,4 +59,23 @@ class ResearchTests(unittest.TestCase):
   # Bid99 fills, target100 reached but uncertain sequence: cannot exit profit same bar.
   r,d,tr=replay(ds,dict(id='p',family='pmm',breakout=20,spread_atr=1),start,start+DAY)
   self.assertGreaterEqual(tr[0]['exit'],start+2*STEP);self.assertEqual(tr[0]['reason'],'GAP_TARGET')
+ def test_same_bar_loss_cannot_change_other_entry_size(self):
+  spec=dict(id='t',family='trend',breakout=20,spread_atr=1)
+  sizes=[]
+  for crash in [False,True]:
+   ds,start=fixture();ds['features']['ETHUSDT']['liq']=True
+   if crash:
+    i=(start+STEP-ds['start'])//STEP;ds['prices']['BTCUSDT'][i]=[100,100,80,100,1e8]
+   _,_,tr=replay(ds,spec,start,start+DAY)
+   sizes.append(next(x['qty'] for x in tr if x['symbol']=='ETHUSDT'))
+  self.assertEqual(sizes[0],sizes[1])
+ def test_resting_quote_gap_gets_adverse_stop_price(self):
+  ds,start=fixture();i=(start+2*STEP-ds['start'])//STEP
+  ds['prices']['BTCUSDT'][i]=[90,91,89,90,1e8]
+  _,_,tr=replay(ds,dict(id='p',family='pmm',breakout=20,spread_atr=1),start,start+DAY)
+  self.assertEqual(tr[0]['entry_fill'],99);self.assertLessEqual(tr[0]['exit_fill'],90)
+ def test_risk_sizing_includes_execution_costs(self):
+  ds,start=fixture();_,_,tr=replay(ds,dict(id='t',family='trend',breakout=20,spread_atr=1),start,start+DAY)
+  x=tr[0];notional=x['qty']*x['entry_fill']
+  self.assertLessEqual(notional,10000*.0025/(.02+.0006+.0006+2*.0006)+.2)
 if __name__=='__main__':unittest.main()

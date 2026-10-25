@@ -1,6 +1,6 @@
 """Run finite training/validation protocol; all outcomes retained, no live orders."""
 from pathlib import Path
-import json,hashlib,time
+import json,hashlib,time,gzip,sys
 import numpy as np,pandas as pd
 from data import load,ms,DAY,SYMS
 from engine import replay,metrics
@@ -12,7 +12,9 @@ def save(key,result):
  marks=r.pop('intraday_details',None)
  if key.startswith('validation'):
   if marks is None:marks=[dict(timestamp=v,equity=10000.) for v in range(d[0]['timestamp']-DAY+900000,d[-1]['timestamp']+1,900000)]
-  pd.DataFrame(marks).to_csv(O/(key+'_intraday.csv.gz'),index=False,compression='gzip')
+  raw=pd.DataFrame(marks).to_csv(index=False).encode();compressed=gzip.compress(raw,mtime=0)
+  assert gzip.decompress(compressed)==raw
+  tmp=O/(key+'_intraday.tmp');tmp.write_bytes(compressed);tmp.replace(O/(key+'_intraday.csv.gz'))
  pd.DataFrame(d).to_csv(O/(key+'_daily.csv'),index=False)
  pd.DataFrame(t,columns=['symbol','entry','exit','side','qty','entry_fill','exit_fill','entry_fee','exit_fee','funding','net','reason','mode','regime']).to_csv(O/(key+'_trades.csv'),index=False)
  (O/(key+'.json')).write_text(json.dumps(r,indent=2,allow_nan=False)+'\n')
@@ -59,6 +61,9 @@ def main():
     else:
      result=replay(ds,spec,ms(b),ms(c),cost,adaptive=family!='control');result[0]['selected']=spec['id']
     validation[key]=save(key,result)
+ finalize(full,training,selection,validation,selhash)
+
+def finalize(full,training,selection,validation,selhash):
  combined={}
  for family in ['trend','pmm','hybrid','control']:
   for cost in [1,2]:
@@ -85,4 +90,11 @@ def main():
   if ok:passes.append(family)
  report=dict(version='R17.25-HB',full=full,training=training,selection=selection,selection_sha256=selhash,validation=validation,combined=combined,passes_promotion_gates=passes,live_promotion=False,walk_forward_note='Historical periods previously consulted in earlier research; only Jul-Aug2026 withheld from this study until selection frozen; not prospective live OOS',protocol_sha256=hashlib.sha256((R/'protocol.json').read_bytes()).hexdigest())
  (O/'summary.json').write_text(json.dumps(report,indent=2,allow_nan=False)+'\n');print('COMPLETE',passes,flush=True)
-if __name__=='__main__':main()
+if __name__=='__main__':
+ if '--finalize' in sys.argv:
+  get=lambda f:json.loads(f.read_text())
+  full={f.stem:get(f) for f in O.glob('historical_*.json')}
+  training={str(j):{s['id']:get(O/(f'train{j}_'+s['id']+'.json')) for s in P['candidates']} for j in range(6)}
+  selection=get(O/'selection_frozen.json');validation={f.stem:get(f) for f in O.glob('validation*.json')}
+  finalize(full,training,selection,validation,get(O/'selection_freeze.json')['sha256'])
+ else:main()

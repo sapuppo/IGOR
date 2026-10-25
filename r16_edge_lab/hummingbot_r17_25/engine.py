@@ -72,6 +72,11 @@ def replay(ds,spec,start,end,cost=1,adaptive=True):
   price,qty=rounded
   # Quotes must preserve exact tick level; taker adverse fill rounded adversely.
   if mode!='pmm':price=(math.ceil(fill/rules[s]['tick']) if side==1 else math.floor(fill/rules[s]['tick']))*rules[s]['tick']
+  # Adverse tick rounding can raise notional above its risk budget. Re-floor
+  # quantity using the FINAL fill price, including the market-lot maximum.
+  qty=math.floor(min(qty,budget/price)/rules[s]['step']+1e-9)*rules[s]['step']
+  if qty<rules[s]['minqty'] or qty*price<rules[s]['minnotional']:
+   stats['min_order_rejections']+=1;return False
   charge=qty*price*entryfee;cash-=charge;entry_equity-=charge;entry_gross+=qty*price;stats['fees']+=charge
   if mode!='pmm':stats['friction_cost']+=qty*ref*friction
   target=price*(1+side*.15) if spec['family']=='control' else price+side*atr if mode=='pmm' else side*float('inf')
