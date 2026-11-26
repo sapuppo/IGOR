@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-26",
+  "reviewed_repositories": [
+    {
+      "repository": "galleonlabs/hypergrok-trading-desk",
+      "commit": "98331af5c407f1929a8aa3869d932eb7680760fb",
+      "license": "MIT"
+    },
+    {
+      "repository": "freqtrade/freqtrade",
+      "commit": "38113b83547857a6cc7f9709511fa90a624cc5bc",
+      "license": "GPL-3.0"
+    },
+    {
+      "repository": "virattt/ai-hedge-fund",
+      "commit": "5c553b5222044f6a5527bd377b4104c50ee0ad28",
+      "license": "MIT"
+    },
+    {
+      "repository": "HKUDS/Vibe-Trading",
+      "commit": "0ec47cd0c92b4bcc1673283621620072a367a698",
+      "license": "MIT"
+    },
+    {
+      "repository": "bmoscon/cryptofeed",
+      "commit": "cb27c73f0e42542e892f46c35de57cc5d8fede97",
+      "license": "NOASSERTION"
+    }
+  ],
+  "reused": [
+    {
+      "repository": "galleonlabs/hypergrok-trading-desk",
+      "path": "scripts/stop_cost.py",
+      "functions": [
+        "UnpriceableStop",
+        "lot",
+        "round_down",
+        "price_stop"
+      ],
+      "local": "third_party/hypergrok_stop.py",
+      "role": "Exact pure stressed-stop sizing functions used by replay; no network/CLI helpers copied",
+      "license": "MIT"
+    },
+    {
+      "repository": "HKUDS/Vibe-Trading",
+      "path": "agent/src/quantlib/risk.py",
+      "local": "third_party/vibe_risk.py",
+      "role": "Independent drawdown/risk verification",
+      "license": "MIT"
+    }
+  ],
+  "not_copied": [
+    {
+      "repository": "freqtrade/freqtrade",
+      "reason": "Reviewed FreqAI LightGBMClassifier as existing alternative; no Freqtrade code vendored or model weights available in cited post. Installed sklearn implements gradient trees used by this study; GPL bot integration would be separate."
+    },
+    {
+      "repository": "virattt/ai-hedge-fund",
+      "reason": "Educational/paper system; no pretrained crypto scalp edge in reviewed paths."
+    },
+    {
+      "repository": "bmoscon/cryptofeed",
+      "reason": "Real feed normalization useful for future forward collector; current head requires Python3.13+, current environment3.12. No code vendored."
+    }
+  ],
+  "claims": "No source, weights, training set or audited wallet linking exact viral dashboard to these repositories was found. No model return claim adopted."
+}

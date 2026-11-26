@@ -1,0 +1,17 @@
+test_ambiguous_labels_stop_first (test_research.ResearchTests.test_ambiguous_labels_stop_first) ... ok
+test_book_imbalance_not_volume_proxy (test_research.ResearchTests.test_book_imbalance_not_volume_proxy) ... ok
+test_book_strict_past_and_stale (test_research.ResearchTests.test_book_strict_past_and_stale) ... ok
+test_conflicting_book_duplicates_rejected (test_research.ResearchTests.test_conflicting_book_duplicates_rejected) ... ok
+test_features_prefix_and_future_perturbation (test_research.ResearchTests.test_features_prefix_and_future_perturbation) ... ok
+test_imported_drawdown_includes_initial_capital (test_research.ResearchTests.test_imported_drawdown_includes_initial_capital) ... ok
+test_imported_stressed_stop_stays_within_budget (test_research.ResearchTests.test_imported_stressed_stop_stays_within_budget) ... ok
+test_kalman_prefix_invariance (test_research.ResearchTests.test_kalman_prefix_invariance) ... ok
+test_label_entry_after_latency (test_research.ResearchTests.test_label_entry_after_latency) ... ok
+test_loss_pause_and_drawdown_halt (test_research.ResearchTests.test_loss_pause_and_drawdown_halt) ... ok
+test_rank_cost_and_duration (test_research.ResearchTests.test_rank_cost_and_duration) ... ok
+test_rounding_final_fill_preserves_budget (test_research.ResearchTests.test_rounding_final_fill_preserves_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.026s
+
+OK
