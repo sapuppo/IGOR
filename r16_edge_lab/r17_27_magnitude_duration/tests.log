@@ -1,0 +1,20 @@
+test_atr_scaling (test_r27.Tests.test_atr_scaling) ... ok
+test_conditional_gain_loss (test_r27.Tests.test_conditional_gain_loss) ... ok
+test_cost_and_book (test_r27.Tests.test_cost_and_book) ... ok
+test_direct_conservative (test_r27.Tests.test_direct_conservative) ... ok
+test_duration_and_horizon (test_r27.Tests.test_duration_and_horizon) ... ok
+test_feature_prefix (test_r27.Tests.test_feature_prefix) ... ok
+test_future_intrabar_cannot_change_entry (test_r27.Tests.test_future_intrabar_cannot_change_entry) ... ok
+test_horizon_exit (test_r27.Tests.test_horizon_exit) ... ok
+test_label_stop_first (test_r27.Tests.test_label_stop_first) ... ok
+test_latency_funding_reconciliation (test_r27.Tests.test_latency_funding_reconciliation) ... ok
+test_negative_ev_skip (test_r27.Tests.test_negative_ev_skip) ... ok
+test_purge_and_book_cohort (test_r27.Tests.test_purge_and_book_cohort) ... ok
+test_qty_floor_minimum (test_r27.Tests.test_qty_floor_minimum) ... ok
+test_risk_pause_drawdown (test_r27.Tests.test_risk_pause_drawdown) ... ok
+test_stop_first_execution (test_r27.Tests.test_stop_first_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.164s
+
+OK
