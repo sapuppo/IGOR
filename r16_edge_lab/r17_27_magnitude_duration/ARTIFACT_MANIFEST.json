@@ -1,0 +1,2302 @@
+{
+  "COMPARISON.json": {
+    "bytes": 31761,
+    "sha256": "3ed7f6bb2375067e0e201317581c7538936802b956fce232144021aea0cd8e05"
+  },
+  "ENVIRONMENT.json": {
+    "bytes": 237,
+    "sha256": "6441ae10e330d8ebdf31ba0554aa5fbb68f05710beeb4c517ae03c1236cbaa9f"
+  },
+  "FORECAST_DIAGNOSTICS.json": {
+    "bytes": 13989,
+    "sha256": "3b5ed189a2f5d2c0a41daa0181b93e8da6427f49a1034d48e4f744c663a5d8e9"
+  },
+  "INPUT_HASHES.json": {
+    "bytes": 1221,
+    "sha256": "98c7f50760a95794ad5c63840296101a300d46efb5a8e0bbe9a9f9b0a5a92f46"
+  },
+  "PREREGISTERED_INTEGRITY.json": {
+    "bytes": 652,
+    "sha256": "39b505ce69574720da77f388eb591445a6cf1321713697999a7c7fff4d2b4842"
+  },
+  "README.md": {
+    "bytes": 3075,
+    "sha256": "393e596e9acfa813dc19d0bdb70f8af9c3973c720d3bbeea9f0729dd7d943767"
+  },
+  "RESULTADO_PT.md": {
+    "bytes": 15963,
+    "sha256": "f85fb3b7c74242ae45dfe1e733477a696d9e8bf792d91ca600d5ba009254d8eb"
+  },
+  "STATUS.json": {
+    "bytes": 3800,
+    "sha256": "05310c678d6d1abf0760519bdaf140d44eb16039b4d9e9dbe7adf1f155bc3e7e"
+  },
+  "VERIFICATION.json": {
+    "bytes": 1548,
+    "sha256": "ed7f61ba0c07bf069847036d406aa36bdda47998c09ccd6e3492b7465e99e9d8"
+  },
+  "data27.py": {
+    "bytes": 2313,
+    "sha256": "59d138c36b00fd2dd5c168e4129e92bd140ff40d5a70e3bd8753e1c896d1081d"
+  },
+  "engine27.py": {
+    "bytes": 11457,
+    "sha256": "53053f8d9725f01407cf11bfe83c476d486db15555663e268115e4216e49ae25"
+  },
+  "make_report27.py": {
+    "bytes": 12788,
+    "sha256": "5a8bd21f5c15eaf6360c3a5c8912fea233b9ef0c9ac4553385ae2452691437cc"
+  },
+  "models/2026-07.json": {
+    "bytes": 7626,
+    "sha256": "1f0942629779347fe10c5f701347186ed6cdac9cd6aaaf4675e83230bfb81828"
+  },
+  "models/2026-07.pkl": {
+    "bytes": 3305576,
+    "sha256": "5b2655d0f2b4b7891212f00cfc1cd09ef7462e04917dad2efd1831a70b8ba17c"
+  },
+  "models/2026-08.json": {
+    "bytes": 7659,
+    "sha256": "41274ad70f6b39633ea2560ef95b1aac4675f1485d1e0496469cd81503087fa7"
+  },
+  "models/2026-08.pkl": {
+    "bytes": 3320901,
+    "sha256": "a5aafcd31aaf9bbe908a5142ebd97f46ef914ce89ccb051e2d5fbbd17d3845d5"
+  },
+  "models/2026-09.json": {
+    "bytes": 7648,
+    "sha256": "22f45948efa1802f37891f66966c4db6ce3ea5304569e16ac34b7338cbf6c655"
+  },
+  "models/2026-09.pkl": {
+    "bytes": 3294758,
+    "sha256": "557378ac30ab6bd951e728375c4d73690e6c499d6644027ad13a205c7eaf1210"
+  },
+  "models/2026-10.json": {
+    "bytes": 7650,
+    "sha256": "9c68687cc2bfcf5e3d9de4f39cbef7c1fadf55c8b26329757b3fd73d93fd68e4"
+  },
+  "models/2026-10.pkl": {
+    "bytes": 3328098,
+    "sha256": "c4b5fee2bb38dd05d2fde478c6ac8158f856974884255690440a15ca794534ac"
+  },
+  "models/2026-11.json": {
+    "bytes": 7667,
+    "sha256": "b16e039ef00d234a4f58429a525208190c6d9ea15dac5c21dcc4c3ec3be21374"
+  },
+  "models/2026-11.pkl": {
+    "bytes": 3320676,
+    "sha256": "e4a609c2661ac216555aa32fa36e2906580be37c644c298b4b766d5b283c26f7"
+  },
+  "models27.py": {
+    "bytes": 7429,
+    "sha256": "1b7f87341df8116f958c1ec6773930666943aa88b9fb593e4ea42bc81069a121"
+  },
+  "package27.py": {
+    "bytes": 2753,
+    "sha256": "70c4af85dfeac6a095ea441fe8ee723569fb9215e6616dd98ab28f60863125f9"
+  },
+  "prepare.log": {
+    "bytes": 75,
+    "sha256": "a1eaa40745ae8e32cc2961eb3f56a1de58d31c802dcb4c0912172d83ba230e40"
+  },
+  "protocol.json": {
+    "bytes": 5970,
+    "sha256": "fbdf7eb390b19b25cfb1f685ae0627588b84a78f7ba6cf7932d4ec1fa1616018"
+  },
+  "requirements.txt": {
+    "bytes": 77,
+    "sha256": "771df08f23292460b4e15c7238f23f48c75b2c62dac7de4566b1cd896ff9694b"
+  },
+  "results/2026-07_conservative_book_cost1.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_conservative_book_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_conservative_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-07_conservative_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_conservative_book_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_conservative_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_conservative_book_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_conservative_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_conservative_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_direct_book_cost1.json": {
+    "bytes": 591,
+    "sha256": "116970c3bf0d91174c1f71a717775f49351b9d1bd83d4da3d24e0d5f537f0f9c"
+  },
+  "results/2026-07_direct_book_cost1_daily.csv": {
+    "bytes": 1034,
+    "sha256": "42134a7815a828b9eadb1ea6eefea30e8c911f14cc27fa3bb7feab4a4cd902a2"
+  },
+  "results/2026-07_direct_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3133,
+    "sha256": "44aeb37a9efe78bc90c1f1990e21b7eb671c79036f0b06204923c45e1bf7f41e"
+  },
+  "results/2026-07_direct_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "aa21bbaec567540b0f69b361841b98444df23f0a34e99b9ab39e3e014e92f5fd"
+  },
+  "results/2026-07_direct_book_cost1_trades.csv.gz": {
+    "bytes": 7354,
+    "sha256": "0910cb79695e73671c2183737e9cb3c9c26b534c882520583ccd824bb20ce714"
+  },
+  "results/2026-07_direct_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_direct_book_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_direct_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_direct_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_duration_book_cost1.json": {
+    "bytes": 609,
+    "sha256": "ad988a29d409cb7629b59460990332a0fdf7779fab81fc76aaf0c45e2f7167d7"
+  },
+  "results/2026-07_duration_book_cost1_daily.csv": {
+    "bytes": 1040,
+    "sha256": "a23d22c2f78b745843cf9c8ea6fcef73679b528df252866f4b5f383dbc2c970d"
+  },
+  "results/2026-07_duration_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 907,
+    "sha256": "7940c33c4fc0295da51c56e0a310f5b5ecabb869aeb4e64e3c663d14f13dc67e"
+  },
+  "results/2026-07_duration_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "e3dfd529cc78de128831912836b8d996e8270e4558b8ab7a863f6fc0d7f80bfc"
+  },
+  "results/2026-07_duration_book_cost1_trades.csv.gz": {
+    "bytes": 2036,
+    "sha256": "583b07c61bd19238108757cb82a5ad8c4a3a8a47b31825cc3381efd448ff8f00"
+  },
+  "results/2026-07_duration_book_cost2.json": {
+    "bytes": 521,
+    "sha256": "9559f965f2aea97b35c4b85cd38f632d079495391c13f7b2e2013b42ec0ed8af"
+  },
+  "results/2026-07_duration_book_cost2_daily.csv": {
+    "bytes": 909,
+    "sha256": "c70b807d25c1430b205796b220095bf160a6be6f77ddb89f6955e4149e33543f"
+  },
+  "results/2026-07_duration_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "3f2e030ffce86f1a663fe67a1c3f64884cd3597889fe01ac11c1b40afb6e01e1"
+  },
+  "results/2026-07_duration_book_cost2_trades.csv.gz": {
+    "bytes": 243,
+    "sha256": "1907cb0a888b55483a5ba02995a7f0dd58cc16dd1bddea7ade1a73c463724946"
+  },
+  "results/2026-07_duration_book_h180_cost1.json": {
+    "bytes": 609,
+    "sha256": "ad988a29d409cb7629b59460990332a0fdf7779fab81fc76aaf0c45e2f7167d7"
+  },
+  "results/2026-07_duration_book_h180_cost1_daily.csv": {
+    "bytes": 1040,
+    "sha256": "a23d22c2f78b745843cf9c8ea6fcef73679b528df252866f4b5f383dbc2c970d"
+  },
+  "results/2026-07_duration_book_h180_cost1_decision_trace.jsonl.gz": {
+    "bytes": 907,
+    "sha256": "7940c33c4fc0295da51c56e0a310f5b5ecabb869aeb4e64e3c663d14f13dc67e"
+  },
+  "results/2026-07_duration_book_h180_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "e3dfd529cc78de128831912836b8d996e8270e4558b8ab7a863f6fc0d7f80bfc"
+  },
+  "results/2026-07_duration_book_h180_cost1_trades.csv.gz": {
+    "bytes": 2036,
+    "sha256": "583b07c61bd19238108757cb82a5ad8c4a3a8a47b31825cc3381efd448ff8f00"
+  },
+  "results/2026-07_duration_book_h180_cost2.json": {
+    "bytes": 521,
+    "sha256": "9559f965f2aea97b35c4b85cd38f632d079495391c13f7b2e2013b42ec0ed8af"
+  },
+  "results/2026-07_duration_book_h180_cost2_daily.csv": {
+    "bytes": 909,
+    "sha256": "c70b807d25c1430b205796b220095bf160a6be6f77ddb89f6955e4149e33543f"
+  },
+  "results/2026-07_duration_book_h180_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "3f2e030ffce86f1a663fe67a1c3f64884cd3597889fe01ac11c1b40afb6e01e1"
+  },
+  "results/2026-07_duration_book_h180_cost2_trades.csv.gz": {
+    "bytes": 243,
+    "sha256": "1907cb0a888b55483a5ba02995a7f0dd58cc16dd1bddea7ade1a73c463724946"
+  },
+  "results/2026-07_duration_book_h30_cost1.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_duration_book_h30_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_duration_book_h30_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-07_duration_book_h30_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_duration_book_h30_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_duration_book_h30_cost2.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_duration_book_h30_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_duration_book_h30_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_duration_book_h30_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_duration_book_h60_cost1.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_duration_book_h60_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_duration_book_h60_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-07_duration_book_h60_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_duration_book_h60_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_duration_book_h60_cost2.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_duration_book_h60_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_duration_book_h60_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_duration_book_h60_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost1.json": {
+    "bytes": 609,
+    "sha256": "ad988a29d409cb7629b59460990332a0fdf7779fab81fc76aaf0c45e2f7167d7"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost1_daily.csv": {
+    "bytes": 1040,
+    "sha256": "a23d22c2f78b745843cf9c8ea6fcef73679b528df252866f4b5f383dbc2c970d"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost1_decision_trace.jsonl.gz": {
+    "bytes": 907,
+    "sha256": "7940c33c4fc0295da51c56e0a310f5b5ecabb869aeb4e64e3c663d14f13dc67e"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "e3dfd529cc78de128831912836b8d996e8270e4558b8ab7a863f6fc0d7f80bfc"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost1_trades.csv.gz": {
+    "bytes": 2036,
+    "sha256": "583b07c61bd19238108757cb82a5ad8c4a3a8a47b31825cc3381efd448ff8f00"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost2.json": {
+    "bytes": 521,
+    "sha256": "9559f965f2aea97b35c4b85cd38f632d079495391c13f7b2e2013b42ec0ed8af"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost2_daily.csv": {
+    "bytes": 909,
+    "sha256": "c70b807d25c1430b205796b220095bf160a6be6f77ddb89f6955e4149e33543f"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "3f2e030ffce86f1a663fe67a1c3f64884cd3597889fe01ac11c1b40afb6e01e1"
+  },
+  "results/2026-07_duration_book_no_adaptive_cost2_trades.csv.gz": {
+    "bytes": 243,
+    "sha256": "1907cb0a888b55483a5ba02995a7f0dd58cc16dd1bddea7ade1a73c463724946"
+  },
+  "results/2026-07_duration_price_cost1.json": {
+    "bytes": 609,
+    "sha256": "f190520f50f6f53699ee2b1687324a95237040ba0f146b9963e90c9a4e21121c"
+  },
+  "results/2026-07_duration_price_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "85c90bd84b9eae0a617fa86f03d1ea79beb7a2ba6b99a4d50b6b659ab8db7248"
+  },
+  "results/2026-07_duration_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 756,
+    "sha256": "4d1a01840ba4709254a77095d7c69387176d57137e4f4cbc56520170664339f4"
+  },
+  "results/2026-07_duration_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "5a3fd95b8e521600276a27ed9521fb9d7d9155ad33f1639f444aaaabe873ff47"
+  },
+  "results/2026-07_duration_price_cost1_trades.csv.gz": {
+    "bytes": 1647,
+    "sha256": "92c18cca55115810eacd3fe9575cee9fb2335ef7d9c35d428fb922d1bbf8e49c"
+  },
+  "results/2026-07_duration_price_cost2.json": {
+    "bytes": 528,
+    "sha256": "c9b92f4172b727448fe6ad3edf542f977eb21d83447fad4953dc312a908e182d"
+  },
+  "results/2026-07_duration_price_cost2_daily.csv": {
+    "bytes": 849,
+    "sha256": "7d8c38768d379323cbac80dfe3b6d7bef166ea5fc23b775229f89082f902e564"
+  },
+  "results/2026-07_duration_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0255be5aa816256b8d7cb864ed1ca5b31a6378d039ab868cec25ea29e258ef26"
+  },
+  "results/2026-07_duration_price_cost2_trades.csv.gz": {
+    "bytes": 242,
+    "sha256": "7db736f41486ecba3b0fa108b2c35732e5095228ae8f46d01787334da1657a93"
+  },
+  "results/2026-07_magnitude_price_cost1.json": {
+    "bytes": 609,
+    "sha256": "f190520f50f6f53699ee2b1687324a95237040ba0f146b9963e90c9a4e21121c"
+  },
+  "results/2026-07_magnitude_price_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "85c90bd84b9eae0a617fa86f03d1ea79beb7a2ba6b99a4d50b6b659ab8db7248"
+  },
+  "results/2026-07_magnitude_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 737,
+    "sha256": "7f25a2e4669b90dfdf2d6e73129f69b1deffd441997137796c60f1abcdcf2dd1"
+  },
+  "results/2026-07_magnitude_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "5a3fd95b8e521600276a27ed9521fb9d7d9155ad33f1639f444aaaabe873ff47"
+  },
+  "results/2026-07_magnitude_price_cost1_trades.csv.gz": {
+    "bytes": 1492,
+    "sha256": "f220931cd177e09d81da072237a36ce0de2a00213ba9b5d09d120e2e740a0d06"
+  },
+  "results/2026-07_magnitude_price_cost2.json": {
+    "bytes": 528,
+    "sha256": "c9b92f4172b727448fe6ad3edf542f977eb21d83447fad4953dc312a908e182d"
+  },
+  "results/2026-07_magnitude_price_cost2_daily.csv": {
+    "bytes": 849,
+    "sha256": "7d8c38768d379323cbac80dfe3b6d7bef166ea5fc23b775229f89082f902e564"
+  },
+  "results/2026-07_magnitude_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0255be5aa816256b8d7cb864ed1ca5b31a6378d039ab868cec25ea29e258ef26"
+  },
+  "results/2026-07_magnitude_price_cost2_trades.csv.gz": {
+    "bytes": 232,
+    "sha256": "54bd23dcca70e4d2add6037170550fd726eaa8fd355b1abb2ac6eaf9ccfdeff1"
+  },
+  "results/2026-07_mean_payoff_price_cost1.json": {
+    "bytes": 578,
+    "sha256": "0747975f68c1a6b587ca6cdc676fd7c68b82ffc6fd25d413e58dc721eba46f03"
+  },
+  "results/2026-07_mean_payoff_price_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "cf7b89d3da73ff6c4ff50a1963787fd1831d5d77481196be06c2eba804409dda"
+  },
+  "results/2026-07_mean_payoff_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 434,
+    "sha256": "e57937c7bcdd1d6e7a5533544c3825cf1868e718e35d326ee0d426d1a68c479a"
+  },
+  "results/2026-07_mean_payoff_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "12550441da94bcb15d5480d0ff63064ba496a3ff145f0404c792838a6b8fbd73"
+  },
+  "results/2026-07_mean_payoff_price_cost1_trades.csv.gz": {
+    "bytes": 917,
+    "sha256": "7c4c69a23e98f0a4b9f9e86abdf788a1ad2792747d2aef73d5bcc2bafbb9fa33"
+  },
+  "results/2026-07_mean_payoff_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "80925eae743da98b6ab2ea964b26eabf050b0d58bf2556e27da07824a7e7f091"
+  },
+  "results/2026-07_mean_payoff_price_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "27368f1a5d63e1a0c1fba2e1626c4ba23ef37b4e1bd40e1e22178204fc2b4628"
+  },
+  "results/2026-07_mean_payoff_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-07_mean_payoff_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-07_reference_cost1.json": {
+    "bytes": 603,
+    "sha256": "c302a5f44e696c7ed42371c0f52714e040f07bd7f47b169ea07ec9eeaaa2a1d1"
+  },
+  "results/2026-07_reference_cost1_daily.csv": {
+    "bytes": 877,
+    "sha256": "9729c66678572b08f61f6e087293e1874fabf081fb87a3798137a6e73eedd2c0"
+  },
+  "results/2026-07_reference_cost1_decision_trace.jsonl.gz": {
+    "bytes": 213,
+    "sha256": "90c871b66543a97a7a56379b78e0ce525a336cd5a4104c96633d3f10904d1ccc"
+  },
+  "results/2026-07_reference_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "4b310b82e85a58469cbc50dbdb17c4a41fb94e5364f3fa95179dee7c25940247"
+  },
+  "results/2026-07_reference_cost1_trades.csv.gz": {
+    "bytes": 396,
+    "sha256": "c9d868d4d44ed364e31bd46cc09dce4bd399a4fb64ea88f873be66f129fa2bc5"
+  },
+  "results/2026-07_reference_cost2.json": {
+    "bytes": 570,
+    "sha256": "26937f8d6ca29131e6e22e6341ed98bf1ebfbf3561f2e10699dae7d18f0cad2d"
+  },
+  "results/2026-07_reference_cost2_daily.csv": {
+    "bytes": 876,
+    "sha256": "c899e20403b6c917c9c1f5be35850f8adb20566ce2eb3f03f849085a49cc6db4"
+  },
+  "results/2026-07_reference_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "7e80e1bb8e21ee16f7c4954b992900a13b80a37e0a7ce1d5d78c812a27342876"
+  },
+  "results/2026-07_reference_cost2_trades.csv.gz": {
+    "bytes": 390,
+    "sha256": "81af4ad9d4387d22bfeb8d89e70da7dd880937a58626ee83ca2d14af09b4833c"
+  },
+  "results/2026-07_rule_momentum_cost1.json": {
+    "bytes": 609,
+    "sha256": "697c22a997bb5e8c40cff44035337ec57cb3bf7b812906fa5464c4c8c95366f0"
+  },
+  "results/2026-07_rule_momentum_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "bea92f6ce159d9b7eca6397d9dc38cb96a290d9c4ea8d99188ebdd5afc9d0d39"
+  },
+  "results/2026-07_rule_momentum_cost1_decision_trace.jsonl.gz": {
+    "bytes": 10312,
+    "sha256": "8fe150fc0ef19cc687f508bf83c555658d0d2b7595d294e03eff07cecc061e28"
+  },
+  "results/2026-07_rule_momentum_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "603672dae2e569fce599deb1f3b363a635c1ee3e9fed6b26f7b603e20025c86a"
+  },
+  "results/2026-07_rule_momentum_cost1_trades.csv.gz": {
+    "bytes": 27696,
+    "sha256": "524c29443e97836feb39a4155b1be517e250c0322c95889a5b53a485311357ad"
+  },
+  "results/2026-07_rule_momentum_cost2.json": {
+    "bytes": 591,
+    "sha256": "3dfbba1f212dcb04aa5f16a0d754a387a4786b8194fd3b471ff3af15af7f39ac"
+  },
+  "results/2026-07_rule_momentum_cost2_daily.csv": {
+    "bytes": 991,
+    "sha256": "b34e5cd1c8575de81cbbaa9815f7725be74220dc18864b842da913b3a76aae1c"
+  },
+  "results/2026-07_rule_momentum_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "178035ae210e3bf5a7b89bbbdce4ca3689ed495194ddf84183d268e534101de8"
+  },
+  "results/2026-07_rule_momentum_cost2_trades.csv.gz": {
+    "bytes": 17486,
+    "sha256": "48ba273a7b558c24c6153397f154ee9efd75c699c919b571a9aea5804d449dd7"
+  },
+  "results/2026-08_conservative_book_cost1.json": {
+    "bytes": 325,
+    "sha256": "3824998815483cf8e81eb5d3326eee1c8a7fe710f18e905e10cf37a75655e1f7"
+  },
+  "results/2026-08_conservative_book_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "f75e1a0286cf996688bc09243ffe8be03363b1e80eecaf6e3c02834a5982abc3"
+  },
+  "results/2026-08_conservative_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-08_conservative_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-08_conservative_book_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-08_conservative_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "3824998815483cf8e81eb5d3326eee1c8a7fe710f18e905e10cf37a75655e1f7"
+  },
+  "results/2026-08_conservative_book_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "f75e1a0286cf996688bc09243ffe8be03363b1e80eecaf6e3c02834a5982abc3"
+  },
+  "results/2026-08_conservative_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-08_conservative_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-08_direct_book_cost1.json": {
+    "bytes": 603,
+    "sha256": "8d3988d5115cb983e1fdcb54944a28d41f95e0f4ae656553a312d249560d847a"
+  },
+  "results/2026-08_direct_book_cost1_daily.csv": {
+    "bytes": 995,
+    "sha256": "d292ef85d12d510d8c8409f6f37b0ec503729bd1c53c5d7f20a012ed98b16224"
+  },
+  "results/2026-08_direct_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3471,
+    "sha256": "531361308ffa184d46e005701625d1d87bc9ac6fc91cd9f8d226efa13a5d691a"
+  },
+  "results/2026-08_direct_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "61619d10e54841dc267d249109b1234897f331bf04d3557dc18fb6964fd01b29"
+  },
+  "results/2026-08_direct_book_cost1_trades.csv.gz": {
+    "bytes": 8077,
+    "sha256": "8f6f0f1c139d4f88ecfec6c7b70292070ec8bce2436fcd7a05f53f8cddd5aff5"
+  },
+  "results/2026-08_direct_book_cost2.json": {
+    "bytes": 524,
+    "sha256": "73dd65b533bc034fbc3223cb7385db98eb7031d943c297aa8fc745a880241b45"
+  },
+  "results/2026-08_direct_book_cost2_daily.csv": {
+    "bytes": 799,
+    "sha256": "6e16764984d7dd0eb03229eab086592f84647956dd8ed5bbb53515b25c0eb7ce"
+  },
+  "results/2026-08_direct_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "521ca149e5222431e04ac03a7be28de128d25a1bd0dbf83cd8e5c638b6df6fdd"
+  },
+  "results/2026-08_direct_book_cost2_trades.csv.gz": {
+    "bytes": 490,
+    "sha256": "b82e8e9d06630caa068555a7f1ab6eff20414a5def40d4548befc1b8e14360f7"
+  },
+  "results/2026-08_duration_book_cost1.json": {
+    "bytes": 615,
+    "sha256": "a46f018d95896e81988bc73c20ae010c4e9917d7f60ee720a12f5f7c9cb3edfe"
+  },
+  "results/2026-08_duration_book_cost1_daily.csv": {
+    "bytes": 986,
+    "sha256": "242fb7a1782d4f0bec163208ba8d71e322a66defd856aa2c714d5a8fa1877904"
+  },
+  "results/2026-08_duration_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3298,
+    "sha256": "c6b607efea6fa35af0f9bfdc0457517bf3764a6816cb79ae558150aa5d755eba"
+  },
+  "results/2026-08_duration_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "20f6a081aad3a4de064d7e650cd296f190b0c95cc90cc09473c084c1559e886e"
+  },
+  "results/2026-08_duration_book_cost1_trades.csv.gz": {
+    "bytes": 7859,
+    "sha256": "bcf3740f5ae63a66dffe8946819c2fa1c0b8aa49c7a2bb7a9b703d389beae709"
+  },
+  "results/2026-08_duration_book_cost2.json": {
+    "bytes": 606,
+    "sha256": "6c9b976ea53d16cb354524a96ed35f5f2af49c5cc77283eaae6f9b03d0116403"
+  },
+  "results/2026-08_duration_book_cost2_daily.csv": {
+    "bytes": 909,
+    "sha256": "2cedb7047fde03f0b26eeee86acf1b5a7fa603ed48ba3ff40c8ad183b8f60895"
+  },
+  "results/2026-08_duration_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c58c0469b6fa45ebe436d8c1c211f90ec92b75244448bf6122b7137d20847c08"
+  },
+  "results/2026-08_duration_book_cost2_trades.csv.gz": {
+    "bytes": 762,
+    "sha256": "ee267605ef623d7040d7ca208341941f5e25688f42c2a060cc4e9ae569df9b8c"
+  },
+  "results/2026-08_duration_book_h180_cost1.json": {
+    "bytes": 607,
+    "sha256": "5e28f440a307aedd2bf8800e297b2eb8e1d695dce012c5559920746146156db1"
+  },
+  "results/2026-08_duration_book_h180_cost1_daily.csv": {
+    "bytes": 987,
+    "sha256": "17281623a51091c61ef43bf9b2c8cc8ac5d89990b54788a598260f1d4539b2fe"
+  },
+  "results/2026-08_duration_book_h180_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3282,
+    "sha256": "666cfaf54d9ce1bcee3edb80c1d2d4142c69b55bb6cd332ccf2a03256068d39f"
+  },
+  "results/2026-08_duration_book_h180_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "e68801d8830aadbf9ae8c53e3bad85230e039d97b0bb58ed507b4a4b022b0cf2"
+  },
+  "results/2026-08_duration_book_h180_cost1_trades.csv.gz": {
+    "bytes": 7872,
+    "sha256": "83dc5f295727c3ea3491b86461f76ae2d8dcae47f24590bc158363a896328265"
+  },
+  "results/2026-08_duration_book_h180_cost2.json": {
+    "bytes": 589,
+    "sha256": "914af9d5c215c843853e2af14c0ee65c6cd196902ebb0d09cdd91601d9459a75"
+  },
+  "results/2026-08_duration_book_h180_cost2_daily.csv": {
+    "bytes": 907,
+    "sha256": "b252742e849e50cb06ea894cc6b1acf49eb719b7ba1494f6adb685503f14a899"
+  },
+  "results/2026-08_duration_book_h180_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "fac880f57504a96b2db9b5abe93d2f83e1fb4082cfb672d07ec2720dfc83d36b"
+  },
+  "results/2026-08_duration_book_h180_cost2_trades.csv.gz": {
+    "bytes": 686,
+    "sha256": "9388f9774f6b7bc3135f4e867fd65d21362fefb74f44b0ffd641a69687922306"
+  },
+  "results/2026-08_duration_book_h30_cost1.json": {
+    "bytes": 547,
+    "sha256": "3c72d514da800585e291b7a85eeac6b33f49005a857ffc952c317b5b3dd38d36"
+  },
+  "results/2026-08_duration_book_h30_cost1_daily.csv": {
+    "bytes": 779,
+    "sha256": "a5205d1565099631ac4a3d0a0c142d4d437968e6b53d386a61e7955b8e74f6f1"
+  },
+  "results/2026-08_duration_book_h30_cost1_decision_trace.jsonl.gz": {
+    "bytes": 276,
+    "sha256": "79b383929e2eeb40add70fad82f4276f48149f5b48e38c4ca9d8db32ac34369c"
+  },
+  "results/2026-08_duration_book_h30_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "719f1d37b83f6047d71c1a7d4abe786c06f00af4da19aff862af832c49e9a1aa"
+  },
+  "results/2026-08_duration_book_h30_cost1_trades.csv.gz": {
+    "bytes": 559,
+    "sha256": "e5480cc6b90483fd23bb2037b0c813491551b42b8f9f1755a1dcbb3e54d10927"
+  },
+  "results/2026-08_duration_book_h30_cost2.json": {
+    "bytes": 325,
+    "sha256": "3824998815483cf8e81eb5d3326eee1c8a7fe710f18e905e10cf37a75655e1f7"
+  },
+  "results/2026-08_duration_book_h30_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "f75e1a0286cf996688bc09243ffe8be03363b1e80eecaf6e3c02834a5982abc3"
+  },
+  "results/2026-08_duration_book_h30_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-08_duration_book_h30_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-08_duration_book_h60_cost1.json": {
+    "bytes": 559,
+    "sha256": "eea7fc0b8a5cf82e7b65d00f820fdbbaa350f288d8da1c1c90538e28b4ab4592"
+  },
+  "results/2026-08_duration_book_h60_cost1_daily.csv": {
+    "bytes": 805,
+    "sha256": "854f3ea1624d5996da9a88662d2dca0823deb5a8be09e6fc780e4446bf9db358"
+  },
+  "results/2026-08_duration_book_h60_cost1_decision_trace.jsonl.gz": {
+    "bytes": 492,
+    "sha256": "0b157a60ac4390cb7fcf7b8c2895a15af3c231846cb6de30c2c4044d1492214e"
+  },
+  "results/2026-08_duration_book_h60_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "d4ba341523107b11a50a410ca8b5f726e1d58c8b298491a0aa4065031fb05b16"
+  },
+  "results/2026-08_duration_book_h60_cost1_trades.csv.gz": {
+    "bytes": 1028,
+    "sha256": "3571201d5c9be4032f3eaf2f5a6e95b31cf9fec367ed8243342b8266eca72f8a"
+  },
+  "results/2026-08_duration_book_h60_cost2.json": {
+    "bytes": 527,
+    "sha256": "1c3097501877e66827aa3ed88feb8225ae09114d06a4e047e1149e440fa1db8c"
+  },
+  "results/2026-08_duration_book_h60_cost2_daily.csv": {
+    "bytes": 769,
+    "sha256": "a131929dd5daed0dff3a38794bf1ae9cef41a015e63c3d88b4f73b3b9760ad27"
+  },
+  "results/2026-08_duration_book_h60_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "1e1057100e2ab1ea932341c9d151de5918f272b8432479cf2ae098e2c7f35ab6"
+  },
+  "results/2026-08_duration_book_h60_cost2_trades.csv.gz": {
+    "bytes": 238,
+    "sha256": "7d34faca6531b2933bb38f759b5a22c5cdbc81b90f90aca5245fe5b791d11214"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost1.json": {
+    "bytes": 609,
+    "sha256": "1a598b4b26fe1a392ccea592ecdee8c7c65f6948e2779f378cd7d9d41e211810"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost1_daily.csv": {
+    "bytes": 983,
+    "sha256": "4fe2588103d5ea8cb14ac707877186c6ce269ecf19f8efb15420657105725c5c"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3632,
+    "sha256": "519f85376077e6603c09938ec18ad771c7d59ae6d88b607667c4a9b5f403363b"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "9ea0d246ec5008460d7a74d6bdccdfc81723f15a560c12702a6ef7e7e7e1e533"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost1_trades.csv.gz": {
+    "bytes": 8703,
+    "sha256": "54435af07afa6b0e0fd53d7ddbd0a567fb317f026a8f5800f54a57b8cdeb3d1c"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost2.json": {
+    "bytes": 606,
+    "sha256": "6c9b976ea53d16cb354524a96ed35f5f2af49c5cc77283eaae6f9b03d0116403"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost2_daily.csv": {
+    "bytes": 909,
+    "sha256": "2cedb7047fde03f0b26eeee86acf1b5a7fa603ed48ba3ff40c8ad183b8f60895"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c58c0469b6fa45ebe436d8c1c211f90ec92b75244448bf6122b7137d20847c08"
+  },
+  "results/2026-08_duration_book_no_adaptive_cost2_trades.csv.gz": {
+    "bytes": 762,
+    "sha256": "ee267605ef623d7040d7ca208341941f5e25688f42c2a060cc4e9ae569df9b8c"
+  },
+  "results/2026-08_duration_price_cost1.json": {
+    "bytes": 610,
+    "sha256": "97fc140b938fe58603e1cee73ba9ce6d5e3d229ac29bef5b0f3389b6f461aed5"
+  },
+  "results/2026-08_duration_price_cost1_daily.csv": {
+    "bytes": 960,
+    "sha256": "129e848c3397af61d88b81f7a97860bad5f40620bfb71466dbc753f65965c07d"
+  },
+  "results/2026-08_duration_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 2998,
+    "sha256": "c97993c3d0cb635fbb5958758468b7aa028407b6c3b5e34c23a75de70f6582fa"
+  },
+  "results/2026-08_duration_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "29a6e90a8da075b8a35af639237c7524972e4a0322f24d48bf3e1aad773b3dbe"
+  },
+  "results/2026-08_duration_price_cost1_trades.csv.gz": {
+    "bytes": 7198,
+    "sha256": "3bab42c10d57a5bd3f7c8884eb1cb69a9216bc9eb819ebce9ff7989b67aac349"
+  },
+  "results/2026-08_duration_price_cost2.json": {
+    "bytes": 543,
+    "sha256": "38c94e4ea167268abf82ab2f4f41f14ed03d7a358aedf103f8941fee86741241"
+  },
+  "results/2026-08_duration_price_cost2_daily.csv": {
+    "bytes": 799,
+    "sha256": "9b483d0394c481d1b0820f3ff355873a45573922744661d8c95f9d920b7da713"
+  },
+  "results/2026-08_duration_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "b5e9466cdad18c05d3903b0e324c497815e468bd3db5b17617653fdc61492f27"
+  },
+  "results/2026-08_duration_price_cost2_trades.csv.gz": {
+    "bytes": 337,
+    "sha256": "c0d273ec738629eb4e98c55f33d7a716d47196c367b525769212b46161ae5478"
+  },
+  "results/2026-08_magnitude_price_cost1.json": {
+    "bytes": 610,
+    "sha256": "97fc140b938fe58603e1cee73ba9ce6d5e3d229ac29bef5b0f3389b6f461aed5"
+  },
+  "results/2026-08_magnitude_price_cost1_daily.csv": {
+    "bytes": 960,
+    "sha256": "129e848c3397af61d88b81f7a97860bad5f40620bfb71466dbc753f65965c07d"
+  },
+  "results/2026-08_magnitude_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 2963,
+    "sha256": "c614d06dcefabdbee9946c6c8f7babeaf2ec3359fa8d3dc7003cd5717e6b4490"
+  },
+  "results/2026-08_magnitude_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "29a6e90a8da075b8a35af639237c7524972e4a0322f24d48bf3e1aad773b3dbe"
+  },
+  "results/2026-08_magnitude_price_cost1_trades.csv.gz": {
+    "bytes": 6489,
+    "sha256": "7aaadcab49a842b61503b33eefb244d7d6bda4f2567874972ae8aad8c571a289"
+  },
+  "results/2026-08_magnitude_price_cost2.json": {
+    "bytes": 543,
+    "sha256": "38c94e4ea167268abf82ab2f4f41f14ed03d7a358aedf103f8941fee86741241"
+  },
+  "results/2026-08_magnitude_price_cost2_daily.csv": {
+    "bytes": 799,
+    "sha256": "9b483d0394c481d1b0820f3ff355873a45573922744661d8c95f9d920b7da713"
+  },
+  "results/2026-08_magnitude_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "b5e9466cdad18c05d3903b0e324c497815e468bd3db5b17617653fdc61492f27"
+  },
+  "results/2026-08_magnitude_price_cost2_trades.csv.gz": {
+    "bytes": 314,
+    "sha256": "2a02cc2b31ecdb41fca7e87a0a402ac76fe0a781c65a71a7c9f615ad9c9b0cf9"
+  },
+  "results/2026-08_mean_payoff_price_cost1.json": {
+    "bytes": 608,
+    "sha256": "cb4f7694a62df723089c60e109830730afc0c51d2bfe9b0284d72abcb9ab0649"
+  },
+  "results/2026-08_mean_payoff_price_cost1_daily.csv": {
+    "bytes": 1004,
+    "sha256": "666c7d49861a390a819b2229dd07300eb34815ab7ac37aa67661973933394e2b"
+  },
+  "results/2026-08_mean_payoff_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 3636,
+    "sha256": "8f3fbdd66a88280d59005b6c5d7a771f44c370a157e4389282053c6b68e1c3a4"
+  },
+  "results/2026-08_mean_payoff_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "955ac47c80523ea60b6e137aeed1efb7e47d7d13748b02360842fece8de2659a"
+  },
+  "results/2026-08_mean_payoff_price_cost1_trades.csv.gz": {
+    "bytes": 8058,
+    "sha256": "0ddfc73a631b7dc8b9071b3e83d8b6b42ff2fb2ff007b16e743bb321670709c3"
+  },
+  "results/2026-08_mean_payoff_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "3824998815483cf8e81eb5d3326eee1c8a7fe710f18e905e10cf37a75655e1f7"
+  },
+  "results/2026-08_mean_payoff_price_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "f75e1a0286cf996688bc09243ffe8be03363b1e80eecaf6e3c02834a5982abc3"
+  },
+  "results/2026-08_mean_payoff_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-08_mean_payoff_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-08_reference_cost1.json": {
+    "bytes": 574,
+    "sha256": "f720eea01ec0c965a0ea5ab013f88f1d6acf3adc49d7f0ffaf6d62207fd22594"
+  },
+  "results/2026-08_reference_cost1_daily.csv": {
+    "bytes": 839,
+    "sha256": "377ef7ac04495c91413c031917a038ce3af9a38227d91bbddb65b5f484fcae0e"
+  },
+  "results/2026-08_reference_cost1_decision_trace.jsonl.gz": {
+    "bytes": 279,
+    "sha256": "6d9095227b6ac5a84527b00afb8d51ce4a3dfe505be671710ce756978a242c07"
+  },
+  "results/2026-08_reference_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c45dc5aa6f831f2c570de819a817e82621be41753cb5d7b38e16f53d7afa034d"
+  },
+  "results/2026-08_reference_cost1_trades.csv.gz": {
+    "bytes": 582,
+    "sha256": "9b81c57b4d09b10494540794db160b2f94d781d04e513eecbbc6fdf9abbf5478"
+  },
+  "results/2026-08_reference_cost2.json": {
+    "bytes": 574,
+    "sha256": "35873f27c2a4666d050ed46414dcabcc9b6d140597058c75fbe55fb769a66a37"
+  },
+  "results/2026-08_reference_cost2_daily.csv": {
+    "bytes": 838,
+    "sha256": "e5b8661be9d5451a69ffea24ca74233e5085c695d09eb14884d5ac231f4cebbe"
+  },
+  "results/2026-08_reference_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "40a54c78c0dec3260032c95c7f91f17468291b693466c9a93b16fed0421a4aa3"
+  },
+  "results/2026-08_reference_cost2_trades.csv.gz": {
+    "bytes": 585,
+    "sha256": "56154f7d90c630b0cb9cbdb18ccce7698f85edee2c34ca390112f1585c4bbd61"
+  },
+  "results/2026-08_rule_momentum_cost1.json": {
+    "bytes": 627,
+    "sha256": "574acf87cc2d7a0eb83faa943dbc937c49c2ea437c896d54878fe1ddcf88136c"
+  },
+  "results/2026-08_rule_momentum_cost1_daily.csv": {
+    "bytes": 1003,
+    "sha256": "60595534c39cf95f0f360438baf07eb2afdcf4fd5e5c1742db8647f5916c685e"
+  },
+  "results/2026-08_rule_momentum_cost1_decision_trace.jsonl.gz": {
+    "bytes": 12795,
+    "sha256": "aa2dc247b554587372269d5e9f9871f885d740a89cdcef0c7bccd44a6c5062ef"
+  },
+  "results/2026-08_rule_momentum_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "309153e9cea74f41f493c2a6346c5f852398f0bf0d4e8461700e6e4248f5fc1a"
+  },
+  "results/2026-08_rule_momentum_cost1_trades.csv.gz": {
+    "bytes": 36459,
+    "sha256": "72df77bc1b4ff55a33d416651d0edfea65c8c87d4eab32400bdd36f7cb3dbf32"
+  },
+  "results/2026-08_rule_momentum_cost2.json": {
+    "bytes": 609,
+    "sha256": "e017aef9b64f420407cd281e9f19b9e1c1aecdd9c3358588ea470d37da2e285a"
+  },
+  "results/2026-08_rule_momentum_cost2_daily.csv": {
+    "bytes": 1007,
+    "sha256": "e4566a5c386325273274f12078e731b62766949644507855db6835aad5e2fd0d"
+  },
+  "results/2026-08_rule_momentum_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "932ead1a7e06f8c671229c7b4feaa5ea00895907bea2fca662f25d0ebee07bec"
+  },
+  "results/2026-08_rule_momentum_cost2_trades.csv.gz": {
+    "bytes": 18972,
+    "sha256": "907a3f886e80c5770e8151acd8e7c7267e09ee4468b9a0cc0f8cf57d4ef36a5a"
+  },
+  "results/2026-09_conservative_book_cost1.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_conservative_book_cost1_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_conservative_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-09_conservative_book_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_conservative_book_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_conservative_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_conservative_book_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_conservative_book_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_conservative_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_direct_book_cost1.json": {
+    "bytes": 605,
+    "sha256": "0d8cb47231ce310d1f5b2c985ee6b8da6c9076e15f9cc1358f624c92c2665bab"
+  },
+  "results/2026-09_direct_book_cost1_daily.csv": {
+    "bytes": 965,
+    "sha256": "6246b6b2f38b5db9f3a9edc9caa8e7591c0d05d5fb36c273f47da6c628be7ad5"
+  },
+  "results/2026-09_direct_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 8108,
+    "sha256": "2fc336bd0a43047be375f50a6627a54d86793841af4c0214b41d390ed7219a6b"
+  },
+  "results/2026-09_direct_book_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0443251b6160dc13eb93c67241b9914a8feffa873e6285cef8dc3e5d26c35179"
+  },
+  "results/2026-09_direct_book_cost1_trades.csv.gz": {
+    "bytes": 18495,
+    "sha256": "e1e4a7d889c180d3d9a945d9e2b2a21f4965988927b73f9909642912041b0c9a"
+  },
+  "results/2026-09_direct_book_cost2.json": {
+    "bytes": 601,
+    "sha256": "be7c8b16e4ee09ee48bc3ab2c2892632f510ed8afc387284f2af9c0e214f8763"
+  },
+  "results/2026-09_direct_book_cost2_daily.csv": {
+    "bytes": 955,
+    "sha256": "ce2621e2b3516192607d4601572052b789e6b401f41b5e4187d33706caae137a"
+  },
+  "results/2026-09_direct_book_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "69db5a7729637ebd560e117dc9fd52db01b6c31db34854893d9bc6d44e37d21d"
+  },
+  "results/2026-09_direct_book_cost2_trades.csv.gz": {
+    "bytes": 2815,
+    "sha256": "18aeba9226bd5821539bced7cb52f9a2c9ddd54e28a7252988084e318536876a"
+  },
+  "results/2026-09_duration_book_cost1.json": {
+    "bytes": 596,
+    "sha256": "8d05eeb2372b6f69c4c954d0de2dedef756dea4e8a5d662a17003d655716bad6"
+  },
+  "results/2026-09_duration_book_cost1_daily.csv": {
+    "bytes": 993,
+    "sha256": "8a3ca2c3053563280ee7730f7c2a32dc2e2996b56389b85a4a232d2f37b8791a"
+  },
+  "results/2026-09_duration_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 481,
+    "sha256": "41438496309ae4c3d8e1acc9cdecef7c6387ea0fbcebe9d78b6e6e6f68416000"
+  },
+  "results/2026-09_duration_book_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "3d60a7069e5bd2ea8a7b7976fb3b66b5b09422617620f1b93dd880f0cae9dcad"
+  },
+  "results/2026-09_duration_book_cost1_trades.csv.gz": {
+    "bytes": 1006,
+    "sha256": "f6c78e9a15ffa9978bc55b50940225620bce03a8fe5bbc7313bac8cd6e35a798"
+  },
+  "results/2026-09_duration_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_h180_cost1.json": {
+    "bytes": 596,
+    "sha256": "8d05eeb2372b6f69c4c954d0de2dedef756dea4e8a5d662a17003d655716bad6"
+  },
+  "results/2026-09_duration_book_h180_cost1_daily.csv": {
+    "bytes": 993,
+    "sha256": "8a3ca2c3053563280ee7730f7c2a32dc2e2996b56389b85a4a232d2f37b8791a"
+  },
+  "results/2026-09_duration_book_h180_cost1_decision_trace.jsonl.gz": {
+    "bytes": 481,
+    "sha256": "41438496309ae4c3d8e1acc9cdecef7c6387ea0fbcebe9d78b6e6e6f68416000"
+  },
+  "results/2026-09_duration_book_h180_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "3d60a7069e5bd2ea8a7b7976fb3b66b5b09422617620f1b93dd880f0cae9dcad"
+  },
+  "results/2026-09_duration_book_h180_cost1_trades.csv.gz": {
+    "bytes": 1006,
+    "sha256": "f6c78e9a15ffa9978bc55b50940225620bce03a8fe5bbc7313bac8cd6e35a798"
+  },
+  "results/2026-09_duration_book_h180_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_h180_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_h180_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_h180_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_h30_cost1.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_h30_cost1_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_h30_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-09_duration_book_h30_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_h30_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_h30_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_h30_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_h30_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_h30_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_h60_cost1.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_h60_cost1_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_h60_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-09_duration_book_h60_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_h60_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_h60_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_h60_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_h60_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_h60_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost1.json": {
+    "bytes": 596,
+    "sha256": "8d05eeb2372b6f69c4c954d0de2dedef756dea4e8a5d662a17003d655716bad6"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost1_daily.csv": {
+    "bytes": 993,
+    "sha256": "8a3ca2c3053563280ee7730f7c2a32dc2e2996b56389b85a4a232d2f37b8791a"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost1_decision_trace.jsonl.gz": {
+    "bytes": 481,
+    "sha256": "41438496309ae4c3d8e1acc9cdecef7c6387ea0fbcebe9d78b6e6e6f68416000"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "3d60a7069e5bd2ea8a7b7976fb3b66b5b09422617620f1b93dd880f0cae9dcad"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost1_trades.csv.gz": {
+    "bytes": 1006,
+    "sha256": "f6c78e9a15ffa9978bc55b50940225620bce03a8fe5bbc7313bac8cd6e35a798"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_book_no_adaptive_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_duration_price_cost1.json": {
+    "bytes": 608,
+    "sha256": "8cfa5181a9dd920d1a265f27166f749b87dfe51e2abfcda88b57b27f3ef3901c"
+  },
+  "results/2026-09_duration_price_cost1_daily.csv": {
+    "bytes": 926,
+    "sha256": "31ccdffd58961ecb051ff2f4dd33c06a7f5c9edde08391c58cbc90a7120bd41e"
+  },
+  "results/2026-09_duration_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 420,
+    "sha256": "d0336f6120c79157f9156f8348a5e2a63ffc8853348c40a720f19cc401ed4566"
+  },
+  "results/2026-09_duration_price_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "319c9dd8008d9236131c4a6e539fc365b3668c58a1a227b8989b0ecd938b8e4f"
+  },
+  "results/2026-09_duration_price_cost1_trades.csv.gz": {
+    "bytes": 907,
+    "sha256": "23a888c1d2933e8fb00f3d56d41d1ae06fb3b2f019bc0289b9953300bc572b8b"
+  },
+  "results/2026-09_duration_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_duration_price_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_duration_price_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_duration_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_magnitude_price_cost1.json": {
+    "bytes": 608,
+    "sha256": "8cfa5181a9dd920d1a265f27166f749b87dfe51e2abfcda88b57b27f3ef3901c"
+  },
+  "results/2026-09_magnitude_price_cost1_daily.csv": {
+    "bytes": 926,
+    "sha256": "31ccdffd58961ecb051ff2f4dd33c06a7f5c9edde08391c58cbc90a7120bd41e"
+  },
+  "results/2026-09_magnitude_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 413,
+    "sha256": "2f3f0435f05a03213ee83b9f4d452fec16764d8f97a34fcc9e0a1883bda9b965"
+  },
+  "results/2026-09_magnitude_price_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "319c9dd8008d9236131c4a6e539fc365b3668c58a1a227b8989b0ecd938b8e4f"
+  },
+  "results/2026-09_magnitude_price_cost1_trades.csv.gz": {
+    "bytes": 828,
+    "sha256": "f8a2045120ca4b15b2cce018ea130c15342937c34c636f20a93b82885472463e"
+  },
+  "results/2026-09_magnitude_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_magnitude_price_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_magnitude_price_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_magnitude_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_mean_payoff_price_cost1.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_mean_payoff_price_cost1_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_mean_payoff_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-09_mean_payoff_price_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_mean_payoff_price_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_mean_payoff_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "00faf7cbefd0469624fbe3885a48e20d085f97d561a5b4301373c921999543c7"
+  },
+  "results/2026-09_mean_payoff_price_cost2_daily.csv": {
+    "bytes": 677,
+    "sha256": "23a4107bc1fa206eaf3b4757f637d6781ab6cbf0243cda66c31fe8241d12b341"
+  },
+  "results/2026-09_mean_payoff_price_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "0b38dcb97be34a297d6d63ee4267eae2c13e0f8a8a7192aeedd6fd07be6ecb1c"
+  },
+  "results/2026-09_mean_payoff_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-09_reference_cost1.json": {
+    "bytes": 585,
+    "sha256": "df1fd69457c74a832ee40a62ad9c6b7f58e2e4cc3349b17fc1673f49c916745a"
+  },
+  "results/2026-09_reference_cost1_daily.csv": {
+    "bytes": 944,
+    "sha256": "b68cfa371ecab57af830f1c96d49f6dd457be23ce9e869656ede4916bc1e9bf8"
+  },
+  "results/2026-09_reference_cost1_decision_trace.jsonl.gz": {
+    "bytes": 380,
+    "sha256": "a66b1acb6d2e18e1056f171eb4751372f77ff456200b2585b858e12d76fc5cb2"
+  },
+  "results/2026-09_reference_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "4666fe14b0e4643805c66996022162d931c966147a21b345bff5340e416807fc"
+  },
+  "results/2026-09_reference_cost1_trades.csv.gz": {
+    "bytes": 867,
+    "sha256": "7bc26fd70f5bf71ee98a5a8b54989bf048be21bd3e37a6c5c13f0996a2ba1baa"
+  },
+  "results/2026-09_reference_cost2.json": {
+    "bytes": 575,
+    "sha256": "328b9261b1d20e9818a27718417137d31fd6e4a09ec76d80d04558f562f1db45"
+  },
+  "results/2026-09_reference_cost2_daily.csv": {
+    "bytes": 951,
+    "sha256": "50b5adf8f7b92d751c6ca66becb5f23c36ab2e660a38703d29aa772f0d40ac33"
+  },
+  "results/2026-09_reference_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "4d032b773d1078669c9857dfff0494077a97d4ba119e2540b6517209a3c7ec26"
+  },
+  "results/2026-09_reference_cost2_trades.csv.gz": {
+    "bytes": 848,
+    "sha256": "a151904eb9dfda8396fcb1bf9de9b62c80ed53d2da6000f9d896817c5da8f367"
+  },
+  "results/2026-09_rule_momentum_cost1.json": {
+    "bytes": 614,
+    "sha256": "dcf244b49dcd7fa00ff9a313e8dc7ed9f5e0bf8e7edf4f49a2d9ca5493b5bad7"
+  },
+  "results/2026-09_rule_momentum_cost1_daily.csv": {
+    "bytes": 970,
+    "sha256": "7acd7b876abdd34c342b15a70f09ade768ccc7b519722f90562a81278eafda0f"
+  },
+  "results/2026-09_rule_momentum_cost1_decision_trace.jsonl.gz": {
+    "bytes": 11137,
+    "sha256": "cc9c8735b3edda29cebbb3566c3306f4c4a03e28e73615c98f3dc24d8cdaf1b4"
+  },
+  "results/2026-09_rule_momentum_cost1_marks.npy": {
+    "bytes": 345728,
+    "sha256": "50657118351fd71eea7c6db920e31a3462d8f07fa6b493f3a0254012ce1ac09b"
+  },
+  "results/2026-09_rule_momentum_cost1_trades.csv.gz": {
+    "bytes": 30601,
+    "sha256": "8ebb0b62cef3eafb1339243da28545853f7b482b63e5a045feff4bf37d22736d"
+  },
+  "results/2026-09_rule_momentum_cost2.json": {
+    "bytes": 613,
+    "sha256": "280d676bdf72769cb674163ecd1ad985277888c5e53c947e07029fce08de5647"
+  },
+  "results/2026-09_rule_momentum_cost2_daily.csv": {
+    "bytes": 976,
+    "sha256": "5facfe16a15e859731ebf3c923542067222957f7d74ceb96673fc786f79ca7c6"
+  },
+  "results/2026-09_rule_momentum_cost2_marks.npy": {
+    "bytes": 345728,
+    "sha256": "bbff8be72c98d363d9a45637f8ff167959ed8bd2a4cc08ffb090c36f410e6f96"
+  },
+  "results/2026-09_rule_momentum_cost2_trades.csv.gz": {
+    "bytes": 16752,
+    "sha256": "6465b5baefafcfb4e388b57e185ef4466e758f98bdce7383ae7cc863cb7d76ac"
+  },
+  "results/2026-10_conservative_book_cost1.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_conservative_book_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_conservative_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-10_conservative_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_conservative_book_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_conservative_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_conservative_book_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_conservative_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_conservative_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_direct_book_cost1.json": {
+    "bytes": 611,
+    "sha256": "5b5d7cea5f2c92291e29e66216193d024ad54c10d133011c1bc8418f952d5455"
+  },
+  "results/2026-10_direct_book_cost1_daily.csv": {
+    "bytes": 1007,
+    "sha256": "02b90b5863960d4004b1e6d7debaf9ecdc52b8e3560fc152c7dd4b76650598ae"
+  },
+  "results/2026-10_direct_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 6791,
+    "sha256": "ea7a2b313d6536c3d2646fbad631fbc0769b8bf9aedf6b654e5b325c005d15c4"
+  },
+  "results/2026-10_direct_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "bfcc7f169f005d4e66f9389990538e355d7cdf736076642afb26fd64e7610e8d"
+  },
+  "results/2026-10_direct_book_cost1_trades.csv.gz": {
+    "bytes": 15407,
+    "sha256": "ae0bf68a6532a7266c0ac0a0e4be511eb8a17217cf6ed8ce232c5bec109204fa"
+  },
+  "results/2026-10_direct_book_cost2.json": {
+    "bytes": 609,
+    "sha256": "0ab87dd9b79833bb0de80da8891fbdab77403516e37a62444515ea85722bda3f"
+  },
+  "results/2026-10_direct_book_cost2_daily.csv": {
+    "bytes": 1002,
+    "sha256": "98a6b1bac2aff95dd64788ebcdefe314c931ef33a80768fbbeff6a753388eb3a"
+  },
+  "results/2026-10_direct_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "d99d4ad6ca227a0de8219e885925149dccc3cdc6e4cc4ac6629fd52078642405"
+  },
+  "results/2026-10_direct_book_cost2_trades.csv.gz": {
+    "bytes": 4225,
+    "sha256": "559803a092c3579604ea1ddabdeb71e359595e765ecf66c276ef6371d8e61677"
+  },
+  "results/2026-10_duration_book_cost1.json": {
+    "bytes": 601,
+    "sha256": "90300659dcea659bf87c5053c0f89d3e4ca112d3f798255c1c6e0a74cb99bc91"
+  },
+  "results/2026-10_duration_book_cost1_daily.csv": {
+    "bytes": 1003,
+    "sha256": "9a94d8804a0cc95bc67c9383fca9436b6e4b43c50bfedc88db1e5203e628b983"
+  },
+  "results/2026-10_duration_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 2208,
+    "sha256": "e7b17c6e7304b32c293a2d05758506c77c5b02a74dd7f2918d078c9bf2ccc107"
+  },
+  "results/2026-10_duration_book_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "5d1d26380cf4b0399cb3c46aca05cf6fe5011de60bb0c91dcf0f46356e884525"
+  },
+  "results/2026-10_duration_book_cost1_trades.csv.gz": {
+    "bytes": 5223,
+    "sha256": "d6b79d6cf13629034d8fa6f53b3b57aad58e9defaccc49c7d4f156f70b536fc0"
+  },
+  "results/2026-10_duration_book_cost2.json": {
+    "bytes": 559,
+    "sha256": "105d056bc937d56ddbf74a113282d81d8c62de188e1fe3fc7f76887acc51aaca"
+  },
+  "results/2026-10_duration_book_cost2_daily.csv": {
+    "bytes": 999,
+    "sha256": "135941c4181dfe440723081cf6cb72d84ba144ef3aac1f568d83ae7990d2161a"
+  },
+  "results/2026-10_duration_book_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c10815ed788d7c8a67d5f2284cfe09effdc61e4f3cdfbf1ccd26ccd972f15764"
+  },
+  "results/2026-10_duration_book_cost2_trades.csv.gz": {
+    "bytes": 261,
+    "sha256": "041b6bfffc574960cdeb843483a37c95b4e03e08b1dac2576db2ca584101629e"
+  },
+  "results/2026-10_duration_book_h180_cost1.json": {
+    "bytes": 597,
+    "sha256": "7d1e121b6f380557ffe090d15e2653df72aee9a7cf6f4d98827fe09bf8497fac"
+  },
+  "results/2026-10_duration_book_h180_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "23175f77a5254ab89182c57941c8c4e4c912fa4b9b6079a09fba52464b6b2954"
+  },
+  "results/2026-10_duration_book_h180_cost1_decision_trace.jsonl.gz": {
+    "bytes": 2108,
+    "sha256": "52a82d4d1f389c77f9ede9f8bcda85d4669286e4b6ebfb2a6563783c5c06f1c0"
+  },
+  "results/2026-10_duration_book_h180_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "fca48667d53b12ddda71c9be5a79983a1f224515710922b5c86ba96db762d306"
+  },
+  "results/2026-10_duration_book_h180_cost1_trades.csv.gz": {
+    "bytes": 4979,
+    "sha256": "b0a6b36431afd1277d1a7d94985c93a88ca3cdc7e1ce009384ba8abb9b4eac9a"
+  },
+  "results/2026-10_duration_book_h180_cost2.json": {
+    "bytes": 559,
+    "sha256": "105d056bc937d56ddbf74a113282d81d8c62de188e1fe3fc7f76887acc51aaca"
+  },
+  "results/2026-10_duration_book_h180_cost2_daily.csv": {
+    "bytes": 999,
+    "sha256": "135941c4181dfe440723081cf6cb72d84ba144ef3aac1f568d83ae7990d2161a"
+  },
+  "results/2026-10_duration_book_h180_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c10815ed788d7c8a67d5f2284cfe09effdc61e4f3cdfbf1ccd26ccd972f15764"
+  },
+  "results/2026-10_duration_book_h180_cost2_trades.csv.gz": {
+    "bytes": 261,
+    "sha256": "041b6bfffc574960cdeb843483a37c95b4e03e08b1dac2576db2ca584101629e"
+  },
+  "results/2026-10_duration_book_h30_cost1.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_duration_book_h30_cost1_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_duration_book_h30_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-10_duration_book_h30_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_duration_book_h30_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_duration_book_h30_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_duration_book_h30_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_duration_book_h30_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_duration_book_h30_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_duration_book_h60_cost1.json": {
+    "bytes": 527,
+    "sha256": "a41c983615fe713b7c102970ffadb72a7738710b47e5e294a945c91f5ea20b57"
+  },
+  "results/2026-10_duration_book_h60_cost1_daily.csv": {
+    "bytes": 903,
+    "sha256": "522b04d5a12801c2bde09eb2c873c955dc28cade072ee673a24c372c15818e86"
+  },
+  "results/2026-10_duration_book_h60_cost1_decision_trace.jsonl.gz": {
+    "bytes": 287,
+    "sha256": "1e15e8116ab4390d1a88cc32e86d6ebd5e01e3fa9790405b908d45f197535781"
+  },
+  "results/2026-10_duration_book_h60_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "b12bb226cf878212208acb688914d1f1e3fad4fb578007f44b227d88e1e13fe3"
+  },
+  "results/2026-10_duration_book_h60_cost1_trades.csv.gz": {
+    "bytes": 566,
+    "sha256": "7fa4187b12efd8ef720f7f7cc34ed3016f766b951542955eaa7336f56978294b"
+  },
+  "results/2026-10_duration_book_h60_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_duration_book_h60_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_duration_book_h60_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_duration_book_h60_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost1.json": {
+    "bytes": 611,
+    "sha256": "b90a257c1479e91d6318cbe125dbc7b4fc0cfe3b7ddb69098a43039c7f1051a8"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost1_daily.csv": {
+    "bytes": 999,
+    "sha256": "7a819fe7bf09cd5ea5171d77f939200df779ead90ddbd578a5cd01f011b1aaa8"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost1_decision_trace.jsonl.gz": {
+    "bytes": 2350,
+    "sha256": "c46a49df360485ce5c7cc2fa6947f32d0ecdca6bff5c3d8bc9daaf5fcd7da171"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0a650b377f12c397f9286fc539ae6a2dfa5f2bd53448103efb1fa27125af9990"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost1_trades.csv.gz": {
+    "bytes": 5592,
+    "sha256": "c0969ed472af6d137e855a4664288606a1d80ede6b721a65d2ca9eafa712e633"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost2.json": {
+    "bytes": 559,
+    "sha256": "105d056bc937d56ddbf74a113282d81d8c62de188e1fe3fc7f76887acc51aaca"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost2_daily.csv": {
+    "bytes": 999,
+    "sha256": "135941c4181dfe440723081cf6cb72d84ba144ef3aac1f568d83ae7990d2161a"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "c10815ed788d7c8a67d5f2284cfe09effdc61e4f3cdfbf1ccd26ccd972f15764"
+  },
+  "results/2026-10_duration_book_no_adaptive_cost2_trades.csv.gz": {
+    "bytes": 261,
+    "sha256": "041b6bfffc574960cdeb843483a37c95b4e03e08b1dac2576db2ca584101629e"
+  },
+  "results/2026-10_duration_price_cost1.json": {
+    "bytes": 604,
+    "sha256": "5731f7f35f830172ad60e3213f51e1604691d73339ca8deda7d3a34fc8b1b348"
+  },
+  "results/2026-10_duration_price_cost1_daily.csv": {
+    "bytes": 997,
+    "sha256": "2a682f4916db55d76fbea0e5a5f90350838f5755b7b5b072f7cfd62b112c07e3"
+  },
+  "results/2026-10_duration_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 1802,
+    "sha256": "8d008c2aec2954e6e1f208773b6778c3e9aa27d25e6eeddfe9216a45e625d227"
+  },
+  "results/2026-10_duration_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "ac3e49475423b303080bad5c5fec0c6697fd0fb0955f965f1471548f88815a53"
+  },
+  "results/2026-10_duration_price_cost1_trades.csv.gz": {
+    "bytes": 4352,
+    "sha256": "aabadc9ba24659e1e8ebf27b4b76174ccc0396e98ac23e249710e5267aa1bb6a"
+  },
+  "results/2026-10_duration_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_duration_price_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_duration_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_duration_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_magnitude_price_cost1.json": {
+    "bytes": 604,
+    "sha256": "5731f7f35f830172ad60e3213f51e1604691d73339ca8deda7d3a34fc8b1b348"
+  },
+  "results/2026-10_magnitude_price_cost1_daily.csv": {
+    "bytes": 997,
+    "sha256": "2a682f4916db55d76fbea0e5a5f90350838f5755b7b5b072f7cfd62b112c07e3"
+  },
+  "results/2026-10_magnitude_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 1772,
+    "sha256": "27313da29eea0ebe0e77982afad467065a0c83997520deb0636d948e18b474ad"
+  },
+  "results/2026-10_magnitude_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "ac3e49475423b303080bad5c5fec0c6697fd0fb0955f965f1471548f88815a53"
+  },
+  "results/2026-10_magnitude_price_cost1_trades.csv.gz": {
+    "bytes": 3923,
+    "sha256": "37843dca3c107fb08924d1deb104ccc02eb44d2744f39f112154e0bd553e05e3"
+  },
+  "results/2026-10_magnitude_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_magnitude_price_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_magnitude_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_magnitude_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_mean_payoff_price_cost1.json": {
+    "bytes": 609,
+    "sha256": "80bc606d2c991d57cb20e44d7ef334c0e0744ab632749e14cf35cfd7d5640a16"
+  },
+  "results/2026-10_mean_payoff_price_cost1_daily.csv": {
+    "bytes": 995,
+    "sha256": "b1012ff046a8cd3b2954dca3089ca6ae6f81bb50a5ab0a4e86b7b96557809fa9"
+  },
+  "results/2026-10_mean_payoff_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 1936,
+    "sha256": "d5b7a565284d973ff7e9935075c38f0a625f71585b712343fd3f63ccbe8d0871"
+  },
+  "results/2026-10_mean_payoff_price_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "a0d9c70eee121185ac0afd2b223d79bd795656103b29bcc572e71aeaa109f409"
+  },
+  "results/2026-10_mean_payoff_price_cost1_trades.csv.gz": {
+    "bytes": 4330,
+    "sha256": "e1b5ce1725730339993c48b75fe19166487f87d7792b8475028dce7f060d3acd"
+  },
+  "results/2026-10_mean_payoff_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "207e5c28a0601fbaf3fce76e7e18f55b15cf26a6da0b44039c51abbfc5de4978"
+  },
+  "results/2026-10_mean_payoff_price_cost2_daily.csv": {
+    "bytes": 699,
+    "sha256": "5b6890c66224104773dda3f96fec9d0470cac026fad3153a7835787a65cc5218"
+  },
+  "results/2026-10_mean_payoff_price_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "0d7345fde9bc3017c802532b3b6c194d79a1d28372530baaa21e98d121b82327"
+  },
+  "results/2026-10_mean_payoff_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-10_reference_cost1.json": {
+    "bytes": 606,
+    "sha256": "99f7a06a9a57400da0747e44d0f2dbf35f9bf15dbae80485517b12df87917322"
+  },
+  "results/2026-10_reference_cost1_daily.csv": {
+    "bytes": 937,
+    "sha256": "3fc302c7524694d7825421212c58b2cb4edec8f4c44e0a1f838e7790222f9399"
+  },
+  "results/2026-10_reference_cost1_decision_trace.jsonl.gz": {
+    "bytes": 349,
+    "sha256": "426084dba7c3fd695a0a3dae03107de0694c8480676a048a35b1428cd0cd07e9"
+  },
+  "results/2026-10_reference_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "38fbe87abd55e47dd9b221611a852edfaaac3143fc6a50bb1d7e6f516fd4851a"
+  },
+  "results/2026-10_reference_cost1_trades.csv.gz": {
+    "bytes": 778,
+    "sha256": "60883853aafb90248370eb9093fde64a6c2a0706b9cb9bc436239d77432a426e"
+  },
+  "results/2026-10_reference_cost2.json": {
+    "bytes": 602,
+    "sha256": "20e114c8792996e742e94d06cbf0202b2805a29b3db499c945537e622340076b"
+  },
+  "results/2026-10_reference_cost2_daily.csv": {
+    "bytes": 929,
+    "sha256": "717d553215f88bbe7731f172bd24d62e30474b41f1a319a5bf61769752953a33"
+  },
+  "results/2026-10_reference_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "56284e5c8c33a4e09de683e22948decdb94f3c330c0b283f143b7fa03dad2b51"
+  },
+  "results/2026-10_reference_cost2_trades.csv.gz": {
+    "bytes": 787,
+    "sha256": "6385a4c41fee65e9565e25900b48f1243194788b493f248a3aedcad2c30ce933"
+  },
+  "results/2026-10_rule_momentum_cost1.json": {
+    "bytes": 614,
+    "sha256": "e9438a369f4d1a2420d1cfef9bae05e6c9c0a9707d7ad004ffb5290c2314d5be"
+  },
+  "results/2026-10_rule_momentum_cost1_daily.csv": {
+    "bytes": 1005,
+    "sha256": "599a67999410512e5ae8dbd3bc4ab26be39881953643865f05bdf596b782bc3c"
+  },
+  "results/2026-10_rule_momentum_cost1_decision_trace.jsonl.gz": {
+    "bytes": 13013,
+    "sha256": "7cfc6d1319f3a08c21acba3818281c3be059cf2f1869fb36f29330327d81c752"
+  },
+  "results/2026-10_rule_momentum_cost1_marks.npy": {
+    "bytes": 357248,
+    "sha256": "e593a9b5560f2d7cfcbac3cbb5c583c51060e78848275b63d1a07a6c52dae2f4"
+  },
+  "results/2026-10_rule_momentum_cost1_trades.csv.gz": {
+    "bytes": 36125,
+    "sha256": "47eb409b4e6c3ae410faf5a659c312ef89063e2e48998faa0008ba5d83f7c83d"
+  },
+  "results/2026-10_rule_momentum_cost2.json": {
+    "bytes": 611,
+    "sha256": "cb5a081ef28fac2b10dd5c64c0e4d11540c17c3ed84c6ff45fcea6aed9ff4bb3"
+  },
+  "results/2026-10_rule_momentum_cost2_daily.csv": {
+    "bytes": 1007,
+    "sha256": "39554f1ae1d2c2098ed68908a5f292d76e4c7a310b7786565d8bb0cdf902c016"
+  },
+  "results/2026-10_rule_momentum_cost2_marks.npy": {
+    "bytes": 357248,
+    "sha256": "1ec70f02cd4916c577ca62310d3daaf2412288a136832ec437c4f422640e915a"
+  },
+  "results/2026-10_rule_momentum_cost2_trades.csv.gz": {
+    "bytes": 19277,
+    "sha256": "1e4ccd791797c915c010346bde63ce40d12d73a7c94e47df727fb9c74690fb96"
+  },
+  "results/2026-11_conservative_book_cost1.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_conservative_book_cost1_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_conservative_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-11_conservative_book_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_conservative_book_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_conservative_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_conservative_book_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_conservative_book_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_conservative_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_direct_book_cost1.json": {
+    "bytes": 582,
+    "sha256": "2d862731378ecda7d0d730c5a97a5185ef954f617aa2afee74b7dd2617f3cffc"
+  },
+  "results/2026-11_direct_book_cost1_daily.csv": {
+    "bytes": 778,
+    "sha256": "bb66637f73755c18c84267ba907573c5076c50bbee52f7a03cfaa60c8495be7d"
+  },
+  "results/2026-11_direct_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 8349,
+    "sha256": "4d652577a9a88bc52ce950dc4e31856c96b8a8adc50e4b70366bf24574f0df65"
+  },
+  "results/2026-11_direct_book_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "e0e39aefe524c2af49b67eaa4c4b1854d4d42831b631199b2cfc102da37c04c0"
+  },
+  "results/2026-11_direct_book_cost1_trades.csv.gz": {
+    "bytes": 18952,
+    "sha256": "049d67969ea7a006d1531e4a9a89e290731fbb1ba64d6a3084e6fdd8207af446"
+  },
+  "results/2026-11_direct_book_cost2.json": {
+    "bytes": 602,
+    "sha256": "8f43b6e0f1cc51e8c0ed3fedd2d92e72a6999f82e7cabad0246587fd6ea67319"
+  },
+  "results/2026-11_direct_book_cost2_daily.csv": {
+    "bytes": 770,
+    "sha256": "051be702089a4130a5cab6a531b257ff6aeae880179c43ff60df5951eb3e1c15"
+  },
+  "results/2026-11_direct_book_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "d2a514cedc6880450196e92e903e64754307d6e00e39a7ee950033519e45a5e2"
+  },
+  "results/2026-11_direct_book_cost2_trades.csv.gz": {
+    "bytes": 4890,
+    "sha256": "67985904cd8d73aa621bc5e931fec86dac8623b6b693bc98810dd8a656eb71d4"
+  },
+  "results/2026-11_duration_book_cost1.json": {
+    "bytes": 597,
+    "sha256": "53ef42da90cf5aaf0bbf5be86da92caef8301b462eb086f85bad7b3974e39d38"
+  },
+  "results/2026-11_duration_book_cost1_daily.csv": {
+    "bytes": 780,
+    "sha256": "553c719cd9e78ef7ea75fa63e105365e43347f71dfe600cf28431ea865c6c67d"
+  },
+  "results/2026-11_duration_book_cost1_decision_trace.jsonl.gz": {
+    "bytes": 609,
+    "sha256": "e617e9d4c4e4e188b64943d04daf39f59062626d2b52eec59db7eaa320a49a62"
+  },
+  "results/2026-11_duration_book_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "2471582cf41f52b5cf3313b82dc771c843e3202bdf8f15679d20dae60591a8a9"
+  },
+  "results/2026-11_duration_book_cost1_trades.csv.gz": {
+    "bytes": 1352,
+    "sha256": "4273cc3365ba499eeb3b070148b340c5786c89a4291535d47f030a19499f13c9"
+  },
+  "results/2026-11_duration_book_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_book_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_book_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_book_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_duration_book_h180_cost1.json": {
+    "bytes": 606,
+    "sha256": "fc479b109cb3469064862eac3e9d7b76f242dbde5da749309fbc004fe1e0b077"
+  },
+  "results/2026-11_duration_book_h180_cost1_daily.csv": {
+    "bytes": 777,
+    "sha256": "bcced0c2e901c0f17c226e98ce8e8ac797239793872e86890d3056ca14bf5402"
+  },
+  "results/2026-11_duration_book_h180_cost1_decision_trace.jsonl.gz": {
+    "bytes": 542,
+    "sha256": "7bc1dd46f20e567df55631041b64908957f40d5f9b5eec7fb057727a4c481f84"
+  },
+  "results/2026-11_duration_book_h180_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "b34f797f48c6f074e9d8d0fd3d282bc39af7f89384bf18ca8bb5ac4634372cb9"
+  },
+  "results/2026-11_duration_book_h180_cost1_trades.csv.gz": {
+    "bytes": 1188,
+    "sha256": "867370baea4f9f02c5a51c5f789759bfea4d849a3615623d3e21a935504ac5c2"
+  },
+  "results/2026-11_duration_book_h180_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_book_h180_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_book_h180_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_book_h180_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_duration_book_h30_cost1.json": {
+    "bytes": 515,
+    "sha256": "7b98e0efc75304470476936dd3e9c924df46471b6ce782d09b15c13110f9ba4c"
+  },
+  "results/2026-11_duration_book_h30_cost1_daily.csv": {
+    "bytes": 567,
+    "sha256": "69aacf5454615e664ef4f887177d7e4ec3fe157fb965694ef703fd9b0cca016c"
+  },
+  "results/2026-11_duration_book_h30_cost1_decision_trace.jsonl.gz": {
+    "bytes": 149,
+    "sha256": "c05a327c33b376ac08532ea54e47894dc60d8a8254a065361aee1336773d4e05"
+  },
+  "results/2026-11_duration_book_h30_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "ac6dc544c619d0a9937ee3328b8fb968610ec079a9c8982a7e3e068845431578"
+  },
+  "results/2026-11_duration_book_h30_cost1_trades.csv.gz": {
+    "bytes": 244,
+    "sha256": "782e80a791d4c3e8e6f3dc592e4d5d9afaaf327ce2ed73d3128a02ec9ef1db7f"
+  },
+  "results/2026-11_duration_book_h30_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_book_h30_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_book_h30_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_book_h30_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_duration_book_h60_cost1.json": {
+    "bytes": 564,
+    "sha256": "405d3b16d768d4b9fde9a34cb266a30bfeeda026d60b6c5c1d522c2e46a2b578"
+  },
+  "results/2026-11_duration_book_h60_cost1_daily.csv": {
+    "bytes": 713,
+    "sha256": "11c7ae4760f91d698606944f9436bab4816c6ee86190b8410158c4c6caa4abba"
+  },
+  "results/2026-11_duration_book_h60_cost1_decision_trace.jsonl.gz": {
+    "bytes": 150,
+    "sha256": "f7287106290b56dc5e21b7829b50fb8a43670a676b2343f7944c9843b6f0e1c2"
+  },
+  "results/2026-11_duration_book_h60_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "2745abab7867ba49aa3f6566133f94a88569d193e5fb613fd5534b2c3307f988"
+  },
+  "results/2026-11_duration_book_h60_cost1_trades.csv.gz": {
+    "bytes": 253,
+    "sha256": "8d03fda1c4efc0d6581d74da778ab7627326abdc642e1e10bf0c261542210c92"
+  },
+  "results/2026-11_duration_book_h60_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_book_h60_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_book_h60_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_book_h60_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost1.json": {
+    "bytes": 597,
+    "sha256": "53ef42da90cf5aaf0bbf5be86da92caef8301b462eb086f85bad7b3974e39d38"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost1_daily.csv": {
+    "bytes": 780,
+    "sha256": "553c719cd9e78ef7ea75fa63e105365e43347f71dfe600cf28431ea865c6c67d"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost1_decision_trace.jsonl.gz": {
+    "bytes": 609,
+    "sha256": "e617e9d4c4e4e188b64943d04daf39f59062626d2b52eec59db7eaa320a49a62"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "2471582cf41f52b5cf3313b82dc771c843e3202bdf8f15679d20dae60591a8a9"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost1_trades.csv.gz": {
+    "bytes": 1352,
+    "sha256": "4273cc3365ba499eeb3b070148b340c5786c89a4291535d47f030a19499f13c9"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_book_no_adaptive_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_duration_price_cost1.json": {
+    "bytes": 580,
+    "sha256": "d0bde97d088f38d1988544ed606c4197c0092dcff19d314f7c936eb5d7b8b56a"
+  },
+  "results/2026-11_duration_price_cost1_daily.csv": {
+    "bytes": 759,
+    "sha256": "490593b80f622e5adf487dbafc4e2d0b8f0da4aac7d9723f1585b8332b87cbac"
+  },
+  "results/2026-11_duration_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 401,
+    "sha256": "af1709649d507cd24a8bab090e76a5d7439fd5230e9c130fef4973da73b9a149"
+  },
+  "results/2026-11_duration_price_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "dddf1ded4c1bc0007096cae1696f07a6b0482d9b56776a5b7e4b2913749c463b"
+  },
+  "results/2026-11_duration_price_cost1_trades.csv.gz": {
+    "bytes": 837,
+    "sha256": "1f435f3393b325706e71ddff2d266727399d25a49247d07dd0947590648290d4"
+  },
+  "results/2026-11_duration_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_duration_price_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_duration_price_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_duration_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_magnitude_price_cost1.json": {
+    "bytes": 580,
+    "sha256": "d0bde97d088f38d1988544ed606c4197c0092dcff19d314f7c936eb5d7b8b56a"
+  },
+  "results/2026-11_magnitude_price_cost1_daily.csv": {
+    "bytes": 759,
+    "sha256": "490593b80f622e5adf487dbafc4e2d0b8f0da4aac7d9723f1585b8332b87cbac"
+  },
+  "results/2026-11_magnitude_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 387,
+    "sha256": "cd80166fb98c1dcc96e8bbd78ac2e32d062c653c2c2a9a816b7851820e40e4ed"
+  },
+  "results/2026-11_magnitude_price_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "dddf1ded4c1bc0007096cae1696f07a6b0482d9b56776a5b7e4b2913749c463b"
+  },
+  "results/2026-11_magnitude_price_cost1_trades.csv.gz": {
+    "bytes": 766,
+    "sha256": "303664c8e48dc093032961d88bdf627da5f8ad0d271ae88e7e86a2e5e5e2c182"
+  },
+  "results/2026-11_magnitude_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_magnitude_price_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_magnitude_price_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_magnitude_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_mean_payoff_price_cost1.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_mean_payoff_price_cost1_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_mean_payoff_price_cost1_decision_trace.jsonl.gz": {
+    "bytes": 21,
+    "sha256": "34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69"
+  },
+  "results/2026-11_mean_payoff_price_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_mean_payoff_price_cost1_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_mean_payoff_price_cost2.json": {
+    "bytes": 325,
+    "sha256": "57e2f5dd1eda6e35e92a04a31ed0fd28bf87351b69e4bd919de62d863de0ac2e"
+  },
+  "results/2026-11_mean_payoff_price_cost2_daily.csv": {
+    "bytes": 545,
+    "sha256": "e7273341a6f304ed717113c893dfe4717f203c016b254d471c759e6c596174a0"
+  },
+  "results/2026-11_mean_payoff_price_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d8e0e55e190d2d5b8078bac38cfeeb1dd430bbd9aadcff22fd18ebd269a0711"
+  },
+  "results/2026-11_mean_payoff_price_cost2_trades.csv.gz": {
+    "bytes": 116,
+    "sha256": "b67fca587bbae0dbddff1b0ae26eee97f72e794a03c4582b2b5f25c257ca1db5"
+  },
+  "results/2026-11_reference_cost1.json": {
+    "bytes": 575,
+    "sha256": "3d911d596c1fa9212a4967b36af1e5ee011a2006c4a64cd84cb0faa4e94cf2ea"
+  },
+  "results/2026-11_reference_cost1_daily.csv": {
+    "bytes": 758,
+    "sha256": "edf40169821b3e54388d250838edf7067fc5408a2935a8524f992694d964566f"
+  },
+  "results/2026-11_reference_cost1_decision_trace.jsonl.gz": {
+    "bytes": 328,
+    "sha256": "a41d933a995b877718dadbaf1259279a85494c0fc6e52c772e8cf0a0f18ff17a"
+  },
+  "results/2026-11_reference_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "4d141a2a7f1a7203b8b8d83ae31aca4f7bafb7da3b51063efac07e71e3f7c3b9"
+  },
+  "results/2026-11_reference_cost1_trades.csv.gz": {
+    "bytes": 705,
+    "sha256": "f5782e4efb42d1753530c933022ae40587a8c59eff24196d4fc878c67e921323"
+  },
+  "results/2026-11_reference_cost2.json": {
+    "bytes": 567,
+    "sha256": "8f452c24ef978fca15c306f03eb7debbe32f42a446baeb1df999814b919a6cbf"
+  },
+  "results/2026-11_reference_cost2_daily.csv": {
+    "bytes": 757,
+    "sha256": "9b2718df42828c2c48caec7866fc7d3102856d1ec70b928b2e229bdb12a29ece"
+  },
+  "results/2026-11_reference_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "e663d793f1c067ecc7a2e32763b11abbcee5948376932c28f048b083b736d7c9"
+  },
+  "results/2026-11_reference_cost2_trades.csv.gz": {
+    "bytes": 714,
+    "sha256": "64278dfc44f2e844a1a102a5502acf4d5cdd9d1a47a2d02868170da322409221"
+  },
+  "results/2026-11_rule_momentum_cost1.json": {
+    "bytes": 612,
+    "sha256": "7913cf43192d466a32796d7f737154c8a89c8842c5ae02ba7c7378b4313bb379"
+  },
+  "results/2026-11_rule_momentum_cost1_daily.csv": {
+    "bytes": 780,
+    "sha256": "bc89f320245286f8c879fb8ae8225e4a8d92dba83b75275cefa6dea6bb9269a9"
+  },
+  "results/2026-11_rule_momentum_cost1_decision_trace.jsonl.gz": {
+    "bytes": 10496,
+    "sha256": "36e1c67c30e26c21b9fd4bd9f65b2eb83447ecf31e17cce09f17d0b80aa71282"
+  },
+  "results/2026-11_rule_momentum_cost1_marks.npy": {
+    "bytes": 276608,
+    "sha256": "e8a1db2207a8bdc888b397850462e723ff8fc377b097db4739f5e9103bf2aa26"
+  },
+  "results/2026-11_rule_momentum_cost1_trades.csv.gz": {
+    "bytes": 28785,
+    "sha256": "c0322640fcb160af236247757a6cdc84a2ea0fef14128242e5e41c7416309998"
+  },
+  "results/2026-11_rule_momentum_cost2.json": {
+    "bytes": 595,
+    "sha256": "3e684de24c79e306c67a41c48dd2c1b931a308b369643983c3660e265f550c40"
+  },
+  "results/2026-11_rule_momentum_cost2_daily.csv": {
+    "bytes": 781,
+    "sha256": "c67396bfd152f44c5fc631277393defa5210ebbfa37a452f23b8e30e59847f66"
+  },
+  "results/2026-11_rule_momentum_cost2_marks.npy": {
+    "bytes": 276608,
+    "sha256": "b15db52bfd0a449cc6fa7da93902a600a1f69c2d5373d1e7ead13bbdc423bdbb"
+  },
+  "results/2026-11_rule_momentum_cost2_trades.csv.gz": {
+    "bytes": 19254,
+    "sha256": "0f6c9ebf3f997fa0c036cdabc141711a02ab717bfc899ef5ca5dfffe7317b281"
+  },
+  "results/selection_before_final.json": {
+    "bytes": 19283,
+    "sha256": "00d7f9c2108009163ee27ec844bf23fd56299cb072576cafc9f29640b57ef432"
+  },
+  "results/summary.json": {
+    "bytes": 153366,
+    "sha256": "def870f5973396a65fe97cf9f45c941aba02a585ede99df4cc66ba4d6f0a71b6"
+  },
+  "run.log": {
+    "bytes": 18341,
+    "sha256": "9c1658b2ae710d0d7aeddcb7d3ff922727cba5fbf1bfe474738178b304ec1113"
+  },
+  "run27.py": {
+    "bytes": 6343,
+    "sha256": "969851641e93e9003e60d8f4169829e42b203bca4387a578daeffa4cab514761"
+  },
+  "test_r27.py": {
+    "bytes": 5400,
+    "sha256": "fa9db918304922e30977bb0b829ddecc14c4cf0c27bea0d6164f1cf2a74a74f0"
+  },
+  "tests.log": {
+    "bytes": 1361,
+    "sha256": "28f33b551ffad9e4484a85acf93b951f790578bc50a6a3f876edd60959a305d1"
+  },
+  "verify.log": {
+    "bytes": 1548,
+    "sha256": "ed7f61ba0c07bf069847036d406aa36bdda47998c09ccd6e3492b7465e99e9d8"
+  },
+  "verify27.py": {
+    "bytes": 4609,
+    "sha256": "d59eaee6270576c2f4593f305d34773dd9834059d9702eaa7c773aba785836b0"
+  }
+}

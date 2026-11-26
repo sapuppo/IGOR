@@ -1,0 +1,112 @@
+{
+  "version": "R17.27",
+  "status": "completed",
+  "date": "2026-11-26",
+  "branch": "research-r17-27-magnitude-duration",
+  "selected": "cash",
+  "promoted": false,
+  "historical_goal_passed": false,
+  "best_diagnostic": "duration_book_h60",
+  "best_diagnostic_walk_forward": {
+    "total_return": 0.012920799330657928,
+    "monthly_equivalent": 0.003181944188908936,
+    "monthly": {
+      "2026-07": 0.0,
+      "2026-08": 0.006737619864000122,
+      "2026-09": 0.0,
+      "2026-10": 0.006141798363999973
+    },
+    "max_drawdown": 0.004955819159784269,
+    "sharpe": 3.5818839754862766,
+    "profit_factor": 2.9246576623940155,
+    "trades": 16,
+    "win_rate": 0.625,
+    "mean_hold_minutes": 47.1875,
+    "days": 123.0,
+    "positive_folds": 2,
+    "fees": 24.256772906455243,
+    "funding": 0.0,
+    "price_pnl_after_spread_slippage": 153.4647662130353,
+    "trades_by_horizon": {
+      "30": 0,
+      "60": 16,
+      "180": 0,
+      "10080": 0
+    }
+  },
+  "best_diagnostic_november_partial": {
+    "total_return": 0.00043432980569990676,
+    "monthly_equivalent": 0.0005508618099527851,
+    "monthly": {
+      "2026-11": 0.00043432980569990676
+    },
+    "max_drawdown": 0.0011620644695961024,
+    "sharpe": 3.89978631893253,
+    "profit_factor": null,
+    "trades": 1,
+    "win_rate": 1.0,
+    "mean_hold_minutes": 60.0,
+    "days": 24.0,
+    "positive_folds": 1,
+    "fees": 1.34253369,
+    "funding": -0.111338253,
+    "price_pnl_after_spread_slippage": 5.797169999999841,
+    "trades_by_horizon": {
+      "30": 0,
+      "60": 1,
+      "180": 0,
+      "10080": 0
+    }
+  },
+  "independent_research_holdout": false,
+  "report_url": "https://github.com/sapuppo/IGOR/blob/research-r17-27-magnitude-duration/r16_edge_lab/r17_27_magnitude_duration/RESULTADO_PT.md",
+  "verification": {
+    "status": "passed",
+    "accounting_replays": 120,
+    "model_bundles": [
+      {
+        "file": "2026-07.json",
+        "model_sha256": "5b2655d0f2b4b7891212f00cfc1cd09ef7462e04917dad2efd1831a70b8ba17c",
+        "predictions_sha256": "ffae50e6bb02f84f17b521894d313af83445724a6b3d97ebbaeda6777b63c56f"
+      },
+      {
+        "file": "2026-08.json",
+        "model_sha256": "a5aafcd31aaf9bbe908a5142ebd97f46ef914ce89ccb051e2d5fbbd17d3845d5",
+        "predictions_sha256": "2c3939edbd16422856a60610288a368d28db013d6e431d347ea93e6643a70197"
+      },
+      {
+        "file": "2026-09.json",
+        "model_sha256": "557378ac30ab6bd951e728375c4d73690e6c499d6644027ad13a205c7eaf1210",
+        "predictions_sha256": "bc6397a6bdd2dee78176e08f8663161077e93bfde6426afcf383ce427e72cbdd"
+      },
+      {
+        "file": "2026-10.json",
+        "model_sha256": "c4b5fee2bb38dd05d2fde478c6ac8158f856974884255690440a15ca794534ac",
+        "predictions_sha256": "637dfb7acb88beef66607dced428fe655d5612b9d67986270eac60cb7ee5cdf4"
+      },
+      {
+        "file": "2026-11.json",
+        "model_sha256": "e4a609c2661ac216555aa32fa36e2906580be37c644c298b4b766d5b283c26f7",
+        "predictions_sha256": "9040e3191670c9f3971e08b5959ab481ab6c7e15c6d1a1a3b1897eb9f7b3af27"
+      }
+    ],
+    "model_heads": 150,
+    "scalar_label_checks": 1800,
+    "real_prefix_checks": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "independent_drawdown": "HKUDS/Vibe-Trading MIT",
+    "unit_tests": 17,
+    "selection_before_final_sha256": "00d7f9c2108009163ee27ec844bf23fd56299cb072576cafc9f29640b57ef432",
+    "no_live_orders": true
+  },
+  "limitations": [
+    "Retrospective reused history, not independent research holdout",
+    "Only 16 best-horizon trades in July-October; one in November1-24",
+    "Monthly risk resets; no continuous live or paper validation",
+    "Current exchange filters, scenario spreads/slippage and snapshot book limitations",
+    "No strategy approved; no promised monthly return"
+  ]
+}

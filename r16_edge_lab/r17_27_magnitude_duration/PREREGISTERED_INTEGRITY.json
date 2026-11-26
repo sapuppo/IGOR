@@ -1,0 +1,12 @@
+{
+  "preregistered_commit": "6e5f0936a1c73305e17de78d1d740947b7f71680",
+  "unchanged_since_registration": true,
+  "verified_by": "byte-for-byte comparison against registered Git tree before outcomes",
+  "sha256": {
+    "data27.py": "59d138c36b00fd2dd5c168e4129e92bd140ff40d5a70e3bd8753e1c896d1081d",
+    "models27.py": "1b7f87341df8116f958c1ec6773930666943aa88b9fb593e4ea42bc81069a121",
+    "engine27.py": "53053f8d9725f01407cf11bfe83c476d486db15555663e268115e4216e49ae25",
+    "run27.py": "969851641e93e9003e60d8f4169829e42b203bca4387a578daeffa4cab514761",
+    "protocol.json": "fbdf7eb390b19b25cfb1f685ae0627588b84a78f7ba6cf7932d4ec1fa1616018"
+  }
+}

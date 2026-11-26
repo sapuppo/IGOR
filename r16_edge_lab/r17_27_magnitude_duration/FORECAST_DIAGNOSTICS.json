@@ -1,0 +1,372 @@
+{
+  "2026-07": {
+    "30_price": {
+      "samples": 267840,
+      "brier": 0.24921677324465902,
+      "prior_brier": 0.2496822300181878,
+      "direct_rmse": 0.7723591043908437,
+      "constant_mean_rmse": 0.7718991382605969,
+      "conditional_rmse": 0.7720639599048132,
+      "duration_mae": 5.285303439971717,
+      "constant_duration_mae": 5.777470296055123,
+      "mean_predicted_return_R": 0.004794535335173039,
+      "mean_realized_return_R": -0.0004536284398898712
+    },
+    "30_book": {
+      "samples": 267840,
+      "brier": 0.24926545829877705,
+      "prior_brier": 0.2496822300181878,
+      "direct_rmse": 0.772435960958573,
+      "constant_mean_rmse": 0.7718991382605969,
+      "conditional_rmse": 0.7722041375468363,
+      "duration_mae": 5.257525465021244,
+      "constant_duration_mae": 5.777470296055123,
+      "mean_predicted_return_R": 0.005890630035798579,
+      "mean_realized_return_R": -0.0004536284398898712
+    },
+    "60_price": {
+      "samples": 267840,
+      "brier": 0.24815167981693712,
+      "prior_brier": 0.24923772468834468,
+      "direct_rmse": 0.87991268887881,
+      "constant_mean_rmse": 0.8799191363257435,
+      "conditional_rmse": 0.8795942484845248,
+      "duration_mae": 13.875227775307819,
+      "constant_duration_mae": 13.937081152266849,
+      "mean_predicted_return_R": 0.011358165555008017,
+      "mean_realized_return_R": 0.0018793951339878508
+    },
+    "60_book": {
+      "samples": 267840,
+      "brier": 0.24827658666047486,
+      "prior_brier": 0.24923772468834468,
+      "direct_rmse": 0.8796757024781999,
+      "constant_mean_rmse": 0.8799191363257435,
+      "conditional_rmse": 0.8799272383742208,
+      "duration_mae": 13.676338185843097,
+      "constant_duration_mae": 13.937081152266849,
+      "mean_predicted_return_R": 0.011401631852853093,
+      "mean_realized_return_R": 0.0018793951339878508
+    },
+    "180_price": {
+      "samples": 267840,
+      "brier": 0.24520316936477934,
+      "prior_brier": 0.2476779446142137,
+      "direct_rmse": 0.9491049166152276,
+      "constant_mean_rmse": 0.9511978099297149,
+      "conditional_rmse": 0.9492818563546066,
+      "duration_mae": 49.81520588530662,
+      "constant_duration_mae": 49.22675045593455,
+      "mean_predicted_return_R": 0.011668372569385226,
+      "mean_realized_return_R": -0.021774969445457766
+    },
+    "180_book": {
+      "samples": 267840,
+      "brier": 0.2451219859114615,
+      "prior_brier": 0.2476779446142137,
+      "direct_rmse": 0.9490174302079074,
+      "constant_mean_rmse": 0.9511978099297149,
+      "conditional_rmse": 0.9495711684142217,
+      "duration_mae": 49.73886344010034,
+      "constant_duration_mae": 49.22675045593455,
+      "mean_predicted_return_R": 0.011220924451249063,
+      "mean_realized_return_R": -0.021774969445457766
+    }
+  },
+  "2026-08": {
+    "30_price": {
+      "samples": 267840,
+      "brier": 0.2496357836542642,
+      "prior_brier": 0.24973352705670981,
+      "direct_rmse": 0.7186991625213055,
+      "constant_mean_rmse": 0.7165390665078345,
+      "conditional_rmse": 0.7179314038456179,
+      "duration_mae": 4.0669495718535265,
+      "constant_duration_mae": 4.866231485478738,
+      "mean_predicted_return_R": -0.001779408717402523,
+      "mean_realized_return_R": 0.002303418366224377
+    },
+    "30_book": {
+      "samples": 267840,
+      "brier": 0.24939576788670942,
+      "prior_brier": 0.24973352705670981,
+      "direct_rmse": 0.7192435085535862,
+      "constant_mean_rmse": 0.7165390665078345,
+      "conditional_rmse": 0.7178278450416079,
+      "duration_mae": 4.040177074530587,
+      "constant_duration_mae": 4.866231485478738,
+      "mean_predicted_return_R": -0.0012709606580516978,
+      "mean_realized_return_R": 0.002303418366224377
+    },
+    "60_price": {
+      "samples": 267840,
+      "brier": 0.2504425038683146,
+      "prior_brier": 0.24952525715108365,
+      "direct_rmse": 0.8336223693364283,
+      "constant_mean_rmse": 0.8280740275805639,
+      "conditional_rmse": 0.8317794641949697,
+      "duration_mae": 11.338900783407217,
+      "constant_duration_mae": 13.083061618957558,
+      "mean_predicted_return_R": 0.004775446248752966,
+      "mean_realized_return_R": 0.005957290367494351
+    },
+    "60_book": {
+      "samples": 267840,
+      "brier": 0.2500549736581214,
+      "prior_brier": 0.24952525715108365,
+      "direct_rmse": 0.8338365137853956,
+      "constant_mean_rmse": 0.8280740275805639,
+      "conditional_rmse": 0.8315223556965434,
+      "duration_mae": 11.280124135187855,
+      "constant_duration_mae": 13.083061618957558,
+      "mean_predicted_return_R": 0.0011921624063220262,
+      "mean_realized_return_R": 0.005957290367494351
+    },
+    "180_price": {
+      "samples": 267840,
+      "brier": 0.25067582433927543,
+      "prior_brier": 0.24869676971620724,
+      "direct_rmse": 0.9721248793956841,
+      "constant_mean_rmse": 0.9572528109690452,
+      "conditional_rmse": 0.9645512012726735,
+      "duration_mae": 45.92881503434149,
+      "constant_duration_mae": 49.00738337012154,
+      "mean_predicted_return_R": -0.014743141327289043,
+      "mean_realized_return_R": 0.007549766329921579
+    },
+    "180_book": {
+      "samples": 267840,
+      "brier": 0.2503154066257124,
+      "prior_brier": 0.24869676971620724,
+      "direct_rmse": 0.9714034013043374,
+      "constant_mean_rmse": 0.9572528109690452,
+      "conditional_rmse": 0.9650247807253794,
+      "duration_mae": 45.77126314189847,
+      "constant_duration_mae": 49.00738337012154,
+      "mean_predicted_return_R": -0.013184401314256062,
+      "mean_realized_return_R": 0.007549766329921579
+    }
+  },
+  "2026-09": {
+    "30_price": {
+      "samples": 259200,
+      "brier": 0.24914102852968292,
+      "prior_brier": 0.2496210791578043,
+      "direct_rmse": 0.7943692002230003,
+      "constant_mean_rmse": 0.7927168419845668,
+      "conditional_rmse": 0.7934682624566262,
+      "duration_mae": 5.191893104596849,
+      "constant_duration_mae": 4.977572885080498,
+      "mean_predicted_return_R": 0.004374469850746847,
+      "mean_realized_return_R": 0.0002948936132325522
+    },
+    "30_book": {
+      "samples": 259200,
+      "brier": 0.2490810715160528,
+      "prior_brier": 0.2496210791578043,
+      "direct_rmse": 0.7943642347818479,
+      "constant_mean_rmse": 0.7927168419845668,
+      "conditional_rmse": 0.7934656329446974,
+      "duration_mae": 5.078330270376268,
+      "constant_duration_mae": 4.977572885080498,
+      "mean_predicted_return_R": 0.004157803787116842,
+      "mean_realized_return_R": 0.0002948936132325522
+    },
+    "60_price": {
+      "samples": 259200,
+      "brier": 0.2488675891277634,
+      "prior_brier": 0.24913505475512718,
+      "direct_rmse": 0.8873435492492545,
+      "constant_mean_rmse": 0.8847543855247391,
+      "conditional_rmse": 0.8861297288724558,
+      "duration_mae": 13.133707941786858,
+      "constant_duration_mae": 13.100146555476414,
+      "mean_predicted_return_R": 0.009799084858530586,
+      "mean_realized_return_R": -0.00208639417722805
+    },
+    "60_book": {
+      "samples": 259200,
+      "brier": 0.24887775777308777,
+      "prior_brier": 0.24913505475512718,
+      "direct_rmse": 0.8873686175901536,
+      "constant_mean_rmse": 0.8847543855247391,
+      "conditional_rmse": 0.8859266533757847,
+      "duration_mae": 12.797458968062953,
+      "constant_duration_mae": 13.100146555476414,
+      "mean_predicted_return_R": 0.006228785670491818,
+      "mean_realized_return_R": -0.00208639417722805
+    },
+    "180_price": {
+      "samples": 259200,
+      "brier": 0.24779117326703917,
+      "prior_brier": 0.24782171776596587,
+      "direct_rmse": 0.9684365391834071,
+      "constant_mean_rmse": 0.9608138062161032,
+      "conditional_rmse": 0.9639124447266828,
+      "duration_mae": 44.13332020715525,
+      "constant_duration_mae": 48.86324577196592,
+      "mean_predicted_return_R": 0.011027762978479294,
+      "mean_realized_return_R": -0.012447765110729009
+    },
+    "180_book": {
+      "samples": 259200,
+      "brier": 0.24769384640391745,
+      "prior_brier": 0.24782171776596587,
+      "direct_rmse": 0.9683010669497086,
+      "constant_mean_rmse": 0.9608138062161032,
+      "conditional_rmse": 0.963724019176424,
+      "duration_mae": 42.43748763320313,
+      "constant_duration_mae": 48.86324577196592,
+      "mean_predicted_return_R": 0.00871477529234808,
+      "mean_realized_return_R": -0.012447765110729009
+    }
+  },
+  "2026-10": {
+    "30_price": {
+      "samples": 250116,
+      "brier": 0.24912052428204123,
+      "prior_brier": 0.2498201493180402,
+      "direct_rmse": 0.752372670629865,
+      "constant_mean_rmse": 0.7509751787190075,
+      "conditional_rmse": 0.7517322396327003,
+      "duration_mae": 4.5210371067936075,
+      "constant_duration_mae": 5.210427884474158,
+      "mean_predicted_return_R": -0.0012001782642644741,
+      "mean_realized_return_R": 0.005884165757305023
+    },
+    "30_book": {
+      "samples": 250116,
+      "brier": 0.24906470722799479,
+      "prior_brier": 0.2498201493180402,
+      "direct_rmse": 0.7521184721802757,
+      "constant_mean_rmse": 0.7509751787190075,
+      "conditional_rmse": 0.7516344013300109,
+      "duration_mae": 4.301726577740974,
+      "constant_duration_mae": 5.210427884474158,
+      "mean_predicted_return_R": -0.0031399202603903573,
+      "mean_realized_return_R": 0.005884165757305023
+    },
+    "60_price": {
+      "samples": 250116,
+      "brier": 0.24941440666296058,
+      "prior_brier": 0.24955336315202745,
+      "direct_rmse": 0.8568775398723275,
+      "constant_mean_rmse": 0.8550540562116167,
+      "conditional_rmse": 0.85688802834544,
+      "duration_mae": 12.233040722562967,
+      "constant_duration_mae": 13.469712266897284,
+      "mean_predicted_return_R": -0.002381983012834527,
+      "mean_realized_return_R": 0.006646528214572683
+    },
+    "60_book": {
+      "samples": 250116,
+      "brier": 0.24915155201888264,
+      "prior_brier": 0.24955336315202745,
+      "direct_rmse": 0.8566731678668761,
+      "constant_mean_rmse": 0.8550540562116167,
+      "conditional_rmse": 0.8561444869604642,
+      "duration_mae": 11.9614122988327,
+      "constant_duration_mae": 13.469712266897284,
+      "mean_predicted_return_R": -0.00045738197245478405,
+      "mean_realized_return_R": 0.006646528214572683
+    },
+    "180_price": {
+      "samples": 250116,
+      "brier": 0.24784403696403912,
+      "prior_brier": 0.24847399887263222,
+      "direct_rmse": 0.9723011288702638,
+      "constant_mean_rmse": 0.9673670663913047,
+      "conditional_rmse": 0.9698972378362559,
+      "duration_mae": 44.8495357076726,
+      "constant_duration_mae": 48.43087320268147,
+      "mean_predicted_return_R": -0.00839235995461061,
+      "mean_realized_return_R": 0.001965818238206725
+    },
+    "180_book": {
+      "samples": 250116,
+      "brier": 0.24728693472212465,
+      "prior_brier": 0.24847399887263222,
+      "direct_rmse": 0.969668418874841,
+      "constant_mean_rmse": 0.9673670663913047,
+      "conditional_rmse": 0.969208049540567,
+      "duration_mae": 43.980095861302935,
+      "constant_duration_mae": 48.43087320268147,
+      "mean_predicted_return_R": -0.025041255443202282,
+      "mean_realized_return_R": 0.001965818238206725
+    }
+  },
+  "2026-11": {
+    "30_price": {
+      "samples": 207180,
+      "brier": 0.24953936571118207,
+      "prior_brier": 0.24954424761320873,
+      "direct_rmse": 0.84513683868116,
+      "constant_mean_rmse": 0.8417967057707834,
+      "conditional_rmse": 0.8433482318813668,
+      "duration_mae": 5.796991386174245,
+      "constant_duration_mae": 5.525811202199548,
+      "mean_predicted_return_R": -0.0017329990894985876,
+      "mean_realized_return_R": 0.0054195158789577804
+    },
+    "30_book": {
+      "samples": 207180,
+      "brier": 0.24948745586780952,
+      "prior_brier": 0.24954424761320873,
+      "direct_rmse": 0.8452767097051651,
+      "constant_mean_rmse": 0.8417967057707834,
+      "conditional_rmse": 0.8433849367405604,
+      "duration_mae": 5.8284252977738085,
+      "constant_duration_mae": 5.525811202199548,
+      "mean_predicted_return_R": -0.0019925924603272924,
+      "mean_realized_return_R": 0.0054195158789577804
+    },
+    "60_price": {
+      "samples": 207048,
+      "brier": 0.24916253255281903,
+      "prior_brier": 0.24919811851475543,
+      "direct_rmse": 0.8950946251065858,
+      "constant_mean_rmse": 0.892777156108052,
+      "conditional_rmse": 0.8943164837668464,
+      "duration_mae": 13.048749581332457,
+      "constant_duration_mae": 13.521727588658925,
+      "mean_predicted_return_R": 0.002084746224803689,
+      "mean_realized_return_R": -0.0003241089162624157
+    },
+    "60_book": {
+      "samples": 207048,
+      "brier": 0.24909160641289327,
+      "prior_brier": 0.24919811851475543,
+      "direct_rmse": 0.8949618640739891,
+      "constant_mean_rmse": 0.892777156108052,
+      "conditional_rmse": 0.8943732646362449,
+      "duration_mae": 13.120675323232511,
+      "constant_duration_mae": 13.521727588658925,
+      "mean_predicted_return_R": 0.0013396559389729017,
+      "mean_realized_return_R": -0.0003241089162624157
+    },
+    "180_price": {
+      "samples": 206374,
+      "brier": 0.24873022240411574,
+      "prior_brier": 0.24838946062241407,
+      "direct_rmse": 0.9547920678034333,
+      "constant_mean_rmse": 0.9417640759408653,
+      "conditional_rmse": 0.946488942593422,
+      "duration_mae": 42.47424033931233,
+      "constant_duration_mae": 48.351739900590914,
+      "mean_predicted_return_R": -0.0014835025606519919,
+      "mean_realized_return_R": -0.010524098030586375
+    },
+    "180_book": {
+      "samples": 206374,
+      "brier": 0.24941462502366715,
+      "prior_brier": 0.24838946062241407,
+      "direct_rmse": 0.9543982371687093,
+      "constant_mean_rmse": 0.9417640759408653,
+      "conditional_rmse": 0.9483790989504239,
+      "duration_mae": 42.51923838731359,
+      "constant_duration_mae": 48.351739900590914,
+      "mean_predicted_return_R": -0.001922047018886413,
+      "mean_realized_return_R": -0.010524098030586375
+    }
+  }
+}

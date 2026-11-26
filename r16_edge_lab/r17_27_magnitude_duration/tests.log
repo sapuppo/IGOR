@@ -11,10 +11,12 @@ test_latency_funding_reconciliation (test_r27.Tests.test_latency_funding_reconci
 test_negative_ev_skip (test_r27.Tests.test_negative_ev_skip) ... ok
 test_purge_and_book_cohort (test_r27.Tests.test_purge_and_book_cohort) ... ok
 test_qty_floor_minimum (test_r27.Tests.test_qty_floor_minimum) ... ok
+test_risk_ablation_only_pauses (test_r27.Tests.test_risk_ablation_only_pauses) ... ok
 test_risk_pause_drawdown (test_r27.Tests.test_risk_pause_drawdown) ... ok
+test_rule_180_minutes (test_r27.Tests.test_rule_180_minutes) ... ok
 test_stop_first_execution (test_r27.Tests.test_stop_first_execution) ... ok
 
 ----------------------------------------------------------------------
-Ran 15 tests in 0.164s
+Ran 17 tests in 0.331s
 
 OK

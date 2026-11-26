@@ -1,0 +1,14 @@
+{
+  "prepared/BTCUSDT_prices.npy": "f1e64a08ae4d90cf8d9888c6588b151d42ee51e843a59ef61f8acb324453480d",
+  "prepared/BTCUSDT_times.npy": "5c68b86aa9460b0b487a9cbe0bae53379f1a974582974dc4bde0444d28ad976c",
+  "prepared/BTCUSDT_features.pkl": "44b6050e9ee33a4a9124336c6eb9cd07c4ad58146380635e795156c83da2da32",
+  "prepared/BTCUSDT_funding.pkl": "a43b8b166122743594862733f7d7df557737a822eb9c89cd035c21b26b3e3820",
+  "prepared/ETHUSDT_prices.npy": "87888a686af167247c7adf8248c8b27bc3e9517d4019d33bc7949c1c538e999b",
+  "prepared/ETHUSDT_times.npy": "5c68b86aa9460b0b487a9cbe0bae53379f1a974582974dc4bde0444d28ad976c",
+  "prepared/ETHUSDT_features.pkl": "53ce6296b73817a2bf446469700e753a664add9dec86ff9a6849702a4f45ca91",
+  "prepared/ETHUSDT_funding.pkl": "de81925c4a9fff694d4ceb95799a4ebec682379100b1eb9e4d51ce900b31f099",
+  "prepared/SOLUSDT_prices.npy": "4af8f84c13847837e3e913823d1ec3d93d227f8eeb44fe1a3b8b421f6c17ac5c",
+  "prepared/SOLUSDT_times.npy": "5c68b86aa9460b0b487a9cbe0bae53379f1a974582974dc4bde0444d28ad976c",
+  "prepared/SOLUSDT_features.pkl": "f1babc6ce22be9a8c3d8db6c143edbba908f7c3b04bf9233c0fe80ebccdf5fc3",
+  "prepared/SOLUSDT_funding.pkl": "4fd60bcc057c376fd230e0eb120430b4215d7a628144005706171c3ab9e732e6"
+}

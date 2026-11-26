@@ -1,0 +1,656 @@
+{
+  "choices": [],
+  "independent_research_holdout": false,
+  "november_models_not_generated": true,
+  "selected": "cash",
+  "walk_forward_results": {
+    "walk_forward_conservative_book_cost1": {
+      "days": 123.0,
+      "fees": 0.0,
+      "funding": 0.0,
+      "max_drawdown": 0.0,
+      "mean_hold_minutes": 0.0,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.0,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": 0.0,
+      "profit_factor": null,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "trades": 0,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.0
+    },
+    "walk_forward_conservative_book_cost2": {
+      "days": 123.0,
+      "fees": 0.0,
+      "funding": 0.0,
+      "max_drawdown": 0.0,
+      "mean_hold_minutes": 0.0,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.0,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": 0.0,
+      "profit_factor": null,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "trades": 0,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.0
+    },
+    "walk_forward_direct_book_cost1": {
+      "days": 123.0,
+      "fees": 926.6950819098346,
+      "funding": 2.6595496120191013,
+      "max_drawdown": 0.19876867229952044,
+      "mean_hold_minutes": 148.45813586097947,
+      "monthly": {
+        "2026-07": 0.017163158197038397,
+        "2026-08": -0.039373572409804325,
+        "2026-09": -0.07622832642975752,
+        "2026-10": -0.08428217115776837
+      },
+      "monthly_equivalent": -0.046044645628275926,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -810.4200761648884,
+      "profit_factor": 0.5758306030037957,
+      "sharpe": -5.542244639339529,
+      "total_return": -0.17344556084626805,
+      "trades": 633,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 602,
+        "30": 9,
+        "60": 22
+      },
+      "win_rate": 0.40442338072669826
+    },
+    "walk_forward_direct_book_cost2": {
+      "days": 123.0,
+      "fees": 228.40909443293742,
+      "funding": -0.5950159234423048,
+      "max_drawdown": 0.06507187295634165,
+      "mean_hold_minutes": 150.48314606741573,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": -0.00763847987999966,
+        "2026-09": -0.017173765064897983,
+        "2026-10": -0.03899950028224042
+      },
+      "monthly_equivalent": -0.015900445292808874,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": -398.1760359020155,
+      "profit_factor": 0.256883854377785,
+      "sharpe": -4.659613987865664,
+      "total_return": -0.06271801462583826,
+      "trades": 89,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 86,
+        "30": 0,
+        "60": 3
+      },
+      "win_rate": 0.23595505617977527
+    },
+    "walk_forward_duration_book_cost1": {
+      "days": 123.0,
+      "fees": 302.74154645932924,
+      "funding": 0.21755318726942108,
+      "max_drawdown": 0.0815037151853768,
+      "mean_hold_minutes": 148.0408163265306,
+      "monthly": {
+        "2026-07": 0.002760749447859645,
+        "2026-08": -0.05622883745323404,
+        "2026-09": 0.0021673931396000157,
+        "2026-10": -0.009498261221349003
+      },
+      "monthly_equivalent": -0.015345569448069196,
+      "positive_folds": 2,
+      "price_pnl_after_spread_slippage": -303.28167545616043,
+      "profit_factor": 0.6040122988987264,
+      "sharpe": -3.354374664774687,
+      "total_return": -0.06058056687282298,
+      "trades": 196,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 191,
+        "30": 0,
+        "60": 5
+      },
+      "win_rate": 0.4030612244897959
+    },
+    "walk_forward_duration_book_cost2": {
+      "days": 123.0,
+      "fees": 23.135288758676793,
+      "funding": 0.08153735513843494,
+      "max_drawdown": 0.007324395980515264,
+      "mean_hold_minutes": 163.33333333333334,
+      "monthly": {
+        "2026-07": 0.0019253884679999445,
+        "2026-08": -0.004173820514100424,
+        "2026-09": 0.0,
+        "2026-10": -0.0015957962913299983
+      },
+      "monthly_equivalent": -0.000953770113927388,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -15.43288559261367,
+      "profit_factor": 0.44987545008350044,
+      "sharpe": -1.6007444916568718,
+      "total_return": -0.003848663699615784,
+      "trades": 9,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 8,
+        "30": 0,
+        "60": 1
+      },
+      "win_rate": 0.4444444444444444
+    },
+    "walk_forward_duration_book_h180_cost1": {
+      "days": 123.0,
+      "fees": 298.32392487263286,
+      "funding": 0.11351334714989283,
+      "max_drawdown": 0.08432353428851613,
+      "mean_hold_minutes": 150.65284974093265,
+      "monthly": {
+        "2026-07": 0.002760749447859645,
+        "2026-08": -0.057629925570761964,
+        "2026-09": 0.0021673931396000157,
+        "2026-10": -0.01560065139874256
+      },
+      "monthly_equivalent": -0.017211621619769413,
+      "positive_folds": 2,
+      "price_pnl_after_spread_slippage": -379.33238033695125,
+      "profit_factor": 0.5572301403308102,
+      "sharpe": -3.883626165182381,
+      "total_return": -0.06775427918624555,
+      "trades": 193,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 193,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.38860103626943004
+    },
+    "walk_forward_duration_book_h180_cost2": {
+      "days": 123.0,
+      "fees": 20.700019342507687,
+      "funding": 0.08154707826018112,
+      "max_drawdown": 0.00760323980150146,
+      "mean_hold_minutes": 176.25,
+      "monthly": {
+        "2026-07": 0.0019253884679999445,
+        "2026-08": -0.004674767350100306,
+        "2026-09": 0.0,
+        "2026-10": -0.0015957962913299983
+      },
+      "monthly_equivalent": -0.0010781584823250645,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -22.879268781754554,
+      "profit_factor": 0.37797552524243766,
+      "sharpe": -1.8255637458869935,
+      "total_return": -0.00434977410460069,
+      "trades": 8,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 8,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.375
+    },
+    "walk_forward_duration_book_h30_cost1": {
+      "days": 123.0,
+      "fees": 6.670105698,
+      "funding": 0.0,
+      "max_drawdown": 0.004303507323619171,
+      "mean_hold_minutes": 18.8,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.001787698430200102,
+        "2026-09": 2.220446049250313e-16,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0004420854289923781,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": 24.54708999999994,
+      "profit_factor": 1.4834292666289228,
+      "sharpe": 1.7226374182623259,
+      "total_return": 0.001787698430200102,
+      "trades": 5,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 5,
+        "60": 0
+      },
+      "win_rate": 0.4
+    },
+    "walk_forward_duration_book_h30_cost2": {
+      "days": 123.0,
+      "fees": 0.0,
+      "funding": 0.0,
+      "max_drawdown": 0.0,
+      "mean_hold_minutes": 0.0,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.0,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": 0.0,
+      "profit_factor": null,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "trades": 0,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.0
+    },
+    "walk_forward_duration_book_h60_cost1": {
+      "days": 123.0,
+      "fees": 24.256772906455243,
+      "funding": 0.0,
+      "max_drawdown": 0.004955819159784269,
+      "mean_hold_minutes": 47.1875,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.006737619864000122,
+        "2026-09": 0.0,
+        "2026-10": 0.006141798363999973
+      },
+      "monthly_equivalent": 0.003181944188908936,
+      "positive_folds": 2,
+      "price_pnl_after_spread_slippage": 153.4647662130353,
+      "profit_factor": 2.9246576623940155,
+      "sharpe": 3.5818839754862766,
+      "total_return": 0.012920799330657928,
+      "trades": 16,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 16
+      },
+      "win_rate": 0.625
+    },
+    "walk_forward_duration_book_h60_cost2": {
+      "days": 123.0,
+      "fees": 2.42693148,
+      "funding": 0.0,
+      "max_drawdown": 0.001295480067599386,
+      "mean_hold_minutes": 60.0,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.0005031968519999541,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0001244971961233965,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": 7.458899999999976,
+      "profit_factor": null,
+      "sharpe": 1.7226374182621105,
+      "total_return": 0.0005031968519999541,
+      "trades": 1,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 1
+      },
+      "win_rate": 1.0
+    },
+    "walk_forward_duration_book_no_adaptive_cost1": {
+      "days": 123.0,
+      "fees": 328.84341024285,
+      "funding": -0.4158445233398817,
+      "max_drawdown": 0.07779285294139626,
+      "mean_hold_minutes": 146.2206572769953,
+      "monthly": {
+        "2026-07": 0.002760749447859645,
+        "2026-08": -0.048349079373042225,
+        "2026-09": 0.0021673931396000157,
+        "2026-10": -0.01502695984251523
+      },
+      "monthly_equivalent": -0.014683265612174923,
+      "positive_folds": 2,
+      "price_pnl_after_spread_slippage": -250.98568386064588,
+      "profit_factor": 0.6522038830167353,
+      "sharpe": -3.108948115790713,
+      "total_return": -0.05802449386268438,
+      "trades": 213,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 205,
+        "30": 1,
+        "60": 7
+      },
+      "win_rate": 0.4225352112676056
+    },
+    "walk_forward_duration_book_no_adaptive_cost2": {
+      "days": 123.0,
+      "fees": 23.135288758676793,
+      "funding": 0.08153735513843494,
+      "max_drawdown": 0.007324395980515264,
+      "mean_hold_minutes": 163.33333333333334,
+      "monthly": {
+        "2026-07": 0.0019253884679999445,
+        "2026-08": -0.004173820514100424,
+        "2026-09": 0.0,
+        "2026-10": -0.0015957962913299983
+      },
+      "monthly_equivalent": -0.000953770113927388,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -15.43288559261367,
+      "profit_factor": 0.44987545008350044,
+      "sharpe": -1.6007444916568718,
+      "total_return": -0.003848663699615784,
+      "trades": 9,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 8,
+        "30": 0,
+        "60": 1
+      },
+      "win_rate": 0.4444444444444444
+    },
+    "walk_forward_duration_price_cost1": {
+      "days": 123.0,
+      "fees": 260.361627644378,
+      "funding": -0.45796228541169,
+      "max_drawdown": 0.0867004723517899,
+      "mean_hold_minutes": 140.3450292397661,
+      "monthly": {
+        "2026-07": 0.0071890388962647656,
+        "2026-08": -0.054645540121750824,
+        "2026-09": -0.005232285882054266,
+        "2026-10": -0.01570854379543629
+      },
+      "monthly_equivalent": -0.01720004853988788,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -416.27956954333746,
+      "profit_factor": 0.5527617910713987,
+      "sharpe": -3.520314921580147,
+      "total_return": -0.06770991594731368,
+      "trades": 171,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 160,
+        "30": 3,
+        "60": 8
+      },
+      "win_rate": 0.391812865497076
+    },
+    "walk_forward_duration_price_cost2": {
+      "days": 123.0,
+      "fees": 7.242647653400525,
+      "funding": 0.0,
+      "max_drawdown": 0.0021333228260986825,
+      "mean_hold_minutes": 100.0,
+      "monthly": {
+        "2026-07": 0.0015856546999999388,
+        "2026-08": -0.0003397531635999096,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.00030803236530174694,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": 19.696275705393536,
+      "profit_factor": 2.475047384854231,
+      "sharpe": 1.3212765403135434,
+      "total_return": 0.0012453628051993793,
+      "trades": 3,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 1,
+        "30": 0,
+        "60": 2
+      },
+      "win_rate": 0.6666666666666666
+    },
+    "walk_forward_magnitude_price_cost1": {
+      "days": 123.0,
+      "fees": 260.361627644378,
+      "funding": -0.45796228541169,
+      "max_drawdown": 0.0867004723517899,
+      "mean_hold_minutes": 140.3450292397661,
+      "monthly": {
+        "2026-07": 0.0071890388962647656,
+        "2026-08": -0.054645540121750824,
+        "2026-09": -0.005232285882054266,
+        "2026-10": -0.01570854379543629
+      },
+      "monthly_equivalent": -0.01720004853988788,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -416.27956954333746,
+      "profit_factor": 0.5527617910713987,
+      "sharpe": -3.520314921580147,
+      "total_return": -0.06770991594731368,
+      "trades": 171,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 160,
+        "30": 2,
+        "60": 9
+      },
+      "win_rate": 0.391812865497076
+    },
+    "walk_forward_magnitude_price_cost2": {
+      "days": 123.0,
+      "fees": 7.242647653400525,
+      "funding": 0.0,
+      "max_drawdown": 0.0021333228260986825,
+      "mean_hold_minutes": 100.0,
+      "monthly": {
+        "2026-07": 0.0015856546999999388,
+        "2026-08": -0.0003397531635999096,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.00030803236530174694,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": 19.696275705393536,
+      "profit_factor": 2.475047384854231,
+      "sharpe": 1.3212765403135434,
+      "total_return": 0.0012453628051993793,
+      "trades": 3,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 1,
+        "30": 0,
+        "60": 2
+      },
+      "win_rate": 0.6666666666666666
+    },
+    "walk_forward_mean_payoff_price_cost1": {
+      "days": 123.0,
+      "fees": 241.25780522230778,
+      "funding": 0.44748434981144786,
+      "max_drawdown": 0.1029587483901564,
+      "mean_hold_minutes": 138.33333333333334,
+      "monthly": {
+        "2026-07": -0.00406772394802446,
+        "2026-08": -0.08440161144962854,
+        "2026-09": 0.0,
+        "2026-10": -0.011649129272729208
+      },
+      "monthly_equivalent": -0.025400431878407015,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": -746.6751880994054,
+      "profit_factor": 0.36234467082389493,
+      "sharpe": -4.399963634569561,
+      "total_return": -0.09874855089719092,
+      "trades": 180,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 167,
+        "30": 0,
+        "60": 13
+      },
+      "win_rate": 0.36666666666666664
+    },
+    "walk_forward_mean_payoff_price_cost2": {
+      "days": 123.0,
+      "fees": 0.0,
+      "funding": 0.0,
+      "max_drawdown": 0.0,
+      "mean_hold_minutes": 0.0,
+      "monthly": {
+        "2026-07": 0.0,
+        "2026-08": 0.0,
+        "2026-09": 0.0,
+        "2026-10": 0.0
+      },
+      "monthly_equivalent": 0.0,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": 0.0,
+      "profit_factor": null,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "trades": 0,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.0
+    },
+    "walk_forward_reference_cost1": {
+      "days": 123.0,
+      "fees": 23.781280688286458,
+      "funding": -2.935870790158374,
+      "max_drawdown": 0.03429990685098472,
+      "mean_hold_minutes": 3826.035714285714,
+      "monthly": {
+        "2026-07": -0.004714017008888738,
+        "2026-08": 0.03186540150423345,
+        "2026-09": -0.0130249820599172,
+        "2026-10": -0.011530584791566989
+      },
+      "monthly_equivalent": 0.0004789341889852583,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": 46.085305496067505,
+      "profit_factor": 1.043664860841376,
+      "sharpe": 0.14114437430964097,
+      "total_return": 0.0019368154017618266,
+      "trades": 28,
+      "trades_by_horizon": {
+        "10080": 28,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.2857142857142857
+    },
+    "walk_forward_reference_cost2": {
+      "days": 123.0,
+      "fees": 44.30163431207238,
+      "funding": -2.382982823304957,
+      "max_drawdown": 0.03459047425842199,
+      "mean_hold_minutes": 3472.8571428571427,
+      "monthly": {
+        "2026-07": -0.007228391230088338,
+        "2026-08": 0.02767573839369608,
+        "2026-09": -0.013496552897645508,
+        "2026-10": -0.012030746881079302
+      },
+      "monthly_equivalent": -0.0013964557557281099,
+      "positive_folds": 1,
+      "price_pnl_after_spread_slippage": -9.62739525223523,
+      "profit_factor": 0.8782718773049031,
+      "sharpe": -0.3493524199898953,
+      "total_return": -0.00563120123876093,
+      "trades": 28,
+      "trades_by_horizon": {
+        "10080": 28,
+        "180": 0,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.21428571428571427
+    },
+    "walk_forward_rule_momentum_cost1": {
+      "days": 123.0,
+      "fees": 2931.7701089285424,
+      "funding": -5.275052464891599,
+      "max_drawdown": 0.5659322109293348,
+      "mean_hold_minutes": 135.50992931672837,
+      "monthly": {
+        "2026-07": -0.2001847564903798,
+        "2026-08": -0.1584982145319982,
+        "2026-09": -0.20047362827528814,
+        "2026-10": -0.19330437605127815
+      },
+      "monthly_equivalent": -0.1865749036160913,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": -2721.9805553743204,
+      "profit_factor": 0.4231657281319508,
+      "sharpe": -21.135757000945326,
+      "total_return": -0.5659025716767758,
+      "trades": 2971,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 2971,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.289464826657691
+    },
+    "walk_forward_rule_momentum_cost2": {
+      "days": 123.0,
+      "fees": 2804.9159421916593,
+      "funding": -1.5151582466329163,
+      "max_drawdown": 0.5914148936570351,
+      "mean_hold_minutes": 128.14162561576356,
+      "monthly": {
+        "2026-07": -0.200279336233535,
+        "2026-08": -0.20077027114219037,
+        "2026-09": -0.2005700918917861,
+        "2026-10": -0.20036426868053114
+      },
+      "monthly_equivalent": -0.19867585627594464,
+      "positive_folds": 0,
+      "price_pnl_after_spread_slippage": -3107.7178361320384,
+      "profit_factor": 0.14641236286050674,
+      "sharpe": -16.72333687804948,
+      "total_return": -0.5914148936570351,
+      "trades": 1624,
+      "trades_by_horizon": {
+        "10080": 0,
+        "180": 1624,
+        "30": 0,
+        "60": 0
+      },
+      "win_rate": 0.16133004926108374
+    }
+  }
+}

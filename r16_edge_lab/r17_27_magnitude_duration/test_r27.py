@@ -38,6 +38,10 @@ class Tests(unittest.TestCase):
   ds,p=fixture();ds['prices']['ETHUSDT'][1,1:3]=[103,98];t=replay(ds,p,'duration_book')[2];self.assertEqual(t[0]['reason'],'STOP');self.assertLess(t[0]['net'],0)
  def test_risk_pause_drawdown(self):
   r=Risk();r.closed(-1,0);r.closed(-1,STEP);r.closed(-1,2*STEP);self.assertEqual(r.factor(10000,3*STEP),0);self.assertEqual(r.factor(9100,100*STEP),.5);self.assertEqual(r.factor(7900,100*STEP),0);self.assertTrue(r.halt)
+ def test_risk_ablation_only_pauses(self):
+  ds,p=fixture();a=replay(ds,p,'duration_book');b=replay(ds,p,'duration_book_no_adaptive');self.assertEqual(a[4][0],b[4][0]);self.assertGreater(b[0]['trades'],a[0]['trades'])
+ def test_rule_180_minutes(self):
+  ds,p=fixture();p['rule_side'][:,1]=1;t=replay(ds,p,'rule_momentum')[2];self.assertTrue(len(t)>0);self.assertTrue(all(x['horizon']==180 for x in t));self.assertEqual(t[0]['hold_minutes'],180)
  def test_qty_floor_minimum(self):
   rule=dict(tick=.1,step=.01,minqty=.01,maxqty=100,minnotional=5,minprice=.1,maxprice=1e6);fill,qty=size_order(100,1,100,rule,.0006);self.assertLessEqual(qty*fill,100);self.assertGreaterEqual(fill,100.06);self.assertIsNone(size_order(100,1,1,rule,.0006))
 if __name__=='__main__':unittest.main(verbosity=2)

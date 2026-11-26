@@ -1,0 +1,152 @@
+FIT 2026-07 30_price 34608 17190 return_rmse 0.7724
+FIT 2026-07 30_book 34608 17190 return_rmse 0.7724
+FIT 2026-07 60_price 34608 17190 return_rmse 0.8799
+FIT 2026-07 60_book 34608 17190 return_rmse 0.8797
+FIT 2026-07 180_price 34608 17190 return_rmse 0.9491
+FIT 2026-07 180_book 34608 17190 return_rmse 0.949
+2026-07_mean_payoff_price_cost1 {"total_return": -0.00406772394802446, "max_drawdown": 0.007873817793282223, "profit_factor": 0.23709144036799412, "trades": 10}
+2026-07_mean_payoff_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_magnitude_price_cost1 {"total_return": 0.0071890388962647656, "max_drawdown": 0.011842808909187319, "profit_factor": 1.6500115680940235, "trades": 18}
+2026-07_magnitude_price_cost2 {"total_return": 0.0015856546999999388, "max_drawdown": 0.001235386595733523, "profit_factor": null, "trades": 1}
+2026-07_duration_price_cost1 {"total_return": 0.0071890388962647656, "max_drawdown": 0.011842808909187319, "profit_factor": 1.6500115680940235, "trades": 18}
+2026-07_duration_price_cost2 {"total_return": 0.0015856546999999388, "max_drawdown": 0.001235386595733523, "profit_factor": null, "trades": 1}
+2026-07_duration_book_cost1 {"total_return": 0.002760749447859645, "max_drawdown": 0.013394256522603287, "profit_factor": 1.1791262989359852, "trades": 23}
+2026-07_duration_book_cost2 {"total_return": 0.0019253884679999445, "max_drawdown": 0.0012331019491461648, "profit_factor": null, "trades": 1}
+2026-07_direct_book_cost1 {"total_return": 0.017163158197038397, "max_drawdown": 0.013904522284493681, "profit_factor": 1.3300101827258226, "trades": 90}
+2026-07_direct_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_conservative_book_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_conservative_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_duration_book_no_adaptive_cost1 {"total_return": 0.002760749447859645, "max_drawdown": 0.013394256522603287, "profit_factor": 1.1791262989359852, "trades": 23}
+2026-07_duration_book_no_adaptive_cost2 {"total_return": 0.0019253884679999445, "max_drawdown": 0.0012331019491461648, "profit_factor": null, "trades": 1}
+2026-07_rule_momentum_cost1 {"total_return": -0.2001847564903798, "max_drawdown": 0.20023936618040816, "profit_factor": 0.37477934542936625, "trades": 626}
+2026-07_rule_momentum_cost2 {"total_return": -0.200279336233535, "max_drawdown": 0.200279336233535, "profit_factor": 0.18787572424655336, "trades": 394}
+2026-07_reference_cost1 {"total_return": -0.004714017008888738, "max_drawdown": 0.009682590025096083, "profit_factor": 0.04232676769492751, "trades": 3}
+2026-07_reference_cost2 {"total_return": -0.007228391230088338, "max_drawdown": 0.009535848376508005, "profit_factor": 0.0, "trades": 3}
+2026-07_duration_book_h30_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_duration_book_h30_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_duration_book_h60_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_duration_book_h60_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-07_duration_book_h180_cost1 {"total_return": 0.002760749447859645, "max_drawdown": 0.013394256522603287, "profit_factor": 1.1791262989359852, "trades": 23}
+2026-07_duration_book_h180_cost2 {"total_return": 0.0019253884679999445, "max_drawdown": 0.0012331019491461648, "profit_factor": null, "trades": 1}
+FIT 2026-08 30_price 34860 17784 return_rmse 0.7187
+FIT 2026-08 30_book 34860 17784 return_rmse 0.7192
+FIT 2026-08 60_price 34860 17784 return_rmse 0.8336
+FIT 2026-08 60_book 34860 17784 return_rmse 0.8338
+FIT 2026-08 180_price 34860 17784 return_rmse 0.9721
+FIT 2026-08 180_book 34860 17784 return_rmse 0.9714
+2026-08_mean_payoff_price_cost1 {"total_return": -0.08440161144962854, "max_drawdown": 0.08465934180981038, "profit_factor": 0.25336430312326486, "trades": 113}
+2026-08_mean_payoff_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-08_magnitude_price_cost1 {"total_return": -0.05464554012175071, "max_drawdown": 0.05869488971733694, "profit_factor": 0.4152723321529288, "trades": 92}
+2026-08_magnitude_price_cost2 {"total_return": -0.00033975316360013164, "max_drawdown": 0.0021333228260986825, "profit_factor": 0.5969474377930183, "trades": 2}
+2026-08_duration_price_cost1 {"total_return": -0.05464554012175071, "max_drawdown": 0.05869488971733694, "profit_factor": 0.4152723321529288, "trades": 92}
+2026-08_duration_price_cost2 {"total_return": -0.00033975316360013164, "max_drawdown": 0.0021333228260986825, "profit_factor": 0.5969474377930183, "trades": 2}
+2026-08_duration_book_cost1 {"total_return": -0.056228837453233926, "max_drawdown": 0.058579296662618296, "profit_factor": 0.38656537171416017, "trades": 99}
+2026-08_duration_book_cost2 {"total_return": -0.004173820514100424, "max_drawdown": 0.0057263168669083875, "profit_factor": 0.22612532565014593, "trades": 7}
+2026-08_direct_book_cost1 {"total_return": -0.03937357240980455, "max_drawdown": 0.052349665555445624, "profit_factor": 0.52462701702866, "trades": 102}
+2026-08_direct_book_cost2 {"total_return": -0.00763847987999966, "max_drawdown": 0.00802863198797299, "profit_factor": 0.0, "trades": 4}
+2026-08_conservative_book_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-08_conservative_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-08_duration_book_no_adaptive_cost1 {"total_return": -0.04834907937304256, "max_drawdown": 0.05071730157854226, "profit_factor": 0.5139041681969825, "trades": 111}
+2026-08_duration_book_no_adaptive_cost2 {"total_return": -0.004173820514100424, "max_drawdown": 0.0057263168669083875, "profit_factor": 0.22612532565014593, "trades": 7}
+2026-08_rule_momentum_cost1 {"total_return": -0.1584982145319982, "max_drawdown": 0.16448568884919068, "profit_factor": 0.4991449859125768, "trades": 832}
+2026-08_rule_momentum_cost2 {"total_return": -0.20077027114219037, "max_drawdown": 0.20077027114219037, "profit_factor": 0.08279821392943745, "trades": 431}
+2026-08_reference_cost1 {"total_return": 0.03186540150423367, "max_drawdown": 0.00758029388886583, "profit_factor": 5.171079880505654, "trades": 6}
+2026-08_reference_cost2 {"total_return": 0.02767573839369608, "max_drawdown": 0.007305005701063183, "profit_factor": 4.743019389754403, "trades": 6}
+2026-08_duration_book_h30_cost1 {"total_return": 0.001787698430200102, "max_drawdown": 0.004303507323619171, "profit_factor": 1.483429266628923, "trades": 5}
+2026-08_duration_book_h30_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-08_duration_book_h60_cost1 {"total_return": 0.006737619864000122, "max_drawdown": 0.004955819159784269, "profit_factor": 2.09831321838169, "trades": 11}
+2026-08_duration_book_h60_cost2 {"total_return": 0.0005031968519999541, "max_drawdown": 0.001295480067599386, "profit_factor": null, "trades": 1}
+2026-08_duration_book_h180_cost1 {"total_return": -0.057629925570761964, "max_drawdown": 0.05997722636810676, "profit_factor": 0.37246945457011976, "trades": 99}
+2026-08_duration_book_h180_cost2 {"total_return": -0.004674767350100195, "max_drawdown": 0.006005609590320038, "profit_factor": 0.1328822357587107, "trades": 6}
+FIT 2026-09 30_price 35046 17784 return_rmse 0.7944
+FIT 2026-09 30_book 35046 17784 return_rmse 0.7944
+FIT 2026-09 60_price 35046 17784 return_rmse 0.8873
+FIT 2026-09 60_book 35046 17784 return_rmse 0.8874
+FIT 2026-09 180_price 35046 17784 return_rmse 0.9684
+FIT 2026-09 180_book 35046 17784 return_rmse 0.9683
+2026-09_mean_payoff_price_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_mean_payoff_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_magnitude_price_cost1 {"total_return": -0.005232285882054377, "max_drawdown": 0.008125465057437498, "profit_factor": 0.30209391158447835, "trades": 9}
+2026-09_magnitude_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_price_cost1 {"total_return": -0.005232285882054377, "max_drawdown": 0.008125465057437498, "profit_factor": 0.30209391158447835, "trades": 9}
+2026-09_duration_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_cost1 {"total_return": 0.0021673931395997936, "max_drawdown": 0.00926455805251758, "profit_factor": 1.3953291663076393, "trades": 11}
+2026-09_duration_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_direct_book_cost1 {"total_return": -0.07622832642975774, "max_drawdown": 0.08591978519341581, "profit_factor": 0.513069048005731, "trades": 242}
+2026-09_direct_book_cost2 {"total_return": -0.017173765064897983, "max_drawdown": 0.023825917667605, "profit_factor": 0.3881522736261771, "trades": 34}
+2026-09_conservative_book_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_conservative_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_no_adaptive_cost1 {"total_return": 0.0021673931395997936, "max_drawdown": 0.00926455805251758, "profit_factor": 1.3953291663076393, "trades": 11}
+2026-09_duration_book_no_adaptive_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_rule_momentum_cost1 {"total_return": -0.20047362827528814, "max_drawdown": 0.20047362827528814, "profit_factor": 0.3822757758886436, "trades": 693}
+2026-09_rule_momentum_cost2 {"total_return": -0.2005700918917862, "max_drawdown": 0.2005700918917862, "profit_factor": 0.13936247412192282, "trades": 371}
+2026-09_reference_cost1 {"total_return": -0.0130249820599172, "max_drawdown": 0.01672070641024659, "profit_factor": 0.2983628765925549, "trades": 10}
+2026-09_reference_cost2 {"total_return": -0.01349655289764562, "max_drawdown": 0.016551316013982187, "profit_factor": 0.27097012147181426, "trades": 10}
+2026-09_duration_book_h30_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_h30_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_h60_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_h60_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-09_duration_book_h180_cost1 {"total_return": 0.0021673931395997936, "max_drawdown": 0.00926455805251758, "profit_factor": 1.3953291663076393, "trades": 11}
+2026-09_duration_book_h180_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+FIT 2026-10 30_price 35640 17208 return_rmse 0.7524
+FIT 2026-10 30_book 35640 17208 return_rmse 0.7521
+FIT 2026-10 60_price 35640 17208 return_rmse 0.8569
+FIT 2026-10 60_book 35640 17208 return_rmse 0.8567
+FIT 2026-10 180_price 35640 17208 return_rmse 0.9723
+FIT 2026-10 180_book 35640 17208 return_rmse 0.9697
+2026-10_mean_payoff_price_cost1 {"total_return": -0.011649129272729208, "max_drawdown": 0.017257875732119454, "profit_factor": 0.7124953203862773, "trades": 57}
+2026-10_mean_payoff_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_magnitude_price_cost1 {"total_return": -0.01570854379543629, "max_drawdown": 0.025271685074422456, "profit_factor": 0.6191882495872361, "trades": 52}
+2026-10_magnitude_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_price_cost1 {"total_return": -0.01570854379543629, "max_drawdown": 0.025271685074422456, "profit_factor": 0.6191882495872361, "trades": 52}
+2026-10_duration_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_book_cost1 {"total_return": -0.009498261221348892, "max_drawdown": 0.022274687291711226, "profit_factor": 0.777403954992214, "trades": 63}
+2026-10_duration_book_cost2 {"total_return": -0.0015957962913298873, "max_drawdown": 0.0016072829249298426, "profit_factor": 0.0, "trades": 1}
+2026-10_direct_book_cost1 {"total_return": -0.08428217115776837, "max_drawdown": 0.08636218179216848, "profit_factor": 0.3643647229969195, "trades": 199}
+2026-10_direct_book_cost2 {"total_return": -0.03899950028224053, "max_drawdown": 0.041035902751840325, "profit_factor": 0.22224209666172484, "trades": 51}
+2026-10_conservative_book_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_conservative_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_book_no_adaptive_cost1 {"total_return": -0.01502695984251512, "max_drawdown": 0.026452895056464754, "profit_factor": 0.6906271138361886, "trades": 68}
+2026-10_duration_book_no_adaptive_cost2 {"total_return": -0.0015957962913298873, "max_drawdown": 0.0016072829249298426, "profit_factor": 0.0, "trades": 1}
+2026-10_rule_momentum_cost1 {"total_return": -0.19330437605127815, "max_drawdown": 0.19433823513342463, "profit_factor": 0.45059454547163175, "trades": 820}
+2026-10_rule_momentum_cost2 {"total_return": -0.20036426868053114, "max_drawdown": 0.20036426868053114, "profit_factor": 0.1624525700400306, "trades": 428}
+2026-10_reference_cost1 {"total_return": -0.011530584791566989, "max_drawdown": 0.016429763004145337, "profit_factor": 0.0844310139599591, "trades": 9}
+2026-10_reference_cost2 {"total_return": -0.01203074688107919, "max_drawdown": 0.016227807709885633, "profit_factor": 0.05428331814241591, "trades": 9}
+2026-10_duration_book_h30_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_book_h30_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_book_h60_cost1 {"total_return": 0.006141798363999751, "max_drawdown": 0.003418435436985834, "profit_factor": 11.683096862822474, "trades": 5}
+2026-10_duration_book_h60_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-10_duration_book_h180_cost1 {"total_return": -0.01560065139874256, "max_drawdown": 0.023827151325694462, "profit_factor": 0.6337688845123178, "trades": 60}
+2026-10_duration_book_h180_cost2 {"total_return": -0.0015957962913298873, "max_drawdown": 0.0016072829249298426, "profit_factor": 0.0, "trades": 1}
+SELECTION_FROZEN cash 00d7f9c2108009163ee27ec844bf23fd56299cb072576cafc9f29640b57ef432
+FIT 2026-11 30_price 35064 16602 return_rmse 0.8451
+FIT 2026-11 30_book 35064 16602 return_rmse 0.8453
+FIT 2026-11 60_price 35064 16602 return_rmse 0.8951
+FIT 2026-11 60_book 35064 16602 return_rmse 0.895
+FIT 2026-11 180_price 35064 16602 return_rmse 0.9548
+FIT 2026-11 180_book 35064 16602 return_rmse 0.9544
+2026-11_mean_payoff_price_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_mean_payoff_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_magnitude_price_cost1 {"total_return": 0.0013285006656769127, "max_drawdown": 0.004745685527219545, "profit_factor": 1.5282284276635574, "trades": 8}
+2026-11_magnitude_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_duration_price_cost1 {"total_return": 0.0013285006656769127, "max_drawdown": 0.004745685527219545, "profit_factor": 1.5282284276635574, "trades": 8}
+2026-11_duration_price_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_duration_book_cost1 {"total_return": -0.003163571759119632, "max_drawdown": 0.0051244563123648, "profit_factor": 0.6473642606087989, "trades": 14}
+2026-11_duration_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_direct_book_cost1 {"total_return": -0.0964119490488804, "max_drawdown": 0.10678610130145894, "profit_factor": 0.4371997453049524, "trades": 250}
+2026-11_direct_book_cost2 {"total_return": -0.05193427193662281, "max_drawdown": 0.05299681280062285, "profit_factor": 0.21517515157939487, "trades": 59}
+2026-11_conservative_book_cost1 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_conservative_book_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_duration_book_no_adaptive_cost1 {"total_return": -0.003163571759119632, "max_drawdown": 0.0051244563123648, "profit_factor": 0.6473642606087989, "trades": 14}
+2026-11_duration_book_no_adaptive_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_rule_momentum_cost1 {"total_return": -0.16603748980446764, "max_drawdown": 0.16650513069039174, "profit_factor": 0.4840964387821712, "trades": 653}
+2026-11_rule_momentum_cost2 {"total_return": -0.20054226881946668, "max_drawdown": 0.20054226881946668, "profit_factor": 0.19930251322819675, "trades": 435}
+2026-11_reference_cost1 {"total_return": 0.01961700440026859, "max_drawdown": 0.011443663418590377, "profit_factor": 3.5911712244527036, "trades": 8}
+2026-11_reference_cost2 {"total_return": 0.01772211715651184, "max_drawdown": 0.010677730426026932, "profit_factor": 3.410331635479917, "trades": 8}
+2026-11_duration_book_h30_cost1 {"total_return": 0.002188877419999846, "max_drawdown": 0.0018958763060998862, "profit_factor": null, "trades": 1}
+2026-11_duration_book_h30_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_duration_book_h60_cost1 {"total_return": 0.00043432980569990676, "max_drawdown": 0.0011620644695961024, "profit_factor": null, "trades": 1}
+2026-11_duration_book_h60_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+2026-11_duration_book_h180_cost1 {"total_return": -0.005770646575453786, "max_drawdown": 0.006959453260716675, "profit_factor": 0.35612968310542414, "trades": 12}
+2026-11_duration_book_h180_cost2 {"total_return": 0.0, "max_drawdown": 0.0, "profit_factor": null, "trades": 0}
+COMPLETE cash False
