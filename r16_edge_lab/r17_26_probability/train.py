@@ -5,6 +5,7 @@ import numpy as np,pandas as pd
 from prepare import R,P,SYMS,STEP,BASE_FEATURES,BOOK_FEATURES,ms
 from probability import train_model,predict,kalman_probability,calibration_metrics
 
+MODEL_DIR='models'
 PARAMS={k:v for k,v in P['model'].items() if k not in ['type','calibration']}
 
 def sample(frames,start,end,horizon,book=True,stride=8):
@@ -16,7 +17,7 @@ def sample(frames,start,end,horizon,book=True,stride=8):
   if book:sel &= f.book_valid
   sub=f.loc[sel];base=sub[cols].to_numpy(dtype=np.float32)
   for side in [1,-1]:
-   rr=sub[f'r_{horizon}_{side}'].to_numpy();dd=sub[f'd_{horizon}_{side}'].to_numpy();valid=np.isfinite(rr)&(sub.index.to_numpy()+(1+dd)*STEP<end)
+   rr=sub[f'r_{horizon}_{side}'].to_numpy();dd=sub[f'd_{horizon}_{side}'].to_numpy(dtype=np.int64);valid=np.isfinite(rr)&(sub.index.to_numpy()+(1+dd)*STEP<end)
    x=np.c_[base,np.full(len(base),si),np.full(len(base),side)].astype(np.float32)
    chunks.append((x[valid],rr[valid],dd[valid],sub.index.to_numpy()[valid]))
  X=np.concatenate([z[0] for z in chunks]);rr=np.concatenate([z[1] for z in chunks]);dd=np.concatenate([z[2] for z in chunks]);times=np.concatenate([z[3] for z in chunks]);sort=np.argsort(times,kind='stable')
@@ -49,7 +50,7 @@ def train_fold(month):
    yy=np.array(metric_y);diagnostics[key]=dict(raw=calibration_metrics(yy,np.array(metric_raw),float(yc.mean())),calibrated=calibration_metrics(yy,np.array(metric_p),float(yc.mean())),kalman=calibration_metrics(yy,np.array(metric_k),float(yc.mean())))
    print('FIT',month,key,'n',len(y),'cal',len(yc),'brier',diagnostics[key]['calibrated']['brier'],flush=True)
  pred['payoff']=np.array(payoffs);pred['price_payoff']=np.array(pricepayoffs)
- out=R/'models';out.mkdir(exist_ok=True);artifact=pickle.dumps(models,protocol=5);(out/(month+'.pkl')).write_bytes(artifact)
+ out=R/MODEL_DIR;out.mkdir(exist_ok=True);artifact=pickle.dumps(models,protocol=5);(out/(month+'.pkl')).write_bytes(artifact)
  np.savez_compressed(out/(month+'_predictions.npz'),**pred)
  metadata=dict(month=month,start=start,end=end,audit=audit,diagnostics=diagnostics,model_sha256=hashlib.sha256(artifact).hexdigest(),features=BASE_FEATURES+BOOK_FEATURES+['symbol_id','side'],params=PARAMS,warning='pickle created locally; never load untrusted pickle')
  (out/(month+'.json')).write_text(json.dumps(metadata,indent=2,allow_nan=False)+'\n')

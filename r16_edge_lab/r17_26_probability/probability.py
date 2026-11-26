@@ -22,7 +22,10 @@ def expected_value(p,stop,mu_plus,mu_minus,tau_plus,tau_minus,cost,adverse_fundi
  return net,net/duration,duration
 
 def train_model(X,y,Xcal,ycal,params):
- model=HistGradientBoostingClassifier(**params).fit(X,y)
+ if 'n_estimators' in params:
+  from lightgbm import LGBMClassifier
+  model=LGBMClassifier(**params).fit(X,y)
+ else:model=HistGradientBoostingClassifier(**params).fit(X,y)
  logits=logit(np.clip(model.predict_proba(Xcal)[:,1],1e-5,1-1e-5)).reshape(-1,1)
  if len(np.unique(ycal))!=2:raise ValueError('calibration needs two outcomes')
  calibration=LogisticRegression(C=1.,solver='lbfgs',random_state=26).fit(logits,ycal)

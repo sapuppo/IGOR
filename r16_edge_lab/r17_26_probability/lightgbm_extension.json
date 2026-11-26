@@ -1,0 +1,8 @@
+{
+ "date":"2026-11-26", "reason":"User added request to find and reuse existing public bot models while original HGB experiment was starting; existing HGB protocol preserved",
+ "existing_model":"Microsoft LightGBM4.6.0 LGBMClassifier, same estimator family used in public FreqAI LightGBMClassifier",
+ "reuse_boundary":"Uses published MIT library, not copied GPL Freqtrade source, not a downloaded pretrained profitable bot",
+ "parameters":{"n_estimators":132,"learning_rate":0.1,"num_leaves":7,"max_depth":3,"min_child_samples":200,"reg_lambda":10,"n_jobs":4,"random_state":26,"verbosity":-1,"deterministic":true,"force_col_wise":true},
+ "changes":"Backend only. Identical data, temporal partitions, calibration, risk, score variants, costs and selection rule. Separate result directory and independent November selection. No parameters optimized after holdout.",
+ "november_policy":"Freeze each backend choice before November inference; compare both, never call best-of-two final result an untouched selection. No auto promotion."
+}

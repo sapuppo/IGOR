@@ -52,4 +52,12 @@ class ResearchTests(unittest.TestCase):
   self.assertEqual(r.factor(9100,61*STEP),.5);self.assertEqual(r.factor(7900,62*STEP),0);self.assertEqual(r.factor(11000,63*STEP),0)
  def test_imported_drawdown_includes_initial_capital(self):
   x=max_drawdown_analysis(pd.Series([10000.,9000.,9500.]));self.assertAlmostEqual(x['max_drawdown'],.1)
+ def test_label_time_arithmetic_uses_int64(self):
+  from train import sample
+  f=self.frame(500);x=feature_frame(f);x['book_valid']=True
+  for c in ['imbalance02','imbalance1','log_depth02','book_age']:x[c]=1.
+  for side in [1,-1]:x['r_8_'+str(side)]=.5;x['d_8_'+str(side)]=np.int16(8)
+  from prepare import SYMS
+  X,r,d,t=sample({s:x for s in SYMS},0,500*STEP,8,True)
+  self.assertGreater(len(t),0);self.assertEqual(d.dtype,np.int64)
 if __name__=='__main__':unittest.main()
