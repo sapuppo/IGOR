@@ -2,6 +2,9 @@ test_ambiguous_labels_stop_first (test_research.ResearchTests.test_ambiguous_lab
 test_book_imbalance_not_volume_proxy (test_research.ResearchTests.test_book_imbalance_not_volume_proxy) ... ok
 test_book_strict_past_and_stale (test_research.ResearchTests.test_book_strict_past_and_stale) ... ok
 test_conflicting_book_duplicates_rejected (test_research.ResearchTests.test_conflicting_book_duplicates_rejected) ... ok
+test_end_to_end_ambiguous_bar_stop (test_research.ResearchTests.test_end_to_end_ambiguous_bar_stop) ... ok
+test_end_to_end_funding_debited (test_research.ResearchTests.test_end_to_end_funding_debited) ... ok
+test_end_to_end_latency_and_cash (test_research.ResearchTests.test_end_to_end_latency_and_cash) ... ok
 test_features_prefix_and_future_perturbation (test_research.ResearchTests.test_features_prefix_and_future_perturbation) ... ok
 test_imported_drawdown_includes_initial_capital (test_research.ResearchTests.test_imported_drawdown_includes_initial_capital) ... ok
 test_imported_stressed_stop_stays_within_budget (test_research.ResearchTests.test_imported_stressed_stop_stays_within_budget) ... ok
@@ -9,10 +12,11 @@ test_kalman_prefix_invariance (test_research.ResearchTests.test_kalman_prefix_in
 test_label_entry_after_latency (test_research.ResearchTests.test_label_entry_after_latency) ... ok
 test_label_time_arithmetic_uses_int64 (test_research.ResearchTests.test_label_time_arithmetic_uses_int64) ... ok
 test_loss_pause_and_drawdown_halt (test_research.ResearchTests.test_loss_pause_and_drawdown_halt) ... ok
+test_onchain_missing_input_fails_closed (test_research.ResearchTests.test_onchain_missing_input_fails_closed) ... ok
 test_rank_cost_and_duration (test_research.ResearchTests.test_rank_cost_and_duration) ... ok
 test_rounding_final_fill_preserves_budget (test_research.ResearchTests.test_rounding_final_fill_preserves_budget) ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.045s
+Ran 17 tests in 0.076s
 
 OK

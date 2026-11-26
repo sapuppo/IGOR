@@ -1,0 +1,50 @@
+{
+  "mode": "read_only_inference",
+  "orders_sent": 0,
+  "kalman": "not applied: caller must retain causal filter state",
+  "funding": "caller must deduct known adverse settlement estimate before any paper entry",
+  "model": "2026-11",
+  "backend": "lightgbm",
+  "candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "side": 1,
+      "horizon": 20,
+      "probability": 0.4734640777440764,
+      "expected_net": -0.002356069536343281,
+      "score": -0.000142840399883372,
+      "expected_minutes": 16.494419913882854,
+      "decision": "SKIP_NEGATIVE_EXPECTATION"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": -1,
+      "horizon": 20,
+      "probability": 0.4690800499544678,
+      "expected_net": -0.0023691107416755385,
+      "score": -0.00014378721528592435,
+      "expected_minutes": 16.476504791921204,
+      "decision": "SKIP_NEGATIVE_EXPECTATION"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": 1,
+      "horizon": 8,
+      "probability": 0.5214013599399151,
+      "expected_net": -0.002325558254479635,
+      "score": -0.000307976076265467,
+      "expected_minutes": 7.551100340907867,
+      "decision": "SKIP_NEGATIVE_EXPECTATION"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "side": -1,
+      "horizon": 8,
+      "probability": 0.4778696490434484,
+      "expected_net": -0.0024119810046650397,
+      "score": -0.00032070551280329013,
+      "expected_minutes": 7.520859194411376,
+      "decision": "SKIP_NEGATIVE_EXPECTATION"
+    }
+  ]
+}

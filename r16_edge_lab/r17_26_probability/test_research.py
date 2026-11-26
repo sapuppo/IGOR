@@ -60,4 +60,28 @@ class ResearchTests(unittest.TestCase):
   from prepare import SYMS
   X,r,d,t=sample({s:x for s in SYMS},0,500*STEP,8,True)
   self.assertGreater(len(t),0);self.assertEqual(d.dtype,np.int64)
+ def fake_replay(self,shock=False,funding=False):
+  from execution import replay
+  from prepare import SYMS,ms
+  start=ms('2026-11-01');n=1440
+  ds=dict(start=start,end=start+n*STEP,prices={sym:np.tile([10000.,10000.,10000.,10000.,1e8],(n,1)) for sym in SYMS},funding={sym:{} for sym in SYMS},last_rate={sym:np.zeros(n) for sym in SYMS})
+  arr=np.full((n,3,2,2),.01);arr[:,:,:,0]=.99
+  book=np.zeros((n,3),bool);book[:,0]=True
+  pred=dict(p=arr,k=arr,price_p=arr,price_k=arr,book=book,stop=np.full((n,3),.005),payoff=np.array([[2.,-1.,8.,8.],[2.,-1.,20.,20.]]),price_payoff=np.array([[2.,-1.,8.,8.],[2.,-1.,20.,20.]]))
+  if shock:ds['prices']['BTCUSDT'][2]=[10000,11000,9000,10000,1e8]
+  if funding:ds['funding']['BTCUSDT']={start+2*STEP:[(start+2*STEP,.01)]}
+  return replay(ds,pred,'turnover_kalman',1),start
+ def test_end_to_end_latency_and_cash(self):
+  (r,d,tr,m,trace),start=self.fake_replay();self.assertGreater(len(tr),0);self.assertEqual(tr[0]['entry'],start+STEP)
+  self.assertAlmostEqual(d[-1],10000+sum(x['net'] for x in tr));self.assertEqual(d[-1],m[-1])
+  for x in tr:self.assertAlmostEqual(x['net'],x['side']*x['qty']*(x['exit_fill']-x['entry_fill'])-x['entry_fee']-x['exit_fee']+x['funding'])
+ def test_end_to_end_ambiguous_bar_stop(self):
+  (r,d,tr,m,trace),start=self.fake_replay(shock=True);self.assertEqual(tr[0]['reason'],'STOP');self.assertLess(tr[0]['net'],0)
+ def test_end_to_end_funding_debited(self):
+  (r,d,tr,m,trace),start=self.fake_replay(funding=True);self.assertAlmostEqual(tr[0]['funding'],-tr[0]['qty']*10000*.01)
+ def test_onchain_missing_input_fails_closed(self):
+  from onchain_filter import screen_token
+  self.assertFalse(screen_token({}).passed)
+  token=dict(liquidity_usd=20000,liquidity_locked_or_burned=True,top10_share=.2,dev_share=.01,mint_enabled=False,freeze_enabled=False,blacklist_enabled=False,adjustable_tax=False,distinct_successful_sellers=6,age_minutes=30)
+  self.assertTrue(screen_token(token).passed);token['dev_share']=.1;self.assertEqual(screen_token(token).reason,'dev_concentration')
 if __name__=='__main__':unittest.main()

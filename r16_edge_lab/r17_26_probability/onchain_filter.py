@@ -17,3 +17,10 @@ def screen_token(token):
    if not predicate(token[key]):return ScreeningDecision(False,reason)
   except (TypeError,ValueError):return ScreeningDecision(False,'invalid_'+key)
  return ScreeningDecision(True,'all_disclosed_checks_passed')
+
+if __name__=='__main__':
+ import sys,json
+ from dataclasses import asdict
+ decision=screen_token(json.loads(open(sys.argv[1]).read()))
+ print(json.dumps(asdict(decision)))
+ raise SystemExit(0 if decision.passed else 2)

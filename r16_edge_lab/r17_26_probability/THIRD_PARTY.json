@@ -4,27 +4,50 @@
     {
       "repository": "galleonlabs/hypergrok-trading-desk",
       "commit": "98331af5c407f1929a8aa3869d932eb7680760fb",
-      "license": "MIT"
+      "license": "MIT",
+      "url": "https://github.com/galleonlabs/hypergrok-trading-desk"
     },
     {
       "repository": "freqtrade/freqtrade",
       "commit": "38113b83547857a6cc7f9709511fa90a624cc5bc",
-      "license": "GPL-3.0"
+      "license": "GPL-3.0",
+      "url": "https://github.com/freqtrade/freqtrade"
     },
     {
       "repository": "virattt/ai-hedge-fund",
       "commit": "5c553b5222044f6a5527bd377b4104c50ee0ad28",
-      "license": "MIT"
+      "license": "MIT",
+      "url": "https://github.com/virattt/ai-hedge-fund"
     },
     {
       "repository": "HKUDS/Vibe-Trading",
       "commit": "0ec47cd0c92b4bcc1673283621620072a367a698",
-      "license": "MIT"
+      "license": "MIT",
+      "url": "https://github.com/HKUDS/Vibe-Trading"
     },
     {
       "repository": "bmoscon/cryptofeed",
       "commit": "cb27c73f0e42542e892f46c35de57cc5d8fede97",
-      "license": "NOASSERTION"
+      "license": "NOASSERTION",
+      "url": "https://github.com/bmoscon/cryptofeed"
+    },
+    {
+      "repository": "chainstacklabs/pumpfun-bonkfun-bot",
+      "commit": "a047c282bca13a5123f484965ac34c9a609430f1",
+      "license": "Apache-2.0",
+      "url": "https://github.com/chainstacklabs/pumpfun-bonkfun-bot"
+    },
+    {
+      "repository": "AI4Finance-Foundation/FinRL",
+      "commit": "5df023ed3faab4cb529bc7e2837a7fb331067cf2",
+      "license": "MIT",
+      "url": "https://github.com/AI4Finance-Foundation/FinRL"
+    },
+    {
+      "repository": "TauricResearch/TradingAgents",
+      "commit": "121265d18d467ac717f7af99cb0d669c15d2e73c",
+      "license": "Apache-2.0",
+      "url": "https://github.com/TauricResearch/TradingAgents"
     }
   ],
   "reused": [
@@ -47,12 +70,19 @@
       "local": "third_party/vibe_risk.py",
       "role": "Independent drawdown/risk verification",
       "license": "MIT"
+    },
+    {
+      "repository": "lightgbm-org/LightGBM",
+      "version": "4.6.0",
+      "local": "External pinned PyPI dependency",
+      "role": "LGBMClassifier trained and replayed in all temporal folds",
+      "license": "MIT"
     }
   ],
   "not_copied": [
     {
       "repository": "freqtrade/freqtrade",
-      "reason": "Reviewed FreqAI LightGBMClassifier as existing alternative; no Freqtrade code vendored or model weights available in cited post. Installed sklearn implements gradient trees used by this study; GPL bot integration would be separate."
+      "reason": "FreqAI public wrapper reviewed; same published LightGBM estimator installed and tested directly, without copying GPL Freqtrade source. No pretrained weights of cited Twitter bot provided."
     },
     {
       "repository": "virattt/ai-hedge-fund",

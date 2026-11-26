@@ -1,0 +1,902 @@
+[
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001831932010993772,
+    "net_percentiles": [
+      -0.002576451859676158,
+      -0.0023795947334431166,
+      -0.0021936275817125463
+    ],
+    "mean_probability": 0.46480560302734375,
+    "max_probability": 0.5452829599380493
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001831932010993772,
+    "net_percentiles": [
+      -0.002576451859676158,
+      -0.0023795947334431166,
+      -0.0021936275817125463
+    ],
+    "mean_probability": 0.46480560302734375,
+    "max_probability": 0.5452829599380493
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001831932010993772,
+    "net_percentiles": [
+      -0.002576451859676158,
+      -0.0023795947334431166,
+      -0.0021936275817125463
+    ],
+    "mean_probability": 0.46480560302734375,
+    "max_probability": 0.5452829599380493
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0019229762915930957,
+    "net_percentiles": [
+      -0.0025468174150643295,
+      -0.0023810247005536687,
+      -0.002209606826729834
+    ],
+    "mean_probability": 0.46479007601737976,
+    "max_probability": 0.5218037962913513
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001981688104408991,
+    "net_percentiles": [
+      -0.0025261284213409893,
+      -0.0023819097893080675,
+      -0.0022185746815023806
+    ],
+    "mean_probability": 0.4648530185222626,
+    "max_probability": 0.5162763595581055
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-07",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0019229762915930957,
+    "net_percentiles": [
+      -0.0025468174150643295,
+      -0.0023810247005536687,
+      -0.002209606826729834
+    ],
+    "mean_probability": 0.46479007601737976,
+    "max_probability": 0.5218037962913513
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001233035316461186,
+    "net_percentiles": [
+      -0.002640649761243251,
+      -0.002379557703751761,
+      -0.002228443654659546
+    ],
+    "mean_probability": 0.4761897921562195,
+    "max_probability": 0.6025866866111755
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001233035316461186,
+    "net_percentiles": [
+      -0.002640649761243251,
+      -0.002379557703751761,
+      -0.002228443654659546
+    ],
+    "mean_probability": 0.4761897921562195,
+    "max_probability": 0.6025866866111755
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001233035316461186,
+    "net_percentiles": [
+      -0.002640649761243251,
+      -0.002379557703751761,
+      -0.002228443654659546
+    ],
+    "mean_probability": 0.4761897921562195,
+    "max_probability": 0.6025866866111755
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0015051975654527881,
+    "net_percentiles": [
+      -0.0026135969388433387,
+      -0.0023805548813496218,
+      -0.002252505826285625
+    ],
+    "mean_probability": 0.4761759042739868,
+    "max_probability": 0.567750096321106
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014668760621457423,
+    "net_percentiles": [
+      -0.002621622723850012,
+      -0.0023827797467236055,
+      -0.0022485203831148592
+    ],
+    "mean_probability": 0.47566911578178406,
+    "max_probability": 0.5630859136581421
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-08",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0015051975654527881,
+    "net_percentiles": [
+      -0.0026135969388433387,
+      -0.0023805548813496218,
+      -0.002252505826285625
+    ],
+    "mean_probability": 0.4761759042739868,
+    "max_probability": 0.567750096321106
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001455351813924123,
+    "net_percentiles": [
+      -0.002649303514995946,
+      -0.0024001413245491278,
+      -0.0022434085367147557
+    ],
+    "mean_probability": 0.46996739506721497,
+    "max_probability": 0.5801214575767517
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001455351813924123,
+    "net_percentiles": [
+      -0.002649303514995946,
+      -0.0024001413245491278,
+      -0.0022434085367147557
+    ],
+    "mean_probability": 0.46996739506721497,
+    "max_probability": 0.5801214575767517
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001455351813924123,
+    "net_percentiles": [
+      -0.002649303514995946,
+      -0.0024001413245491278,
+      -0.0022434085367147557
+    ],
+    "mean_probability": 0.46996739506721497,
+    "max_probability": 0.5801214575767517
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016963289072476216,
+    "net_percentiles": [
+      -0.002633527963811923,
+      -0.0024007552692747983,
+      -0.00225744383357958
+    ],
+    "mean_probability": 0.4699503779411316,
+    "max_probability": 0.5540749430656433
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0017916481750100575,
+    "net_percentiles": [
+      -0.0026217252429242555,
+      -0.002400861048954719,
+      -0.002275502679815506
+    ],
+    "mean_probability": 0.46987292170524597,
+    "max_probability": 0.5461114048957825
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-09",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016963289072476216,
+    "net_percentiles": [
+      -0.002633527963811923,
+      -0.0024007552692747983,
+      -0.00225744383357958
+    ],
+    "mean_probability": 0.4699503779411316,
+    "max_probability": 0.5540749430656433
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.000541605962869807,
+    "net_percentiles": [
+      -0.0026511125240356935,
+      -0.0023903116028763938,
+      -0.002178863294981836
+    ],
+    "mean_probability": 0.4736337959766388,
+    "max_probability": 0.6054062843322754
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.000541605962869807,
+    "net_percentiles": [
+      -0.0026511125240356935,
+      -0.0023903116028763938,
+      -0.002178863294981836
+    ],
+    "mean_probability": 0.4736337959766388,
+    "max_probability": 0.6054062843322754
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.000541605962869807,
+    "net_percentiles": [
+      -0.0026511125240356935,
+      -0.0023903116028763938,
+      -0.002178863294981836
+    ],
+    "mean_probability": 0.4736337959766388,
+    "max_probability": 0.6054062843322754
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0010308339711329912,
+    "net_percentiles": [
+      -0.002628659904221788,
+      -0.0023911637216233067,
+      -0.0022025294472451623
+    ],
+    "mean_probability": 0.47361287474632263,
+    "max_probability": 0.5595671534538269
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011082902657835038,
+    "net_percentiles": [
+      -0.002664940567231496,
+      -0.002389945502618412,
+      -0.0021985097935785106
+    ],
+    "mean_probability": 0.47305241227149963,
+    "max_probability": 0.553532063961029
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-10",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0010308339711329912,
+    "net_percentiles": [
+      -0.002628659904221788,
+      -0.0023911637216233067,
+      -0.0022025294472451623
+    ],
+    "mean_probability": 0.47361287474632263,
+    "max_probability": 0.5595671534538269
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011943539184195548,
+    "net_percentiles": [
+      -0.002820744446532214,
+      -0.0024041159667291825,
+      -0.0020968677142236833
+    ],
+    "mean_probability": 0.4690905809402466,
+    "max_probability": 0.6131685376167297
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011943539184195548,
+    "net_percentiles": [
+      -0.002820744446532214,
+      -0.0024041159667291825,
+      -0.0020968677142236833
+    ],
+    "mean_probability": 0.4690905809402466,
+    "max_probability": 0.6131685376167297
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011943539184195548,
+    "net_percentiles": [
+      -0.002820744446532214,
+      -0.0024041159667291825,
+      -0.0020968677142236833
+    ],
+    "mean_probability": 0.4690905809402466,
+    "max_probability": 0.6131685376167297
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014951011359781645,
+    "net_percentiles": [
+      -0.0027752207045236964,
+      -0.0024061852019940616,
+      -0.0021348485409092084
+    ],
+    "mean_probability": 0.46906524896621704,
+    "max_probability": 0.5859869718551636
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.001599611010868891,
+    "net_percentiles": [
+      -0.002757964376536252,
+      -0.0024018557377319246,
+      -0.0021424185763615116
+    ],
+    "mean_probability": 0.4697159230709076,
+    "max_probability": 0.5695643424987793
+  },
+  {
+    "backend": "hist_gradient_boosting",
+    "month": "2026-11",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014951011359781645,
+    "net_percentiles": [
+      -0.0027752207045236964,
+      -0.0024061852019940616,
+      -0.0021348485409092084
+    ],
+    "mean_probability": 0.46906524896621704,
+    "max_probability": 0.5859869718551636
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016819239056952641,
+    "net_percentiles": [
+      -0.002585656186227817,
+      -0.0023789338473848925,
+      -0.0021677344235387416
+    ],
+    "mean_probability": 0.46511924266815186,
+    "max_probability": 0.5707355737686157
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016819239056952641,
+    "net_percentiles": [
+      -0.002585656186227817,
+      -0.0023789338473848925,
+      -0.0021677344235387416
+    ],
+    "mean_probability": 0.46511924266815186,
+    "max_probability": 0.5707355737686157
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016819239056952641,
+    "net_percentiles": [
+      -0.002585656186227817,
+      -0.0023789338473848925,
+      -0.0021677344235387416
+    ],
+    "mean_probability": 0.46511924266815186,
+    "max_probability": 0.5707355737686157
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0018951919829235824,
+    "net_percentiles": [
+      -0.002552812971651183,
+      -0.0023807428914111675,
+      -0.0021892617964027992
+    ],
+    "mean_probability": 0.4650997221469879,
+    "max_probability": 0.5398159027099609
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.002069416197880564,
+    "net_percentiles": [
+      -0.002521068027814942,
+      -0.0023810125832370898,
+      -0.0022285159713394055
+    ],
+    "mean_probability": 0.46483132243156433,
+    "max_probability": 0.5156824588775635
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-07",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0018951919829235824,
+    "net_percentiles": [
+      -0.002552812971651183,
+      -0.0023807428914111675,
+      -0.0021892617964027992
+    ],
+    "mean_probability": 0.4650997221469879,
+    "max_probability": 0.5398159027099609
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011314630704144745,
+    "net_percentiles": [
+      -0.0026548225721548468,
+      -0.0023803028907306333,
+      -0.002224636172772086
+    ],
+    "mean_probability": 0.4761560559272766,
+    "max_probability": 0.6075089573860168
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011314630704144745,
+    "net_percentiles": [
+      -0.0026548225721548468,
+      -0.0023803028907306333,
+      -0.002224636172772086
+    ],
+    "mean_probability": 0.4761560559272766,
+    "max_probability": 0.6075089573860168
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011314630704144745,
+    "net_percentiles": [
+      -0.0026548225721548468,
+      -0.0023803028907306333,
+      -0.002224636172772086
+    ],
+    "mean_probability": 0.4761560559272766,
+    "max_probability": 0.6075089573860168
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014391528380843905,
+    "net_percentiles": [
+      -0.002627434821843188,
+      -0.0023810472835489125,
+      -0.002244288194530083
+    ],
+    "mean_probability": 0.4761415421962738,
+    "max_probability": 0.5546015501022339
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014127941866845396,
+    "net_percentiles": [
+      -0.002613457857821029,
+      -0.002381845296740956,
+      -0.0022512009470479874
+    ],
+    "mean_probability": 0.475820928812027,
+    "max_probability": 0.5574606657028198
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-08",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014391528380843905,
+    "net_percentiles": [
+      -0.002627434821843188,
+      -0.0023810472835489125,
+      -0.002244288194530083
+    ],
+    "mean_probability": 0.4761415421962738,
+    "max_probability": 0.5546015501022339
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0013748039174835665,
+    "net_percentiles": [
+      -0.0026728821599028268,
+      -0.002399493414402689,
+      -0.0022324415900627924
+    ],
+    "mean_probability": 0.4696311354637146,
+    "max_probability": 0.5954644680023193
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0013748039174835665,
+    "net_percentiles": [
+      -0.0026728821599028268,
+      -0.002399493414402689,
+      -0.0022324415900627924
+    ],
+    "mean_probability": 0.4696311354637146,
+    "max_probability": 0.5954644680023193
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0013748039174835665,
+    "net_percentiles": [
+      -0.0026728821599028268,
+      -0.002399493414402689,
+      -0.0022324415900627924
+    ],
+    "mean_probability": 0.4696311354637146,
+    "max_probability": 0.5954644680023193
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0015907328411806873,
+    "net_percentiles": [
+      -0.0026538436656336458,
+      -0.0024000680788796185,
+      -0.002247533324826107
+    ],
+    "mean_probability": 0.4696081578731537,
+    "max_probability": 0.5606931447982788
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0016557774306934503,
+    "net_percentiles": [
+      -0.002609688070438159,
+      -0.002401063663154283,
+      -0.0022748962792128753
+    ],
+    "mean_probability": 0.47015655040740967,
+    "max_probability": 0.5499733090400696
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-09",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0015907328411806873,
+    "net_percentiles": [
+      -0.0026538436656336458,
+      -0.0024000680788796185,
+      -0.002247533324826107
+    ],
+    "mean_probability": 0.4696081578731537,
+    "max_probability": 0.5606931447982788
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0005858830328044624,
+    "net_percentiles": [
+      -0.0026478177547415173,
+      -0.0023906063645882415,
+      -0.0021743517622724476
+    ],
+    "mean_probability": 0.47340983152389526,
+    "max_probability": 0.6063727736473083
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0005858830328044624,
+    "net_percentiles": [
+      -0.0026478177547415173,
+      -0.0023906063645882415,
+      -0.0021743517622724476
+    ],
+    "mean_probability": 0.47340983152389526,
+    "max_probability": 0.6063727736473083
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0005858830328044624,
+    "net_percentiles": [
+      -0.0026478177547415173,
+      -0.0023906063645882415,
+      -0.0021743517622724476
+    ],
+    "mean_probability": 0.47340983152389526,
+    "max_probability": 0.6063727736473083
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0010950759091901236,
+    "net_percentiles": [
+      -0.0026261357332018355,
+      -0.0023912990799264573,
+      -0.0021970630667093333
+    ],
+    "mean_probability": 0.4733889102935791,
+    "max_probability": 0.5545616745948792
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0011626746028760477,
+    "net_percentiles": [
+      -0.002664768474963099,
+      -0.0023912218764902335,
+      -0.002189556910164503
+    ],
+    "mean_probability": 0.4730978012084961,
+    "max_probability": 0.5608011484146118
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-10",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0010950759091901236,
+    "net_percentiles": [
+      -0.0026261357332018355,
+      -0.0023912990799264573,
+      -0.0021970630667093333
+    ],
+    "mean_probability": 0.4733889102935791,
+    "max_probability": 0.5545616745948792
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "probability_only",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0012074980009169343,
+    "net_percentiles": [
+      -0.0028714322613567454,
+      -0.002407053476039824,
+      -0.002066269443876771
+    ],
+    "mean_probability": 0.46830591559410095,
+    "max_probability": 0.6015607118606567
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "ev_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0012074980009169343,
+    "net_percentiles": [
+      -0.0028714322613567454,
+      -0.002407053476039824,
+      -0.002066269443876771
+    ],
+    "mean_probability": 0.46830591559410095,
+    "max_probability": 0.6015607118606567
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "turnover_rank",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0012074980009169343,
+    "net_percentiles": [
+      -0.0028714322613567454,
+      -0.002407053476039824,
+      -0.002066269443876771
+    ],
+    "mean_probability": 0.46830591559410095,
+    "max_probability": 0.6015607118606567
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014274821259169148,
+    "net_percentiles": [
+      -0.002826641775826257,
+      -0.0024081541243761505,
+      -0.002100371525271715
+    ],
+    "mean_probability": 0.4682779610157013,
+    "max_probability": 0.5757830739021301
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "price_only_turnover_kalman",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0015546739467504297,
+    "net_percentiles": [
+      -0.002762287475409721,
+      -0.002402391265918298,
+      -0.0021268054199428304
+    ],
+    "mean_probability": 0.4697178602218628,
+    "max_probability": 0.5712835192680359
+  },
+  {
+    "backend": "lightgbm",
+    "month": "2026-11",
+    "variant": "turnover_kalman_buffer",
+    "eligible_forecasts": 0,
+    "positive_cost_adjusted_forecasts": 0,
+    "max_forecast_net": -0.0014274821259169148,
+    "net_percentiles": [
+      -0.002826641775826257,
+      -0.0024081541243761505,
+      -0.002100371525271715
+    ],
+    "mean_probability": 0.4682779610157013,
+    "max_probability": 0.5757830739021301
+  }
+]

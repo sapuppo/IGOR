@@ -1,0 +1,508 @@
+{
+  "result": [
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793491200000,
+      "fundingRate": "0.00008826",
+      "markPrice": "95.44000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793520000003,
+      "fundingRate": "0.00010000",
+      "markPrice": "95.51638599",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793548800000,
+      "fundingRate": "0.00010000",
+      "markPrice": "94.75099790",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793577600005,
+      "fundingRate": "0.00010000",
+      "markPrice": "94.50588125",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793606400001,
+      "fundingRate": "0.00010000",
+      "markPrice": "94.24116083",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793635200000,
+      "fundingRate": "0.00010000",
+      "markPrice": "93.50344009",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793664000002,
+      "fundingRate": "0.00010000",
+      "markPrice": "91.95000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793692800001,
+      "fundingRate": "0.00010000",
+      "markPrice": "92.08296570",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793721600001,
+      "fundingRate": "0.00010000",
+      "markPrice": "93.72000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793750400000,
+      "fundingRate": "0.00010000",
+      "markPrice": "92.80582840",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793779200000,
+      "fundingRate": "0.00010000",
+      "markPrice": "93.03284622",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793808000001,
+      "fundingRate": "0.00010000",
+      "markPrice": "96.68000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793836800000,
+      "fundingRate": "0.00010000",
+      "markPrice": "95.55969530",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793865600000,
+      "fundingRate": "0.00010000",
+      "markPrice": "95.84722812",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793894400000,
+      "fundingRate": "0.00008962",
+      "markPrice": "90.14002965",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793923200002,
+      "fundingRate": "0.00001627",
+      "markPrice": "89.30143419",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793952000000,
+      "fundingRate": "0.00003262",
+      "markPrice": "89.64947225",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1793980800000,
+      "fundingRate": "0.00006719",
+      "markPrice": "90.70577925",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794009600001,
+      "fundingRate": "0.00009840",
+      "markPrice": "90.09641464",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794038400000,
+      "fundingRate": "0.00005614",
+      "markPrice": "90.19000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794067200000,
+      "fundingRate": "0.00001115",
+      "markPrice": "89.51158156",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794096000000,
+      "fundingRate": "0.00003475",
+      "markPrice": "89.77000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794124800001,
+      "fundingRate": "0.00005796",
+      "markPrice": "89.30677981",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794153600000,
+      "fundingRate": "0.00008537",
+      "markPrice": "89.69000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794182400000,
+      "fundingRate": "-0.00003278",
+      "markPrice": "86.50000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794211200001,
+      "fundingRate": "-0.00006827",
+      "markPrice": "85.53971498",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794240000001,
+      "fundingRate": "0.00005789",
+      "markPrice": "87.89571118",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794268800000,
+      "fundingRate": "0.00008448",
+      "markPrice": "86.70358269",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794297600000,
+      "fundingRate": "0.00008631",
+      "markPrice": "86.06186676",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794326400002,
+      "fundingRate": "-0.00000171",
+      "markPrice": "82.23977506",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794355200002,
+      "fundingRate": "0.00005728",
+      "markPrice": "83.30025710",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794384000000,
+      "fundingRate": "0.00008617",
+      "markPrice": "83.33000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794412800000,
+      "fundingRate": "0.00008936",
+      "markPrice": "84.80128681",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794441600000,
+      "fundingRate": "0.00002657",
+      "markPrice": "83.23493319",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794470400001,
+      "fundingRate": "0.00000927",
+      "markPrice": "82.98000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794499200003,
+      "fundingRate": "0.00000716",
+      "markPrice": "81.66212588",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794528000000,
+      "fundingRate": "0.00010000",
+      "markPrice": "81.68822469",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794556800000,
+      "fundingRate": "-0.00005430",
+      "markPrice": "79.69000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794585600000,
+      "fundingRate": "0.00007203",
+      "markPrice": "80.00258223",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794614400004,
+      "fundingRate": "0.00006550",
+      "markPrice": "78.16000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794643200001,
+      "fundingRate": "-0.00007941",
+      "markPrice": "75.21754845",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794672000000,
+      "fundingRate": "-0.00002128",
+      "markPrice": "73.85000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794700800002,
+      "fundingRate": "-0.00013955",
+      "markPrice": "70.22000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794729600000,
+      "fundingRate": "0.00001273",
+      "markPrice": "69.93345588",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794758400000,
+      "fundingRate": "-0.00011827",
+      "markPrice": "71.19962011",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794787200000,
+      "fundingRate": "-0.00003335",
+      "markPrice": "72.71948826",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794816000001,
+      "fundingRate": "-0.00000658",
+      "markPrice": "71.35000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794844800004,
+      "fundingRate": "-0.00003392",
+      "markPrice": "70.73925660",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794873600000,
+      "fundingRate": "-0.00006360",
+      "markPrice": "71.52000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794902400000,
+      "fundingRate": "-0.00012633",
+      "markPrice": "72.90549244",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794931200000,
+      "fundingRate": "-0.00004733",
+      "markPrice": "72.43327240",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794960000000,
+      "fundingRate": "-0.00001180",
+      "markPrice": "75.15000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1794988800001,
+      "fundingRate": "-0.00014846",
+      "markPrice": "75.14195511",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795017600000,
+      "fundingRate": "-0.00001390",
+      "markPrice": "73.45393422",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795046400000,
+      "fundingRate": "0.00000751",
+      "markPrice": "73.61000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795075200002,
+      "fundingRate": "0.00005755",
+      "markPrice": "74.90146736",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795104000002,
+      "fundingRate": "0.00004562",
+      "markPrice": "73.53000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795132800001,
+      "fundingRate": "0.00002297",
+      "markPrice": "73.10803159",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795161600000,
+      "fundingRate": "0.00003327",
+      "markPrice": "72.63250924",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795190400000,
+      "fundingRate": "-0.00009930",
+      "markPrice": "68.33000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795219200002,
+      "fundingRate": "-0.00020208",
+      "markPrice": "68.82381178",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795248000003,
+      "fundingRate": "-0.00013695",
+      "markPrice": "67.36000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795276800000,
+      "fundingRate": "-0.00017066",
+      "markPrice": "70.40184358",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795305600001,
+      "fundingRate": "0.00006877",
+      "markPrice": "70.26544798",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795334400003,
+      "fundingRate": "0.00002574",
+      "markPrice": "69.14000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795363200000,
+      "fundingRate": "0.00002221",
+      "markPrice": "70.29000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795392000000,
+      "fundingRate": "0.00000108",
+      "markPrice": "70.69000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795420800004,
+      "fundingRate": "-0.00002933",
+      "markPrice": "72.00018932",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795449600000,
+      "fundingRate": "0.00002468",
+      "markPrice": "75.63000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795478400001,
+      "fundingRate": "-0.00009174",
+      "markPrice": "71.98594673",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795507200000,
+      "fundingRate": "0.00003964",
+      "markPrice": "71.47000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "fundingTime": 1795536000000,
+      "fundingRate": "-0.00001555",
+      "markPrice": "69.01467094",
+      "rateType": "Regular"
+    }
+  ]
+}

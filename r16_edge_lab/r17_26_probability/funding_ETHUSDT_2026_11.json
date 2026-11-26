@@ -1,0 +1,508 @@
+{
+  "result": [
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793491200000,
+      "fundingRate": "-0.00003076",
+      "markPrice": "2254.54000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793520000003,
+      "fundingRate": "0.00001499",
+      "markPrice": "2269.16563964",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793548800000,
+      "fundingRate": "-0.00001034",
+      "markPrice": "2265.78263566",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793577600005,
+      "fundingRate": "0.00001316",
+      "markPrice": "2274.27000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793606400001,
+      "fundingRate": "-0.00000440",
+      "markPrice": "2283.71958140",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793635200000,
+      "fundingRate": "0.00002419",
+      "markPrice": "2272.44703689",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793664000002,
+      "fundingRate": "0.00010000",
+      "markPrice": "2252.80000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793692800001,
+      "fundingRate": "0.00010000",
+      "markPrice": "2257.37116279",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793721600001,
+      "fundingRate": "0.00010000",
+      "markPrice": "2298.67000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793750400000,
+      "fundingRate": "0.00008833",
+      "markPrice": "2273.85000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793779200000,
+      "fundingRate": "0.00010000",
+      "markPrice": "2303.08556589",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793808000001,
+      "fundingRate": "0.00010000",
+      "markPrice": "2425.77209302",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793836800000,
+      "fundingRate": "-0.00002650",
+      "markPrice": "2423.61337209",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793865600000,
+      "fundingRate": "0.00005731",
+      "markPrice": "2415.68000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793894400000,
+      "fundingRate": "0.00010000",
+      "markPrice": "2251.18000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793923200002,
+      "fundingRate": "0.00010000",
+      "markPrice": "2237.11824806",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793952000000,
+      "fundingRate": "0.00005654",
+      "markPrice": "2227.94085271",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1793980800000,
+      "fundingRate": "0.00003319",
+      "markPrice": "2229.92698450",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794009600001,
+      "fundingRate": "0.00009833",
+      "markPrice": "2237.70000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794038400000,
+      "fundingRate": "0.00004541",
+      "markPrice": "2245.05856589",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794067200000,
+      "fundingRate": "0.00007427",
+      "markPrice": "2236.19000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794096000000,
+      "fundingRate": "0.00004572",
+      "markPrice": "2239.24548062",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794124800001,
+      "fundingRate": "0.00010000",
+      "markPrice": "2240.24000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794153600000,
+      "fundingRate": "0.00006062",
+      "markPrice": "2241.10000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794182400000,
+      "fundingRate": "-0.00008336",
+      "markPrice": "2126.17601043",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794211200001,
+      "fundingRate": "-0.00004676",
+      "markPrice": "2092.96000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794240000001,
+      "fundingRate": "0.00002570",
+      "markPrice": "2146.75000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794268800000,
+      "fundingRate": "0.00006634",
+      "markPrice": "2134.20490698",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794297600000,
+      "fundingRate": "0.00003035",
+      "markPrice": "2115.11000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794326400002,
+      "fundingRate": "-0.00002117",
+      "markPrice": "2022.42103101",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794355200002,
+      "fundingRate": "-0.00004758",
+      "markPrice": "2052.20000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794384000000,
+      "fundingRate": "0.00004710",
+      "markPrice": "2068.90000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794412800000,
+      "fundingRate": "0.00006582",
+      "markPrice": "2074.77794306",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794441600000,
+      "fundingRate": "0.00005883",
+      "markPrice": "2055.36448062",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794470400001,
+      "fundingRate": "0.00004854",
+      "markPrice": "2050.66640337",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794499200003,
+      "fundingRate": "0.00004733",
+      "markPrice": "2008.48000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794528000000,
+      "fundingRate": "0.00009474",
+      "markPrice": "2019.01000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794556800000,
+      "fundingRate": "0.00000971",
+      "markPrice": "1933.59265036",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794585600000,
+      "fundingRate": "0.00004743",
+      "markPrice": "1934.44748837",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794614400004,
+      "fundingRate": "0.00001200",
+      "markPrice": "1929.20000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794643200001,
+      "fundingRate": "0.00002584",
+      "markPrice": "1897.79970543",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794672000000,
+      "fundingRate": "0.00000059",
+      "markPrice": "1840.39000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794700800002,
+      "fundingRate": "-0.00005374",
+      "markPrice": "1768.14771318",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794729600000,
+      "fundingRate": "0.00002632",
+      "markPrice": "1781.52363673",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794758400000,
+      "fundingRate": "-0.00004249",
+      "markPrice": "1809.99000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794787200000,
+      "fundingRate": "-0.00000867",
+      "markPrice": "1834.39794574",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794816000001,
+      "fundingRate": "-0.00000184",
+      "markPrice": "1820.49811628",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794844800004,
+      "fundingRate": "0.00000905",
+      "markPrice": "1819.29000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794873600000,
+      "fundingRate": "-0.00003280",
+      "markPrice": "1819.75066159",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794902400000,
+      "fundingRate": "0.00003267",
+      "markPrice": "1831.42523256",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794931200000,
+      "fundingRate": "-0.00001778",
+      "markPrice": "1784.96239374",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794960000000,
+      "fundingRate": "0.00008373",
+      "markPrice": "1824.32000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1794988800001,
+      "fundingRate": "0.00004541",
+      "markPrice": "1816.64184496",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795017600000,
+      "fundingRate": "-0.00001129",
+      "markPrice": "1768.28487169",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795046400000,
+      "fundingRate": "0.00009810",
+      "markPrice": "1776.50000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795075200002,
+      "fundingRate": "0.00010000",
+      "markPrice": "1803.58810345",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795104000002,
+      "fundingRate": "0.00002874",
+      "markPrice": "1781.09681235",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795132800001,
+      "fundingRate": "0.00004779",
+      "markPrice": "1756.73000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795161600000,
+      "fundingRate": "0.00005158",
+      "markPrice": "1752.09589816",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795190400000,
+      "fundingRate": "-0.00000239",
+      "markPrice": "1654.26000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795219200002,
+      "fundingRate": "-0.00018843",
+      "markPrice": "1622.02000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795248000003,
+      "fundingRate": "-0.00002440",
+      "markPrice": "1630.41323256",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795276800000,
+      "fundingRate": "0.00002909",
+      "markPrice": "1683.89000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795305600001,
+      "fundingRate": "0.00002718",
+      "markPrice": "1684.86000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795334400003,
+      "fundingRate": "-0.00001111",
+      "markPrice": "1665.52000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795363200000,
+      "fundingRate": "0.00001410",
+      "markPrice": "1717.67970543",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795392000000,
+      "fundingRate": "0.00001739",
+      "markPrice": "1723.24000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795420800004,
+      "fundingRate": "-0.00005131",
+      "markPrice": "1721.63368217",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795449600000,
+      "fundingRate": "0.00000918",
+      "markPrice": "1772.97056536",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795478400001,
+      "fundingRate": "-0.00004447",
+      "markPrice": "1710.12000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795507200000,
+      "fundingRate": "0.00004678",
+      "markPrice": "1697.29000000",
+      "rateType": "Regular"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "fundingTime": 1795536000000,
+      "fundingRate": "-0.00001211",
+      "markPrice": "1677.13232959",
+      "rateType": "Regular"
+    }
+  ]
+}

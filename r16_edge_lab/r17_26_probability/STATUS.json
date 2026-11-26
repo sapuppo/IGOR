@@ -1,0 +1,23 @@
+{
+  "version": "R17.26",
+  "status": "completed",
+  "date": "2026-11-26",
+  "branch": "research-r17-26-probability-turnover",
+  "base_commit": "7268aadabc68ca76b9231a6f95d5085fdad9bfb3",
+  "tested_backends": [
+    "sklearn HistGradientBoostingClassifier1.8.0",
+    "LightGBM4.6.0"
+  ],
+  "classifiers": 40,
+  "model_bundles": 10,
+  "replays": 140,
+  "distinct_execution_scenarios": 130,
+  "unit_tests_passed": 17,
+  "selected_hgb": "cash",
+  "selected_lightgbm": "cash",
+  "goal_achieved": false,
+  "promoted": false,
+  "report": "RESULTADO_PT.md",
+  "research": "PESQUISA_MODELOS_PT.md",
+  "orders_sent": 0
+}

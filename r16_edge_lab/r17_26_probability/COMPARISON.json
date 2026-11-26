@@ -1,0 +1,940 @@
+{
+  "HGB": {
+    "selected": "cash",
+    "goal_achieved": false,
+    "combined": {
+      "walk_forward_probability_only_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_probability_only_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_ev_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_ev_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_price_only_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_price_only_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_buffer_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_buffer_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_reference_cost1": {
+        "total_return": 0.0019368154017618266,
+        "monthly_equivalent": 0.0004789341889852583,
+        "monthly": {
+          "2026-07": -0.004714017008888738,
+          "2026-08": 0.03186540150423345,
+          "2026-09": -0.0130249820599172,
+          "2026-10": -0.011530584791566989
+        },
+        "max_drawdown": 0.03429990685098472,
+        "sharpe": 0.14114437430964097,
+        "profit_factor": 1.043664860841376,
+        "trades": 28,
+        "win_rate": 0.2857142857142857,
+        "mean_hold_minutes": 3826.035714285714,
+        "days": 123.0,
+        "positive_folds": 1
+      },
+      "walk_forward_reference_cost2": {
+        "total_return": -0.00563120123876093,
+        "monthly_equivalent": -0.0013964557557281099,
+        "monthly": {
+          "2026-07": -0.007228391230088338,
+          "2026-08": 0.02767573839369608,
+          "2026-09": -0.013496552897645508,
+          "2026-10": -0.012030746881079302
+        },
+        "max_drawdown": 0.03459047425842199,
+        "sharpe": -0.3493524199898953,
+        "profit_factor": 0.8782718773049031,
+        "trades": 28,
+        "win_rate": 0.21428571428571427,
+        "mean_hold_minutes": 3472.8571428571427,
+        "days": 123.0,
+        "positive_folds": 1
+      },
+      "final_probability_only_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_probability_only_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_ev_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_ev_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_price_only_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_price_only_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_buffer_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_buffer_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_reference_cost1": {
+        "total_return": 0.019617004400268367,
+        "monthly_equivalent": 0.024944001013462724,
+        "monthly": {
+          "2026-11": 0.019617004400268367
+        },
+        "max_drawdown": 0.011443663418590377,
+        "sharpe": 5.383647355346039,
+        "profit_factor": 3.5911712244527036,
+        "trades": 8,
+        "win_rate": 0.625,
+        "mean_hold_minutes": 7261.625,
+        "days": 24.0,
+        "positive_folds": 1
+      },
+      "final_reference_cost2": {
+        "total_return": 0.01772211715651184,
+        "monthly_equivalent": 0.022528896831913503,
+        "monthly": {
+          "2026-11": 0.01772211715651184
+        },
+        "max_drawdown": 0.010677730426026932,
+        "sharpe": 5.153340943394153,
+        "profit_factor": 3.410331635479917,
+        "trades": 8,
+        "win_rate": 0.625,
+        "mean_hold_minutes": 7261.625,
+        "days": 24.0,
+        "positive_folds": 1
+      }
+    },
+    "selection_sha256": "593559ccee220105d21efad85e5ddbd882c58bcf6a9e8a7bfe7b3f6d80581029"
+  },
+  "LightGBM": {
+    "selected": "cash",
+    "goal_achieved": false,
+    "combined": {
+      "walk_forward_probability_only_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_probability_only_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_ev_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_ev_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_price_only_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_price_only_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_buffer_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_turnover_kalman_buffer_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-07": 0.0,
+          "2026-08": 0.0,
+          "2026-09": 0.0,
+          "2026-10": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 123.0,
+        "positive_folds": 0
+      },
+      "walk_forward_reference_cost1": {
+        "total_return": 0.0019368154017618266,
+        "monthly_equivalent": 0.0004789341889852583,
+        "monthly": {
+          "2026-07": -0.004714017008888738,
+          "2026-08": 0.03186540150423345,
+          "2026-09": -0.0130249820599172,
+          "2026-10": -0.011530584791566989
+        },
+        "max_drawdown": 0.03429990685098472,
+        "sharpe": 0.14114437430964097,
+        "profit_factor": 1.043664860841376,
+        "trades": 28,
+        "win_rate": 0.2857142857142857,
+        "mean_hold_minutes": 3826.035714285714,
+        "days": 123.0,
+        "positive_folds": 1
+      },
+      "walk_forward_reference_cost2": {
+        "total_return": -0.00563120123876093,
+        "monthly_equivalent": -0.0013964557557281099,
+        "monthly": {
+          "2026-07": -0.007228391230088338,
+          "2026-08": 0.02767573839369608,
+          "2026-09": -0.013496552897645508,
+          "2026-10": -0.012030746881079302
+        },
+        "max_drawdown": 0.03459047425842199,
+        "sharpe": -0.3493524199898953,
+        "profit_factor": 0.8782718773049031,
+        "trades": 28,
+        "win_rate": 0.21428571428571427,
+        "mean_hold_minutes": 3472.8571428571427,
+        "days": 123.0,
+        "positive_folds": 1
+      },
+      "final_probability_only_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_probability_only_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_ev_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_ev_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_rank_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_rank_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_price_only_turnover_kalman_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_price_only_turnover_kalman_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_buffer_cost1": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_turnover_kalman_buffer_cost2": {
+        "total_return": 0.0,
+        "monthly_equivalent": 0.0,
+        "monthly": {
+          "2026-11": 0.0
+        },
+        "max_drawdown": 0.0,
+        "sharpe": 0.0,
+        "profit_factor": null,
+        "trades": 0,
+        "win_rate": 0.0,
+        "mean_hold_minutes": 0.0,
+        "days": 24.0,
+        "positive_folds": 0
+      },
+      "final_reference_cost1": {
+        "total_return": 0.019617004400268367,
+        "monthly_equivalent": 0.024944001013462724,
+        "monthly": {
+          "2026-11": 0.019617004400268367
+        },
+        "max_drawdown": 0.011443663418590377,
+        "sharpe": 5.383647355346039,
+        "profit_factor": 3.5911712244527036,
+        "trades": 8,
+        "win_rate": 0.625,
+        "mean_hold_minutes": 7261.625,
+        "days": 24.0,
+        "positive_folds": 1
+      },
+      "final_reference_cost2": {
+        "total_return": 0.01772211715651184,
+        "monthly_equivalent": 0.022528896831913503,
+        "monthly": {
+          "2026-11": 0.01772211715651184
+        },
+        "max_drawdown": 0.010677730426026932,
+        "sharpe": 5.153340943394153,
+        "profit_factor": 3.410331635479917,
+        "trades": 8,
+        "win_rate": 0.625,
+        "mean_hold_minutes": 7261.625,
+        "days": 24.0,
+        "positive_folds": 1
+      }
+    },
+    "selection_sha256": "593559ccee220105d21efad85e5ddbd882c58bcf6a9e8a7bfe7b3f6d80581029"
+  }
+}
