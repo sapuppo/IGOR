@@ -1,0 +1,80 @@
+{
+  "study": "IGOR public trader behavior",
+  "version": "research-2026-11-27",
+  "status": "not_executed",
+  "target": {
+    "start_inclusive_utc": "2024-11-27T00:00:00Z",
+    "end_exclusive_utc": "2026-11-27T00:00:00Z",
+    "note": "Dois anos em datas UTC; dados de painel consultados em 27/11 podem conter atualização posterior ao corte. Não misturar ao dataset alvo."
+  },
+  "baselines": {
+    "code_commit": "94aef86d4e1b0b47fb1cafd2818fb308f19d8f56",
+    "main_robot_changed": false
+  },
+  "population_warning": "Nine wallets selected using current public panels; exploratory hypotheses only, not unbiased historical top-trader selection.",
+  "metrics_required": [
+    "calendar_month_net_return_cashflow_adjusted",
+    "max_drawdown_mark_to_market",
+    "Sharpe_daily",
+    "profit_factor_complete_campaigns",
+    "funding_and_fee_split",
+    "active_months",
+    "turnover",
+    "maker_taker_fraction_if_observed",
+    "capital_concentration",
+    "leave_best_campaign_out",
+    "latency_cost_sensitivity"
+  ],
+  "order_of_work": [
+    "export raw fills and ledgers with provenance",
+    "prove date coverage and initial inventory",
+    "reconcile complete position campaigns",
+    "infer candidate behavior from prior data",
+    "freeze hypotheses before evaluation",
+    "walk-forward with contemporaneous eligibility",
+    "prospective paper validation"
+  ],
+  "selection_restrictions": [
+    "No current winner applied retroactively as a tradable 2024 selection",
+    "No profit based on just winning fills or closed PnL omitting unrealized losses",
+    "No unknown fees or ledger fields replaced with zero",
+    "No wallet label or alias used as proof of account ownership",
+    "No copying a visible short unless external hedge uncertainty is acknowledged",
+    "No live promotion or orders"
+  ],
+  "hypotheses_to_test": [
+    {
+      "family": "position_campaigns",
+      "wallets": [
+        "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+        "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+        "0x5b5d51203a0f9079f8aeb098a6523a13f298c060",
+        "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36"
+      ],
+      "claim": "Measure duration and add/reduce behavior; entry rule unknown",
+      "tested": false
+    },
+    {
+      "family": "inventory_and_execution",
+      "wallets": [
+        "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00"
+      ],
+      "claim": "Study observable maker/taker, inventory and price response; external hedge unknown",
+      "tested": false
+    },
+    {
+      "family": "negative_and_concentration_controls",
+      "wallets": [
+        "0x8def9f50456c6c4e37fa5d3d57f108ed23992dae",
+        "0xefe4c06b6d310978bead596e1798a4fc1d9d194b",
+        "0x1f250df59a777d61cb8bd043c12970f3afe4f925",
+        "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
+        "0x15a4f009bb324a3fb9e36137136b201e3fe0dfdb"
+      ],
+      "claim": "Detect overfitting to popularity, current ranking and one-event gains",
+      "tested": false
+    }
+  ],
+  "promotion": false,
+  "live_orders": false
+}

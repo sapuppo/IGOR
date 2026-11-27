@@ -1,0 +1,131 @@
+[
+  {
+    "label": "Wintermute — atribuição pública",
+    "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+    "role": "institutional_research",
+    "sources": [
+      "https://perpex.co/copy-trading/0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+      "https://www.wintermute.com/algorithmic-trading"
+    ],
+    "provider_reported_first_activity_month": "2024-01",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Estudar liquidez, arbitragem e controle de inventário. O histórico desta carteira não revela hedges em outras venues."
+  },
+  {
+    "label": "BobbyBigSize — rótulo público",
+    "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+    "role": "behavior_research",
+    "sources": [
+      "https://perpex.co/copy-trading/0x7fdafde5cfb5465924316eced2d3715494c517d1",
+      "https://blockmetric.io/wallet/0x7fdafde5cfb5465924316eced2d3715494c517d1"
+    ],
+    "provider_reported_first_activity_month": "2024-10",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Estudar posições multidiárias e construção/redução parcelada, sem afirmar o gatilho de entrada."
+  },
+  {
+    "label": "Abraxas Capital — atribuição pública",
+    "address": "0x5b5d51203a0f9079f8aeb098a6523a13f298c060",
+    "role": "institutional_research",
+    "sources": [
+      "https://blockmetric.io/wallet/0x5b5d51203a0f9079f8aeb098a6523a13f298c060"
+    ],
+    "provider_reported_first_activity_month": null,
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Reconstruir posições long/short, transferências e spot. Identidade e hedges externos não auditados."
+  },
+  {
+    "label": "Abraxas Capital — segunda atribuição",
+    "address": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+    "role": "institutional_research",
+    "sources": [
+      "https://blockmetric.io/wallet/0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+      "https://perpex.co/copy-trading/0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36"
+    ],
+    "provider_reported_first_activity_month": null,
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Mesmo rótulo de instituição não prova vínculo de subconta; não somar automaticamente resultados."
+  },
+  {
+    "label": "Loracle — rótulo público",
+    "address": "0x8def9f50456c6c4e37fa5d3d57f108ed23992dae",
+    "role": "negative_control",
+    "sources": [
+      "https://perpex.co/copy-trading/0x8def9f50456c6c4e37fa5d3d57f108ed23992dae"
+    ],
+    "provider_reported_first_activity_month": "2024-06",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Comparar ganho recente com resultado acumulado negativo; não copiar por notoriedade."
+  },
+  {
+    "label": "Loracle — outra carteira atribuída",
+    "address": "0xefe4c06b6d310978bead596e1798a4fc1d9d194b",
+    "role": "negative_control",
+    "sources": [
+      "https://perpex.co/copy-trading/0xefe4c06b6d310978bead596e1798a4fc1d9d194b"
+    ],
+    "provider_reported_first_activity_month": "2026-08",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Conta recente não pode sustentar histórico de dois anos. Investigar perdas grandes e posição concentrada."
+  },
+  {
+    "label": "AguilaTrades — rótulo público",
+    "address": "0x1f250df59a777d61cb8bd043c12970f3afe4f925",
+    "role": "negative_control",
+    "sources": [
+      "https://perpex.co/copy-trading/0x1f250df59a777d61cb8bd043c12970f3afe4f925"
+    ],
+    "provider_reported_first_activity_month": "2025-06",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Estudar drawdown e caudas de perdas. Resultado acumulado publicado negativo."
+  },
+  {
+    "label": "James Wynn — atribuição pública",
+    "address": "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
+    "role": "negative_control",
+    "sources": [
+      "https://blockmetric.io/wallet/0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6"
+    ],
+    "provider_reported_first_activity_month": null,
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Contrastar aumentos de posição e indicações de liquidação; não tratar fama ou mês positivo como competência comprovada."
+  },
+  {
+    "label": "0x15a4 — endereço sem identidade",
+    "address": "0x15a4f009bb324a3fb9e36137136b201e3fe0dfdb",
+    "role": "profit_concentration_control",
+    "sources": [
+      "https://perpex.co/copy-trading/0x15a4f009bb324a3fb9e36137136b201e3fe0dfdb"
+    ],
+    "provider_reported_first_activity_month": "2026-02",
+    "first_activity_independently_verified": false,
+    "ownership_verified": false,
+    "raw_history_collected": false,
+    "eligible_for_live_copy": false,
+    "research_reason": "Vencedor de outubro no ranking consultado; lucro concentrado em um evento não prova repetibilidade."
+  }
+]

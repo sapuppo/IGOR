@@ -1,0 +1,24 @@
+{
+  "source": "https://perpex.co/research/hyperliquid-top-traders-october-2026",
+  "note": "Arithmetic on rounded provider figures. Realized PnL minus fees excluding funding, not independently audited. Neither return on capital nor average profit per complete trade.",
+  "metrics": [
+    {
+      "name": "Wintermute (rótulo)",
+      "october_reported_pnl_usd": 19230000,
+      "volume_usd": 12330000000,
+      "fills": 4604441,
+      "pnl_divided_by_volume_bps": 15.59610705596107,
+      "mean_fills_per_day": 148530.35483870967,
+      "days_covered_by_10000_at_monthly_average": 0.06732630519101017
+    },
+    {
+      "name": "BobbyBigSize (rótulo)",
+      "october_reported_pnl_usd": 17930000,
+      "volume_usd": 2360000000,
+      "fills": 1422691,
+      "pnl_divided_by_volume_bps": 75.97457627118644,
+      "mean_fills_per_day": 45893.25806451613,
+      "days_covered_by_10000_at_monthly_average": 0.21789692912937525
+    }
+  ]
+}

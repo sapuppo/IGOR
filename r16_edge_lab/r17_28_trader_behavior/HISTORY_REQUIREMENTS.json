@@ -1,0 +1,64 @@
+{
+  "target": {
+    "start_inclusive_utc": "2024-11-27T00:00:00Z",
+    "end_exclusive_utc": "2026-11-27T00:00:00Z",
+    "note": "Dois anos em datas UTC; dados de painel consultados em 27/11 podem conter atualização posterior ao corte. Não misturar ao dataset alvo."
+  },
+  "raw_fills_downloaded": 0,
+  "complete_wallet_histories": 0,
+  "sources": {
+    "official": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint",
+    "provider": "https://docs.hypedexer.com/guides/historical-trade-archive",
+    "export": "https://trade-export.hypedexer.com/?v=1"
+  },
+  "official_api": {
+    "max_recent_retained_fills": 10000,
+    "max_per_response": 2000,
+    "pagination_does_not_extend_retained_history": true
+  },
+  "provider_claims_not_download_verified": {
+    "free_export_since": "2024-01-01",
+    "format": [
+      "CSV",
+      "JSON"
+    ],
+    "requires_account_for_portal": false,
+    "periods": [
+      {
+        "start": "2024-11-27T00:00:00Z",
+        "end_exclusive": "2025-03-22T00:00:00Z",
+        "missing_fields": [
+          "dir",
+          "oid",
+          "hash",
+          "startPosition",
+          "closedPnl",
+          "fee",
+          "feeToken"
+        ]
+      },
+      {
+        "start": "2025-03-22T00:00:00Z",
+        "end_exclusive": "2025-05-25T00:00:00Z",
+        "missing_fields": [
+          "fee",
+          "feeToken",
+          "tid"
+        ]
+      },
+      {
+        "start": "2025-05-25T00:00:00Z",
+        "end_exclusive": "2026-11-27T00:00:00Z",
+        "note": "Provider reports ordinary fill fields present; verify per export."
+      }
+    ]
+  },
+  "additional_requirements": [
+    "pre-window opening inventory",
+    "funding and non-trade ledgers",
+    "point-in-time instrument mappings",
+    "subaccount links rather than name guesses",
+    "historical execution costs when observed"
+  ],
+  "global_ranking_proven": false
+}

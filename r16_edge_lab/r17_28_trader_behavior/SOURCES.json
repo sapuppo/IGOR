@@ -1,0 +1,26 @@
+{
+  "retrieved_date": "2026-11-27",
+  "sources": {
+    "HL_API": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint",
+    "HL_ARCHIVE": "https://hyperliquid.gitbook.io/hyperliquid-docs/historical-data",
+    "EXPORT": "https://trade-export.hypedexer.com/?v=1",
+    "COVERAGE": "https://docs.hypedexer.com/guides/historical-trade-archive",
+    "PROVIDER": "https://app.hypedexer.com/blog/hyperliquid-wallet-trade-history",
+    "OCTOBER": "https://perpex.co/research/hyperliquid-top-traders-october-2026",
+    "WIN_OFFICIAL": "https://www.wintermute.com/algorithmic-trading",
+    "WIN": "https://perpex.co/copy-trading/0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+    "WIN_EVENTS": "https://blockmetric.io/wallet/0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+    "BOBBY": "https://perpex.co/copy-trading/0x7fdafde5cfb5465924316eced2d3715494c517d1",
+    "BOBBY_EVENTS": "https://blockmetric.io/wallet/0x7fdafde5cfb5465924316eced2d3715494c517d1",
+    "ABRAXAS": "https://blockmetric.io/wallet/0x5b5d51203a0f9079f8aeb098a6523a13f298c060",
+    "B83": "https://blockmetric.io/wallet/0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+    "B83_LABEL": "https://perpex.co/copy-trading/0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
+    "LORACLE": "https://perpex.co/copy-trading/0x8def9f50456c6c4e37fa5d3d57f108ed23992dae",
+    "LORACLE_SUB": "https://perpex.co/copy-trading/0xefe4c06b6d310978bead596e1798a4fc1d9d194b",
+    "AGUILA": "https://perpex.co/copy-trading/0x1f250df59a777d61cb8bd043c12970f3afe4f925",
+    "WYNN": "https://blockmetric.io/wallet/0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
+    "CONCENTRATED": "https://perpex.co/copy-trading/0x15a4f009bb324a3fb9e36137136b201e3fe0dfdb",
+    "HLP": "https://hyperliquid.gitbook.io/hyperliquid-docs/hypercore/vaults/protocol-vaults"
+  },
+  "raw_page_copies_stored": false
+}
