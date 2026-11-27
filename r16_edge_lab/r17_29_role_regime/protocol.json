@@ -1,0 +1,151 @@
+{
+  "version": "R17.29 research",
+  "date": "2026-11-27",
+  "branch": "research-r17-29-role-regime",
+  "base_commit": "00dea10fc174a311f3b417db61a393c897222b99",
+  "preserve_prior_versions": true,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "DOGEUSDT"
+  ],
+  "data": {
+    "start": "2024-05-01",
+    "requested_end_exclusive": "2026-11-27",
+    "end_rule": "Latest common contiguous verified hourly coverage, fixed before any replay; funding gaps fail closed",
+    "bar": "1h",
+    "signals": "4h",
+    "sources": "Binance UM public archives with official SHA256, native Binance funding API for current month"
+  },
+  "candidates": [
+    "trend_32_96",
+    "trend_64_192",
+    "breakout_36",
+    "breakout_72",
+    "regime_trend",
+    "regime_breakout",
+    "relative_72",
+    "relative_168"
+  ],
+  "controls": [
+    "reference",
+    "buy_hold",
+    "short_hold",
+    "cash"
+  ],
+  "parameters": {
+    "trend_pairs": [
+      [
+        32,
+        96
+      ],
+      [
+        64,
+        192
+      ]
+    ],
+    "momentum_4h_bars": 18,
+    "breakout_4h_bars": [
+      36,
+      72
+    ],
+    "regime_pair": [
+      32,
+      96
+    ],
+    "regime_gap_atr": 1,
+    "relative_momentum_hour_bars": [
+      72,
+      168
+    ],
+    "atr_period_4h": 14,
+    "stop_atr": 3,
+    "trailing_atr": 4,
+    "stop_fraction_clamp": [
+      0.01,
+      0.12
+    ],
+    "max_holding_hours": 336,
+    "decision_frequency_hours": 4,
+    "latency_hours": 1
+  },
+  "execution": {
+    "fee_per_side": 0.0006,
+    "spread_slippage_per_side": 0.0006,
+    "cost_scenarios": [
+      1,
+      2
+    ],
+    "no_maker_rebates": true,
+    "no_touch_equals_fill": true,
+    "venue": "Binance USDT-M taker simulation; current filters, not historical point-in-time",
+    "participation_previous_hour_quote_volume": 0.001,
+    "stop_first_ambiguity": true,
+    "funding": "Exact historical events; adverse-only if intrahour holding uncertain; mark proxy hour open"
+  },
+  "risk": {
+    "capital": 10000,
+    "leverage": 1,
+    "trade_risk": 0.0025,
+    "max_weight": 0.2,
+    "gross_cap": 0.6,
+    "max_positions": 3,
+    "soft_drawdown": 0.08,
+    "hard_drawdown": 0.2,
+    "daily_stop": 0.04,
+    "consecutive_losses": 3,
+    "cooldown_hours": 6,
+    "reset_risk_between_test_quarters": false,
+    "research_risk_fractions": [
+      0.0025,
+      0.005
+    ]
+  },
+  "walk_forward": {
+    "train_months": 6,
+    "test_quarters": [
+      "2025-01-01",
+      "2025-04-01",
+      "2025-07-01",
+      "2025-10-01",
+      "2026-01-01",
+      "2026-04-01",
+      "2026-07-01",
+      "2026-10-01"
+    ],
+    "eligibility": "At least20 closed trades, PF>1.1, drawdown<=20%, positive both3month halves, netpositive atdoublecost, return above reference. Maxnetreturn then alphabetical; otherwisecash.",
+    "freeze": "Each selection only past6months. Final continuous replay switches at quarter boundaries; closes old policy positions, preserves capital/risk peak/hardhalt.",
+    "historical_dates_reused": true,
+    "selection_risk": "Select candidate+risk combination among16 registered configurations, under identicaldrawdown gates; no risk increase aftertest."
+  },
+  "copy_experiment": {
+    "period": "2026-10-01..2026-11-01",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "policies": [
+      "naive_buy_sell",
+      "opening_risk_only",
+      "opening_with_regime"
+    ],
+    "flow_lookback_minutes": 60,
+    "hold_horizon_minutes": 60,
+    "latency_minutes": 1,
+    "meaning": "Controlled retrospective copy-flow experiment, not original trader strategy or full-wallet replication",
+    "not_eligible_for_production_selection": true,
+    "source": "R17.28 publicBobbyexport, selectedwithhindsight; role labelswithoutstartPosition mean fullwalletinventory remainsunknown"
+  },
+  "promotion": "No main changes. Require continuous selectedWFO positive2025and2026, meanmonth>=5% normalandstress, PF>=1.2, Sharpe>=1, DD<=20, >=100trades and prospectiveindependentconfirmation. Historicalpassalone cannotpromote.",
+  "forbidden": [
+    "No spending/subscriptions or contactingthirdparties withoutspecificauthorization",
+    "No bypassingIP limits or access controls",
+    "No extrapolation of one-monthwalletprofit to our capital",
+    "No post-resultstrategy tuning to force target"
+  ],
+  "no_live_orders": true
+}
