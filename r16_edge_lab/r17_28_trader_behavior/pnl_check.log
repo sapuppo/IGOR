@@ -1,0 +1,7 @@
+{
+  "checks": 0,
+  "matches_gross_within_0_00001": 0,
+  "matches_after_fee_within_0_00001": 0,
+  "examples": [],
+  "note": "Limited recent segments, not proof of historical CSV transformation or full account PnL. Native API fill field can differ from frontend PnL labels."
+}

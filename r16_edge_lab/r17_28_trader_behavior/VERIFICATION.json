@@ -1,0 +1,30 @@
+{
+  "status": "independent_sums_and_provenance_passed_research_gates_not_passed",
+  "unit_tests": 13,
+  "export_rows": 1422691,
+  "source_sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148",
+  "daily_reconciliations": 31,
+  "public_api_pages_verified": 16,
+  "recent_samples": [
+    {
+      "name": "bobby",
+      "fills": 11955
+    },
+    {
+      "name": "wintermute",
+      "fills": 11958
+    }
+  ],
+  "gates": {
+    "two_year_history": false,
+    "exact_inventory_and_campaign_reconstruction": false,
+    "portfolio_return_and_drawdown": false,
+    "strategy_backtested": false,
+    "production_promotion": false
+  },
+  "notes": [
+    "Accounting contradictions are based on literal CSV row ordering; within-second order ambiguity is a possible cause, not resolved or silently reordered.",
+    "No missing fee or closing PnL replaced by zero when asserting complete net profit.",
+    "Reported PnL subtotal is distinct from account equity return."
+  ]
+}

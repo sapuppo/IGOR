@@ -1,0 +1,97 @@
+{
+  "month": "2026-10",
+  "observed_export_fills": 1422691,
+  "directions": {
+    "Close Long": {
+      "fills": 196955,
+      "notional": 231505318.788996,
+      "fees_observed": -648.712977,
+      "closed_pnl_observed": -1957486.0060820002
+    },
+    "Close Short": {
+      "fills": 464554,
+      "notional": 956143588.624297,
+      "fees_observed": -8695.029340000001,
+      "closed_pnl_observed": 19862319.926851
+    },
+    "Long > Short": {
+      "fills": 48,
+      "notional": 201028.319884,
+      "fees_observed": 2.8443389999999997,
+      "closed_pnl_observed": 1251.537121
+    },
+    "Open Long": {
+      "fills": 197366,
+      "notional": 262699855.327878,
+      "fees_observed": -423.8897290000002,
+      "closed_pnl_observed": 0.0
+    },
+    "Open Short": {
+      "fills": 563724,
+      "notional": 912164477.8630911,
+      "fees_observed": -7092.5711759999995,
+      "closed_pnl_observed": 0.0
+    },
+    "Short > Long": {
+      "fills": 43,
+      "notional": 169520.168431,
+      "fees_observed": -1.085766,
+      "closed_pnl_observed": 2160.232023
+    },
+    "Spot Dust Conversion": {
+      "fills": 1,
+      "notional": 3.10695e-07,
+      "fees_observed": 0.0,
+      "closed_pnl_observed": 0.0
+    }
+  },
+  "ledger": {
+    "observed_entries": 490,
+    "types": {
+      "send": 339,
+      "spotTransfer": 115,
+      "deposit": 36
+    },
+    "note": "Internal dex transfers, deposits and withdrawals must be classified before capital returns."
+  },
+  "recent_native_samples": [
+    {
+      "name": "bobby",
+      "fills": 11955,
+      "start": 1795734271103,
+      "end": 1795746096508,
+      "seconds_covered": 11825.405,
+      "makers": 10089,
+      "takers": 1866,
+      "fee_sum": -12.159090999999997,
+      "rebate_fills": 10089,
+      "maker_fraction": 0.8439146800501882,
+      "notional": 11120185.501368001,
+      "inventory_transition_matches": 6004,
+      "inventory_discontinuities": 2313,
+      "same_ms_order_ambiguities": 3620,
+      "not_two_year_history": true
+    },
+    {
+      "name": "wintermute",
+      "fills": 11958,
+      "start": 1795746495803,
+      "end": 1795751221843,
+      "seconds_covered": 4726.04,
+      "makers": 8668,
+      "takers": 3290,
+      "fee_sum": 522.1741678621,
+      "rebate_fills": 8668,
+      "maker_fraction": 0.7248703796621508,
+      "notional": 30643500.9836995,
+      "inventory_transition_matches": 6671,
+      "inventory_discontinuities": 1408,
+      "same_ms_order_ambiguities": 2466,
+      "not_two_year_history": true
+    }
+  ],
+  "rebate_credit_share_of_observed_closed_pnl": 0.0009413789011447137,
+  "portfolio_return_computed": false
+}
+FUNDING_SUM 1277413.672301
+TOP_COINS [('BTC', {'fills': 85555, 'short_related_volume_fraction': np.float64(1.0), 'median_inter_fill_seconds': 1.0, 'max_fills_one_second': 102}), ('ETH', {'fills': 49771, 'short_related_volume_fraction': np.float64(0.8759992523192355), 'median_inter_fill_seconds': 1.0, 'max_fills_one_second': 32}), ('HYPE', {'fills': 245756, 'short_related_volume_fraction': np.float64(0.6951071093581808), 'median_inter_fill_seconds': 1.0, 'max_fills_one_second': 234}), ('ZEC', {'fills': 294465, 'short_related_volume_fraction': np.float64(1.0), 'median_inter_fill_seconds': 1.0, 'max_fills_one_second': 207}), ('XRP', {'fills': 52504, 'short_related_volume_fraction': np.float64(0.2975307361453575), 'median_inter_fill_seconds': 3.0, 'max_fills_one_second': 133}), ('xyz:SNDK', {'fills': 70826, 'short_related_volume_fraction': np.float64(0.5718342393955659), 'median_inter_fill_seconds': 2.0, 'max_fills_one_second': 50}), ('xyz:GOLD', {'fills': 56089, 'short_related_volume_fraction': np.float64(0.1209983557135968), 'median_inter_fill_seconds': 6.0, 'max_fills_one_second': 43}), ('SOL', {'fills': 23575, 'short_related_volume_fraction': np.float64(0.7769050407090395), 'median_inter_fill_seconds': 4.0, 'max_fills_one_second': 42})]

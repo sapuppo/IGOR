@@ -2,9 +2,9 @@
   "target": {
     "start_inclusive_utc": "2024-11-27T00:00:00Z",
     "end_exclusive_utc": "2026-11-27T00:00:00Z",
-    "note": "Dois anos em datas UTC; dados de painel consultados em 27/11 podem conter atualização posterior ao corte. Não misturar ao dataset alvo."
+    "note": "Dois anos em datas UTC; dados de painel consultados em 27/11 podem conter atualiza\u00e7\u00e3o posterior ao corte. N\u00e3o misturar ao dataset alvo."
   },
-  "raw_fills_downloaded": 0,
+  "raw_fills_downloaded": 1422691,
   "complete_wallet_histories": 0,
   "sources": {
     "official": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint",
@@ -60,5 +60,10 @@
     "subaccount links rather than name guesses",
     "historical execution costs when observed"
   ],
-  "global_ranking_proven": false
+  "global_ranking_proven": false,
+  "actual_export_limits": {
+    "max_records": 6250000,
+    "exports_per_ip_per_24h": 1
+  },
+  "current_inventory_identification_passed": false
 }

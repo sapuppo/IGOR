@@ -1,6 +1,6 @@
 [
   {
-    "label": "Wintermute — atribuição pública",
+    "label": "Wintermute \u2014 atribui\u00e7\u00e3o p\u00fablica",
     "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
     "role": "institutional_research",
     "sources": [
@@ -12,10 +12,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Estudar liquidez, arbitragem e controle de inventário. O histórico desta carteira não revela hedges em outras venues."
+    "research_reason": "Estudar liquidez, arbitragem e controle de invent\u00e1rio. O hist\u00f3rico desta carteira n\u00e3o revela hedges em outras venues.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": true
   },
   {
-    "label": "BobbyBigSize — rótulo público",
+    "label": "BobbyBigSize \u2014 r\u00f3tulo p\u00fablico",
     "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
     "role": "behavior_research",
     "sources": [
@@ -25,12 +28,17 @@
     "provider_reported_first_activity_month": "2024-10",
     "first_activity_independently_verified": false,
     "ownership_verified": false,
-    "raw_history_collected": false,
+    "raw_history_collected": true,
     "eligible_for_live_copy": false,
-    "research_reason": "Estudar posições multidiárias e construção/redução parcelada, sem afirmar o gatilho de entrada."
+    "research_reason": "Estudar posi\u00e7\u00f5es multidi\u00e1rias e constru\u00e7\u00e3o/redu\u00e7\u00e3o parcelada, sem afirmar o gatilho de entrada.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [
+      "2026-10"
+    ],
+    "recent_native_sample_collected": true
   },
   {
-    "label": "Abraxas Capital — atribuição pública",
+    "label": "Abraxas Capital \u2014 atribui\u00e7\u00e3o p\u00fablica",
     "address": "0x5b5d51203a0f9079f8aeb098a6523a13f298c060",
     "role": "institutional_research",
     "sources": [
@@ -41,10 +49,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Reconstruir posições long/short, transferências e spot. Identidade e hedges externos não auditados."
+    "research_reason": "Reconstruir posi\u00e7\u00f5es long/short, transfer\u00eancias e spot. Identidade e hedges externos n\u00e3o auditados.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "Abraxas Capital — segunda atribuição",
+    "label": "Abraxas Capital \u2014 segunda atribui\u00e7\u00e3o",
     "address": "0xb83de012dba672c76a7dbbbf3e459cb59d7d6e36",
     "role": "institutional_research",
     "sources": [
@@ -56,10 +67,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Mesmo rótulo de instituição não prova vínculo de subconta; não somar automaticamente resultados."
+    "research_reason": "Mesmo r\u00f3tulo de institui\u00e7\u00e3o n\u00e3o prova v\u00ednculo de subconta; n\u00e3o somar automaticamente resultados.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "Loracle — rótulo público",
+    "label": "Loracle \u2014 r\u00f3tulo p\u00fablico",
     "address": "0x8def9f50456c6c4e37fa5d3d57f108ed23992dae",
     "role": "negative_control",
     "sources": [
@@ -70,10 +84,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Comparar ganho recente com resultado acumulado negativo; não copiar por notoriedade."
+    "research_reason": "Comparar ganho recente com resultado acumulado negativo; n\u00e3o copiar por notoriedade.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "Loracle — outra carteira atribuída",
+    "label": "Loracle \u2014 outra carteira atribu\u00edda",
     "address": "0xefe4c06b6d310978bead596e1798a4fc1d9d194b",
     "role": "negative_control",
     "sources": [
@@ -84,10 +101,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Conta recente não pode sustentar histórico de dois anos. Investigar perdas grandes e posição concentrada."
+    "research_reason": "Conta recente n\u00e3o pode sustentar hist\u00f3rico de dois anos. Investigar perdas grandes e posi\u00e7\u00e3o concentrada.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "AguilaTrades — rótulo público",
+    "label": "AguilaTrades \u2014 r\u00f3tulo p\u00fablico",
     "address": "0x1f250df59a777d61cb8bd043c12970f3afe4f925",
     "role": "negative_control",
     "sources": [
@@ -98,10 +118,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Estudar drawdown e caudas de perdas. Resultado acumulado publicado negativo."
+    "research_reason": "Estudar drawdown e caudas de perdas. Resultado acumulado publicado negativo.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "James Wynn — atribuição pública",
+    "label": "James Wynn \u2014 atribui\u00e7\u00e3o p\u00fablica",
     "address": "0x5078c2fbea2b2ad61bc840bc023e35fce56bedb6",
     "role": "negative_control",
     "sources": [
@@ -112,10 +135,13 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Contrastar aumentos de posição e indicações de liquidação; não tratar fama ou mês positivo como competência comprovada."
+    "research_reason": "Contrastar aumentos de posi\u00e7\u00e3o e indica\u00e7\u00f5es de liquida\u00e7\u00e3o; n\u00e3o tratar fama ou m\u00eas positivo como compet\u00eancia comprovada.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   },
   {
-    "label": "0x15a4 — endereço sem identidade",
+    "label": "0x15a4 \u2014 endere\u00e7o sem identidade",
     "address": "0x15a4f009bb324a3fb9e36137136b201e3fe0dfdb",
     "role": "profit_concentration_control",
     "sources": [
@@ -126,6 +152,9 @@
     "ownership_verified": false,
     "raw_history_collected": false,
     "eligible_for_live_copy": false,
-    "research_reason": "Vencedor de outubro no ranking consultado; lucro concentrado em um evento não prova repetibilidade."
+    "research_reason": "Vencedor de outubro no ranking consultado; lucro concentrado em um evento n\u00e3o prova repetibilidade.",
+    "complete_two_year_raw_history_collected": false,
+    "collected_export_months": [],
+    "recent_native_sample_collected": false
   }
 ]

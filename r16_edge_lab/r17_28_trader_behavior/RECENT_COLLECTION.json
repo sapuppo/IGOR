@@ -1,0 +1,184 @@
+[
+  {
+    "name": "bobby",
+    "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+    "rows": 11955,
+    "first_time": 1795734271103,
+    "last_time": 1795746096508,
+    "pages": [
+      {
+        "file": "bobby_recent_fills_0.json",
+        "sha256": "d46aaa577f98862dbcbcc0e0aae7b71370b386bf0f7e0fbd2786586e7f17d711",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1704067200000,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "bobby_recent_fills_1.json",
+        "sha256": "80783c08c4224d53d38d96ee70ce9335cf571c1b3a635bd3310b78783b85ae68",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1795736581017,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "bobby_recent_fills_2.json",
+        "sha256": "dc877ad20254e80242a8e009e31811c4f39cad98fc98c3c88b5c208042336c44",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1795738286430,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "bobby_recent_fills_3.json",
+        "sha256": "4e9244b976f2ff29b920785dc9b061a52aa7c562bf6406bc0652e50150688475",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1795740642585,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "bobby_recent_fills_4.json",
+        "sha256": "553c8509c3a192b03dd36f2e234c33b80c6e866794732a012ea087de514c4c72",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1795742546243,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "bobby_recent_fills_5.json",
+        "sha256": "016debff1b2f36d660daaafde26f7b2ff9f0762a10b713589ae90fbd602e2a81",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+          "startTime": 1795744943329,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      }
+    ],
+    "twap_rows": 2000,
+    "snapshot_end_inclusive": 1795753114816,
+    "full_history": false,
+    "warning": [
+      "Retained recent window only. Older fills unavailable through native endpoint. TWAP slices separate, not merged into campaign accounting.",
+      "Six-page bounded sample, not an exhaustive download of the retained window. Raw responses can exceed the older documented 10,000-fill figure; actual first/last times define coverage."
+    ],
+    "bounded_sample": true,
+    "page_limit": 6,
+    "stopped_at_page_limit": true
+  },
+  {
+    "name": "wintermute",
+    "address": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+    "rows": 11958,
+    "first_time": 1795746495803,
+    "last_time": 1795751221843,
+    "pages": [
+      {
+        "file": "wintermute_recent_fills_0.json",
+        "sha256": "0db5834d2b2055eae79cfddc3fe7ea941c5efb770aab3f46a5cc29a0e92286b8",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1704067200000,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "wintermute_recent_fills_1.json",
+        "sha256": "80eb04afb85d90b6efd3861c5ad6b7afe8ad6afb62c47e125a593cf6cb29b67b",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1795747068846,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "wintermute_recent_fills_2.json",
+        "sha256": "395813be2ba88645a0c459eb76a24931787f4cf84ede86aa1a0770d8de3db08f",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1795747901180,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "wintermute_recent_fills_3.json",
+        "sha256": "e3078106b416fddeb9ae70e1100cdb7d255ee43287ffc6eee4a14767f2e7a4e8",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1795748760134,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "wintermute_recent_fills_4.json",
+        "sha256": "73feda250c1edca19c798b875881a1ddd998807613cb7fbaa02db3cbce590b12",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1795749657066,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      },
+      {
+        "file": "wintermute_recent_fills_5.json",
+        "sha256": "2a99f0138e6c6519e10c7deb6e9eb04e3f30d62df5b515ee90c50f9d905c566e",
+        "count": 2000,
+        "request": {
+          "type": "userFillsByTime",
+          "user": "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00",
+          "startTime": 1795750359268,
+          "endTime": 1795753114816,
+          "aggregateByTime": false
+        }
+      }
+    ],
+    "twap_rows": 5,
+    "snapshot_end_inclusive": 1795753114816,
+    "full_history": false,
+    "warning": [
+      "Retained recent window only. Older fills unavailable through native endpoint. TWAP slices separate, not merged into campaign accounting.",
+      "Six-page bounded sample, not an exhaustive download of the retained window. Raw responses can exceed the older documented 10,000-fill figure; actual first/last times define coverage."
+    ],
+    "bounded_sample": true,
+    "page_limit": 6,
+    "stopped_at_page_limit": true
+  }
+]

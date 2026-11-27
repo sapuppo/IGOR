@@ -1,0 +1,18 @@
+{
+  "source": "https://trade-export.hypedexer.com/?v=1",
+  "wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+  "requested_start": "2026-10-01",
+  "requested_end_exclusive": "2026-11-01",
+  "original_browser_download_path": "/opt/codex/downloads/afc79642-7cfe-42b6-ae3f-c477dfa1cdc1/cbb67c10-9878-4966-b580-0cb862f576e3",
+  "file": "raw/bobby_2026-10.csv.gz",
+  "bytes": 65208510,
+  "sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148",
+  "rows": 1422691,
+  "private_durable_reference": "libfile_f9b21a328d708191809a40d39d69b6de",
+  "format": "gzip-compressed CSV despite download name lacking extension",
+  "limits_observed": {
+    "max_rows_per_export": 6250000,
+    "exports_per_ip_per_24h": 1
+  },
+  "raw_source_mutated": false
+}

@@ -1,0 +1,18 @@
+test_detect_missing_fill_or_bad_label (test_inventory.TestInventory.test_detect_missing_fill_or_bad_label) ... ok
+test_exact_decimal (test_inventory.TestInventory.test_exact_decimal) ... ok
+test_fee_currency_not_merged (test_inventory.TestInventory.test_fee_currency_not_merged) ... ok
+test_identifies_inherited_position (test_inventory.TestInventory.test_identifies_inherited_position) ... ok
+test_inherited_no_fake_hold (test_inventory.TestInventory.test_inherited_no_fake_hold) ... ok
+test_missing_close_pnl_never_zero (test_inventory.TestInventory.test_missing_close_pnl_never_zero) ... ok
+test_missing_fees_never_zero (test_inventory.TestInventory.test_missing_fees_never_zero) ... ok
+test_not_assume_zero (test_inventory.TestInventory.test_not_assume_zero) ... ok
+test_partial_close_campaign (test_inventory.TestInventory.test_partial_close_campaign) ... ok
+test_rebate_and_flip_fee (test_inventory.TestInventory.test_rebate_and_flip_fee) ... ok
+test_reversal_constraint (test_inventory.TestInventory.test_reversal_constraint) ... ok
+test_split_reversal (test_inventory.TestInventory.test_split_reversal) ... ok
+test_unfinished_campaign_not_closed (test_inventory.TestInventory.test_unfinished_campaign_not_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.000s
+
+OK

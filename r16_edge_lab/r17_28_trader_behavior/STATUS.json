@@ -2,22 +2,44 @@
   "study": "public-trader-behavior",
   "date": "2026-11-27",
   "status": "partial",
-  "stage": "public_source_screening_complete",
+  "stage": "one_month_export_analyzed_full_history_blocked",
   "complete_two_year_study": false,
   "watchlist_wallets": 9,
-  "reported_event_examples": 13,
-  "raw_fills_collected": 0,
+  "raw_export_fills": 1422691,
+  "export_months": [
+    {
+      "wallet": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+      "month": "2026-10",
+      "rows": 1422691,
+      "sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148"
+    }
+  ],
+  "native_recent_sample_fills": {
+    "bobby": 11955,
+    "wintermute": 11958
+  },
+  "official_funding_entries": 1462,
+  "official_ledger_entries": 490,
+  "long_portfolio_pnl_points_in_target": {
+    "bobby": 79,
+    "wintermute": 65
+  },
   "backtests_run": 0,
+  "unit_tests_passed": 13,
   "strategy_inferred_or_verified": false,
-  "profitability_computed_by_us": false,
+  "trader_net_monthly_return": null,
+  "equity_drawdown": null,
+  "inventory_reconstruction_approved": false,
   "live_orders": false,
   "background_job_running": false,
   "baseline_changed": false,
   "blockers": [
-    "execution environment unavailable",
-    "full archival exports and funding/capital ledger not collected",
-    "older archival fields incomplete; exact net return requires resolving these gaps"
+    "Export portal: one export per IP per24h; maximum6.25M records perexport",
+    "Full two-year archive not collected",
+    "CSV omits state/identifiers and millisecond order; exact initial inventory and campaigns unresolved",
+    "Full account equity and cash flow reconciliation pending"
   ],
-  "next_required": "Acquire and reconcile full raw exports and ledger before strategy inference",
-  "sources_only": true
+  "next_required": "State-complete historical archive and account reconciliation before strategy replication",
+  "report": "TRADER_RESEARCH_PT.md",
+  "verification": "VERIFICATION.json"
 }

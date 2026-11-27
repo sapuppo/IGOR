@@ -1,0 +1,69 @@
+{
+  "address": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+  "start": 1790812800000,
+  "end_exclusive": 1793491200000,
+  "results": [
+    {
+      "type": "userFunding",
+      "complete_within_public_endpoint": true,
+      "rows": 1462,
+      "raw_rows_with_overlap": 1491,
+      "pages": [
+        {
+          "file": "bobby_october_userFunding_000.json",
+          "sha256": "f57ee8a2cd735de001d34527f5a5042deb81efceb96caeb83c222a88d11680ac",
+          "count": 500,
+          "request": {
+            "type": "userFunding",
+            "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+            "startTime": 1790812800000,
+            "endTime": 1793491199999
+          }
+        },
+        {
+          "file": "bobby_october_userFunding_001.json",
+          "sha256": "f7463da9dfe01b953697d7f1a7d7d5f32d5c1cf2f3fb23f40f6261fc25208fe3",
+          "count": 500,
+          "request": {
+            "type": "userFunding",
+            "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+            "startTime": 1791763200000,
+            "endTime": 1793491199999
+          }
+        },
+        {
+          "file": "bobby_october_userFunding_002.json",
+          "sha256": "bfc86a9a37c3fdcb3eba69affe43c6f47a2381c5b6438a2805ecd990939dfb10",
+          "count": 491,
+          "request": {
+            "type": "userFunding",
+            "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+            "startTime": 1792627200000,
+            "endTime": 1793491199999
+          }
+        }
+      ],
+      "warning": "API response completeness is conditional on endpoint history retention; no archive guarantee inferred."
+    },
+    {
+      "type": "userNonFundingLedgerUpdates",
+      "complete_within_public_endpoint": true,
+      "rows": 490,
+      "raw_rows_with_overlap": 490,
+      "pages": [
+        {
+          "file": "bobby_october_userNonFundingLedgerUpdates_000.json",
+          "sha256": "5f655a063b4bd98aee3fc114c46a405ae5c9ac25a4a71b5978e374850c32dc50",
+          "count": 490,
+          "request": {
+            "type": "userNonFundingLedgerUpdates",
+            "user": "0x7fdafde5cfb5465924316eced2d3715494c517d1",
+            "startTime": 1790812800000,
+            "endTime": 1793491199999
+          }
+        }
+      ],
+      "warning": "API response completeness is conditional on endpoint history retention; no archive guarantee inferred."
+    }
+  ]
+}

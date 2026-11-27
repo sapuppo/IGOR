@@ -1,0 +1,11 @@
+{
+  "file": "R17_28_EVIDENCE.zip",
+  "bytes": 3937909,
+  "sha256": "bdfa0eaa6672242f1091f28fcdd18abb1e9f76ccf1ded0822cf9a61992c045ce",
+  "git_blob_sha1": "ba322f1d2f9358741bf97bae78dd133443ad3804",
+  "files": 83,
+  "raw_large_export_included": false,
+  "raw_export_reference": "RAW_RECEIPT.json",
+  "chunk_bytes": 75000,
+  "chunks": 53
+}

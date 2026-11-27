@@ -1,0 +1,42 @@
+/workspace/scratch/06e3cb12ae31/IGOR/r16_edge_lab/r17_28_trader_behavior/profile_raw.py:4: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for c in pd.read_csv(path,chunksize=150000,keep_default_na=False):
+/workspace/scratch/06e3cb12ae31/IGOR/r16_edge_lab/r17_28_trader_behavior/profile_raw.py:4: DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+  for c in pd.read_csv(path,chunksize=150000,keep_default_na=False):
+{
+  "rows": 1422691,
+  "columns": [
+    "time",
+    "coin",
+    "dir",
+    "px",
+    "sz",
+    "ntl",
+    "fee",
+    "feeToken",
+    "closedPnl",
+    "hash"
+  ],
+  "start": "2026-10-01T00:00:00+00:00",
+  "end": "2026-10-31T23:59:59+00:00",
+  "directions": {
+    "Spot Dust Conversion": 1,
+    "Close Long": 196955,
+    "Open Long": 197366,
+    "Close Short": 464554,
+    "Open Short": 563724,
+    "Long > Short": 48,
+    "Short > Long": 43
+  },
+  "missing_fee": 162,
+  "missing_closedpnl": 761107,
+  "fee_sign": {
+    "missing": 162,
+    "rebate": 1393325,
+    "paid": 29204
+  },
+  "sum_fees": -16858.444648999994,
+  "sum_closedpnl": 17908245.689913,
+  "sum_notional": 2362883789.0925775,
+  "sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148"
+}
+TOP [('BTC', {'fills': 85555, 'fees': np.float64(-6696.391447), 'closedpnl': np.float64(3051469.7100349995), 'notional': np.float64(669643363.4674201)}), ('ETH', {'fills': 49771, 'fees': np.float64(-3616.0869019999996), 'closedpnl': np.float64(10331387.681681), 'notional': np.float64(362855262.47258)}), ('HYPE', {'fills': 245756, 'fees': np.float64(-2947.0252169999994), 'closedpnl': np.float64(658928.1514390002), 'notional': np.float64(295425453.54836)}), ('ZEC', {'fills': 294465, 'fees': np.float64(-2897.221443), 'closedpnl': np.float64(3376840.6743009994), 'notional': np.float64(289736245.331)}), ('XRP', {'fills': 52504, 'fees': np.float64(-899.102944), 'closedpnl': np.float64(-168896.61000000004), 'notional': np.float64(89912898.7421)}), ('xyz:SNDK', {'fills': 70826, 'fees': np.float64(147.95184200000003), 'closedpnl': np.float64(697037.963938), 'notional': np.float64(75411091.73120001)}), ('xyz:GOLD', {'fills': 56089, 'fees': np.float64(278.159064), 'closedpnl': np.float64(-372302.20190700004), 'notional': np.float64(68785439.14192)}), ('SOL', {'fills': 23575, 'fees': np.float64(-677.362095), 'closedpnl': np.float64(1228004.459895), 'notional': np.float64(67737386.06434001)}), ('xyz:MU', {'fills': 73793, 'fees': np.float64(-64.26601600000001), 'closedpnl': np.float64(248279.533949), 'notional': np.float64(64310218.77235)}), ('XMR', {'fills': 124191, 'fees': np.float64(-528.816059), 'closedpnl': np.float64(68556.187352), 'notional': np.float64(52887840.61343)}), ('NEAR', {'fills': 57870, 'fees': np.float64(-459.1081509999999), 'closedpnl': np.float64(-496360.0859989999), 'notional': np.float64(45913703.160560004)}), ('xyz:CL', {'fills': 23118, 'fees': np.float64(-43.132256000000005), 'closedpnl': np.float64(-431251.523147), 'notional': np.float64(43144130.86166801)})]

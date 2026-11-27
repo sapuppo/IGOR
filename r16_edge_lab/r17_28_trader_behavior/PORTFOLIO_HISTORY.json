@@ -1,0 +1,28 @@
+[
+  {
+    "wallet_label": "bobby",
+    "first_date_utc": "2024-12-04T22:58:49.708000+00:00",
+    "last_date_utc": "2026-11-25T19:04:59.897000+00:00",
+    "points_in_target": 79,
+    "total_alltime_points": 87,
+    "source": "https://api.hyperliquid.xyz/info",
+    "request_type": "portfolio",
+    "series": "allTime.pnlHistory",
+    "sha256": "eae70a754265ec5f05fae35f00642854b5d0207106f2292db4bbec207d016208",
+    "monthly_returns_computed": false,
+    "note": "Sparse cumulative reported PnL, not reconstructed trades, not capital return, no interpolation at month ends."
+  },
+  {
+    "wallet_label": "wintermute",
+    "first_date_utc": "2024-11-27T22:36:00.130000+00:00",
+    "last_date_utc": "2026-11-23T14:46:00.074000+00:00",
+    "points_in_target": 65,
+    "total_alltime_points": 95,
+    "source": "https://api.hyperliquid.xyz/info",
+    "request_type": "portfolio",
+    "series": "allTime.pnlHistory",
+    "sha256": "d9499b39e281796758b8709d62f9cfb8d5f55e5d9ec09b8221b9758a5fd7f727",
+    "monthly_returns_computed": false,
+    "note": "Sparse cumulative reported PnL, not reconstructed trades, not capital return, no interpolation at month ends."
+  }
+]

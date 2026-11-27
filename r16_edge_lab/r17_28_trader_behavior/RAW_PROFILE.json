@@ -1,0 +1,395 @@
+{
+  "rows": 1422691,
+  "columns": [
+    "time",
+    "coin",
+    "dir",
+    "px",
+    "sz",
+    "ntl",
+    "fee",
+    "feeToken",
+    "closedPnl",
+    "hash"
+  ],
+  "start": "2026-10-01T00:00:00+00:00",
+  "end": "2026-10-31T23:59:59+00:00",
+  "directions": {
+    "Spot Dust Conversion": 1,
+    "Close Long": 196955,
+    "Open Long": 197366,
+    "Close Short": 464554,
+    "Open Short": 563724,
+    "Long > Short": 48,
+    "Short > Long": 43
+  },
+  "missing_fee": 162,
+  "missing_closedpnl": 761107,
+  "fee_sign": {
+    "missing": 162,
+    "rebate": 1393325,
+    "paid": 29204
+  },
+  "sum_fees": -16858.444648999994,
+  "sum_closedpnl": 17908245.689913,
+  "sum_notional": 2362883789.0925775,
+  "by_coin": {
+    "@334": {
+      "fills": 1,
+      "fees": 0.0,
+      "closedpnl": 0.0,
+      "notional": 3.10695e-07
+    },
+    "BTC": {
+      "fills": 85555,
+      "fees": -6696.391447,
+      "closedpnl": 3051469.7100349995,
+      "notional": 669643363.4674201
+    },
+    "DOGE": {
+      "fills": 31651,
+      "fees": -106.80853899999998,
+      "closedpnl": 190104.02967000002,
+      "notional": 10682451.685801998
+    },
+    "ETH": {
+      "fills": 49771,
+      "fees": -3616.0869019999996,
+      "closedpnl": 10331387.681681,
+      "notional": 362855262.47258
+    },
+    "FARTCOIN": {
+      "fills": 15645,
+      "fees": -40.004534,
+      "closedpnl": 381556.346234,
+      "notional": 4001299.39833
+    },
+    "GRAM": {
+      "fills": 1304,
+      "fees": -6.905586,
+      "closedpnl": -9244.999200999999,
+      "notional": 690628.0677
+    },
+    "HYPE": {
+      "fills": 245756,
+      "fees": -2947.0252169999994,
+      "closedpnl": 658928.1514390002,
+      "notional": 295425453.54836
+    },
+    "NEAR": {
+      "fills": 57870,
+      "fees": -459.1081509999999,
+      "closedpnl": -496360.0859989999,
+      "notional": 45913703.160560004
+    },
+    "SOL": {
+      "fills": 23575,
+      "fees": -677.362095,
+      "closedpnl": 1228004.459895,
+      "notional": 67737386.06434001
+    },
+    "XMR": {
+      "fills": 124191,
+      "fees": -528.816059,
+      "closedpnl": 68556.187352,
+      "notional": 52887840.61343
+    },
+    "XRP": {
+      "fills": 52504,
+      "fees": -899.102944,
+      "closedpnl": -168896.61000000004,
+      "notional": 89912898.7421
+    },
+    "ZEC": {
+      "fills": 294465,
+      "fees": -2897.221443,
+      "closedpnl": 3376840.6743009994,
+      "notional": 289736245.331
+    },
+    "kPEPE": {
+      "fills": 6863,
+      "fees": -55.076704,
+      "closedpnl": -2469.3996419999894,
+      "notional": 5508022.246517999
+    },
+    "xyz:BRENTOIL": {
+      "fills": 12842,
+      "fees": 157.31500299999996,
+      "closedpnl": 76520.460777,
+      "notional": 20904997.98928
+    },
+    "xyz:CL": {
+      "fills": 23118,
+      "fees": -43.132256000000005,
+      "closedpnl": -431251.523147,
+      "notional": 43144130.86166801
+    },
+    "xyz:GOLD": {
+      "fills": 56089,
+      "fees": 278.159064,
+      "closedpnl": -372302.20190700004,
+      "notional": 68785439.14192
+    },
+    "xyz:GOOGL": {
+      "fills": 10057,
+      "fees": 96.704254,
+      "closedpnl": 58307.63217899999,
+      "notional": 4758626.51853
+    },
+    "xyz:MU": {
+      "fills": 73793,
+      "fees": -64.26601600000001,
+      "closedpnl": 248279.533949,
+      "notional": 64310218.77235
+    },
+    "xyz:NVDA": {
+      "fills": 12596,
+      "fees": -10.589243999999999,
+      "closedpnl": -11719.205967000002,
+      "notional": 10595906.29475
+    },
+    "xyz:SILVER": {
+      "fills": 16323,
+      "fees": 65.378496,
+      "closedpnl": -29024.56880199999,
+      "notional": 25720920.01273
+    },
+    "xyz:SKHX": {
+      "fills": 25663,
+      "fees": -26.233877,
+      "closedpnl": 123951.05330400007,
+      "notional": 26246728.220450003
+    },
+    "xyz:SKHY": {
+      "fills": 27005,
+      "fees": 168.24212099999994,
+      "closedpnl": -675631.4349379999,
+      "notional": 30015906.466599997
+    },
+    "xyz:SNDK": {
+      "fills": 70826,
+      "fees": 147.95184200000003,
+      "closedpnl": 697037.963938,
+      "notional": 75411091.73120001
+    },
+    "xyz:SPCX": {
+      "fills": 29089,
+      "fees": 163.993239,
+      "closedpnl": -396128.500276,
+      "notional": 41227681.7582
+    },
+    "AVAX": {
+      "fills": 402,
+      "fees": -1.957652,
+      "closedpnl": 63783.04891,
+      "notional": 195785.225646
+    },
+    "BNB": {
+      "fills": 1218,
+      "fees": -7.537091,
+      "closedpnl": 27704.648586,
+      "notional": 753768.4581500002
+    },
+    "LIT": {
+      "fills": 18235,
+      "fees": 64.73461599999999,
+      "closedpnl": 253692.354714,
+      "notional": 6749397.727400001
+    },
+    "VVV": {
+      "fills": 1215,
+      "fees": -2.691455,
+      "closedpnl": 0.0,
+      "notional": 269206.6064
+    },
+    "xyz:CRCL": {
+      "fills": 22692,
+      "fees": 273.117987,
+      "closedpnl": -178225.654778,
+      "notional": 18169185.662451
+    },
+    "MON": {
+      "fills": 267,
+      "fees": -0.614431,
+      "closedpnl": 0.0,
+      "notional": 61456.87545300001
+    },
+    "ONDO": {
+      "fills": 4584,
+      "fees": -12.855345,
+      "closedpnl": 300291.583454,
+      "notional": 1285761.96367
+    },
+    "xyz:INTC": {
+      "fills": 770,
+      "fees": -0.9822529999999999,
+      "closedpnl": 0.0,
+      "notional": 982604.8856599999
+    },
+    "PUMP": {
+      "fills": 1343,
+      "fees": -10.651425,
+      "closedpnl": 66425.78218000001,
+      "notional": 1065207.902716
+    },
+    "WLD": {
+      "fills": 7515,
+      "fees": -32.845174,
+      "closedpnl": -322577.39979,
+      "notional": 3284896.557108
+    },
+    "ENA": {
+      "fills": 2733,
+      "fees": -9.062301999999999,
+      "closedpnl": -205720.33499,
+      "notional": 906363.60524
+    },
+    "LTC": {
+      "fills": 1851,
+      "fees": -4.978153,
+      "closedpnl": 4956.306752,
+      "notional": 497908.61725999997
+    },
+    "xyz:AAPL": {
+      "fills": 4991,
+      "fees": 398.82421,
+      "closedpnl": 0.0,
+      "notional": 9809685.57145
+    },
+    "xyz:SP500": {
+      "fills": 4429,
+      "fees": 500.96392699999996,
+      "closedpnl": 0.0,
+      "notional": 11183850.7587
+    },
+    "XPL": {
+      "fills": 3894,
+      "fees": -15.523113,
+      "closedpnl": 0.0,
+      "notional": 1552506.1094550001
+    }
+  },
+  "sample": [
+    {
+      "time": "2026-10-01 00:00:00",
+      "coin": "@334",
+      "dir": "Spot Dust Conversion",
+      "px": 0.4035,
+      "sz": 7.699999999999999e-07,
+      "ntl": 3.10695e-07,
+      "fee": "",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "time": "2026-10-01 00:00:00",
+      "coin": "xyz:SKHY",
+      "dir": "Close Long",
+      "px": 184.43,
+      "sz": 0.57,
+      "ntl": 105.1251,
+      "fee": "-0.000105",
+      "feeToken": "USDC",
+      "closedPnl": "-0.758556",
+      "hash": "0xb86f5f245d61941ab9e9044591a1150205f50009f864b2ec5c380a771c656e05"
+    },
+    {
+      "time": "2026-10-01 00:00:02",
+      "coin": "xyz:SKHY",
+      "dir": "Open Long",
+      "px": 184.42,
+      "sz": 5.36,
+      "ntl": 988.4912,
+      "fee": "-0.000988",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x2ceeb79c473b6e9d2e68044591a12502094a0081e23e8d6fd0b762ef063f4887"
+    },
+    {
+      "time": "2026-10-01 00:00:06",
+      "coin": "BTC",
+      "dir": "Close Short",
+      "px": 83612.0,
+      "sz": 0.00102,
+      "ntl": 85.28424000000001,
+      "fee": "-0.000852",
+      "feeToken": "USDC",
+      "closedPnl": "0.517344",
+      "hash": "0x30b7bebc8b9a54d23231044591a1670202b600a2269d73a4d4806a0f4a9e2ebc"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.06003,
+      "ntl": 5019.64857,
+      "fee": "-0.050196",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0xcd3672bfc0bb2f6eceb0044591a1dc0210cf00a55bbe4e4070ff1e127fbf0959"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.00041,
+      "ntl": 34.28379,
+      "fee": "-0.000342",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0xd9b35f95e78e35b4db2d044591a1dd020aff007b828154867d7c0ae8a6820f9f"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.13035,
+      "ntl": 10899.73665,
+      "fee": "-0.108997",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x19000c58bcea8e3a1a79044591a1e0020776003e57edad0cbcc8b7ab7bee6824"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.09849,
+      "ntl": 8235.63531,
+      "fee": "-0.082356",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x1542ae67bc87270f16bc044591a1e0020780004d578a45e1b90b59ba7b8b00f9"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.0423,
+      "ntl": 3537.0837,
+      "fee": "-0.03537",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x0d7111e9f6b079290eea044591a1e002041b00cf91b397fbb139bd3cb5b45313"
+    },
+    {
+      "time": "2026-10-01 00:00:15",
+      "coin": "BTC",
+      "dir": "Open Short",
+      "px": 83619.0,
+      "sz": 0.15948,
+      "ntl": 13335.558120000002,
+      "fee": "-0.133355",
+      "feeToken": "USDC",
+      "closedPnl": "",
+      "hash": "0x10a8575dfcc667ac1222044591a1e202029a004397c9867eb47102b0bbca4196"
+    }
+  ],
+  "sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148"
+}
