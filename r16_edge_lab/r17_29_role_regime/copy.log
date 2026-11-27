@@ -1,0 +1,7 @@
+COPY naive_buy_sell_cost1 return -0.20024872327008236 dd 0.200370677020272 trades 662
+COPY naive_buy_sell_cost2 return -0.20066172366350243 dd 0.20066172366350243 trades 355
+COPY opening_risk_only_cost1 return -0.20033172468485472 dd 0.20033172468485472 trades 701
+COPY opening_risk_only_cost2 return -0.201229164238924 dd 0.201229164238924 trades 362
+COPY opening_with_regime_cost1 return -0.07303768530081467 dd 0.07332181034325036 trades 194
+COPY opening_with_regime_cost2 return -0.1225820902255802 dd 0.1226237782375802 trades 189
+COPY COMPLETE

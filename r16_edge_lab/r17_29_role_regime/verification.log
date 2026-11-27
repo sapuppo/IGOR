@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "unit_tests": 26,
+  "verified_market_archives": 510,
+  "real_feature_prefix_checks": 12,
+  "selection_folds_checked": 8,
+  "accounting_replays": 48,
+  "trade_rows_reconciled": 23820,
+  "training_replays": 264,
+  "total_strategy_replays": 312,
+  "protocol_sha256": "fd62521bb4614f6a49e8198620c4f16f6328d0b7b353ee0ca36f4d00d09d3f60",
+  "selection_sha256": "371bee529e02c9d44f999744cf3326427995666c2a2717f164f5df44bdb45b8f",
+  "limitations": [
+    "No independent untouched future sample",
+    "Current venue filters, not historical point-in-time",
+    "Hourly maximum drawdown excludes intrahour unrealized extreme",
+    "No live execution, queue simulation or complete2year wallet reconstruction"
+  ]
+}

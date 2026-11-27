@@ -1,0 +1,115 @@
+{
+  "start": 1714521600000,
+  "end_exclusive": 1795651200000,
+  "requested_end_exclusive": 1795737600000,
+  "coverage": {
+    "BTCUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    },
+    "ETHUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    },
+    "SOLUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    },
+    "BNBUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    },
+    "XRPUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    },
+    "DOGEUSDT": {
+      "hours": 22536,
+      "first": 1714521600000,
+      "last": 1795647600000,
+      "funding_events": 2817
+    }
+  },
+  "prepared_sha256": {
+    "prepared/BTCUSDT.pkl": "d3677bde6be8e31dcf4748c1b51f5372518357f42a78efb1e6f4996fdc04d0a0",
+    "prepared/BTCUSDT_funding.pkl": "f042e5b5e5b771d91425d1f463814f3b69d389241881d5ec851471947897422c",
+    "prepared/ETHUSDT.pkl": "eb7fd7b2402f47c61f466d698ffb31333040423861f313790cfdecc805a33f44",
+    "prepared/ETHUSDT_funding.pkl": "2f3d542b47f341d7c1f348f0527f28d770c73370696dbefaa6e0c51384aa7115",
+    "prepared/SOLUSDT.pkl": "af0e04aff27e981f9f09a8dae0cfaeefd991bfc79e98852db8eb389b2bcbb322",
+    "prepared/SOLUSDT_funding.pkl": "271fd0a5e3bbe631b42336c1d6b82bc624db057171ba57ddb7bd3212713a8346",
+    "prepared/BNBUSDT.pkl": "c2cbcd378e5d7cb840cd5209dee2730b54bc246065b2404c93afe0a886027408",
+    "prepared/BNBUSDT_funding.pkl": "e54e32721514dc42f5a75b44993b28860ca84a58bcfe7840b3b60b8349db4f39",
+    "prepared/XRPUSDT.pkl": "8dee58f4bae5d8a2054975674fddf3a18e34accd37f3c9c52bd10b3676b18db7",
+    "prepared/XRPUSDT_funding.pkl": "0b833172bd2dc3430f600db6b577fa4f3f0c51af4db6b6411fc5884a51b1a914",
+    "prepared/DOGEUSDT.pkl": "cf8742cc625e41ec171b496ee90d35773d8ba0eb0af010806aa005208e1aac70",
+    "prepared/DOGEUSDT_funding.pkl": "4ab00484d0c95e3dcbe72daf4ee8b56abe9354e83bb6b2cd499c135e2fc629ae"
+  },
+  "source_archive_count": 510,
+  "missing": [
+    {
+      "symbol": "BTCUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "BTCUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/BTCUSDT/1h/BTCUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "ETHUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/ETHUSDT/1h/ETHUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "SOLUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/SOLUSDT/1h/SOLUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    },
+    {
+      "symbol": "BNBUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "BNBUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/BNBUSDT/1h/BNBUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    },
+    {
+      "symbol": "XRPUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "XRPUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/XRPUSDT/1h/XRPUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "kind": "klines",
+      "period": "2026-11-26",
+      "frequency": "daily",
+      "file": "DOGEUSDT-1h-2026-11-26.zip",
+      "url": "https://data.binance.vision/data/futures/um/daily/klines/DOGEUSDT/1h/DOGEUSDT-1h-2026-11-26.zip",
+      "status": "missing_404"
+    }
+  ],
+  "time_rule": "4hfeatures available at4hclose, executable after1hour delay; no unfinished candles"
+}

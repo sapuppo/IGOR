@@ -19,8 +19,13 @@ test_future_export_cannot_change_past (test_copy29.CopyTests.test_future_export_
 test_new_copy_engine_latency_horizon_and_reconcile (test_copy29.CopyTests.test_new_copy_engine_latency_horizon_and_reconcile) ... ok
 test_reversal_excluded_without_inventory (test_copy29.CopyTests.test_reversal_excluded_without_inventory) ... ok
 test_role_and_bucket_availability (test_copy29.CopyTests.test_role_and_bucket_availability) ... ok
+test_explicit_last_page (test_archive29.ArchiveTests.test_explicit_last_page) ... ok
+test_missing_completion_flag_rejected (test_archive29.ArchiveTests.test_missing_completion_flag_rejected) ... ok
+test_missing_cursor_rejected (test_archive29.ArchiveTests.test_missing_cursor_rejected) ... ok
+test_provider_rejection_stays_rejected (test_archive29.ArchiveTests.test_provider_rejection_stays_rejected) ... ok
+test_short_page_does_not_imply_complete (test_archive29.ArchiveTests.test_short_page_does_not_imply_complete) ... ok
 
 ----------------------------------------------------------------------
-Ran 21 tests in 0.145s
+Ran 26 tests in 0.136s
 
 OK

@@ -29,7 +29,7 @@ def flow_arrays(f,index):
 
 def native_roles():
  out={}
- for wallet in ['bobby','winter']:
+ for wallet in ['bobby','wintermute']:
   p=ROOT.parent/'r17_28_trader_behavior/raw'/(wallet+'_recent_fills_all.json')
   if not p.exists():continue
   ff=json.loads(p.read_text());c=Counter();rows=[]

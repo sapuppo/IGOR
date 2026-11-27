@@ -1,0 +1,10 @@
+COLLECT 50 / 516 seconds 16
+COLLECT 100 / 516 seconds 140COLLECT 150 / 516 seconds 60
+COLLECT 200 / 516 seconds 83
+COLLECT 250 / 516 seconds 107
+COLLECT 300 / 516 seconds 132
+COLLECT 350 / 516 seconds 156
+COLLECT 400 / 516 seconds 181
+COLLECT 450 / 516 seconds 205
+COLLECT 500 / 516 seconds 236
+COMPLETE Counter({'verified': 510, 'missing_404': 6})

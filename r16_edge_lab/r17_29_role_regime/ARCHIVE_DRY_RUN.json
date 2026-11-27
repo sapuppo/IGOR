@@ -1,0 +1,8 @@
+{
+  "provider": "Hypedexer",
+  "url": "https://api.hypedexer.com/fills/user/0x7fdafde5cfb5465924316eced2d3715494c517d1?start_time=2024-11-27T00%3A00%3A00Z&end_time=2026-11-27T00%3A00%3A00Z&limit=1000",
+  "max_pages": 10,
+  "execute": false,
+  "out": "archive_bobby",
+  "note": "Read-only; requests may consume provider credits. No orders, account creation or subscriptions. Paginated completion is provider-reported, not proof that missing TWAPs, fees or ledgers were recovered."
+}

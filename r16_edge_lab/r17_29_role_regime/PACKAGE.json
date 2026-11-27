@@ -1,0 +1,26 @@
+{
+  "archives": [
+    {
+      "file": "R17_29_RESULTS.zip",
+      "bytes": 5718224,
+      "sha256": "938618fb5acda55e12269f47131ffe7a4f0cb200a812615cc0dcbc375cfc2269",
+      "git_blob_sha": "2bbf88e9e4738a2ffc0698a6060e9076db5c0f53",
+      "files": 261
+    },
+    {
+      "file": "R17_29_DATA.zip",
+      "bytes": 7862926,
+      "sha256": "73eed52e61f89a0983407c32837d3076790d9985fdb9a8aaabf1f16c4c191e7b",
+      "git_blob_sha": "f7d26cfee6149d3b600765db5e2ca8f0a2e8ca20",
+      "files": 12
+    }
+  ],
+  "files": 273,
+  "public_raw_archive_count": 510,
+  "public_raw_archives_included": false,
+  "prepared_hourly_data_included_in": "R17_29_DATA.zip",
+  "extract_both_to_same_research_folder": true,
+  "minute_copy_inputs": "Rebuild R17.26 prepared inputs and use preserved R17.28 export; not bundled here",
+  "initial_protocol_commit": "7a6191467dae311e6dbc48b95d72217ebe2f628f",
+  "pre_replay_implementation_commit": "01ca9e4abadb7d32ca50831c55bd509d2cb70000"
+}

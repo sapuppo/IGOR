@@ -1,0 +1,28 @@
+{
+  "version": "R17.29",
+  "status": "completed",
+  "research_completed": true,
+  "profitability_validated": false,
+  "promoted": false,
+  "branch": "research-r17-29-role-regime",
+  "test_start": "2025-01-01",
+  "test_end_inclusive": "2026-11-25",
+  "replays": 312,
+  "unit_tests": 26,
+  "best_retrospective": {
+    "name": "breakout_36_r25_cost1",
+    "total_return": 0.05494087711816098,
+    "monthly_equivalent": 0.002348490148578408,
+    "return_2026": -0.0026348934673529056
+  },
+  "selected_wfo": {
+    "total_return": -0.029177915343090888,
+    "stress_total_return": -0.04337497017385317,
+    "return_2026": -0.047193140890763874,
+    "max_drawdown": 0.09710047118204668
+  },
+  "full_two_year_trader_history_completed": false,
+  "archive_authenticated_fetch_executed": false,
+  "video_content_verified": false,
+  "report": "r16_edge_lab/r17_29_role_regime/RESULTADO_PT.md"
+}

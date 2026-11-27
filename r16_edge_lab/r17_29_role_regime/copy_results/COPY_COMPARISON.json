@@ -1,0 +1,164 @@
+{
+  "period": [
+    "2026-10-01",
+    "2026-11-01"
+  ],
+  "selected_fill_rows": 158901,
+  "dir_counts": {
+    "Open Short": 72265,
+    "Close Short": 70045,
+    "Close Long": 11170,
+    "Open Long": 5415,
+    "Long > Short": 3,
+    "Short > Long": 3
+  },
+  "source_sha256": "ae9ddb381c62570c7fa0ed297feab7caff0c43eedadd9e332f84d4ba0eff6148",
+  "results": {
+    "naive_buy_sell_cost1": {
+      "total_return": -0.20024872327008236,
+      "monthly_equivalent": -0.1969994545184427,
+      "monthly": {
+        "2026-10": -0.20024872327008236
+      },
+      "max_drawdown": 0.200370677020272,
+      "sharpe": -15.688023307563698,
+      "profit_factor": 0.22855160431527674,
+      "trades": 662,
+      "win_rate": 0.21450151057401812,
+      "mean_hold_minutes": 47.06948640483384,
+      "days": 31.0,
+      "stats": {
+        "fees": 1037.8384211099988,
+        "spread_slippage": 1059.5061726355623,
+        "entries": 662,
+        "funding": -0.9310615908384
+      },
+      "halted": true,
+      "fees": 1037.83842111,
+      "funding": -0.9310615908383998
+    },
+    "naive_buy_sell_cost2": {
+      "total_return": -0.20066172366350243,
+      "monthly_equivalent": -0.19740661037248697,
+      "monthly": {
+        "2026-10": -0.20066172366350243
+      },
+      "max_drawdown": 0.20066172366350243,
+      "sharpe": -10.85095135381333,
+      "profit_factor": 0.04343182367919795,
+      "trades": 355,
+      "win_rate": 0.07887323943661972,
+      "mean_hold_minutes": 44.543661971830986,
+      "days": 31.0,
+      "stats": {
+        "fees": 981.7456178880004,
+        "spread_slippage": 992.7116723017901,
+        "entries": 355,
+        "funding": -0.4529387470046999
+      },
+      "halted": true,
+      "fees": 981.745617888,
+      "funding": -0.4529387470046999
+    },
+    "opening_risk_only_cost1": {
+      "total_return": -0.20033172468485472,
+      "monthly_equivalent": -0.19708128103947764,
+      "monthly": {
+        "2026-10": -0.20033172468485472
+      },
+      "max_drawdown": 0.20033172468485472,
+      "sharpe": -22.192946185152366,
+      "profit_factor": 0.2897800414797099,
+      "trades": 701,
+      "win_rate": 0.24821683309557774,
+      "mean_hold_minutes": 48.7546362339515,
+      "days": 31.0,
+      "stats": {
+        "fees": 1124.3116517280014,
+        "spread_slippage": 1151.6133611696584,
+        "entries": 701,
+        "funding": 2.6398448794561995,
+        "stop_target_ambiguous": 1
+      },
+      "halted": true,
+      "fees": 1124.311651728,
+      "funding": 2.639844879456199
+    },
+    "opening_risk_only_cost2": {
+      "total_return": -0.201229164238924,
+      "monthly_equivalent": -0.19796602708726707,
+      "monthly": {
+        "2026-10": -0.201229164238924
+      },
+      "max_drawdown": 0.201229164238924,
+      "sharpe": -13.344473500595656,
+      "profit_factor": 0.033861143326626035,
+      "trades": 362,
+      "win_rate": 0.06629834254143646,
+      "mean_hold_minutes": 45.5828729281768,
+      "days": 31.0,
+      "stats": {
+        "fees": 988.0514486399983,
+        "spread_slippage": 999.3779597850553,
+        "entries": 362,
+        "funding": 0.9021862507479
+      },
+      "halted": true,
+      "fees": 988.05144864,
+      "funding": 0.9021862507479
+    },
+    "opening_with_regime_cost1": {
+      "total_return": -0.07303768530081467,
+      "monthly_equivalent": -0.07176114756528595,
+      "monthly": {
+        "2026-10": -0.07303768530081467
+      },
+      "max_drawdown": 0.07332181034325036,
+      "sharpe": -7.6791699728477845,
+      "profit_factor": 0.18701490498932682,
+      "trades": 194,
+      "win_rate": 0.2422680412371134,
+      "mean_hold_minutes": 48.19072164948454,
+      "days": 31.0,
+      "stats": {
+        "fees": 321.8321986379998,
+        "spread_slippage": 332.90539236567554,
+        "entries": 194,
+        "funding": 1.7482556298541003
+      },
+      "halted": false,
+      "fees": 321.83219863799997,
+      "funding": 1.7482556298541003
+    },
+    "opening_with_regime_cost2": {
+      "total_return": -0.1225820902255802,
+      "monthly_equivalent": -0.12049761347996735,
+      "monthly": {
+        "2026-10": -0.1225820902255802
+      },
+      "max_drawdown": 0.1226237782375802,
+      "sharpe": -8.227223519105243,
+      "profit_factor": 0.02828157784735277,
+      "trades": 189,
+      "win_rate": 0.06878306878306878,
+      "mean_hold_minutes": 44.698412698412696,
+      "days": 31.0,
+      "stats": {
+        "fees": 542.0746512360004,
+        "spread_slippage": 551.6515082164067,
+        "entries": 189,
+        "funding": 0.9714989801932001
+      },
+      "halted": false,
+      "fees": 542.074651236,
+      "funding": 0.9714989801932001
+    }
+  },
+  "independent_holdout": false,
+  "promoted": false,
+  "opening_definition": "Only OpenLong and OpenShort; reversals excluded due missingstartPosition",
+  "not_full_wallet": true,
+  "source_venue": "Hyperliquid",
+  "execution_venue": "Binance USDT-M",
+  "source_visibility_assumption": "Every historical export fill assumed observable atminuteclose; no livefeedlatency/dropout guarantee"
+}
