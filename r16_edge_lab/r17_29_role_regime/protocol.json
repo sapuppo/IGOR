@@ -147,5 +147,14 @@
     "No extrapolation of one-monthwalletprofit to our capital",
     "No post-resultstrategy tuning to force target"
   ],
-  "no_live_orders": true
+  "no_live_orders": true,
+  "clarifications_before_replay": {
+    "trend": "EMA direction and 72h momentum sign agree; exit at next decision when this gate ceases",
+    "breakout": "Confirmed close beyond prior36/72bar high/low, with EMA64/192 direction. Hold until EMA gate changes, stop or time.",
+    "regime": "BTC EMA32/96 direction only if EMA gap/ATR >=1; regime_breakout uses72bars; regime_trend uses32/96",
+    "relative": "72/168hour close returns divided by corresponding hourly return standard deviation, entirely shifted1hour; highest positive long/lowest negative short; may be one-sided",
+    "trailing": "ATR14 from completed4h bars; trailing clamp1\u201316%, updated at hour close for next hour",
+    "selection": "Eight candidates times two preregistered risk scenarios; selection uses training only. Stress follows the same selected schedule, without reselecting.",
+    "copy": "CSV OpenLong/OpenShort only count as new risk. Reversals excluded without startPosition. 60minute rolling flow available at minute close, fills after1minute. BTC4h EMA32/96 gapATR>=1 filters opening_with_regime. Risk0.25%, stops from minuteATR scaledsqrt(60/8), clamp0.3\u20132%, TP2R, hold60min, cooldown60min; fixed priorR27 execution otherwise."
+  }
 }

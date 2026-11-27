@@ -1,0 +1,26 @@
+test_ambiguous_positive_funding_skipped (test29.Tests.test_ambiguous_positive_funding_skipped) ... ok
+test_buy_reversal_split (test29.Tests.test_buy_reversal_split) ... ok
+test_cash_reconciles (test29.Tests.test_cash_reconciles) ... ok
+test_causal_feature_prefix (test29.Tests.test_causal_feature_prefix) ... ok
+test_cover_not_new_long (test29.Tests.test_cover_not_new_long) ... ok
+test_current_hour_close_not_available (test29.Tests.test_current_hour_close_not_available) ... ok
+test_exact_decimal (test29.Tests.test_exact_decimal) ... ok
+test_funding_debit_and_reconciliation (test29.Tests.test_funding_debit_and_reconciliation) ... ok
+test_increase_short (test29.Tests.test_increase_short) ... ok
+test_intrabar_cannot_change_open_allocation (test29.Tests.test_intrabar_cannot_change_open_allocation) ... ok
+test_long_reduction (test29.Tests.test_long_reduction) ... ok
+test_one_hour_latency_and_end_fees (test29.Tests.test_one_hour_latency_and_end_fees) ... ok
+test_policy_switch_does_not_reset_halt (test29.Tests.test_policy_switch_does_not_reset_halt) ... ok
+test_qty_rounding (test29.Tests.test_qty_rounding) ... ok
+test_risk_sticky (test29.Tests.test_risk_sticky) ... ok
+test_stop_first (test29.Tests.test_stop_first) ... ok
+test_unknown_position_rejected (test29.Tests.test_unknown_position_rejected) ... ok
+test_future_export_cannot_change_past (test_copy29.CopyTests.test_future_export_cannot_change_past) ... ok
+test_new_copy_engine_latency_horizon_and_reconcile (test_copy29.CopyTests.test_new_copy_engine_latency_horizon_and_reconcile) ... ok
+test_reversal_excluded_without_inventory (test_copy29.CopyTests.test_reversal_excluded_without_inventory) ... ok
+test_role_and_bucket_availability (test_copy29.CopyTests.test_role_and_bucket_availability) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.145s
+
+OK
