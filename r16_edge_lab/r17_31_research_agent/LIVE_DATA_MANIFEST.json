@@ -1,0 +1,290 @@
+[
+  {
+    "error": null,
+    "id": "BTCUSDT:hourly",
+    "received_ms": 1795829545849,
+    "requested_ms": 1795829540388,
+    "sha256": "d529739b0ce0f6e8bee032711a9932736a782c791474299dd4e0b6f61b5d742c",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "BTCUSDT:four_hourly",
+    "received_ms": 1795829545809,
+    "requested_ms": 1795829540388,
+    "sha256": "1d649caf3cb9b8876e3ff58c2cbc9b4acf4cc45d6963f2068a075abb3e675db8",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "BTCUSDT:book",
+    "received_ms": 1795829545749,
+    "requested_ms": 1795829540389,
+    "sha256": "c91ffcb40449d1f6b3465636befc1922c13f8b588e284c0b4b871841d13d2dc5",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=BTCUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "BTCUSDT:funding",
+    "received_ms": 1795829545752,
+    "requested_ms": 1795829540389,
+    "sha256": "60df4e134f19825128431bc6fee0d0fd3354eb57cb0ca3cd0eb783000a41fa39",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BTCUSDT"
+  },
+  {
+    "error": null,
+    "id": "BTCUSDT:open_interest",
+    "received_ms": 1795829550928,
+    "requested_ms": 1795829545750,
+    "sha256": "560f08518a2a0f707231ccd83c5a5d8fdf510d234493249d22510b5eae9705a2",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=BTCUSDT"
+  },
+  {
+    "error": null,
+    "id": "ETHUSDT:hourly",
+    "received_ms": 1795829550985,
+    "requested_ms": 1795829545752,
+    "sha256": "2d012521193e3ce3c45a6d285030a514ee4d00ff3da9a7aaea05f1a6f0294bf1",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "ETHUSDT:four_hourly",
+    "received_ms": 1795829551117,
+    "requested_ms": 1795829545809,
+    "sha256": "3cd459298a0c96b1c8c6ff6830c032d5bb7cef67c24096d566079a4216bd4bb7",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=ETHUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "ETHUSDT:book",
+    "received_ms": 1795829550929,
+    "requested_ms": 1795829545850,
+    "sha256": "80f3a0b7cd9581133ef1ee61ead944a57f7cc7316888f6f334f869694edf7bb6",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=ETHUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "ETHUSDT:funding",
+    "received_ms": 1795829556454,
+    "requested_ms": 1795829550928,
+    "sha256": "673bd22f619dcd95179e39f1f436957e9840ffa08ee43209cc60841bc8dcaf5a",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=ETHUSDT"
+  },
+  {
+    "error": null,
+    "id": "ETHUSDT:open_interest",
+    "received_ms": 1795829556374,
+    "requested_ms": 1795829550929,
+    "sha256": "3f0016d96dca60f2b606d570b7d955c3aa1f01a46a3318be6a9ca57f69bb0bc4",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=ETHUSDT"
+  },
+  {
+    "error": null,
+    "id": "SOLUSDT:hourly",
+    "received_ms": 1795829556433,
+    "requested_ms": 1795829550985,
+    "sha256": "a5f2f3d0234176327ecbfc96f5b0fa99e1c90f56318b1775f9c1e9b00ab4d74e",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "SOLUSDT:four_hourly",
+    "received_ms": 1795829556377,
+    "requested_ms": 1795829551117,
+    "sha256": "266a6e4701993e906534ce63ddcdd585ea043877be7ac63ec56dd9826f22b3bd",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=SOLUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "SOLUSDT:book",
+    "received_ms": 1795829561760,
+    "requested_ms": 1795829556374,
+    "sha256": "ed4d6cd01c8dd8942b7b1089879e1570fab7d89e4feebc8a358eae40c432ebef",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=SOLUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "SOLUSDT:funding",
+    "received_ms": 1795829561853,
+    "requested_ms": 1795829556377,
+    "sha256": "51684033f3146930d76bf675982cc456e80509b5c5952ad9df27b66cbb96bdcf",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=SOLUSDT"
+  },
+  {
+    "error": null,
+    "id": "SOLUSDT:open_interest",
+    "received_ms": 1795829561758,
+    "requested_ms": 1795829556433,
+    "sha256": "43855b29635f7bf124975d044f56943160c5012ce2551f3ae8930d6d1ee1c979",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=SOLUSDT"
+  },
+  {
+    "error": null,
+    "id": "BNBUSDT:hourly",
+    "received_ms": 1795829561769,
+    "requested_ms": 1795829556454,
+    "sha256": "6874e8c76e9fb7155ffcde219ae148c404ab75c365fdc253f990f18c95fea349",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BNBUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "BNBUSDT:four_hourly",
+    "received_ms": 1795829567105,
+    "requested_ms": 1795829561758,
+    "sha256": "bb6dc5c76f0ded678a1ad3c5e3bb43da8b198dce9350100ed59836538c8171cd",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=BNBUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "BNBUSDT:book",
+    "received_ms": 1795829567185,
+    "requested_ms": 1795829561760,
+    "sha256": "2f40003c0a1f2935bec5bf0d08f97ec82df07a61a4fadc73542be98514c2bd96",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=BNBUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "BNBUSDT:funding",
+    "received_ms": 1795829567099,
+    "requested_ms": 1795829561769,
+    "sha256": "8adeeec77fb9372c7468e095421c55a607734c37e792c8865b51015cbffefd07",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=BNBUSDT"
+  },
+  {
+    "error": null,
+    "id": "BNBUSDT:open_interest",
+    "received_ms": 1795829567100,
+    "requested_ms": 1795829561853,
+    "sha256": "61333bb8e4453e6fadc23d2e5e6385820497e4808cc5f0e41eddcc4dd2729c01",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=BNBUSDT"
+  },
+  {
+    "error": null,
+    "id": "XRPUSDT:hourly",
+    "received_ms": 1795829573230,
+    "requested_ms": 1795829567099,
+    "sha256": "911ed69f4efd18646dbc7a3fd13da4cf9efc753fac07aa7f6129f54da2fef5b6",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=XRPUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "XRPUSDT:four_hourly",
+    "received_ms": 1795829573229,
+    "requested_ms": 1795829567100,
+    "sha256": "c58ac39c38d8ac83801b2ba291ec58cad8fcef89f6f0241dfc542a2f6bbbec4a",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=XRPUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "XRPUSDT:book",
+    "received_ms": 1795829573035,
+    "requested_ms": 1795829567105,
+    "sha256": "302755e24ac964671b5df06fc4c978ad6f3af8215b6588b9fccc4c5bf93b4136",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=XRPUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "XRPUSDT:funding",
+    "received_ms": 1795829573035,
+    "requested_ms": 1795829567185,
+    "sha256": "fa8ad6960fbbf05cc566069dcd39a889015a868161c6644d6c3140ce92cbc42e",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=XRPUSDT"
+  },
+  {
+    "error": null,
+    "id": "XRPUSDT:open_interest",
+    "received_ms": 1795829578469,
+    "requested_ms": 1795829573035,
+    "sha256": "cec28c018887ea7315368b0a7ea7d3a7a58aa1561d07ec91cbaaa5833353876c",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=XRPUSDT"
+  },
+  {
+    "error": null,
+    "id": "DOGEUSDT:hourly",
+    "received_ms": 1795829578661,
+    "requested_ms": 1795829573035,
+    "sha256": "3758c07e4348578b83c295171401d8321f52506ba2c79b921f82eb9f50074ab1",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=DOGEUSDT&interval=1h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "DOGEUSDT:four_hourly",
+    "received_ms": 1795829578529,
+    "requested_ms": 1795829573229,
+    "sha256": "962e38dcc4c4b4f2fb6a4248af091ab1b53154dd518afcee091302f01fe967e5",
+    "url": "https://fapi.binance.com/fapi/v1/klines?symbol=DOGEUSDT&interval=4h&limit=200"
+  },
+  {
+    "error": null,
+    "id": "DOGEUSDT:book",
+    "received_ms": 1795829578468,
+    "requested_ms": 1795829573230,
+    "sha256": "54f198fe78abfbe247e0c7bbcfab616df9d9cfbd97b63771df00d9d2a3b366ce",
+    "url": "https://fapi.binance.com/fapi/v1/depth?symbol=DOGEUSDT&limit=20"
+  },
+  {
+    "error": null,
+    "id": "DOGEUSDT:funding",
+    "received_ms": 1795829583858,
+    "requested_ms": 1795829578468,
+    "sha256": "982014245560601a90e2f5dee0f779cc65c4a31e89cf87f3a0f5524d1caa59d6",
+    "url": "https://fapi.binance.com/fapi/v1/premiumIndex?symbol=DOGEUSDT"
+  },
+  {
+    "error": null,
+    "id": "DOGEUSDT:open_interest",
+    "received_ms": 1795829583858,
+    "requested_ms": 1795829578469,
+    "sha256": "96c9b92ebb25578b00890066a27a1ad52e8c3363800074e28b9656dba399334c",
+    "url": "https://fapi.binance.com/fapi/v1/openInterest?symbol=DOGEUSDT"
+  },
+  {
+    "error": null,
+    "id": "GLOBAL:global",
+    "received_ms": 1795829582781,
+    "requested_ms": 1795829578529,
+    "sha256": "e2aaa9082d02fe471eb631e5e052ccc876f273826401d19642816b09d166aca9",
+    "url": "https://api.coingecko.com/api/v3/global"
+  },
+  {
+    "error": null,
+    "id": "CONTEXT:stablecoins",
+    "received_ms": 1795829583779,
+    "requested_ms": 1795829578661,
+    "sha256": "281cb30d5510c3697665c14c944370b578433e1dd97561e1da07bc99ce868691",
+    "url": "https://stablecoins.llama.fi/stablecoincharts/all"
+  },
+  {
+    "error": null,
+    "id": "CONTEXT:chains",
+    "received_ms": 1795829586601,
+    "requested_ms": 1795829582781,
+    "sha256": "079487e2ccf9f5360ec03878fb4d0d7bdb597b312fecd7cb1c0e3d1759710afa",
+    "url": "https://api.llama.fi/v2/chains"
+  },
+  {
+    "error": null,
+    "id": "CONTEXT:supply",
+    "received_ms": 1795829588833,
+    "requested_ms": 1795829583781,
+    "sha256": "b9f70e2fe45e183d3badd6fac3460fd8d7e037a2d2c880b0e25617ac56060a27",
+    "url": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,ripple,dogecoin"
+  },
+  {
+    "error": null,
+    "id": "NEWS:feed_0",
+    "received_ms": 1795829590549,
+    "requested_ms": 1795829583858,
+    "sha256": "e6c6bc0b660073c0ef02b03e29bca9a788a8c337c870a0071a3d2dc346115cc5",
+    "url": "https://blog.ethereum.org/feed.xml"
+  },
+  {
+    "error": null,
+    "id": "NEWS:feed_1",
+    "received_ms": 1795829587341,
+    "requested_ms": 1795829583858,
+    "sha256": "b0b75fbd438ed27fdec21887552a2f62840b97c2b5cea90553c9be9590a3bf3d",
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml"
+  }
+]

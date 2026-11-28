@@ -1,0 +1,41 @@
+test_chat_review_bound_to_exact_snapshot (test_agent.ModelTests.test_chat_review_bound_to_exact_snapshot) ... ok
+test_fabricated_citation_rejected (test_agent.ModelTests.test_fabricated_citation_rejected) ... ok
+test_llm_opinion_cannot_promote_or_self_calibrate (test_agent.ModelTests.test_llm_opinion_cannot_promote_or_self_calibrate) ... ok
+test_missing_symbol_rejected (test_agent.ModelTests.test_missing_symbol_rejected) ... ok
+test_nan_probability_rejected (test_agent.ModelTests.test_nan_probability_rejected) ... ok
+test_remote_plain_http_rejected (test_agent.ModelTests.test_remote_plain_http_rejected) ... ok
+test_unknown_risk_field_rejected (test_agent.ModelTests.test_unknown_risk_field_rejected) ... ok
+test_candle_gap_rejected (test_agent.ResearchTests.test_candle_gap_rejected) ... ok
+test_chain_tvl_not_token_revenue (test_agent.ResearchTests.test_chain_tvl_not_token_revenue) ... ok
+test_closed_candles_and_missing_fundamentals (test_agent.ResearchTests.test_closed_candles_and_missing_fundamentals) ... ok
+test_collector_preserves_partial_errors (test_agent.ResearchTests.test_collector_preserves_partial_errors) ... ok
+test_crossed_book_rejected (test_agent.ResearchTests.test_crossed_book_rejected) ... ok
+test_future_candle_price_cannot_change_features (test_agent.ResearchTests.test_future_candle_price_cannot_change_features) ... ok
+test_future_global_metric_is_unknown (test_agent.ResearchTests.test_future_global_metric_is_unknown) ... ok
+test_future_headline_excluded (test_agent.ResearchTests.test_future_headline_excluded) ... ok
+test_future_observation_rejected (test_agent.ResearchTests.test_future_observation_rejected) ... ok
+test_headline_without_date_not_evidence (test_agent.ResearchTests.test_headline_without_date_not_evidence) ... ok
+test_nonfinite_price_rejected (test_agent.ResearchTests.test_nonfinite_price_rejected) ... ok
+test_stablecoin_supply_change_is_not_tradable_liquidity (test_agent.ResearchTests.test_stablecoin_supply_change_is_not_tradable_liquidity) ... ok
+test_stale_exchange_book_rejected (test_agent.ResearchTests.test_stale_exchange_book_rejected) ... ok
+test_stale_supply_is_unknown (test_agent.ResearchTests.test_stale_supply_is_unknown) ... ok
+test_supply_does_not_imply_unlock_schedule (test_agent.ResearchTests.test_supply_does_not_imply_unlock_schedule) ... ok
+test_brier_only_matured_labels (test_agent.ReviewAndRunnerTests.test_brier_only_matured_labels) ... ok
+test_cli_replay_idempotence (test_agent.ReviewAndRunnerTests.test_cli_replay_idempotence) ... ok
+test_cycle_provenance_and_no_orders (test_agent.ReviewAndRunnerTests.test_cycle_provenance_and_no_orders) ... ok
+test_duplicate_label_not_double_counted (test_agent.ReviewAndRunnerTests.test_duplicate_label_not_double_counted) ... ok
+test_failed_model_keeps_orders_blocked (test_agent.ReviewAndRunnerTests.test_failed_model_keeps_orders_blocked) ... ok
+test_no_labels_means_no_claim_of_calibration (test_agent.ReviewAndRunnerTests.test_no_labels_means_no_claim_of_calibration) ... ok
+test_tampered_snapshot_rejected (test_agent.ReviewAndRunnerTests.test_tampered_snapshot_rejected) ... ok
+test_daily_limit (test_agent.RiskTests.test_daily_limit) ... ok
+test_drawdown_halt (test_agent.RiskTests.test_drawdown_halt) ... ok
+test_invalid_state (test_agent.RiskTests.test_invalid_state) ... ok
+test_kill_switch_zeroes_budget (test_agent.RiskTests.test_kill_switch_zeroes_budget) ... ok
+test_max_positions (test_agent.RiskTests.test_max_positions) ... ok
+test_risk_budget_includes_friction (test_agent.RiskTests.test_risk_budget_includes_friction) ... ok
+test_stale_candidate (test_agent.RiskTests.test_stale_candidate) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.200s
+
+OK

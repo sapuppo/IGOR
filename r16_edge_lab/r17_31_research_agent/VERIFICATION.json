@@ -1,0 +1,26 @@
+{
+  "archive": "R17_31_EVIDENCE.zip",
+  "size_bytes": 2133429,
+  "sha256": "fe4795b1c42d65d2a3680cb417d2083e3259589622680e2e8096f2466823d488",
+  "version": "17.31",
+  "new_tests_passed": 36,
+  "previous_module_tests_passed": 16,
+  "live_collections": 2,
+  "latest_source_count": 36,
+  "latest_collection_errors": [],
+  "assets": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "DOGEUSDT"
+  ],
+  "external_model_called": false,
+  "chat_review_imported": true,
+  "orders_sent": 0,
+  "fills": 0,
+  "returns_measured": false,
+  "service_24h_started": false,
+  "promotion": "BLOCKED_UNVALIDATED_EDGE"
+}

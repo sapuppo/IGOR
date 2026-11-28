@@ -1,0 +1,6 @@
+__pycache__/
+runs/
+replay_session/
+evidence/live_run/
+evidence/chat_review/
+evidence/session_final/
